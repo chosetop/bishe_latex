@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.16)  16 MAR 2026 17:57
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.16)  19 MAR 2026 16:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1351,108 +1351,109 @@ Package fontspec Info:
 
 ]
 1
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 51.
-[1
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1
 
 
 ]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2] [3]
 2
 
-Package natbib Warning: Citation `caolin' on page 2 undefined on input line 67.
+Package fontspec Info: 
+(fontspec)             Script 'CJK' not explicitly supported within font
+(fontspec)             'STFangsong'. Check the typeset output, and if it is
+(fontspec)             okay then ignore this warning. Otherwise a different
+(fontspec)             font should be chosen.
 
 
-Package natbib Warning: Citation `r1' on page 2 undefined on input line 67.
+Package fontspec Info: 
+(fontspec)             Could not resolve font "STFangsong/I" (it probably
+(fontspec)             doesn't exist).
 
 
-Package natbib Warning: Citation `Nalamura2014' on page 2 undefined on input line 67.
+Package fontspec Info: 
+(fontspec)             Could not resolve font "STFangsong/BI" (it probably
+(fontspec)             doesn't exist).
 
 
-Package natbib Warning: Citation `zhongguozhigong' on page 2 undefined on input line 67.
+Package fontspec Info: 
+(fontspec)             Could not resolve font "STFangsong/I" (it probably
+(fontspec)             doesn't exist).
 
 
-Package natbib Warning: Citation `r2' on page 2 undefined on input line 67.
-
-File: figure1.png Graphic file (type bmp)
-<figure1.png>
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 94.
-
-Overfull \hbox (55.12375pt too wide) in paragraph at lines 98--99
-[]|\TU/TimesNewRoman(0)/m/n/10.53937 ZZZZZZZZZZZZZZZZZZZZZZZZZZZZ| 
- []
-
-
-Overfull \hbox (55.12375pt too wide) in paragraph at lines 99--100
-[]|\TU/TimesNewRoman(0)/m/n/10.53937 ZZZZZZZZZZZZZZZZZZZZZZZZZZZZ| 
- []
+Package fontspec Info: 
+(fontspec)             Font family 'STFangsong(0)' created for font
+(fontspec)             'STFangsong' with options
+(fontspec)             [Script={CJK},AutoFakeBold={4}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"STFangsong/OT:script=hani;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"STFangsong/OT:script=hani;language=dflt;embolden=4;"
 
 
-Package natbib Warning: Citation `r3' on page 2 undefined on input line 106.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \vbox (badness 2384) has occurred while \output is active []
-
- [2
+ [4
 
 ]
 
-Package natbib Warning: Citation `Nalamura2014' on page 3 undefined on input line 116.
-
-File: figure1.png Graphic file (type bmp)
-<figure1.png>
-File: figure1.png Graphic file (type bmp)
-<figure1.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3]
-
-Package natbib Warning: Citation `yangkang2019' on page 4 undefined on input line 146.
+Package natbib Warning: Citation `yangkang2019' on page 5 undefined on input line 114.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4] [5]
+ [5] [6]
 3
 File: figure1.png Graphic file (type bmp)
 <figure1.png>
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 168.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 168.
 
-Overfull \hbox (12.16591pt too wide) in paragraph at lines 205--206
+Overfull \hbox (12.16591pt too wide) in paragraph at lines 173--174
 []|\TU/TimesNewRoman(0)/m/n/10.53937 XXXXXXXXXXXXXXXXXXXXXXXXXXXXX| 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6
+ [7
 
 ]
 
-Package natbib Warning: Citation `yangkang2019' on page 7 undefined on input line 223.
+Package natbib Warning: Citation `yangkang2019' on page 8 undefined on input line 191.
 
 
-Package natbib Warning: Citation `yuanxunlai' on page 7 undefined on input line 223.
+Package natbib Warning: Citation `yuanxunlai' on page 8 undefined on input line 191.
 
 
-Package natbib Warning: Citation `halisen2019' on page 7 undefined on input line 223.
+Package natbib Warning: Citation `halisen2019' on page 8 undefined on input line 191.
 
-[7]
+[8]
 4
-[8
+[9
 
 ]
 5
 No file hzu.bbl.
-[9
+[10
 
-] [10
+] [11
 
 ]
 
 Package natbib Warning: There were undefined citations.
 
-[11
+[12
 
 ] (./hzu.aux)
  ***********
@@ -1467,22 +1468,16 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-Package rerunfilecheck Warning: File `hzu.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `hzu.out':
-(rerunfilecheck)             Before: 916FEC39A6628E6A2C493A21E1B2170A;1676
-(rerunfilecheck)             After:  A918446995FFC7620ABA25EA2A3FC5BC;1684.
+Package rerunfilecheck Info: File `hzu.out' has not changed.
+(rerunfilecheck)             Checksum: 7D3A6A8A06496D7F8D2093D145E40118;2697.
  ) 
 Here is how much of TeX's memory you used:
- 33609 strings out of 468168
- 719380 string characters out of 5432815
- 1117292 words of memory out of 5000000
- 61679 multiletter control sequences out of 15000+600000
- 668117 words of font info for 232 fonts, out of 8000000 for 9000
+ 33638 strings out of 468168
+ 721834 string characters out of 5432815
+ 1121150 words of memory out of 5000000
+ 61702 multiletter control sequences out of 15000+600000
+ 666701 words of font info for 231 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 123i,12n,128p,1227b,622s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 123i,11n,128p,1227b,551s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on hzu.pdf (16 pages).
+Output written on hzu.pdf (17 pages).
