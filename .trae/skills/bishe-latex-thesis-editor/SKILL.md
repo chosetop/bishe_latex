@@ -40,6 +40,83 @@ description: "Edits this thesis LaTeX project while preserving structure and ref
   - 英文缩写（Web3D、AIGC、AI、Three.js、ControlNet）按原文保留
   - 避免引入新宏包/新命令，除非项目现有模板已依赖
 
+### 2.1) Markdown 转 LaTeX：图片/表格/换行
+
+- 图片：Markdown 的 `![标题](xxx.png)` → `figure` 环境，默认 `\includegraphics[width=...]{xxx.png}`；如用户要求紧跟文字显示，使用 `[H]`（需 `\usepackage{float}`）。
+- 表格：Markdown 的 `|...|...|` 表格需要按内容复杂度选择环境：
+  - 默认使用 `table` + `tabular/tabularx`（浮动表格）
+  - 需要“超出页自动换页/续表” → `longtable`
+- 单元格换行：Markdown 的 `<br>` 不要直译为 `\\`（会被当作“表格换行”）；用 `\newline` 作为单元格内换行。
+
+### 2.2) 表格排版规范（避免溢出/对齐一致）
+
+- 目标：表格宽度不超过版心、标题不换行、单元格内容自动换行，且统一“水平左对齐、垂直顶部对齐”。
+- 列类型建议：
+  - 用 `>{\raggedright\arraybackslash}p{...}` 或 `>{\raggedright\arraybackslash}X`（left/top）
+  - 表头用 `\mbox{...}` 包裹，避免表头断行
+- 间距与边界：
+  - 适当减小 `\tabcolsep`（例如 `0.2ex`）
+  - `tabular` 两端加 `@{}` 去掉左右外边距，避免总宽度因 `\tabcolsep` 叠加而溢出
+- 长字符串/URL 换行：
+  - 表格中包含下划线长标识符时，用 `\_\allowbreak` 允许在下划线处分行
+  - URL 建议启用 `xurl`，长字符串可用 `\seqsplit{...}`（需要 `seqsplit`）
+
+### 2.3) 规约表（用例规约）模板（table + tabular）
+
+```tex
+\begin{table}[!htb]
+  \centering
+  \caption{...}
+  \label{tab:...}
+  \renewcommand{\arraystretch}{1.25}
+  \setlength{\tabcolsep}{0.2ex}
+  \begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.11\textwidth} >{\raggedright\arraybackslash}p{0.15\textwidth} >{\raggedright\arraybackslash}p{0.13\textwidth} >{\raggedright\arraybackslash}p{0.25\textwidth} >{\raggedright\arraybackslash}p{0.24\textwidth} >{\raggedright\arraybackslash}p{0.11\textwidth}@{}}
+    \toprule
+    \mbox{用例编号} & \mbox{用例名称} & \mbox{前置条件} & \mbox{基本流程} & \mbox{扩展流程} & \mbox{后置条件} \\
+    \midrule
+    ... \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+```
+
+### 2.4) 多页表模板（longtable + 续表）
+
+```tex
+{
+  \small
+  \renewcommand{\arraystretch}{1.3}
+  \begin{longtable}{
+    >{\RaggedRight\arraybackslash}p{0.12\textwidth}
+    >{\RaggedRight\arraybackslash}p{0.18\textwidth}
+    >{\RaggedRight\arraybackslash}p{0.14\textwidth}
+    >{\RaggedRight\arraybackslash}p{0.16\textwidth}
+    >{\centering\arraybackslash}p{0.08\textwidth}
+    >{\RaggedRight\arraybackslash}p{0.22\textwidth}
+  }
+    \caption{...}\label{tab:...}\\
+    \toprule
+    数据项名 & 数据项含义 & 别名 & 数据类型 & 长度 & 取值范围 \\
+    \midrule
+    \endfirsthead
+
+    \multicolumn{6}{r}{\zihao{5}续表\thechapter-\arabic{table}}\\
+    \toprule
+    数据项名 & 数据项含义 & 别名 & 数据类型 & 长度 & 取值范围 \\
+    \midrule
+    \endhead
+
+    \bottomrule
+    \endfoot
+
+    \bottomrule
+    \endlastfoot
+
+    ... \\
+  \end{longtable}
+}
+```
+
 ### 3) 按模板风格写入 `hzu.tex`
 
 - 不改变 `\documentclass` 与模板命令（如 `\title/\author/...`）
