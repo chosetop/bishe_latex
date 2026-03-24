@@ -171,7 +171,7 @@ footskip=7.9mm,%
 \def\MiyaHeaderfont{\zihao{-5}\songti}
 \def\MiyaFooterfont{\zihao{-5}}
 \def\Miya@Value@headerA{\nouppercase{\Miya@Value@title\Miya@Value@titleB}}
-\def\Miya@Value@headerB{惠州学院2025届本科生毕业论文}
+\def\Miya@Value@headerB{惠州学院2026届本科生毕业论文}
 
 \renewcommand\author[1]{\def\Miya@Value@author{#1}}
 \renewcommand\title[2][\Miya@Value@title]{\def\Miya@Value@title{#2} \def\Miya@Value@titlemark{{#1}} }
