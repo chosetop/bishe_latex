@@ -1,0 +1,81 @@
+\begin{thebibliography}{15}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\relax\else
+  \urlstyle{same}\fi
+
+\bibitem[Gundogdu et~al.()Gundogdu, Constantin, and
+  Sminchisescu]{garnet_cloth_draping}
+Gundogdu~E, Constantin~V, Sminchisescu~C.
+\newblock GarNet: A Two-Stream Network for Fast and Accurate 3D Cloth
+  Draping\allowbreak[Z].
+
+\bibitem[Yang et~al.()Yang, Huang, and Zhou]{detailed_garment_recovery}
+Yang~H, Huang~B, Zhou~Z.
+\newblock Detailed Garment Recovery from a Single-View Image\allowbreak[Z].
+
+\bibitem[{Three.js}()]{threejs}
+{Three.js}.
+\newblock {Three.js} (JavaScript 3D library)\allowbreak[Z].
+
+\bibitem[佚名({\natexlab{a}})]{threejs_webgl_intro}
+佚名.
+\newblock 基础入门：使用 {Three.js} 进行 {WebGL} 开发\allowbreak[Z].
+\newblock {\natexlab{a}}.
+
+\bibitem[佚名({\natexlab{b}})]{webgl_threejs_fullstack_guide}
+佚名.
+\newblock {WebGL}+{Three.js} 全栈开发指南：从 3D
+  建模到交互式场景构建\allowbreak[Z].
+\newblock {\natexlab{b}}.
+
+\bibitem[佚名({\natexlab{c}})]{threejs_117_examples}
+佚名.
+\newblock 117 {Three.js} Examples\allowbreak[Z].
+\newblock {\natexlab{c}}.
+
+\bibitem[佚名({\natexlab{d}})]{webgl_threejs_learning_guide}
+佚名.
+\newblock {WebGL}+{Three.js} 入门到实战：{Web3D}
+  技术系统学习指南\allowbreak[Z].
+\newblock {\natexlab{d}}.
+
+\bibitem[佚名({\natexlab{e}})]{threejs_enterprise_course}
+佚名.
+\newblock {Three.js} 可视化企业实战 {WebGL} 课\allowbreak[Z].
+\newblock {\natexlab{e}}.
+
+\bibitem[{Gin Web Framework}()]{gin_web_framework}
+{Gin Web Framework}.
+\newblock Gin Web Framework\allowbreak[Z].
+
+\bibitem[佚名({\natexlab{f}})]{gin_complete_guide_1}
+佚名.
+\newblock {GO} 语言 {Web} 框架 {Gin}
+  之完全指南（一）\allowbreak[Z].
+\newblock {\natexlab{f}}.
+
+\bibitem[佚名({\natexlab{g}})]{gin_tutorial_elegant_webapp_1}
+佚名.
+\newblock {Gin} 教程：构建优雅的 {Web} 应用（一）\allowbreak[Z].
+\newblock {\natexlab{g}}.
+
+\bibitem[tengge1()]{shadoweditor}
+tengge1.
+\newblock ShadowEditor\allowbreak[Z].
+
+\bibitem[Chung et~al.()Chung, Lee, and Kim]{m3d_vton}
+Chung~J, Lee~M, Kim~H.
+\newblock {M3D-VTON}: A Monocular-to-3D Virtual Try-On Network\allowbreak[Z].
+
+\bibitem[佚名({\natexlab{h}})]{go_gin_vue3_blog_tutorial}
+佚名.
+\newblock {Go}+{Gin}+{Vue3} 个人博客项目教程\allowbreak[Z].
+\newblock {\natexlab{h}}.
+
+\bibitem[Patil et~al.()Patil and Jampani]{drapenet_garment_generation}
+Patil~A, Jampani~V.
+\newblock DrapeNet: Garment Generation and Self-Supervised
+  Draping\allowbreak[Z].
+
+\end{thebibliography}

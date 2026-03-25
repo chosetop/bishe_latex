@@ -78,5 +78,6 @@
 \contentsline {chapter}{\numberline {7\hspace {.3em}}总结与展望}{66}{chapter.7}%
 \contentsline {section}{\numberline {7.1}总结}{66}{section.7.1}%
 \contentsline {section}{\numberline {7.2}展望}{67}{section.7.2}%
-\contentsline {chapter}{致 谢}{68}{section*.61}%
+\contentsline {chapter}{参考文献}{68}{section*.61}%
+\contentsline {chapter}{致 谢}{69}{section*.62}%
 \contentsfinish 
