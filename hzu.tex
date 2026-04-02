@@ -288,13 +288,13 @@ Redis 是开源的高性能键值存储数据库，支持 String、Hash、List�
 >{\RaggedRight\arraybackslash}p{0.22\textwidth}
 }
 
-\caption{系统数据库设计数据项} \\
+\caption{系统数据库设计数据项}\label{tab:dataitems} \\
 \toprule
 数据项名 & 数据项含义 & 别名 & 数据类型 & 长度 & 取值范围 \\
 \midrule
 \endfirsthead
 
-\multicolumn{3}{r}{\zihao{5}续表\thechapter-\arabic{table}}\\
+\multicolumn{6}{r}{\zihao{5}续表\thechapter-\arabic{table}}\\
 \toprule
 数据项名 & 数据项含义 & 别名 & 数据类型 & 长度 & 取值范围 \\
 \midrule
@@ -329,7 +329,16 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 \subsection{系统功能结构设计}
 
-系统功能结构采用“角色—业务域—功能点”的划分方式，保证前台创作与社区能力、后台治理能力相互独立又可协同。整体功能结构如下：
+系统功能结构采用“角色—业务域—功能点”的划分方式，保证前台创作与社区能力、后台治理能力相互独立又可协同。系统总体功能结构如图~\ref{fig:functionStructure} 所示。
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{Power.png}
+	\caption{系统功能结构图}
+	\label{fig:functionStructure}
+\end{figure}
+
+整体功能结构如下：
 \begin{enumerate}[label=(\arabic*)]
 	\item \textbf{用户与权限} 注册登录、JWT 鉴权、角色区分（普通用户/管理员）、个人信息维护。
 	\item \textbf{3D 服装定制} 基础模型选择、颜色与材质参数调整、图案上传与部位应用、三维交互（旋转/缩放/查看细节）、设计草稿保存。

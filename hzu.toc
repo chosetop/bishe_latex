@@ -21,18 +21,18 @@
 \contentsline {subsection}{\numberline {3.3.1}用户管理模块}{10}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}3D 服装定制模块}{10}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}AI 虚拟试穿模块}{10}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}创意广场模块}{11}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}作品管理模块}{11}{subsection.3.3.5}%
-\contentsline {subsection}{\numberline {3.3.6}后台管理模块}{11}{subsection.3.3.6}%
-\contentsline {section}{\numberline {3.4}系统数据需求}{11}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}数据流图}{11}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.3.4}创意广场模块}{10}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}作品管理模块}{10}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.3.6}后台管理模块}{10}{subsection.3.3.6}%
+\contentsline {section}{\numberline {3.4}系统数据需求}{10}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}数据流图}{10}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}数据项}{11}{subsection.3.4.2}%
-\contentsline {chapter}{\numberline {4\hspace {.3em}}系统设计}{15}{chapter.4}%
-\contentsline {section}{\numberline {4.1}系统总体设计}{15}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}系统架构设计}{15}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}系统功能结构设计}{15}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}系统功能模块设计}{16}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}用户与权限模块}{16}{subsection.4.2.1}%
+\contentsline {chapter}{\numberline {4\hspace {.3em}}系统设计}{14}{chapter.4}%
+\contentsline {section}{\numberline {4.1}系统总体设计}{14}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}系统架构设计}{14}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}系统功能结构设计}{14}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}系统功能模块设计}{15}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}用户与权限模块}{15}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}3D 服装定制模块}{18}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}AI 虚拟试穿模块}{20}{subsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.2.4}作品管理模块}{21}{subsection.4.2.4}%
@@ -78,6 +78,6 @@
 \contentsline {chapter}{\numberline {7\hspace {.3em}}总结与展望}{66}{chapter.7}%
 \contentsline {section}{\numberline {7.1}总结}{66}{section.7.1}%
 \contentsline {section}{\numberline {7.2}展望}{67}{section.7.2}%
-\contentsline {chapter}{参考文献}{68}{section*.61}%
-\contentsline {chapter}{致 谢}{69}{section*.62}%
+\contentsline {chapter}{参考文献}{68}{section*.62}%
+\contentsline {chapter}{致 谢}{69}{section*.63}%
 \contentsfinish 
