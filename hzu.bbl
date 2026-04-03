@@ -1,81 +1,166 @@
-\begin{thebibliography}{15}
+\begin{thebibliography}{25}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\relax\else
   \urlstyle{same}\fi
 
-\bibitem[Gundogdu et~al.()Gundogdu, Constantin, and
-  Sminchisescu]{garnet_cloth_draping}
-Gundogdu~E, Constantin~V, Sminchisescu~C.
-\newblock GarNet: A Two-Stream Network for Fast and Accurate 3D Cloth
-  Draping\allowbreak[Z].
+\bibitem[吴一文 et~al.(2023)吴一文, 任武, 鲁毅, and 温文怡]{yuan2023aigc}
+吴一文, 任武, 鲁毅, 温文怡.
+\newblock 生成式人工智能（{AIGC}）技术研究综述\allowbreak[J].
+\newblock 中国图象图形学报, 2023, 28\allowbreak(10):\allowbreak 3001--3015.
 
-\bibitem[Yang et~al.()Yang, Huang, and Zhou]{detailed_garment_recovery}
-Yang~H, Huang~B, Zhou~Z.
-\newblock Detailed Garment Recovery from a Single-View Image\allowbreak[Z].
+\bibitem[Han et~al.(2018)Han, Wu, Wu, Yu, and Davis]{viton_han2018}
+Han~X, Wu~Z, Wu~Z, Yu~R, Davis~L~S.
+\newblock {VITON}: An Image-Based Virtual Try-On Network\allowbreak[C].
+\newblock In: Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition (CVPR), 2018: 7543--7552.
 
-\bibitem[{Three.js}()]{threejs}
-{Three.js}.
-\newblock {Three.js} (JavaScript 3D library)\allowbreak[Z].
+\bibitem[Wang et~al.(2018)Wang, Zheng, Liang, Chen, Lin, and
+  Yang]{cpvton_wang2018}
+Wang~B, Zheng~H, Liang~X, Chen~Y, Lin~L, Yang~M.
+\newblock Toward Characteristic-Preserving Image-Based Virtual Try-On
+  Network\allowbreak[C].
+\newblock In: Proceedings of the European Conference on Computer Vision
+  (ECCV), 2018: 589--604.
 
-\bibitem[佚名({\natexlab{a}})]{threejs_webgl_intro}
-佚名.
-\newblock 基础入门：使用 {Three.js} 进行 {WebGL} 开发\allowbreak[Z].
-\newblock {\natexlab{a}}.
+\bibitem[Choi et~al.(2021)Choi, Park, Lee, and Choo]{vitonhd_choi2021}
+Choi~S, Park~S, Lee~M, Choo~J.
+\newblock {VITON-HD}: High-Resolution Virtual Try-On via Misalignment-Aware
+  Normalization\allowbreak[C].
+\newblock In: Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition (CVPR), 2021: 14131--14140.
 
-\bibitem[佚名({\natexlab{b}})]{webgl_threejs_fullstack_guide}
-佚名.
-\newblock {WebGL}+{Three.js} 全栈开发指南：从 3D
-  建模到交互式场景构建\allowbreak[Z].
-\newblock {\natexlab{b}}.
+\bibitem[曹思祺 et~al.(2023)曹思祺, 郑德付, 刘沛津, and 江涛]{zhao2023tryon}
+曹思祺, 郑德付, 刘沛津, 江涛.
+\newblock 基于深度学习的图像虚拟试衣技术综述\allowbreak[J].
+\newblock 计算机应用, 2023, 43\allowbreak(4):\allowbreak 993--1006.
 
-\bibitem[佚名({\natexlab{c}})]{threejs_117_examples}
-佚名.
-\newblock 117 {Three.js} Examples\allowbreak[Z].
-\newblock {\natexlab{c}}.
+\bibitem[LeCun et~al.(2015)LeCun, Bengio, and Hinton]{lecun2015deep}
+LeCun~Y, Bengio~Y, Hinton~G.
+\newblock Deep Learning\allowbreak[J].
+\newblock Nature, 2015, 521\allowbreak(7553):\allowbreak 436--444.
 
-\bibitem[佚名({\natexlab{d}})]{webgl_threejs_learning_guide}
-佚名.
-\newblock {WebGL}+{Three.js} 入门到实战：{Web3D}
-  技术系统学习指南\allowbreak[Z].
-\newblock {\natexlab{d}}.
+\bibitem[Goodfellow et~al.(2020)Goodfellow, Pouget-Abadie, Mirza, Xu,
+  Warde-Farley, Ozair, Courville, and Bengio]{gan_goodfellow2020}
+Goodfellow~I, Pouget-Abadie~J, Mirza~M, Xu~B, Warde-Farley~D, Ozair~S,
+  Courville~A, Bengio~Y.
+\newblock Generative Adversarial Networks\allowbreak[J].
+\newblock Communications of the ACM, 2020, 63\allowbreak(11):\allowbreak
+  139--144.
 
-\bibitem[佚名({\natexlab{e}})]{threejs_enterprise_course}
-佚名.
-\newblock {Three.js} 可视化企业实战 {WebGL} 课\allowbreak[Z].
-\newblock {\natexlab{e}}.
+\bibitem[Gundogdu et~al.(2019)Gundogdu, Constantin, Seifoddini, Dang,
+  Salzmann, and Fua]{garnet_cloth_draping}
+Gundogdu~E, Constantin~V, Seifoddini~A, Dang~M, Salzmann~M, Fua~P.
+\newblock {GarNet}: A Two-Stream Network for Fast and Accurate 3D Cloth
+  Draping\allowbreak[C].
+\newblock In: Proceedings of the IEEE/CVF International Conference on Computer
+  Vision (ICCV), 2019: 8739--8748.
 
-\bibitem[{Gin Web Framework}()]{gin_web_framework}
-{Gin Web Framework}.
-\newblock Gin Web Framework\allowbreak[Z].
+\bibitem[Yildirim et~al.(2023)Yildirim, Sarafianos, Katircioglu, Black, and
+  Tung]{detailed_garment_recovery}
+Yildirim~E, Sarafianos~N, Katircioglu~I, Black~M~J, Tung~T.
+\newblock Detailed Garment Recovery from a Single-View Image\allowbreak[C].
+\newblock In: Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition (CVPR), 2023: 22974--22983.
 
-\bibitem[佚名({\natexlab{f}})]{gin_complete_guide_1}
-佚名.
-\newblock {GO} 语言 {Web} 框架 {Gin}
-  之完全指南（一）\allowbreak[Z].
-\newblock {\natexlab{f}}.
+\bibitem[You et~al.(2020)You and {Vue.js Contributors}]{vue3_docs}
+You~E, {Vue.js Contributors}.
+\newblock Vue.js 3: The Progressive {JavaScript} Framework\allowbreak[EB/OL].
+\newblock 2020. \url{https://vuejs.org}.
 
-\bibitem[佚名({\natexlab{g}})]{gin_tutorial_elegant_webapp_1}
-佚名.
-\newblock {Gin} 教程：构建优雅的 {Web} 应用（一）\allowbreak[Z].
-\newblock {\natexlab{g}}.
+\bibitem[Cabello et~al.(2010)Cabello and {Three.js Contributors}]{threejs}
+Cabello~R, {Three.js Contributors}.
+\newblock {Three.js}: {JavaScript} 3D Library\allowbreak[EB/OL].
+\newblock 2010. \url{https://threejs.org}.
 
-\bibitem[tengge1()]{shadoweditor}
-tengge1.
-\newblock ShadowEditor\allowbreak[Z].
+\bibitem[周进 et~al.(2022)周进, 杨晓峰, and 熊明福]{liu2022web3d}
+周进, 杨晓峰, 熊明福.
+\newblock 基于 {Three.js} 的服装 {Web3D} 可视化系统设计与实现\allowbreak[J].
+\newblock 计算机工程与设计, 2022, 43\allowbreak(7):\allowbreak 2003--2010.
 
-\bibitem[Chung et~al.()Chung, Lee, and Kim]{m3d_vton}
-Chung~J, Lee~M, Kim~H.
-\newblock {M3D-VTON}: A Monocular-to-3D Virtual Try-On Network\allowbreak[Z].
+\bibitem[Loper et~al.(2015)Loper, Mahmood, Romero, Pons-Moll, and
+  Black]{loper2015smpl}
+Loper~M, Mahmood~N, Romero~J, Pons-Moll~G, Black~M~J.
+\newblock {SMPL}: A Skinned Multi-Person Linear Model\allowbreak[J].
+\newblock ACM Transactions on Graphics, 2015, 34\allowbreak(6):\allowbreak
+  248:1--248:16.
 
-\bibitem[佚名({\natexlab{h}})]{go_gin_vue3_blog_tutorial}
-佚名.
-\newblock {Go}+{Gin}+{Vue3} 个人博客项目教程\allowbreak[Z].
-\newblock {\natexlab{h}}.
+\bibitem[{Gin Contributors}(2014)]{gin_web_framework}
+{Gin Contributors}.
+\newblock Gin {Web} Framework\allowbreak[EB/OL].
+\newblock 2014. \url{https://gin-gonic.com}.
 
-\bibitem[Patil et~al.()Patil and Jampani]{drapenet_garment_generation}
-Patil~A, Jampani~V.
-\newblock DrapeNet: Garment Generation and Self-Supervised
-  Draping\allowbreak[Z].
+\bibitem[Fielding(2000)]{fielding2000rest}
+Fielding~R~T.
+\newblock Architectural Styles and the Design of Network-Based Software
+  Architectures\allowbreak[D].
+\newblock Irvine: University of California, Irvine, 2000.
+
+\bibitem[{Redis Ltd.}(2009)]{redis_docs}
+{Redis Ltd.}
+\newblock Redis: The Open Source, In-Memory Data Store\allowbreak[EB/OL].
+\newblock 2009. \url{https://redis.io}.
+
+\bibitem[Pons-Moll et~al.(2017)Pons-Moll, Pujades, Hu, and
+  Black]{pons2017clothcap}
+Pons-Moll~G, Pujades~S, Hu~S, Black~M~J.
+\newblock {ClothCap}: Seamless 4D Clothing Capture and Retargeting\allowbreak[J].
+\newblock ACM Transactions on Graphics, 2017, 36\allowbreak(4):\allowbreak
+  73:1--73:15.
+
+\bibitem[Ho et~al.(2020)Ho, Jain, and Abbeel]{ddpm_ho2020}
+Ho~J, Jain~A, Abbeel~P.
+\newblock Denoising Diffusion Probabilistic Models\allowbreak[C].
+\newblock In: Advances in Neural Information Processing Systems (NeurIPS),
+  volume~33, 2020: 6840--6851.
+
+\bibitem[Rombach et~al.(2022)Rombach, Blattmann, Lorenz, Esser, and
+  Ommer]{ldm_rombach2022}
+Rombach~R, Blattmann~A, Lorenz~D, Esser~P, Ommer~B.
+\newblock High-Resolution Image Synthesis with Latent Diffusion
+  Models\allowbreak[C].
+\newblock In: Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition (CVPR), 2022: 10684--10695.
+
+\bibitem[Zhang et~al.(2023)Zhang, Rao, and Agrawala]{controlnet_zhang2023}
+Zhang~L, Rao~A, Agrawala~M.
+\newblock Adding Conditional Control to Text-to-Image Diffusion
+  Models\allowbreak[C].
+\newblock In: Proceedings of the IEEE/CVF International Conference on Computer
+  Vision (ICCV), 2023: 3836--3847.
+
+\bibitem[Cao et~al.(2021)Cao, Hidalgo, Simon, Wei, and Sheikh]{cao2021openpose}
+Cao~Z, Hidalgo~G, Simon~T, Wei~S, Sheikh~Y.
+\newblock {OpenPose}: Realtime Multi-Person 2D Pose Estimation Using Part
+  Affinity Fields\allowbreak[J].
+\newblock IEEE Transactions on Pattern Analysis and Machine Intelligence, 2021,
+  43\allowbreak(1):\allowbreak 172--186.
+
+\bibitem[Li et~al.(2022)Li, Xu, Wei, and Yang]{li2022schp}
+Li~P, Xu~Y, Wei~Y, Yang~Y.
+\newblock Self-Correction for Human Parsing\allowbreak[J].
+\newblock IEEE Transactions on Pattern Analysis and Machine Intelligence, 2022,
+  44\allowbreak(6):\allowbreak 3260--3271.
+
+\bibitem[Zhao et~al.(2021)Zhao, Xia, Meng, Jiang, Lu, and Dong]{m3d_vton}
+Zhao~F, Xia~Z, Meng~K, Jiang~N, Lu~C, Dong~J.
+\newblock {M3D-VTON}: A Monocular-to-3D Virtual Try-On Network\allowbreak[C].
+\newblock In: Proceedings of the IEEE/CVF International Conference on Computer
+  Vision (ICCV), 2021: 13239--13249.
+
+\bibitem[De~Luigi et~al.(2023)De~Luigi, Li, Guillard, Salzmann, and
+  Fua]{drapenet_garment_generation}
+De~Luigi~L, Li~R, Guillard~B, Salzmann~M, Fua~P.
+\newblock {DrapeNet}: Garment Generation and Self-Supervised
+  Draping\allowbreak[C].
+\newblock In: Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition (CVPR), 2023: 1451--1460.
+
+\bibitem[Wang et~al.(2004)Wang, Bovik, Sheikh, and Simoncelli]{wang2004ssim}
+Wang~Z, Bovik~A~C, Sheikh~H~R, Simoncelli~E~P.
+\newblock Image Quality Assessment: From Error Visibility to Structural
+  Similarity\allowbreak[J].
+\newblock IEEE Transactions on Image Processing, 2004, 13\allowbreak(4):\allowbreak
+  600--612.
 
 \end{thebibliography}
