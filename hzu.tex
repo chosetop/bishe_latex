@@ -129,6 +129,8 @@ Redis 是开源的高性能键值存储数据库\cite{redis_docs}，支持 Strin
 
 普通用户是平台的主要服务对象，涵盖服装设计爱好者、时尚博主、支持模型定制服装的商家，或想表达创意的一般消费者。该类用户无需专业设计背景，通过平台提供的可视化工具完成服装创意表达。
 
+普通用户用例图如图~\ref{fig:usecase-user} 所示。
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.85\textwidth]{useCase1.png}
@@ -184,6 +186,8 @@ Redis 是开源的高性能键值存储数据库\cite{redis_docs}，支持 Strin
 
 系统管理员负责平台的日常运营和维护，包括用户管理、内容审核、作品管理和模型库维护。
 
+系统管理员用例图如图~\ref{fig:usecase-admin} 所示。
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.85\textwidth]{useCase2.png}
@@ -233,29 +237,14 @@ Redis 是开源的高性能键值存储数据库\cite{redis_docs}，支持 Strin
 
 \section{主要功能需求}
 
-\subsection{用户管理模块}
-
-支持用户注册、登录、个人信息管理功能。系统采用 JWT 认证机制，区分普通用户和管理员两种角色。普通用户可管理个人作品、参与社区互动；管理员拥有内容审核、用户管理和 3D 模型管理权限。
-
-\subsection{3D 服装定制模块}
-
-提供基于 Web3D 的服装可视化编辑工具。用户可选择基础服装模型，实时调整颜色、材质参数，上传自定义图案并指定应用部位，通过鼠标交互旋转、缩放查看模型细节。系统需保证渲染流畅性，编辑操作响应延迟控制在 100\,ms 以内。
-
-\subsection{AI 虚拟试穿模块}
-
-支持将定制完成的 3D 服装转换为真人试穿图像。用户选择模特体型和场景风格后，系统调用 AI 服务生成高保真效果图。该模块需处理任务队列管理、生成进度反馈和结果展示功能，平均生成耗时控制在 30 秒以内。
-
-\subsection{创意广场模块}
-
-提供作品发布、浏览、搜索功能。支持按热度、时间、标签等排序，实现点赞、收藏、评论等互动操作。用户可关注其他创作者，便于查看喜欢的作品类型。
-
-\subsection{作品管理模块}
-
-支持用户对 3D 草稿和 AI 成图的完整生命周期管理，包括保存、编辑、删除、提审、发布设置。提供作品历史版本回溯功能。
-
-\subsection{后台管理模块}
-
-管理员可进行用户账号状态管理、作品内容审核、3D 模型库维护等操作。
+\begin{enumerate}[label=(\arabic*)]
+	\item \textbf{用户管理模块}：支持用户注册、登录、个人信息管理功能。系统采用 JWT 认证机制，区分普通用户和管理员两种角色。普通用户可管理个人作品、参与社区互动；管理员拥有内容审核、用户管理和 3D 模型管理权限。
+	\item \textbf{3D 服装定制模块}：提供基于 Web3D 的服装可视化编辑工具。用户可选择基础服装模型，实时调整颜色、材质参数，上传自定义图案并指定应用部位，通过鼠标交互旋转、缩放查看模型细节。系统需保证渲染流畅性，编辑操作响应延迟控制在 100\,ms 以内。
+	\item \textbf{AI 虚拟试穿模块}：支持将定制完成的 3D 服装转换为真人试穿图像。用户选择模特体型和场景风格后，系统调用 AI 服务生成高保真效果图。该模块需处理任务队列管理、生成进度反馈和结果展示功能，平均生成耗时控制在 30 秒以内。
+	\item \textbf{创意广场模块}：提供作品发布、浏览、搜索功能。支持按热度、时间、标签等排序，实现点赞、收藏、评论等互动操作。用户可关注其他创作者，便于查看喜欢的作品类型。
+	\item \textbf{作品管理模块}：支持用户对 3D 草稿和 AI 成图的完整生命周期管理，包括保存、编辑、删除、提审、发布设置。提供作品历史版本回溯功能。
+	\item \textbf{后台管理模块}：管理员可进行用户账号状态管理、作品内容审核、3D 模型库维护等操作。
+\end{enumerate}
 
 \section{系统数据需求}
 
@@ -294,7 +283,7 @@ Redis 是开源的高性能键值存储数据库\cite{redis_docs}，支持 Strin
 \midrule
 \endfirsthead
 
-\multicolumn{6}{r}{\zihao{5}续表\thechapter-\arabic{table}}\\
+\multicolumn{6}{r}{\zihao{5}续表\thechapter.\arabic{table}}\\
 \toprule
 数据项名 & 数据项含义 & 别名 & 数据类型 & 长度 & 取值范围 \\
 \midrule
@@ -356,7 +345,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 模块功能：该模块为系统提供身份认证与权限控制能力，覆盖用户注册、登录、退出、个人信息维护与角色权限校验等功能。系统采用 JWT 作为鉴权载体，在保证前端无状态访问的同时，实现普通用户与管理员接口的权限隔离，为作品发布、互动与后台治理提供统一的安全入口。
 
-模块功能结构图：
+模块功能结构图如图~\ref{fig:userModule} 所示。
 
 \begin{figure}[H]
 	\centering
@@ -367,7 +356,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 模块流程描述：用户提交账号密码完成登录后，后端校验凭证并签发 JWT；前端在后续请求中携带令牌，后端完成令牌校验与角色鉴权后返回业务数据；当用户退出或令牌失效时，前端清理本地令牌并重新进入登录流程。
 
-模块流程图：
+模块流程图如图~\ref{fig:userModuleFlow} 所示。
 
 \begin{figure}[H]
 	\centering
@@ -380,7 +369,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 模块功能：该模块在浏览器端提供三维可视化服装定制能力，支持基础模型选择、颜色与材质参数调整、图案上传与部位应用、视角控制与细节预览等操作。服装三维捕获与重定向技术\cite{pons2017clothcap}的研究成果为本模块的服装形变处理提供了参考基础。用户可将定制配置保存为草稿或作品版本，为作品发布提供可复用的设计数据。
 
-模块功能结构图：
+模块功能结构图如图~\ref{fig:3dModule} 所示。
 
 \begin{figure}[H]
 	\centering
@@ -391,7 +380,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 模块流程描述：用户选择基础服装模型后，前端加载模型与材质资源并渲染；用户通过交互面板调整参数并实时预览；当用户保存时，前端将关键配置参数（模型引用、材质与贴图、颜色与部位信息等）提交至后端形成草稿/版本记录，支持后续继续编辑或提审发布。
 
-模块流程图：
+模块流程图如图~\ref{fig:3dModuleFlow} 所示。
 
 \begin{figure}[H]
 	\centering
@@ -404,7 +393,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 模块功能：该模块将用户的 3D 设计各角度平面图作为条件输入，生成高保真的真人试穿效果图。本系统 AI 试穿功能以去噪扩散概率模型（DDPM）\cite{ddpm_ho2020}为核心基础，借助潜在扩散模型（LDM）\cite{ldm_rombach2022}的高效图像合成能力，并采用 ControlNet\cite{controlnet_zhang2023} 实现以 3D 服装渲染图为控制条件的引导生成。试穿前处理流程中涉及人体姿态估计\cite{cao2021openpose}与人体语义解析\cite{li2022schp}，以保证服装与人体的对齐精度。最终参考 M3D-VTON\cite{m3d_vton}的单目转三维方案提升试穿立体感。由于 AI 生成属于耗时任务，系统采用任务化/异步化机制：后端创建任务并返回任务 ID，任务执行模块从队列取出任务调用外部 AI 服务，生成结果保存至文件存储并写入数据库，前端通过查询接口获取进度并展示结果。
 
-模块功能结构图：
+模块功能结构图如图~\ref{fig:aiModule} 所示。
 
 \begin{figure}[H]
 	\centering
@@ -415,7 +404,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 模块流程描述：用户在前端选择模特体型与场景风格后提交生成请求；后端创建任务写入队列并返回任务 ID；前端基于任务 ID 查询进度；任务执行模块消费队列调用外部 AI，生成完成后上传结果文件并写入版本数据，更新任务状态；前端获取到完成状态后展示试穿图并允许用户保存。
 
-模块流程图：
+模块流程图如图~\ref{fig:aiModuleFlow} 所示。
 
 \begin{figure}[H]
 	\centering
@@ -428,7 +417,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 模块功能：该模块面向普通用户提供作品全生命周期管理能力，包含作品创建、信息编辑、草稿、发布/下架、删除等功能。
 
-模块功能结构图：
+模块功能结构图如图~\ref{fig:workModule} 所示。
 
 \begin{figure}[H]
 	\centering
@@ -439,7 +428,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 模块流程描述：用户创建作品并编辑标题、描述等信息；编辑完成后存储为草稿可选择提审发布，后端更新作品状态与发布时间；当用户下架或删除作品时，后端校验归属权限并更新状态，保证数据一致性与可审计性。
 
-模块流程图：
+模块流程图如图~\ref{fig:workModuleFlow} 所示。
 
 \begin{figure}[H]
 	\centering
@@ -452,7 +441,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 模块功能：该模块提供作品展示与社区交互能力，包含作品列表浏览、搜索与排序（热度/时间/标签等）、作品详情查看，以及点赞、收藏、评论、关注等互动功能。模块通过将互动行为与作品数据关联，形成反馈闭环，提升作品传播与社区活跃度。
 
-模块功能结构图：
+模块功能结构图如图~\ref{fig:squareModule} 所示。
 
 \begin{figure}[H]
 	\centering
@@ -463,7 +452,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 模块流程描述：用户进入创意广场后，前端请求作品列表并支持排序与筛选；用户打开作品详情页后加载作品信息、互动数据；当用户进行点赞、收藏或评论时，前端提交互动请求，后端校验登录状态并写入互动记录，更新计数并返回最新状态以刷新页面展示。
 
-模块流程图：
+模块流程图如图~\ref{fig:squareModuleFlow} 所示。
 
 \begin{figure}[H]
 	\centering
@@ -476,7 +465,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 模块功能：该模块面向系统管理员提供用户管理、模型管理与内容治理能力，包括用户管理（信息维护，权限分配）、作品内容审核（通过/拒绝/下架）、模型库维护等功能。模块通过权限控制与审核流程保障平台内容质量与资源可用性。
 
-模块功能结构图：
+模块功能结构图如图~\ref{fig:adminModule} 所示。
 
 \begin{figure}[H]
 	\centering
@@ -487,7 +476,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 模块流程描述：管理员登录后进入后台；在用户管理中可检索用户并执行角色分配，信息修改等操作；在作品审核中查看待审内容并做出通过或拒绝决定，必要时可对已发布内容执行下架；在资源管理中维护模型资源，保证前端定制能力与内容展示的基础数据完整。
 
-模块流程图：
+模块流程图如图~\ref{fig:adminModuleFlow} 所示。
 
 \begin{figure}[H]
 	\centering
@@ -540,6 +529,8 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 \noindent users（用户核心表）用于存储系统用户账号、密码、角色与基础资料，是全局用户主体表。系统通过 \texttt{user\_follows} 建立“用户\texorpdfstring{-}{-}用户”多对多关注关系，并引入 \texttt{followers\_count}/\texttt{following\_count} 作为冗余计数字段以降低列表页聚合统计开销；在关注/取关时同步更新被关注者 \texttt{followers\_count} 与关注者 \texttt{following\_count}。
 
+users 表结构如表~\ref{tab:users} 所示。
+
 {
 \renewcommand{\arraystretch}{1.25}
 \setlength{\tabcolsep}{0.2ex}
@@ -550,7 +541,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 \midrule
 \endfirsthead
 
-\multicolumn{4}{r}{\zihao{5}续表\thechapter-\arabic{table}}\\
+\multicolumn{4}{r}{\zihao{5}续表\thechapter.\arabic{table}}\\
 \toprule
 字段名 & 类型 & 约束/索引 & 说明 \\
 \midrule
@@ -578,6 +569,8 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 \noindent user\_follows（用户关注关系表）用于记录用户之间的关注关系，以 \texttt{follower\_id} 与 \texttt{following\_id} 关联 \texttt{users}，支持关注/取关与关注列表/粉丝列表等功能，并通过唯一约束 \texttt{(follower\_id, following\_id)} 防止重复关注；用户注销时外键设置 \texttt{ON DELETE CASCADE} 以清理关联数据。
 
+user\_follows 表结构如表~\ref{tab:user-follows} 所示。
+
 {
 \renewcommand{\arraystretch}{1.25}
 \setlength{\tabcolsep}{0.2ex}
@@ -588,7 +581,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 \midrule
 \endfirsthead
 
-\multicolumn{4}{r}{\zihao{5}续表\thechapter-\arabic{table}}\\
+\multicolumn{4}{r}{\zihao{5}续表\thechapter.\arabic{table}}\\
 \toprule
 字段名 & 类型 & 约束/索引 & 说明 \\
 \midrule
@@ -614,6 +607,8 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 \noindent model\_files（模型/资源文件表）用于统一管理系统上传/生成的文件资源元数据，包括展示名称、访问 URL、文件大小以及创建/更新时间等信息，并作为各业务表引用外部资源的统一入口。当前模型中该表主要承载作品封面文件的引用关系，便于复用同一资源、减少冗余存储，同时通过名称索引支持后台按名称检索与管理。
 
+model\_files 表结构如表~\ref{tab:model-files} 所示。
+
 {
 \renewcommand{\arraystretch}{1.25}
 \setlength{\tabcolsep}{0.2ex}
@@ -624,7 +619,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 \midrule
 \endfirsthead
 
-\multicolumn{4}{r}{\zihao{5}续表\thechapter-\arabic{table}}\\
+\multicolumn{4}{r}{\zihao{5}续表\thechapter.\arabic{table}}\\
 \toprule
 字段名 & 类型 & 约束/索引 & 说明 \\
 \midrule
@@ -650,6 +645,8 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 \noindent design\_works（作品主表）用于存储作品主体信息，是创意广场的核心业务表，记录作品标题、描述、发布状态与发布时间等内容，并通过 \texttt{user\_id} 关联作品作者。该表可选关联封面文件 \texttt{cover\_file\_id}，并维护点赞数、评论数、收藏数等冗余统计字段与推荐标识，用于提升广场列表查询与排序展示的性能。
 
+design\_works 表结构如表~\ref{tab:design-works} 所示。
+
 {
 \renewcommand{\arraystretch}{1.25}
 \setlength{\tabcolsep}{0.2ex}
@@ -660,7 +657,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 \midrule
 \endfirsthead
 
-\multicolumn{4}{r}{\zihao{5}续表\thechapter-\arabic{table}}\\
+\multicolumn{4}{r}{\zihao{5}续表\thechapter.\arabic{table}}\\
 \toprule
 字段名 & 类型 & 约束/索引 & 说明 \\
 \midrule
@@ -692,6 +689,8 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 \noindent work\_tags（作品标签表）用于维护作品与标签的关联，将作品与若干语义标签进行绑定，以支撑分类浏览、条件筛选与个性化推荐等功能。表中通过 \texttt{work\_id} 快速定位作品标签集合，并为 \texttt{tag} 建立索引以提高按标签聚合与检索的效率。
 
+work\_tags 表结构如表~\ref{tab:work-tags} 所示。
+
 {
 \renewcommand{\arraystretch}{1.25}
 \setlength{\tabcolsep}{0.2ex}
@@ -702,7 +701,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 \midrule
 \endfirsthead
 
-\multicolumn{4}{r}{\zihao{5}续表\thechapter-\arabic{table}}\\
+\multicolumn{4}{r}{\zihao{5}续表\thechapter.\arabic{table}}\\
 \toprule
 字段名 & 类型 & 约束/索引 & 说明 \\
 \midrule
@@ -724,6 +723,8 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 \noindent work\_likes（作品点赞表）用于记录用户对作品的点赞行为，形成“用户\texorpdfstring{-}{-}作品”的多对多关系落地数据，用于支撑点赞/取消点赞以及点赞列表查询等功能。该表通过唯一约束 \texttt{(work\_id, user\_id)} 防止重复点赞，并以时间字段记录行为发生时间，便于行为追溯与排序展示。
 
+work\_likes 表结构如表~\ref{tab:work-likes} 所示。
+
 {
 \renewcommand{\arraystretch}{1.25}
 \setlength{\tabcolsep}{0.2ex}
@@ -734,7 +735,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 \midrule
 \endfirsthead
 
-\multicolumn{4}{r}{\zihao{5}续表\thechapter-\arabic{table}}\\
+\multicolumn{4}{r}{\zihao{5}续表\thechapter.\arabic{table}}\\
 \toprule
 字段名 & 类型 & 约束/索引 & 说明 \\
 \midrule
@@ -758,6 +759,8 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 \noindent work\_favorites（作品收藏表）用于记录用户对作品的收藏行为，支撑用户收藏夹、收藏/取消收藏与收藏状态判断等功能，并在数据层面表达“用户\texorpdfstring{-}{-}作品”多对多关系。该表同样通过唯一约束 \texttt{(work\_id, user\_id)} 防止重复收藏，并使用时间字段记录收藏发生时间，便于收藏列表按时间排序。
 
+work\_favorites 表结构如表~\ref{tab:work-favorites} 所示。
+
 {
 \renewcommand{\arraystretch}{1.25}
 \setlength{\tabcolsep}{0.2ex}
@@ -768,7 +771,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 \midrule
 \endfirsthead
 
-\multicolumn{4}{r}{\zihao{5}续表\thechapter-\arabic{table}}\\
+\multicolumn{4}{r}{\zihao{5}续表\thechapter.\arabic{table}}\\
 \toprule
 字段名 & 类型 & 约束/索引 & 说明 \\
 \midrule
@@ -792,6 +795,8 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 \noindent work\_comments（作品评论表）用于记录用户对作品的文本评论内容，支撑作品详情页评论展示、评论发布与评论列表分页查询等功能。该表通过 \texttt{work\_id} 关联评论所属作品、通过 \texttt{user\_id} 标识评论作者，并对 \texttt{work\_id} 建立索引以优化按作品维度的评论检索。
 
+work\_comments 表结构如表~\ref{tab:work-comments} 所示。
+
 {
 \renewcommand{\arraystretch}{1.25}
 \setlength{\tabcolsep}{0.2ex}
@@ -802,7 +807,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 \midrule
 \endfirsthead
 
-\multicolumn{4}{r}{\zihao{5}续表\thechapter-\arabic{table}}\\
+\multicolumn{4}{r}{\zihao{5}续表\thechapter.\arabic{table}}\\
 \toprule
 字段名 & 类型 & 约束/索引 & 说明 \\
 \midrule
@@ -826,6 +831,8 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 \noindent tryon\_tasks（试衣任务表）用于记录用户针对作品发起的试衣生成任务及执行结果，支撑异步任务创建、进度查询与结果展示等流程，并通过唯一的业务任务号 \texttt{task\_id} 进行幂等与外部调用关联。该表记录输入参考数据、任务状态与进度、结果地址以及异常信息，同时保存开始/完成时间与创建/更新时间，用于任务调度、失败重试与问题定位。
 
+tryon\_tasks 表结构如表~\ref{tab:tryon-tasks} 所示。
+
 {
 \renewcommand{\arraystretch}{1.25}
 \setlength{\tabcolsep}{0.2ex}
@@ -836,7 +843,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 \midrule
 \endfirsthead
 
-\multicolumn{4}{r}{\zihao{5}续表\thechapter-\arabic{table}}\\
+\multicolumn{4}{r}{\zihao{5}续表\thechapter.\arabic{table}}\\
 \toprule
 字段名 & 类型 & 约束/索引 & 说明 \\
 \midrule
@@ -890,7 +897,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 \subsection{用户管理模块实现}
 
-用户管理模块涉及前台认证与用户信息维护，后端核心对象为 \texttt{AuthController}、\texttt{User} 数据模型以及 JWT/密码工具组件。前端 Nuxt3 通过登录页、注册页和个人中心页调用用户接口，实现身份认证与资料维护。
+用户管理模块涉及前台认证与用户信息维护，后端核心对象为 \texttt{AuthController}、\texttt{User} 数据模型以及 JWT/密码工具组件。前端 Nuxt3 通过登录页、注册页和个人中心页调用用户接口，实现身份认证与资料维护。用户管理模块接口如表~\ref{tab:api-user} 所示。此部分的核心代码参看附录A 
 
 \begin{table}[H]
 	\centering
@@ -931,7 +938,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 \subsection{3D 服装定制模块实现}
 
-3D 服装定制模块用于实现服装参数化设计与模板选择。前端提供参数面板和设计表单，同时通过 Three.js 渲染模型；后端维护作品草稿、定制参数及模型资源引用，实现“创建—编辑—保存”的设计闭环。
+3D 服装定制模块用于实现服装参数化设计与模板选择。前端提供参数面板和设计表单，同时通过 Three.js 渲染模型；后端维护作品草稿、定制参数及模型资源引用，实现“创建—编辑—保存”的设计闭环。3D 服装定制模块接口如表~\ref{tab:api-3d} 所示。此部分的核心代码参看附录B
 
 \begin{table}[H]
 	\centering
@@ -971,7 +978,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 \subsection{AI 虚拟试穿模块实现}
 
-AI 虚拟试穿模块采用异步任务架构，服务端由”任务创建接口 + Worker 消费进程”构成。前端 Nuxt3 负责提交试穿参数并轮询任务状态，完成结果展示。本模块参考了 DrapeNet\cite{drapenet_garment_generation}的服装生成与自监督拟合思路，结合扩散模型进行真人效果合成，生成图像质量采用结构相似性（SSIM）\cite{wang2004ssim}等指标衡量。
+AI 虚拟试穿模块采用异步任务架构，服务端由”任务创建接口 + Worker 消费进程”构成。前端 Nuxt3 负责提交试穿参数并轮询任务状态，完成结果展示。本模块参考了 DrapeNet\cite{drapenet_garment_generation}的服装生成与自监督拟合思路，结合扩散模型进行真人效果合成，生成图像质量采用结构相似性（SSIM）\cite{wang2004ssim}等指标衡量。AI 虚拟试穿模块接口如表~\ref{tab:api-tryon} 所示。此部分的核心代码参看附录C
 
 \begin{table}[H]
 	\centering
@@ -1016,7 +1023,7 @@ AI 虚拟试穿模块采用异步任务架构，服务端由”任务创建接�
 
 \subsection{创意广场模块实现}
 
-创意广场模块面向作品公开展示与社区互动，支持列表浏览、标签筛选、热度排序、点赞、收藏、评论以及关注创作者。前端对应广场首页与作品详情页，后端支持可选登录态访问和缓存加速。
+创意广场模块面向作品公开展示与社区互动，支持列表浏览、标签筛选、热度排序、点赞、收藏、评论以及关注创作者。前端对应广场首页与作品详情页，后端支持可选登录态访问和缓存加速。创意广场模块接口如表~\ref{tab:api-square} 所示。此部分的核心代码参看附录D
 
 \begin{table}[H]
 	\centering
@@ -1060,7 +1067,7 @@ AI 虚拟试穿模块采用异步任务架构，服务端由”任务创建接�
 
 \subsection{作品管理模块实现}
 
-作品管理模块负责前台用户对个人作品的全生命周期管理，包括创建、编辑、提审、查看详情、下架和删除，并与审核流程、试穿流程联动。
+作品管理模块负责前台用户对个人作品的全生命周期管理，包括创建、编辑、提审、查看详情、下架和删除，并与审核流程、试穿流程联动。作品管理模块接口如表~\ref{tab:api-work} 所示。此部分的核心代码参看附录E
 
 \begin{table}[H]
 	\centering
@@ -1103,7 +1110,7 @@ AI 虚拟试穿模块采用异步任务架构，服务端由”任务创建接�
 
 \subsection{后台管理模块实现}
 
-后台管理模块用于管理员对平台资源进行统一治理，涵盖管理员登录、用户管理、模型管理和作品审核。后端通过“认证中间件 + 管理员权限中间件”实现访问控制。
+后台管理模块用于管理员对平台资源进行统一治理，涵盖管理员登录、用户管理、模型管理和作品审核。后端通过“认证中间件 + 管理员权限中间件”实现访问控制。后台管理模块接口如表~\ref{tab:api-admin} 所示。此部分的核心代码参看附录F
 
 \begin{table}[H]
 	\centering
@@ -1187,18 +1194,18 @@ AI 虚拟试穿模块采用异步任务架构，服务端由”任务创建接�
 	\end{tabularx}
 \end{table}
 
-注册与登录功能测试过程中，系统能够对账号不存在、密码错误等异常输入给出明确的错误提示，并在认证通过后正确跳转并展示登录态下的页面内容；其中，图~\ref{fig:test-login-fail}展示了登录失败时的提示信息，图~\ref{fig:test-login-success}展示了登录成功后的页面与会话状态。
+按表~\ref{tab:testcase-register-login} 的步骤进行测试：先在注册页输入合法信息完成注册，再使用新账号登录并验证页面跳转与登录态展示；随后退出登录并再次登录，验证会话保持与登录态恢复逻辑。测试结果与期望一致：账号不存在、密码错误等异常输入能够给出明确提示；认证通过后能够正确跳转并展示登录态页面内容。为证明失败与成功两类关键结果，图~\ref{fig:test-login-fail}需展示登录失败时的提示信息，图~\ref{fig:test-login-success}需展示登录成功后的页面与会话状态。
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth]{test1.png}
+	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：按表~\ref{tab:testcase-register-login} 的步骤进行登录失败场景验证（例如输入不存在账号或错误密码），页面应展示清晰的失败原因提示（账号不存在/密码错误等）。}}
 	\caption{注册与登录失败提示}
 	\label{fig:test-login-fail}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth]{test2.png}
+	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：按表~\ref{tab:testcase-register-login} 的步骤完成注册并使用新账号登录成功后，系统应跳转到首页/个人中心等登录态页面，并能看到用户信息或登录态标识（如头像、昵称、退出登录入口等）。}}
 	\caption{注册与登录成功页面}
 	\label{fig:test-login-success}
 \end{figure}
@@ -1222,18 +1229,18 @@ AI 虚拟试穿模块采用异步任务架构，服务端由”任务创建接�
 	\end{tabularx}
 \end{table}
 
-个人信息展示与修改密码校验效果分别如图~\ref{fig:test-profile}、图~\ref{fig:test-password-check}所示。
+按表~\ref{tab:testcase-profile} 的步骤进行测试：在个人中心修改昵称、头像或密码并保存，刷新页面或重新登录后检查数据是否持久化；修改密码后使用新密码登录验证生效；退出登录后再次访问受保护页面验证会话失效与访问拦截。测试结果与期望一致：资料保存后即时生效且刷新不丢失；非法输入会被拦截或提示；退出登录后访问受保护资源会被重定向到登录页。为证明上述过程与结果，图~\ref{fig:test-profile}需展示资料修改与保存后的个人中心页面，图~\ref{fig:test-password-check}需展示修改密码时的校验提示或修改成功反馈。
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth]{test3.png}
+	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：个人中心资料维护验证（按表~\ref{tab:testcase-profile} 步骤1--2）。截图应包含修改后的昵称/头像等信息以及“保存成功”提示或保存后的回显效果。}}
 	\caption{个人信息展示}
 	\label{fig:test-profile}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth]{test4.png}
+	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：修改密码校验/生效验证（按表~\ref{tab:testcase-profile} 步骤3）。可选择“旧密码错误/两次密码不一致”等校验提示，或“修改成功”提示与随后使用新密码登录成功的页面。}}
 	\caption{修改密码校验}
 	\label{fig:test-password-check}
 \end{figure}
@@ -1261,11 +1268,11 @@ AI 虚拟试穿模块采用异步任务架构，服务端由”任务创建接�
 	\end{tabularx}
 \end{table}
 
-模型广场展示效果如图~\ref{fig:test-model-square}所示。
+按表~\ref{tab:testcase-customize-load} 的步骤进行测试：从入口进入 3D 定制页面，观察模型、材质、纹理等资源加载流程与提示信息。测试结果与期望一致：加载完成后模型显示完整，无明显缺面或贴图异常；加载过程具有清晰的状态提示。为证明资源加载过程与结果，图~\ref{fig:test-model-square}需展示进入定制页面并加载完成后的 3D 模型预览画面（可同时包含加载提示区域或加载完成状态）。
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth]{test10.png}
+	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：进入 3D 定制页面后的加载完成状态（按表~\ref{tab:testcase-customize-load} 步骤1--2）。截图需能看见 3D 服装模型已渲染完成，且无贴图错位/缺失。}}
 	\caption{模型广场展示}
 	\label{fig:test-model-square}
 \end{figure}
@@ -1289,18 +1296,18 @@ AI 虚拟试穿模块采用异步任务架构，服务端由”任务创建接�
 	\end{tabularx}
 \end{table}
 
-模型选择与编辑成功效果分别如图~\ref{fig:test-model-select}、图~\ref{fig:test-model-edit}所示。
+按表~\ref{tab:testcase-style-config} 的步骤进行测试：切换不同服装款式并调整颜色、材质、图案等参数，观察 3D 视图是否实时更新；对边界输入进行验证，检查非法输入拦截或限制策略。测试结果与期望一致：属性变更能够即时反映到模型，显示效果与选择项一致；参数边界限制合理。为证明款式切换与属性编辑效果，图~\ref{fig:test-model-select}需展示款式切换前后（或不同款式列表选择）的页面，图~\ref{fig:test-model-edit}需展示至少一项属性（如颜色/材质/图案）变更后 3D 模型外观发生对应变化的页面。
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth]{test7.png}
+	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：款式选择验证（按表~\ref{tab:testcase-style-config} 步骤1）。截图需能看见款式/模型列表选择状态，以及 3D 预览区域对应切换后的模型外观。}}
 	\caption{模型选择展示}
 	\label{fig:test-model-select}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth]{test6.png}
+	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：属性编辑成功验证（按表~\ref{tab:testcase-style-config} 步骤2）。截图需同时包含“参数面板选项（颜色/材质/图案等）”与“3D 模型外观变化结果”，以证明选择项与模型展示一致。}}
 	\caption{模型编辑成功展示}
 	\label{fig:test-model-edit}
 \end{figure}
@@ -1319,16 +1326,16 @@ AI 虚拟试穿模块采用异步任务架构，服务端由”任务创建接�
 		\toprule
 		\textbf{\mbox{用例ID}} & \textbf{\mbox{前置条件}} & \textbf{\mbox{测试步骤}} & \textbf{\mbox{期望结果}} \\
 		\midrule
-		\mbox{005} & 模型可交互。 & 1. 测试旋转、缩放、平移、重置视角等交互；\newline 2. 切换不同视角，检查渲染是否稳定、帧率是否可接受；\newline 3. 在不同分辨率下查看布局是否错位。 & 1. 交互响应顺畅；重置视角可恢复默认状态；\newline 2. 关键组件（按钮/面板）不遮挡核心操作，布局自适应正常。 \\
+		\mbox{005} & 模型可交互。 & 1. 测试旋转、缩放等交互；\newline 2. 切换不同视角，检查渲染是否稳定、帧率是否可接受；\newline 3. 在不同分辨率下查看布局是否错位。 & 1. 交互响应顺畅；重置视角可恢复默认状态；\newline 2. 关键组件（按钮/面板）不遮挡核心操作，布局自适应正常。 \\
 		\bottomrule
 	\end{tabularx}
 \end{table}
 
-模型交互展示如图~\ref{fig:test-model-interaction}所示。
+按表~\ref{tab:testcase-3d-interaction} 的步骤进行测试：对模型执行旋转、缩放等操作，并在不同分辨率下检查布局自适应与交互可用性。测试结果与期望一致：交互响应顺畅，重置视角可恢复默认状态；关键按钮与面板不遮挡核心操作区域，页面布局自适应正常。为证明 3D 交互与预览效果，图~\ref{fig:test-model-interaction}需展示一次交互后的模型视角变化以及视角重置/交互控件区域（可在截图中体现当前视角与默认视角的差异）。
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth]{test5.png}
+	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：3D 交互验证（按表~\ref{tab:testcase-3d-interaction} 步骤1）。截图建议能体现模型已被旋转/缩放后的视角变化，并同时包含“重置视角”等关键交互按钮或控制提示。}}
 	\caption{模型交互展示}
 	\label{fig:test-model-interaction}
 \end{figure}
@@ -1352,11 +1359,11 @@ AI 虚拟试穿模块采用异步任务架构，服务端由”任务创建接�
 	\end{tabularx}
 \end{table}
 
-作品状态展示如图~\ref{fig:test-work-status-3d}所示。
+按表~\ref{tab:testcase-plan-save} 的步骤进行测试：完成一组定制参数后执行保存，随后进入“我的作品”核对列表是否新增记录、参数是否可正确回显；再对记录进行编辑或删除，检查更新是否正确且不影响其他记录。测试结果与期望一致：保存成功提示明确；保存记录可查询并正确回显；编辑/删除操作生效且数据一致。为证明方案保存与后续流转结果，图~\ref{fig:test-work-status-3d}需展示“我的作品”列表中的新增记录及其状态（如草稿/待审核等）或回显页面，以证明保存动作生效。
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth]{test8.png}
+	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：方案保存后的作品状态验证（按表~\ref{tab:testcase-plan-save} 步骤1--2）。截图需包含保存成功提示或“我的作品”列表中新增条目（含标题、状态、更新时间等信息）。}}
 	\caption{作品状态展示}
 	\label{fig:test-work-status-3d}
 \end{figure}
@@ -1384,11 +1391,11 @@ AI 虚拟试穿模块主要覆盖“输入准备—提交生成—结果展示�
 	\end{tabularx}
 \end{table}
 
-AI 试穿创建任务页面如图~\ref{fig:test-ai-create}所示。
+按表~\ref{tab:testcase-tryon-create} 的步骤进行测试：在作品详情页选择模特性别与场景等参数后提交试穿任务，观察任务状态展示与按钮防重复提交策略。测试结果与期望一致：提交后显示排队/生成中等任务状态，且按钮置灰或提示避免重复提交。为证明任务创建与状态展示，图~\ref{fig:test-ai-create}需展示作品详情页中“试穿参数选择 + 提交按钮 + 提交后的任务状态/按钮置灰效果”。
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth]{test9.png}
+	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：试穿任务创建验证（按表~\ref{tab:testcase-tryon-create} 步骤1--2）。截图需包含模特性别/场景等选项，以及点击“开始试穿/生成”后显示的任务状态（排队/生成中）与防重复提交表现（按钮置灰/提示）。}}
 	\caption{AI 试穿创建任务展示}
 	\label{fig:test-ai-create}
 \end{figure}
@@ -1412,11 +1419,11 @@ AI 试穿创建任务页面如图~\ref{fig:test-ai-create}所示。
 	\end{tabularx}
 \end{table}
 
-AI 生成结果如图~\ref{fig:test-ai-result}所示。
+按表~\ref{tab:testcase-tryon-result} 的步骤进行测试：观察生成进度提示与历史记录展示，等待生成完成后查看试穿图，并验证下载或再次生成等操作可用性。测试结果与期望一致：生成完成后页面能够自动刷新或提供明确入口，结果可预览与下载；失败时具备可理解的错误提示。为证明生成过程与结果展示，图~\ref{fig:test-ai-result}需展示“生成完成状态 + 试穿图预览区域（含下载/再次生成等操作入口）”，以体现结果可用且符合预期。
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth]{AI2.png}
+	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：AI 试穿结果展示验证（按表~\ref{tab:testcase-tryon-result} 步骤1--3）。截图需包含任务状态为“已完成”的标识，以及试穿结果图的预览与下载（或保存）入口。}}
 	\caption{AI 试穿生成结果}
 	\label{fig:test-ai-result}
 \end{figure}
@@ -1444,11 +1451,11 @@ AI 生成结果如图~\ref{fig:test-ai-result}所示。
 	\end{tabularx}
 \end{table}
 
-创意广场展示如图~\ref{fig:test-creative-square}所示。
+按表~\ref{tab:testcase-square-browse} 的步骤进行测试：进入创意广场浏览推荐/最新等列表，进行分页加载并检查重复数据与加载提示；随后进入任意作品详情查看图片/作者信息/标签等内容。测试结果与期望一致：列表加载顺序与规则正确，详情信息与列表项一致；资源加载失败时有占位与重试，不影响主流程。为证明“列表浏览—进入详情”的关键步骤，图~\ref{fig:test-creative-square}需展示创意广场列表页以及进入作品详情页后的信息展示（可用两张截图拼接为一张，或在同一张截图中体现导航路径与页面状态）。
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth]{test10.png}
+	\fbox{\parbox[c][0.34\textheight][c]{0.85\textwidth}{\centering 此处插入截图：创意广场内容浏览验证（按表~\ref{tab:testcase-square-browse} 步骤1--3）。截图建议包含：1) 创意广场列表（推荐/最新等）；2) 任意作品详情（作者信息、标签、图片/3D 展示区域等）。}}
 	\caption{创意广场展示}
 	\label{fig:test-creative-square}
 \end{figure}
@@ -1472,11 +1479,11 @@ AI 生成结果如图~\ref{fig:test-ai-result}所示。
 	\end{tabularx}
 \end{table}
 
-搜索加载展示如图~\ref{fig:test-search}所示。
+按表~\ref{tab:testcase-square-search} 的步骤进行测试：使用关键词进行搜索，组合标签/风格/时间等筛选条件并观察列表更新，再清空筛选条件检查是否恢复默认列表。测试结果与期望一致：搜索结果与筛选条件匹配，条件切换后列表更新及时且不出现条件叠加错误。为证明搜索、筛选与排序的过程与结果，图~\ref{fig:test-search}需展示“关键词输入 + 筛选条件选择 + 结果列表更新”的页面状态（建议截图中同时包含筛选条件区域与结果列表区域）。
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth]{test12.png}
+	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：搜索/筛选验证（按表~\ref{tab:testcase-square-search} 步骤1--3）。截图需包含已输入的关键词、已选中的筛选条件（如标签/风格/时间等）以及更新后的结果列表，以证明条件与结果一致。}}
 	\caption{搜索加载展示}
 	\label{fig:test-search}
 \end{figure}
@@ -1500,18 +1507,18 @@ AI 生成结果如图~\ref{fig:test-ai-result}所示。
 	\end{tabularx}
 \end{table}
 
-作品交互与作者主页页面分别如图~\ref{fig:test-work-interaction}、图~\ref{fig:test-author-home}所示。
+按表~\ref{tab:testcase-square-interact} 的步骤进行测试：对作品执行点赞、收藏、评论、分享、关注作者等互动操作，并验证取消点赞/取消关注等反向操作的状态回滚；刷新页面后检查状态是否仍保持一致。测试结果与期望一致：互动状态即时更新且刷新后保持一致；不允许的操作能够给出明确提示。为证明互动与反馈行为可用，图~\ref{fig:test-work-interaction}需展示作品详情页中的互动按钮状态变化（例如点赞前后或评论提交成功提示），图~\ref{fig:test-author-home}需展示关注作者后作者主页信息与关注状态展示（或取消关注后的状态回滚）。
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth]{test13.png}
+	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：作品互动验证（按表~\ref{tab:testcase-square-interact} 步骤1--2）。截图建议体现点赞/收藏/评论等操作后的状态变化或成功提示（例如点赞变为已点赞、收藏变为已收藏、评论发布成功提示等）。}}
 	\caption{作品交互展示}
 	\label{fig:test-work-interaction}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth]{test14.png}
+	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：作者主页与关注状态验证（按表~\ref{tab:testcase-square-interact} 步骤1--2）。截图建议体现关注作者后的主页展示与关注状态（或取消关注后的状态回滚），以证明互动结果可持久化。}}
 	\caption{作者主页展示}
 	\label{fig:test-author-home}
 \end{figure}
@@ -1539,11 +1546,11 @@ AI 生成结果如图~\ref{fig:test-ai-result}所示。
 	\end{tabularx}
 \end{table}
 
-“我的作品”展示如图~\ref{fig:test-mywork}所示。
+按表~\ref{tab:testcase-work-create} 的步骤进行测试：在“我的作品”中新建作品并保存为草稿，随后提交审核并检查列表中是否可见该作品且回显信息一致。测试结果与期望一致：必填字段校验准确；保存成功后列表可见新作品；回显内容与保存内容一致。为证明作品创建与保存结果，图~\ref{fig:test-mywork}需展示“我的作品”列表中的新建作品条目及其状态（草稿/待审核等），并能看见该条目的标题、更新时间等信息。
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth]{mywork.png}
+	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：作品创建与保存验证（按表~\ref{tab:testcase-work-create} 步骤1--2）。截图需包含“我的作品”列表中的新建作品条目（含状态/更新时间等），以及保存成功提示或回显信息。}}
 	\caption{我的作品展示}
 	\label{fig:test-mywork}
 \end{figure}
@@ -1567,11 +1574,11 @@ AI 生成结果如图~\ref{fig:test-ai-result}所示。
 	\end{tabularx}
 \end{table}
 
-作品状态展示如图~\ref{fig:test-work-publish-status}所示。
+按表~\ref{tab:testcase-work-publish} 的步骤进行测试：编辑作品信息并保存，发布作品到创意广场并在广场侧确认可见性；执行撤回/下架后验证广场端不可见且个人端状态正确。测试结果与期望一致：发布状态切换正确，不同状态下可执行的操作按钮与权限一致。为证明发布与撤回状态流转，图~\ref{fig:test-work-publish-status}需展示作品在不同状态下的管理页面（如草稿/已发布/已下架），以及对应的操作按钮或状态标识。
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth]{test15.png}
+	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：作品发布/撤回状态流转验证（按表~\ref{tab:testcase-work-publish} 步骤1--3）。截图建议体现状态从“草稿”切换到“已发布”（或撤回后“已下架”）的页面，并包含状态标签与可用操作按钮。}}
 	\caption{作品状态展示}
 	\label{fig:test-work-publish-status}
 \end{figure}
@@ -1599,18 +1606,18 @@ AI 生成结果如图~\ref{fig:test-ai-result}所示。
 	\end{tabularx}
 \end{table}
 
-后台登录拦截与登录成功页面分别如图~\ref{fig:test-admin-block}、图~\ref{fig:test-admin-login-success}所示。
+按表~\ref{tab:testcase-admin-login} 的步骤进行测试：使用管理员账号登录后台，随后使用普通用户账号尝试访问后台路由验证访问限制；退出登录后再次访问后台页面验证会话失效。测试结果与期望一致：仅管理员可访问后台；非管理员访问会被拦截并提示无权限或跳转登录；退出后再次访问需要重新认证。为证明权限控制与登录效果，图~\ref{fig:test-admin-block}需展示普通用户访问后台被拦截的提示或跳转页面，图~\ref{fig:test-admin-login-success}需展示管理员登录成功后的后台首页或管理页面。
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth]{test16.png}
+	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：后台访问拦截验证（按表~\ref{tab:testcase-admin-login} 步骤2--3）。截图需体现普通用户访问后台时的拦截效果（无权限提示/跳转登录）或退出登录后的会话失效提示。}}
 	\caption{后台登录拦截展示}
 	\label{fig:test-admin-block}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth]{test17.png}
+	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：管理员登录成功验证（按表~\ref{tab:testcase-admin-login} 步骤1）。截图需展示后台管理端首页或任一管理页面，并可体现管理员身份与可用菜单。}}
 	\caption{后台登录成功展示}
 	\label{fig:test-admin-login-success}
 \end{figure}
@@ -1634,18 +1641,18 @@ AI 生成结果如图~\ref{fig:test-ai-result}所示。
 	\end{tabularx}
 \end{table}
 
-用户列表与修改用户信息页面分别如图~\ref{fig:test-admin-user-list}、图~\ref{fig:test-admin-user-edit}所示。
+按表~\ref{tab:testcase-admin-user} 的步骤进行测试：在后台查询用户列表并执行修改信息/重置密码/删除等管理动作，观察操作结果提示与列表刷新情况。测试结果与期望一致：管理操作具备二次确认与结果提示，列表状态刷新正确且数据一致。为证明用户管理操作可用，图~\ref{fig:test-admin-user-list}需展示用户列表页面（含查询条件/分页等），图~\ref{fig:test-admin-user-edit}需展示修改用户信息表单与提交成功提示（或修改后列表回显变化）。
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth]{test17.png}
+	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：后台用户列表查询验证（按表~\ref{tab:testcase-admin-user} 步骤1）。截图需包含用户列表与分页/查询条件，能体现数据加载正常。}}
 	\caption{用户列表展示}
 	\label{fig:test-admin-user-list}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth]{test18.png}
+	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：修改用户信息验证（按表~\ref{tab:testcase-admin-user} 步骤2）。截图需包含用户编辑弹窗/页面与提交成功提示，或修改后列表中对应字段已更新的回显。}}
 	\caption{修改用户信息展示}
 	\label{fig:test-admin-user-edit}
 \end{figure}
@@ -1669,11 +1676,11 @@ AI 生成结果如图~\ref{fig:test-ai-result}所示。
 	\end{tabularx}
 \end{table}
 
-审核作品页面如图~\ref{fig:test-admin-review}所示。
+按表~\ref{tab:testcase-admin-review} 的步骤进行测试：在后台对待审核作品执行通过、驳回或下架操作，并检查前台展示变化与审核状态一致性。测试结果与期望一致：审核状态与前台可见性保持一致；如系统支持驳回原因记录，则作者侧可见。为证明作品审核结果生效，图~\ref{fig:test-admin-review}需展示后台审核页面中作品状态变化（通过/驳回/下架）以及操作结果提示（必要时可配合前台可见性变化的对比截图拼接）。
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth]{test19.png}
+	\fbox{\parbox[c][0.34\textheight][c]{0.85\textwidth}{\centering 此处插入截图：后台作品审核验证（按表~\ref{tab:testcase-admin-review} 步骤1）。截图需体现对某作品执行通过/驳回/下架后的状态变化与结果提示；如需证明前台变化，可将前台对应作品可见性变化截图与本图拼接。}}
 	\caption{审核作品展示}
 	\label{fig:test-admin-review}
 \end{figure}
@@ -1697,18 +1704,18 @@ AI 生成结果如图~\ref{fig:test-ai-result}所示。
 	\end{tabularx}
 \end{table}
 
-模型列表与上传模型页面分别如图~\ref{fig:test-model-list}、图~\ref{fig:test-model-upload}所示。
+按表~\ref{tab:testcase-admin-model} 的步骤进行测试：查询模型列表并上传模型信息，检查上传成功后列表是否可见新增模型记录。测试结果与期望一致：模型列表能够显示上传的模型信息，上传成功提示明确且新增条目可在列表中查询到。为证明模型管理功能可用，图~\ref{fig:test-model-list}需展示上传前/后模型列表（或列表中新增模型条目），图~\ref{fig:test-model-upload}需展示上传模型表单与提交成功反馈。
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth]{test20.png}
+	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：后台模型列表验证（按表~\ref{tab:testcase-admin-model} 步骤1）。截图需包含模型列表与新增模型条目（如已上传），以证明列表查询与数据展示正常。}}
 	\caption{模型列表展示}
 	\label{fig:test-model-list}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth]{test21.png}
+	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：上传模型验证（按表~\ref{tab:testcase-admin-model} 步骤2）。截图需包含上传模型表单（名称/分类/文件等关键字段）与提交成功提示，或上传后返回列表可见新增条目。}}
 	\caption{上传模型展示}
 	\label{fig:test-model-upload}
 \end{figure}

@@ -97,17 +97,19 @@ flowchart TB
 模块流程图：
 
 ```mermaid
-flowchart TD
-  S[开始] --> M1[选择基础模型]
-  M1 --> M2[加载模型/材质资源]
-  M2 --> M3[Three.js 渲染预览]
-  M3 --> M4[调整颜色/材质/图案]
+%%{init: {'flowchart': {'nodeSpacing': 18, 'rankSpacing': 18, 'padding': 6}, 'themeVariables': {'fontSize': '12px'}} }%%
+flowchart TB
+  S([开始]) --> M1[选择基础模型]
+  M1 --> M2[加载模型与材质]
+  M2 --> M3[渲染预览]
+  M3 --> M4[调整参数<br/>颜色/材质/图案]
   M4 --> M3
-  M3 --> Save{保存草稿/版本?}
-  Save -- 否 --> End[结束]
-  Save -- 是 --> P[序列化配置参数]
+  M3 --> D{保存草稿/版本?}
+  D -- 否 --> E([结束])
+  D -- 是 --> P[序列化配置参数]
   P --> API[调用后端保存接口]
-  API --> Ok[保存成功/返回版本信息] --> End
+  API --> OK[返回版本信息]
+  OK --> E
 ```
 
 #### 4.2.3 AI 虚拟试穿模块
