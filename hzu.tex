@@ -402,7 +402,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 	\label{fig:aiModule}
 \end{figure}
 
-模块流程描述：用户在前端选择模特体型与场景风格后提交生成请求；后端创建任务写入队列并返回任务 ID；前端基于任务 ID 查询进度；任务执行模块消费队列调用外部 AI，生成完成后上传结果文件并写入版本数据，更新任务状态；前端获取到完成状态后展示试穿图并允许用户保存。
+模块流程描述：用户在前端选择模特与场景风格后提交生成请求；后端创建任务写入队列并返回任务 ID；前端基于任务 ID 查询进度；任务执行模块消费队列调用外部 AI，生成完成后上传结果文件并写入版本数据，更新任务状态；前端获取到完成状态后展示试穿图并允许用户保存。
 
 模块流程图如图~\ref{fig:aiModuleFlow} 所示。
 
@@ -859,6 +859,7 @@ tryon\_tasks 表结构如表~\ref{tab:tryon-tasks} 所示。
 \texttt{task\_id} & \texttt{varchar(64)} & \texttt{NOT NULL, UNIQUE uk\_task\_id(task\_id)} & 业务任务号 \\
 \texttt{work\_id} & \texttt{bigint(20) UNSIGNED} & \texttt{NOT NULL, KEY idx\_work\_id(work\_id)} & 关联作品 ID \\
 \texttt{user\_id} & \texttt{bigint(20) UNSIGNED} & \texttt{NOT NULL, KEY idx\_user\_id(user\_id)} & 发起用户 ID \\
+\texttt{gender} & \texttt{varchar(64)} & \texttt{NOT NULL, DEFAULT ''} & 性别 \\
 \texttt{body\_type} & \texttt{varchar(64)} & \texttt{NOT NULL, DEFAULT ''} & 体型参数 \\
 \texttt{scene\_style} & \texttt{varchar(64)} & \texttt{NOT NULL, DEFAULT ''} & 场景风格 \\
 \texttt{input\_refs} & \texttt{json} & \texttt{NOT NULL} & 输入参考数据 \\
@@ -1194,18 +1195,18 @@ AI 虚拟试穿模块采用异步任务架构，服务端由”任务创建接�
 	\end{tabularx}
 \end{table}
 
-按表~\ref{tab:testcase-register-login} 的步骤进行测试：先在注册页输入合法信息完成注册，再使用新账号登录并验证页面跳转与登录态展示；随后退出登录并再次登录，验证会话保持与登录态恢复逻辑。测试结果与期望一致：账号不存在、密码错误等异常输入能够给出明确提示；认证通过后能够正确跳转并展示登录态页面内容。为证明失败与成功两类关键结果，图~\ref{fig:test-login-fail}需展示登录失败时的提示信息，图~\ref{fig:test-login-success}需展示登录成功后的页面与会话状态。
+测试结果与期望一致：登录失败时能够给出明确原因提示；注册成功后可正常登录并保持会话状态。结果如图~\ref{fig:test-login-fail}和图~\ref{fig:test-login-success}所示。
 
 \begin{figure}[H]
 	\centering
-	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：按表~\ref{tab:testcase-register-login} 的步骤进行登录失败场景验证（例如输入不存在账号或错误密码），页面应展示清晰的失败原因提示（账号不存在/密码错误等）。}}
+	\includegraphics[width=0.85\textwidth]{test1}
 	\caption{注册与登录失败提示}
 	\label{fig:test-login-fail}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：按表~\ref{tab:testcase-register-login} 的步骤完成注册并使用新账号登录成功后，系统应跳转到首页/个人中心等登录态页面，并能看到用户信息或登录态标识（如头像、昵称、退出登录入口等）。}}
+	\includegraphics[width=0.85\textwidth]{test2}
 	\caption{注册与登录成功页面}
 	\label{fig:test-login-success}
 \end{figure}
@@ -1229,18 +1230,18 @@ AI 虚拟试穿模块采用异步任务架构，服务端由”任务创建接�
 	\end{tabularx}
 \end{table}
 
-按表~\ref{tab:testcase-profile} 的步骤进行测试：在个人中心修改昵称、头像或密码并保存，刷新页面或重新登录后检查数据是否持久化；修改密码后使用新密码登录验证生效；退出登录后再次访问受保护页面验证会话失效与访问拦截。测试结果与期望一致：资料保存后即时生效且刷新不丢失；非法输入会被拦截或提示；退出登录后访问受保护资源会被重定向到登录页。为证明上述过程与结果，图~\ref{fig:test-profile}需展示资料修改与保存后的个人中心页面，图~\ref{fig:test-password-check}需展示修改密码时的校验提示或修改成功反馈。
+测试结果与期望一致：个人资料修改保存后可正确回显且持久化；密码修改校验与生效正常；退出登录后受保护资源访问会被拦截并重定向登录。结果如图~\ref{fig:test-profile}和图~\ref{fig:test-password-check}所示。
 
 \begin{figure}[H]
 	\centering
-	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：个人中心资料维护验证（按表~\ref{tab:testcase-profile} 步骤1--2）。截图应包含修改后的昵称/头像等信息以及“保存成功”提示或保存后的回显效果。}}
+	\includegraphics[width=0.85\textwidth]{test3}
 	\caption{个人信息展示}
 	\label{fig:test-profile}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：修改密码校验/生效验证（按表~\ref{tab:testcase-profile} 步骤3）。可选择“旧密码错误/两次密码不一致”等校验提示，或“修改成功”提示与随后使用新密码登录成功的页面。}}
+	\includegraphics[width=0.85\textwidth]{test4}
 	\caption{修改密码校验}
 	\label{fig:test-password-check}
 \end{figure}
@@ -1268,11 +1269,11 @@ AI 虚拟试穿模块采用异步任务架构，服务端由”任务创建接�
 	\end{tabularx}
 \end{table}
 
-按表~\ref{tab:testcase-customize-load} 的步骤进行测试：从入口进入 3D 定制页面，观察模型、材质、纹理等资源加载流程与提示信息。测试结果与期望一致：加载完成后模型显示完整，无明显缺面或贴图异常；加载过程具有清晰的状态提示。为证明资源加载过程与结果，图~\ref{fig:test-model-square}需展示进入定制页面并加载完成后的 3D 模型预览画面（可同时包含加载提示区域或加载完成状态）。
+测试结果与期望一致：3D 模型及材质纹理加载完成后显示完整，无明显缺面或贴图异常，加载状态提示清晰。如图~\ref{fig:test-model-square}所示。
 
 \begin{figure}[H]
 	\centering
-	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：进入 3D 定制页面后的加载完成状态（按表~\ref{tab:testcase-customize-load} 步骤1--2）。截图需能看见 3D 服装模型已渲染完成，且无贴图错位/缺失。}}
+	\includegraphics[width=0.85\textwidth]{test5}
 	\caption{模型广场展示}
 	\label{fig:test-model-square}
 \end{figure}
@@ -1296,18 +1297,18 @@ AI 虚拟试穿模块采用异步任务架构，服务端由”任务创建接�
 	\end{tabularx}
 \end{table}
 
-按表~\ref{tab:testcase-style-config} 的步骤进行测试：切换不同服装款式并调整颜色、材质、图案等参数，观察 3D 视图是否实时更新；对边界输入进行验证，检查非法输入拦截或限制策略。测试结果与期望一致：属性变更能够即时反映到模型，显示效果与选择项一致；参数边界限制合理。为证明款式切换与属性编辑效果，图~\ref{fig:test-model-select}需展示款式切换前后（或不同款式列表选择）的页面，图~\ref{fig:test-model-edit}需展示至少一项属性（如颜色/材质/图案）变更后 3D 模型外观发生对应变化的页面。
+测试结果与期望一致：款式切换正确，颜色/材质/图案等属性修改可实时反映到 3D 模型且与选择项一致，参数边界限制合理。结果如图~\ref{fig:test-model-select}和图~\ref{fig:test-model-edit}所示。
 
 \begin{figure}[H]
 	\centering
-	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：款式选择验证（按表~\ref{tab:testcase-style-config} 步骤1）。截图需能看见款式/模型列表选择状态，以及 3D 预览区域对应切换后的模型外观。}}
+	\includegraphics[width=0.85\textwidth]{test6}
 	\caption{模型选择展示}
 	\label{fig:test-model-select}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：属性编辑成功验证（按表~\ref{tab:testcase-style-config} 步骤2）。截图需同时包含“参数面板选项（颜色/材质/图案等）”与“3D 模型外观变化结果”，以证明选择项与模型展示一致。}}
+	\includegraphics[width=0.85\textwidth]{test7}
 	\caption{模型编辑成功展示}
 	\label{fig:test-model-edit}
 \end{figure}
@@ -1331,11 +1332,11 @@ AI 虚拟试穿模块采用异步任务架构，服务端由”任务创建接�
 	\end{tabularx}
 \end{table}
 
-按表~\ref{tab:testcase-3d-interaction} 的步骤进行测试：对模型执行旋转、缩放等操作，并在不同分辨率下检查布局自适应与交互可用性。测试结果与期望一致：交互响应顺畅，重置视角可恢复默认状态；关键按钮与面板不遮挡核心操作区域，页面布局自适应正常。为证明 3D 交互与预览效果，图~\ref{fig:test-model-interaction}需展示一次交互后的模型视角变化以及视角重置/交互控件区域（可在截图中体现当前视角与默认视角的差异）。
+测试结果与期望一致：旋转、缩放等交互响应顺畅，重置视角可恢复默认状态，页面布局自适应正常。如图~\ref{fig:test-model-interaction}所示。
 
 \begin{figure}[H]
 	\centering
-	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：3D 交互验证（按表~\ref{tab:testcase-3d-interaction} 步骤1）。截图建议能体现模型已被旋转/缩放后的视角变化，并同时包含“重置视角”等关键交互按钮或控制提示。}}
+	\includegraphics[width=0.85\textwidth]{test8}
 	\caption{模型交互展示}
 	\label{fig:test-model-interaction}
 \end{figure}
@@ -1359,11 +1360,11 @@ AI 虚拟试穿模块采用异步任务架构，服务端由”任务创建接�
 	\end{tabularx}
 \end{table}
 
-按表~\ref{tab:testcase-plan-save} 的步骤进行测试：完成一组定制参数后执行保存，随后进入“我的作品”核对列表是否新增记录、参数是否可正确回显；再对记录进行编辑或删除，检查更新是否正确且不影响其他记录。测试结果与期望一致：保存成功提示明确；保存记录可查询并正确回显；编辑/删除操作生效且数据一致。为证明方案保存与后续流转结果，图~\ref{fig:test-work-status-3d}需展示“我的作品”列表中的新增记录及其状态（如草稿/待审核等）或回显页面，以证明保存动作生效。
+测试结果与期望一致：方案保存成功提示明确，保存记录可在“我的作品”列表查询并正确回显，编辑/删除后数据一致。如图~\ref{fig:test-work-status-3d}所示。
 
 \begin{figure}[H]
 	\centering
-	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：方案保存后的作品状态验证（按表~\ref{tab:testcase-plan-save} 步骤1--2）。截图需包含保存成功提示或“我的作品”列表中新增条目（含标题、状态、更新时间等信息）。}}
+	\includegraphics[width=0.85\textwidth]{test9}
 	\caption{作品状态展示}
 	\label{fig:test-work-status-3d}
 \end{figure}
@@ -1391,11 +1392,11 @@ AI 虚拟试穿模块主要覆盖“输入准备—提交生成—结果展示�
 	\end{tabularx}
 \end{table}
 
-按表~\ref{tab:testcase-tryon-create} 的步骤进行测试：在作品详情页选择模特性别与场景等参数后提交试穿任务，观察任务状态展示与按钮防重复提交策略。测试结果与期望一致：提交后显示排队/生成中等任务状态，且按钮置灰或提示避免重复提交。为证明任务创建与状态展示，图~\ref{fig:test-ai-create}需展示作品详情页中“试穿参数选择 + 提交按钮 + 提交后的任务状态/按钮置灰效果”。
+测试结果与期望一致：试穿任务提交后状态展示正常（排队/生成中），并具备防重复提交机制（按钮置灰/提示）。如图~\ref{fig:test-ai-create}所示。
 
 \begin{figure}[H]
 	\centering
-	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：试穿任务创建验证（按表~\ref{tab:testcase-tryon-create} 步骤1--2）。截图需包含模特性别/场景等选项，以及点击“开始试穿/生成”后显示的任务状态（排队/生成中）与防重复提交表现（按钮置灰/提示）。}}
+	\includegraphics[width=0.85\textwidth]{test10}
 	\caption{AI 试穿创建任务展示}
 	\label{fig:test-ai-create}
 \end{figure}
@@ -1419,11 +1420,11 @@ AI 虚拟试穿模块主要覆盖“输入准备—提交生成—结果展示�
 	\end{tabularx}
 \end{table}
 
-按表~\ref{tab:testcase-tryon-result} 的步骤进行测试：观察生成进度提示与历史记录展示，等待生成完成后查看试穿图，并验证下载或再次生成等操作可用性。测试结果与期望一致：生成完成后页面能够自动刷新或提供明确入口，结果可预览与下载；失败时具备可理解的错误提示。为证明生成过程与结果展示，图~\ref{fig:test-ai-result}需展示“生成完成状态 + 试穿图预览区域（含下载/再次生成等操作入口）”，以体现结果可用且符合预期。
+测试结果与期望一致：生成完成后试穿结果可正常预览与下载（或保存），并提供明确入口；生成失败时错误提示清晰可理解。如图~\ref{fig:test-ai-result}所示。
 
 \begin{figure}[H]
 	\centering
-	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：AI 试穿结果展示验证（按表~\ref{tab:testcase-tryon-result} 步骤1--3）。截图需包含任务状态为“已完成”的标识，以及试穿结果图的预览与下载（或保存）入口。}}
+	\includegraphics[width=0.85\textwidth]{test11}
 	\caption{AI 试穿生成结果}
 	\label{fig:test-ai-result}
 \end{figure}
@@ -1451,11 +1452,11 @@ AI 虚拟试穿模块主要覆盖“输入准备—提交生成—结果展示�
 	\end{tabularx}
 \end{table}
 
-按表~\ref{tab:testcase-square-browse} 的步骤进行测试：进入创意广场浏览推荐/最新等列表，进行分页加载并检查重复数据与加载提示；随后进入任意作品详情查看图片/作者信息/标签等内容。测试结果与期望一致：列表加载顺序与规则正确，详情信息与列表项一致；资源加载失败时有占位与重试，不影响主流程。为证明“列表浏览—进入详情”的关键步骤，图~\ref{fig:test-creative-square}需展示创意广场列表页以及进入作品详情页后的信息展示（可用两张截图拼接为一张，或在同一张截图中体现导航路径与页面状态）。
+测试结果与期望一致：创意广场列表加载顺序与展示规则正确，作品详情信息与列表项一致；资源加载异常时具备占位与重试机制，不影响主流程。如图~\ref{fig:test-creative-square}所示。
 
 \begin{figure}[H]
 	\centering
-	\fbox{\parbox[c][0.34\textheight][c]{0.85\textwidth}{\centering 此处插入截图：创意广场内容浏览验证（按表~\ref{tab:testcase-square-browse} 步骤1--3）。截图建议包含：1) 创意广场列表（推荐/最新等）；2) 任意作品详情（作者信息、标签、图片/3D 展示区域等）。}}
+	\includegraphics[width=0.85\textwidth]{test12}
 	\caption{创意广场展示}
 	\label{fig:test-creative-square}
 \end{figure}
@@ -1479,11 +1480,11 @@ AI 虚拟试穿模块主要覆盖“输入准备—提交生成—结果展示�
 	\end{tabularx}
 \end{table}
 
-按表~\ref{tab:testcase-square-search} 的步骤进行测试：使用关键词进行搜索，组合标签/风格/时间等筛选条件并观察列表更新，再清空筛选条件检查是否恢复默认列表。测试结果与期望一致：搜索结果与筛选条件匹配，条件切换后列表更新及时且不出现条件叠加错误。为证明搜索、筛选与排序的过程与结果，图~\ref{fig:test-search}需展示“关键词输入 + 筛选条件选择 + 结果列表更新”的页面状态（建议截图中同时包含筛选条件区域与结果列表区域）。
+测试结果与期望一致：关键词搜索与筛选结果匹配，条件切换后列表更新及时且不出现条件叠加错误。如图~\ref{fig:test-search}所示。
 
 \begin{figure}[H]
 	\centering
-	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：搜索/筛选验证（按表~\ref{tab:testcase-square-search} 步骤1--3）。截图需包含已输入的关键词、已选中的筛选条件（如标签/风格/时间等）以及更新后的结果列表，以证明条件与结果一致。}}
+	\includegraphics[width=0.85\textwidth]{test13}
 	\caption{搜索加载展示}
 	\label{fig:test-search}
 \end{figure}
@@ -1507,18 +1508,18 @@ AI 虚拟试穿模块主要覆盖“输入准备—提交生成—结果展示�
 	\end{tabularx}
 \end{table}
 
-按表~\ref{tab:testcase-square-interact} 的步骤进行测试：对作品执行点赞、收藏、评论、分享、关注作者等互动操作，并验证取消点赞/取消关注等反向操作的状态回滚；刷新页面后检查状态是否仍保持一致。测试结果与期望一致：互动状态即时更新且刷新后保持一致；不允许的操作能够给出明确提示。为证明互动与反馈行为可用，图~\ref{fig:test-work-interaction}需展示作品详情页中的互动按钮状态变化（例如点赞前后或评论提交成功提示），图~\ref{fig:test-author-home}需展示关注作者后作者主页信息与关注状态展示（或取消关注后的状态回滚）。
+测试结果与期望一致：点赞/收藏/评论/关注等互动状态可即时更新并在刷新后保持一致，取消操作可正确回滚；不允许的操作提示明确。结果如图~\ref{fig:test-work-interaction}和图~\ref{fig:test-author-home}所示。
 
 \begin{figure}[H]
 	\centering
-	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：作品互动验证（按表~\ref{tab:testcase-square-interact} 步骤1--2）。截图建议体现点赞/收藏/评论等操作后的状态变化或成功提示（例如点赞变为已点赞、收藏变为已收藏、评论发布成功提示等）。}}
+	\includegraphics[width=0.85\textwidth]{test14}
 	\caption{作品交互展示}
 	\label{fig:test-work-interaction}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：作者主页与关注状态验证（按表~\ref{tab:testcase-square-interact} 步骤1--2）。截图建议体现关注作者后的主页展示与关注状态（或取消关注后的状态回滚），以证明互动结果可持久化。}}
+	\includegraphics[width=0.85\textwidth]{test15}
 	\caption{作者主页展示}
 	\label{fig:test-author-home}
 \end{figure}
@@ -1546,11 +1547,11 @@ AI 虚拟试穿模块主要覆盖“输入准备—提交生成—结果展示�
 	\end{tabularx}
 \end{table}
 
-按表~\ref{tab:testcase-work-create} 的步骤进行测试：在“我的作品”中新建作品并保存为草稿，随后提交审核并检查列表中是否可见该作品且回显信息一致。测试结果与期望一致：必填字段校验准确；保存成功后列表可见新作品；回显内容与保存内容一致。为证明作品创建与保存结果，图~\ref{fig:test-mywork}需展示“我的作品”列表中的新建作品条目及其状态（草稿/待审核等），并能看见该条目的标题、更新时间等信息。
+测试结果与期望一致：必填字段校验准确，作品保存成功后可在“我的作品”列表中查看且回显信息一致，状态流转显示正常。如图~\ref{fig:test-mywork}所示。
 
 \begin{figure}[H]
 	\centering
-	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：作品创建与保存验证（按表~\ref{tab:testcase-work-create} 步骤1--2）。截图需包含“我的作品”列表中的新建作品条目（含状态/更新时间等），以及保存成功提示或回显信息。}}
+	\includegraphics[width=0.85\textwidth]{test16}
 	\caption{我的作品展示}
 	\label{fig:test-mywork}
 \end{figure}
@@ -1574,11 +1575,11 @@ AI 虚拟试穿模块主要覆盖“输入准备—提交生成—结果展示�
 	\end{tabularx}
 \end{table}
 
-按表~\ref{tab:testcase-work-publish} 的步骤进行测试：编辑作品信息并保存，发布作品到创意广场并在广场侧确认可见性；执行撤回/下架后验证广场端不可见且个人端状态正确。测试结果与期望一致：发布状态切换正确，不同状态下可执行的操作按钮与权限一致。为证明发布与撤回状态流转，图~\ref{fig:test-work-publish-status}需展示作品在不同状态下的管理页面（如草稿/已发布/已下架），以及对应的操作按钮或状态标识。
+测试结果与期望一致：作品发布、撤回/下架等状态切换正确，不同状态下可执行操作与权限匹配且展示一致。如图~\ref{fig:test-work-publish-status}所示。
 
 \begin{figure}[H]
 	\centering
-	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：作品发布/撤回状态流转验证（按表~\ref{tab:testcase-work-publish} 步骤1--3）。截图建议体现状态从“草稿”切换到“已发布”（或撤回后“已下架”）的页面，并包含状态标签与可用操作按钮。}}
+	\includegraphics[width=0.85\textwidth]{test17}
 	\caption{作品状态展示}
 	\label{fig:test-work-publish-status}
 \end{figure}
@@ -1606,18 +1607,18 @@ AI 虚拟试穿模块主要覆盖“输入准备—提交生成—结果展示�
 	\end{tabularx}
 \end{table}
 
-按表~\ref{tab:testcase-admin-login} 的步骤进行测试：使用管理员账号登录后台，随后使用普通用户账号尝试访问后台路由验证访问限制；退出登录后再次访问后台页面验证会话失效。测试结果与期望一致：仅管理员可访问后台；非管理员访问会被拦截并提示无权限或跳转登录；退出后再次访问需要重新认证。为证明权限控制与登录效果，图~\ref{fig:test-admin-block}需展示普通用户访问后台被拦截的提示或跳转页面，图~\ref{fig:test-admin-login-success}需展示管理员登录成功后的后台首页或管理页面。
+测试结果与期望一致：仅管理员可访问后台管理端，非管理员访问会被拦截并提示无权限或跳转登录；退出后会话失效需重新认证。结果如图~\ref{fig:test-admin-block}和图~\ref{fig:test-admin-login-success}所示。
 
 \begin{figure}[H]
 	\centering
-	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：后台访问拦截验证（按表~\ref{tab:testcase-admin-login} 步骤2--3）。截图需体现普通用户访问后台时的拦截效果（无权限提示/跳转登录）或退出登录后的会话失效提示。}}
+	\includegraphics[width=0.85\textwidth]{test18}
 	\caption{后台登录拦截展示}
 	\label{fig:test-admin-block}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：管理员登录成功验证（按表~\ref{tab:testcase-admin-login} 步骤1）。截图需展示后台管理端首页或任一管理页面，并可体现管理员身份与可用菜单。}}
+	\includegraphics[width=0.85\textwidth]{test19}
 	\caption{后台登录成功展示}
 	\label{fig:test-admin-login-success}
 \end{figure}
@@ -1641,18 +1642,18 @@ AI 虚拟试穿模块主要覆盖“输入准备—提交生成—结果展示�
 	\end{tabularx}
 \end{table}
 
-按表~\ref{tab:testcase-admin-user} 的步骤进行测试：在后台查询用户列表并执行修改信息/重置密码/删除等管理动作，观察操作结果提示与列表刷新情况。测试结果与期望一致：管理操作具备二次确认与结果提示，列表状态刷新正确且数据一致。为证明用户管理操作可用，图~\ref{fig:test-admin-user-list}需展示用户列表页面（含查询条件/分页等），图~\ref{fig:test-admin-user-edit}需展示修改用户信息表单与提交成功提示（或修改后列表回显变化）。
+测试结果与期望一致：用户列表查询正常，修改信息等管理操作具备二次确认与结果提示，列表刷新与数据回显一致。结果如图~\ref{fig:test-admin-user-list}和图~\ref{fig:test-admin-user-edit}所示。
 
 \begin{figure}[H]
 	\centering
-	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：后台用户列表查询验证（按表~\ref{tab:testcase-admin-user} 步骤1）。截图需包含用户列表与分页/查询条件，能体现数据加载正常。}}
+	\includegraphics[width=0.85\textwidth]{test20}
 	\caption{用户列表展示}
 	\label{fig:test-admin-user-list}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：修改用户信息验证（按表~\ref{tab:testcase-admin-user} 步骤2）。截图需包含用户编辑弹窗/页面与提交成功提示，或修改后列表中对应字段已更新的回显。}}
+	\includegraphics[width=0.85\textwidth]{test21}
 	\caption{修改用户信息展示}
 	\label{fig:test-admin-user-edit}
 \end{figure}
@@ -1676,11 +1677,11 @@ AI 虚拟试穿模块主要覆盖“输入准备—提交生成—结果展示�
 	\end{tabularx}
 \end{table}
 
-按表~\ref{tab:testcase-admin-review} 的步骤进行测试：在后台对待审核作品执行通过、驳回或下架操作，并检查前台展示变化与审核状态一致性。测试结果与期望一致：审核状态与前台可见性保持一致；如系统支持驳回原因记录，则作者侧可见。为证明作品审核结果生效，图~\ref{fig:test-admin-review}需展示后台审核页面中作品状态变化（通过/驳回/下架）以及操作结果提示（必要时可配合前台可见性变化的对比截图拼接）。
+测试结果与期望一致：作品审核通过/驳回/下架等操作生效，审核状态与前台可见性保持一致（如支持驳回原因记录，作者侧可见）。如图~\ref{fig:test-admin-review}所示。
 
 \begin{figure}[H]
 	\centering
-	\fbox{\parbox[c][0.34\textheight][c]{0.85\textwidth}{\centering 此处插入截图：后台作品审核验证（按表~\ref{tab:testcase-admin-review} 步骤1）。截图需体现对某作品执行通过/驳回/下架后的状态变化与结果提示；如需证明前台变化，可将前台对应作品可见性变化截图与本图拼接。}}
+	\includegraphics[width=0.85\textwidth]{test22}
 	\caption{审核作品展示}
 	\label{fig:test-admin-review}
 \end{figure}
@@ -1704,18 +1705,18 @@ AI 虚拟试穿模块主要覆盖“输入准备—提交生成—结果展示�
 	\end{tabularx}
 \end{table}
 
-按表~\ref{tab:testcase-admin-model} 的步骤进行测试：查询模型列表并上传模型信息，检查上传成功后列表是否可见新增模型记录。测试结果与期望一致：模型列表能够显示上传的模型信息，上传成功提示明确且新增条目可在列表中查询到。为证明模型管理功能可用，图~\ref{fig:test-model-list}需展示上传前/后模型列表（或列表中新增模型条目），图~\ref{fig:test-model-upload}需展示上传模型表单与提交成功反馈。
+测试结果与期望一致：模型列表查询正常，上传模型成功提示明确，新增条目可在列表中正确显示与查询。结果如图~\ref{fig:test-model-list}和图~\ref{fig:test-model-upload}所示。
 
 \begin{figure}[H]
 	\centering
-	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：后台模型列表验证（按表~\ref{tab:testcase-admin-model} 步骤1）。截图需包含模型列表与新增模型条目（如已上传），以证明列表查询与数据展示正常。}}
+	\includegraphics[width=0.85\textwidth]{test23}
 	\caption{模型列表展示}
 	\label{fig:test-model-list}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\fbox{\parbox[c][0.32\textheight][c]{0.85\textwidth}{\centering 此处插入截图：上传模型验证（按表~\ref{tab:testcase-admin-model} 步骤2）。截图需包含上传模型表单（名称/分类/文件等关键字段）与提交成功提示，或上传后返回列表可见新增条目。}}
+	\includegraphics[width=0.85\textwidth]{test24}
 	\caption{上传模型展示}
 	\label{fig:test-model-upload}
 \end{figure}
