@@ -11,6 +11,7 @@
 \usepackage{array}
 \usepackage{makecell}
 \usepackage{ragged2e}
+\usepackage{needspace} % 控制“如图所示”与下方图片尽量同页
 \usepackage{xurl} % 关键：URL自动换行
 \usepackage{seqsplit} % 长字符串换行
 
@@ -36,7 +37,7 @@
 \begin{abstract}
 随着数字时尚和个性化表达需求的增长，传统的服装设计模式存在显著的“高门槛”与“体验断层”问题。一方面，普通用户虽然拥有丰富的穿搭创意，但难以将脑海中的创意具像化；另一方面，现有的在线服装设计工具大多停留在平面的、抽象的版型拼接，用户无法直观感知服装设计完成后的真实穿着效果与环境氛围。这种“所想”与“所见”之间的鸿沟，极大的抑制了用户的创作积极性与分享欲望。
 
-本文研究基于Three.js，设计了一套融合3D定制和AI试穿的服装创意分享平台及对应的后台管理系统。用户可以在平台上实时预览自己的设计，与其他用户分享自己的创作，同时可以通过AI生图功能，了解定制服装的真实穿着效果。
+本文研究基于Three.js，设计了一套融合3D定制和AI试穿的服装创意分享平台及对应的后台管理系统。用户可以在平台上实时预览自己的设计，与其他用户分享自己的创作，同时可以通过AI生图功能，体验定制服装的真实穿着效果。
 
 \keywords{Three.js框架；3D定制；AI试穿；服装创意分享}
 \end{abstract}
@@ -70,12 +71,12 @@ This thesis designs and implements a fashion creativity sharing platform and a c
 \section{主要研究内容}
 本课题旨在设计并实现一个融合 3D 定制和 AI 试穿的服装创意分享平台，主要研究内容包括以下六个方面：
 \begin{enumerate}[label=(\arabic*)]
-	\item \textbf{多角色用户体系构建} 设计并实现普通用户与系统管理员的双重角色权限体系。普通用户拥有创意设计、作品管理、社区互动等权限；系统管理员负责平台内容审核、基础数据维护和用户管理等功能，保障平台的良性运营。
-	\item \textbf{3D 服装可视化定制模块} 基于 Web3D 技术（主要采用 Three.js 框架）实现服装模型的实时渲染展示，支持用户对服装款式、颜色、材质、图案等参数进行个性化编辑与定制。研究 3D 模型在浏览器端的高效加载、实时渲染和交互响应技术，确保用户获得流畅的定制体验。
-	\item \textbf{AI 虚拟试穿生成模块} 接入 AI 图像生成服务，实现“3D 模型转真人试穿图”的核心功能\cite{detailed_garment_recovery}。将用户定制的 3D 服装模型作为条件输入，引导 AI 生成高保真的真人上身效果预览图像，填补 3D 模型与真实穿搭效果之间的视觉鸿沟。
-	\item \textbf{创意广场与社区互动模块} 构建服装创意分享广场，支持用户发布自己的设计作品，并实现点赞、收藏、评论等社区互动功能。促进用户间的灵感交流与创意碰撞，打破单机创作的孤岛效应。
-	\item \textbf{数字资产与作品管理模块} 实现用户对个人创作作品（从 3D 草稿到 AI 成图）的完整生命周期管理，支持作品的保存、修改、版本控制和公开展示。研究数字服装资产的存储结构和元数据标准，确保创作成果的完整留存。
-	\item \textbf{系统后台管理模块} 实现管理员对用户数据、创意作品内容、3D 基础模型库的统一维护与管理。提供可视化的数据管理界面，支持内容的审核、模型的管理和用户信息配置等功能。
+	\item \textbf{多角色用户体系构建}。设计并实现普通用户与系统管理员的双重角色权限体系。普通用户拥有创意设计、作品管理、社区互动等权限；系统管理员负责平台内容审核、基础数据维护和用户管理等功能，保障平台的良性运营。
+	\item \textbf{3D 服装可视化定制模块}。 基于 Web3D 技术（主要采用 Three.js 框架）实现服装模型的实时渲染展示，支持用户对服装款式、颜色、材质、图案等参数进行个性化编辑与定制。研究 3D 模型在浏览器端的高效加载、实时渲染和交互响应技术，确保用户获得流畅的定制体验。
+	\item \textbf{AI 虚拟试穿生成模块}。 接入 AI 图像生成服务，实现“3D 模型转真人试穿图”的核心功能\cite{detailed_garment_recovery}。将用户定制的 3D 服装模型作为条件输入，引导 AI 生成高保真的真人上身效果预览图像，填补 3D 模型与真实穿搭效果之间的视觉鸿沟。
+	\item \textbf{创意广场与社区互动模块}。 构建服装创意分享广场，支持用户发布自己的设计作品，并实现点赞、收藏、评论等社区互动功能。促进用户间的灵感交流与创意碰撞，打破单机创作的孤岛效应。
+	\item \textbf{数字资产与作品管理模块}。 实现用户对个人创作作品（从 3D 草稿到 AI 成图）的完整生命周期管理，支持作品的保存、修改、版本控制和公开展示。研究数字服装资产的存储结构和元数据标准，确保创作成果的完整留存。
+	\item \textbf{系统后台管理模块}。 实现管理员对用户数据、创意作品内容、3D 基础模型库的统一维护与管理。提供可视化的数据管理界面，支持内容的审核、模型的管理和用户信息配置等功能。
 \end{enumerate}
 
 \section{主要解决的问题}
@@ -129,7 +130,7 @@ Redis 是开源的高性能键值存储数据库\cite{redis_docs}，支持 Strin
 
 普通用户是平台的主要服务对象，涵盖服装设计爱好者、时尚博主、支持模型定制服装的商家，或想表达创意的一般消费者。该类用户无需专业设计背景，通过平台提供的可视化工具完成服装创意表达。
 
-普通用户用例图如图~\ref{fig:usecase-user} 所示。
+普通用户围绕“创作—生成—发布—互动”的业务闭环开展操作：用户完成注册登录后，可在平台进行 3D 服装定制与 AI 虚拟试穿生成，随后对作品进行发布与个人作品管理，并在创意广场对他人作品进行浏览、点赞、评论与收藏等互动行为。普通用户用例图如图~\ref{fig:usecase-user} 所示。
 
 \begin{figure}[H]
 	\centering
@@ -138,7 +139,7 @@ Redis 是开源的高性能键值存储数据库\cite{redis_docs}，支持 Strin
 	\label{fig:usecase-user}
 \end{figure}
 
-选择普通用户中的关键用例进行用例规约编写，如表~\ref{tab:usecase-user} 所示。
+为便于后续模块设计与接口实现，选取普通用户中的关键用例进行用例规约编写，规约内容包含前置条件、基本流程、异常处理与后置条件等要素，用于明确业务边界与异常场景，如表~\ref{tab:usecase-user} 所示。
 
 \begin{table}[H]
 	\centering
@@ -186,7 +187,7 @@ Redis 是开源的高性能键值存储数据库\cite{redis_docs}，支持 Strin
 
 系统管理员负责平台的日常运营和维护，包括用户管理、内容审核、作品管理和模型库维护。
 
-系统管理员用例图如图~\ref{fig:usecase-admin} 所示。
+系统管理员主要承担平台治理与资源维护职责：一方面对用户账号进行管理，保障平台安全与秩序；另一方面对用户提交的作品进行审核与发布控制，确保内容合规；同时维护模型库、材质库以及分类等基础资源，为前端创作与展示提供稳定的数据支撑。系统管理员用例图如图~\ref{fig:usecase-admin} 所示。
 
 \begin{figure}[H]
 	\centering
@@ -195,7 +196,7 @@ Redis 是开源的高性能键值存储数据库\cite{redis_docs}，支持 Strin
 	\label{fig:usecase-admin}
 \end{figure}
 
-选择系统管理员中的关键用例进行用例规约编写，如表~\ref{tab:usecase-admin} 所示。
+进一步选取系统管理员侧的关键用例进行规约编写，覆盖登录鉴权、用户管理、作品审核、模型/材质资源维护以及分类与内容管理等核心操作，为后台管理模块的页面功能拆分、权限控制策略与数据一致性处理提供依据，如表~\ref{tab:usecase-admin} 所示。
 
 \begin{table}[H]
 	\centering
@@ -252,6 +253,8 @@ Redis 是开源的高性能键值存储数据库\cite{redis_docs}，支持 Strin
 
 根据系统功能需求分析，画出主要功能的数据流图。系统的数据流图如图~\ref{fig:dataflow} 所示。
 
+图中外部实体包括普通用户、管理员以及对象存储/文件服务；系统内部处理过程主要由用户认证与资料（P1）、作品管理（P2）、版本管理/参数提交（P3）、文件/模型资源管理（P6）、审核管理（P4）与创意广场互动（P5）组成。普通用户完成登录后，可创建作品并上传模型文件，文件服务返回的 URL 与元数据写入 \texttt{model\_files} 并关联 \texttt{design\_works}；版本与参数写入 \texttt{design\_versions}。作品/版本提审后进入审核流程，管理员在 P4 中审核并将结果记录到 \texttt{design\_reviews}，同时回写更新 \texttt{design\_works} 的状态与发布信息。作品发布后，创意广场产生点赞、收藏、评论与标签等互动，分别写入 \texttt{work\_likes}、\texttt{work\_favorites}、\texttt{work\_comments} 和 \texttt{work\_tags}，并更新作品热度计数。
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.88\textwidth]{dataFlow.png}
@@ -283,7 +286,7 @@ Redis 是开源的高性能键值存储数据库\cite{redis_docs}，支持 Strin
 \midrule
 \endfirsthead
 
-\multicolumn{6}{r}{\zihao{5}续表\thechapter.\arabic{table}}\\
+\multicolumn{6}{c}{\zihao{5}续表\thetable\quad 系统数据库设计数据项表}\\
 \toprule
 数据项名 & 数据项含义 & 别名 & 数据类型 & 长度 & 取值范围 \\
 \midrule
@@ -307,8 +310,6 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 本平台面向普通用户与系统管理员两类角色，围绕“3D 服装可视化定制”和“AI 真人试穿效果生成”构建“工具 + 社区”的一体化应用形态，系统采用“前端—后端—数据层—外部 AI 服务”的分层架构（见图~\ref{fig:systemArchitecture}）。其中，前端聚焦三维渲染与交互，将复杂的服装编辑过程以参数化方式呈现并实时预览，降低创作门槛；后端统一承载鉴权与业务规则，对作品、版本与互动等数据进行一致性管理，并以标准接口向前端返回业务数据；通过任务化/异步化方式接入AI 试穿，由后端负责创建任务、维护状态与结果回写；数据层将结构化业务数据与大文件资源存储至云端，以url形式保存，并引入缓存与队列机制提升热点访问与任务处理效率，从而支撑平台的稳定运行与后续功能扩展。
 
-系统架构图：
-
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.88\textwidth]{systemArchitecture.png}
@@ -328,23 +329,41 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 \end{figure}
 
 整体功能结构如下：
-\begin{enumerate}[label=(\arabic*)]
-	\item \textbf{用户与权限} 注册登录、JWT 鉴权、角色区分（普通用户/管理员）、个人信息维护。
-	\item \textbf{3D 服装定制} 基础模型选择、颜色与材质参数调整、图案上传与部位应用、三维交互（旋转/缩放/查看细节）、设计草稿保存。
-	\item \textbf{AI 虚拟试穿} 模特体型/场景风格选择、生成任务创建、生成进度反馈、结果展示与保存。
-	\item \textbf{作品管理} 作品信息编辑、草稿、发布/下架/删除、编辑回溯。
-	\item \textbf{创意广场与互动} 作品浏览/搜索/排序（热度/时间/标签）、点赞/收藏/评论、关注创作者、个人作品主页展示。
-	\item \textbf{后台管理} 管理员登录、用户管理、作品审核（通过/拒绝/下架）、模型库维护。
-\end{enumerate}
+\subsubsection*{（1）用户与权限}
+注册登录、JWT 鉴权、角色区分（普通用户/管理员）、个人信息维护。
+
+\subsubsection*{（2）3D 服装定制}
+基础模型选择、颜色与材质参数调整、图案上传与部位应用、三维交互（旋转/缩放/查看细节）、设计草稿保存。
+
+\subsubsection*{（3）AI 虚拟试穿}
+模特体型/场景风格选择、生成任务创建、生成进度反馈、结果展示与保存。
+
+\subsubsection*{（4）作品管理}
+作品信息编辑、草稿、发布/下架/删除、编辑回溯。
+
+\subsubsection*{（5）创意广场与互动}
+作品浏览/搜索/排序（热度/时间/标签）、点赞/收藏/评论、关注创作者、个人作品主页展示。
+
+\subsubsection*{（6）后台管理}
+管理员登录、用户管理、作品审核（通过/拒绝/下架）、模型库维护。
 
 \section{系统功能模块设计}
 
 系统功能模块设计以“前台创作与社区 + 后台治理运营”为主线，围绕用户体系、3D 定制、AI 试穿、作品管理、创意广场互动与后台管理等核心业务模块展开。各模块之间以统一的后端接口进行解耦协作，以“作品/分享”为核心业务对象贯通数据，形成完整的创作与运营闭环。
 
+\begingroup
+% 说明：本章节图较多，为避免 samepage + [H] 造成大段留白，
+% 采用更灵活的浮动策略，并适当收紧图文间距（仅在本章节生效）。
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\intextsep}{10pt plus 2pt minus 2pt}
+\setlength{\abovecaptionskip}{6pt}
+\setlength{\belowcaptionskip}{0pt}
+
 \subsection{用户与权限模块}
 
 模块功能：该模块为系统提供身份认证与权限控制能力，覆盖用户注册、登录、退出、个人信息维护与角色权限校验等功能。系统采用 JWT 作为鉴权载体，在保证前端无状态访问的同时，实现普通用户与管理员接口的权限隔离，为作品发布、互动与后台治理提供统一的安全入口。
 
+\Needspace{0.55\textheight}
 模块功能结构图如图~\ref{fig:userModule} 所示。
 
 \begin{figure}[H]
@@ -356,6 +375,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 模块流程描述：用户提交账号密码完成登录后，后端校验凭证并签发 JWT；前端在后续请求中携带令牌，后端完成令牌校验与角色鉴权后返回业务数据；当用户退出或令牌失效时，前端清理本地令牌并重新进入登录流程。
 
+\Needspace{0.55\textheight}
 模块流程图如图~\ref{fig:userModuleFlow} 所示。
 
 \begin{figure}[H]
@@ -369,6 +389,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 模块功能：该模块在浏览器端提供三维可视化服装定制能力，支持基础模型选择、颜色与材质参数调整、图案上传与部位应用、视角控制与细节预览等操作。服装三维捕获与重定向技术\cite{pons2017clothcap}的研究成果为本模块的服装形变处理提供了参考基础。用户可将定制配置保存为草稿或作品版本，为作品发布提供可复用的设计数据。
 
+\Needspace{0.55\textheight}
 模块功能结构图如图~\ref{fig:3dModule} 所示。
 
 \begin{figure}[H]
@@ -378,8 +399,9 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 	\label{fig:3dModule}
 \end{figure}
 
-模块流程描述：用户选择基础服装模型后，前端加载模型与材质资源并渲染；用户通过交互面板调整参数并实时预览；当用户保存时，前端将关键配置参数（模型引用、材质与贴图、颜色与部位信息等）提交至后端形成草稿/版本记录，支持后续继续编辑或提审发布。
+模块流程描述：用户选择服装类型后，前端加载模型与材质资源并渲染；用户通过交互面板调整参数并实时预览；当用户保存时，前端将关键配置参数（模型引用、材质与贴图、颜色与部位信息等）提交至后端形成草稿/版本记录，支持后续继续编辑或提审发布。
 
+\Needspace{0.55\textheight}
 模块流程图如图~\ref{fig:3dModuleFlow} 所示。
 
 \begin{figure}[H]
@@ -393,6 +415,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 模块功能：该模块将用户的 3D 设计各角度平面图作为条件输入，生成高保真的真人试穿效果图。本系统 AI 试穿功能以去噪扩散概率模型（DDPM）\cite{ddpm_ho2020}为核心基础，借助潜在扩散模型（LDM）\cite{ldm_rombach2022}的高效图像合成能力，并采用 ControlNet\cite{controlnet_zhang2023} 实现以 3D 服装渲染图为控制条件的引导生成。试穿前处理流程中涉及人体姿态估计\cite{cao2021openpose}与人体语义解析\cite{li2022schp}，以保证服装与人体的对齐精度。最终参考 M3D-VTON\cite{m3d_vton}的单目转三维方案提升试穿立体感。由于 AI 生成属于耗时任务，系统采用任务化/异步化机制：后端创建任务并返回任务 ID，任务执行模块从队列取出任务调用外部 AI 服务，生成结果保存至文件存储并写入数据库，前端通过查询接口获取进度并展示结果。
 
+\Needspace{0.55\textheight}
 模块功能结构图如图~\ref{fig:aiModule} 所示。
 
 \begin{figure}[H]
@@ -404,6 +427,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 模块流程描述：用户在前端选择模特与场景风格后提交生成请求；后端创建任务写入队列并返回任务 ID；前端基于任务 ID 查询进度；任务执行模块消费队列调用外部 AI，生成完成后上传结果文件并写入版本数据，更新任务状态；前端获取到完成状态后展示试穿图并允许用户保存。
 
+\Needspace{0.55\textheight}
 模块流程图如图~\ref{fig:aiModuleFlow} 所示。
 
 \begin{figure}[H]
@@ -417,6 +441,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 模块功能：该模块面向普通用户提供作品全生命周期管理能力，包含作品创建、信息编辑、草稿、发布/下架、删除等功能。
 
+\Needspace{0.55\textheight}
 模块功能结构图如图~\ref{fig:workModule} 所示。
 
 \begin{figure}[H]
@@ -428,6 +453,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 模块流程描述：用户创建作品并编辑标题、描述等信息；编辑完成后存储为草稿可选择提审发布，后端更新作品状态与发布时间；当用户下架或删除作品时，后端校验归属权限并更新状态，保证数据一致性与可审计性。
 
+\Needspace{0.55\textheight}
 模块流程图如图~\ref{fig:workModuleFlow} 所示。
 
 \begin{figure}[H]
@@ -441,6 +467,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 模块功能：该模块提供作品展示与社区交互能力，包含作品列表浏览、搜索与排序（热度/时间/标签等）、作品详情查看，以及点赞、收藏、评论、关注等互动功能。模块通过将互动行为与作品数据关联，形成反馈闭环，提升作品传播与社区活跃度。
 
+\Needspace{0.55\textheight}
 模块功能结构图如图~\ref{fig:squareModule} 所示。
 
 \begin{figure}[H]
@@ -452,6 +479,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 模块流程描述：用户进入创意广场后，前端请求作品列表并支持排序与筛选；用户打开作品详情页后加载作品信息、互动数据；当用户进行点赞、收藏或评论时，前端提交互动请求，后端校验登录状态并写入互动记录，更新计数并返回最新状态以刷新页面展示。
 
+\Needspace{0.55\textheight}
 模块流程图如图~\ref{fig:squareModuleFlow} 所示。
 
 \begin{figure}[H]
@@ -465,6 +493,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 模块功能：该模块面向系统管理员提供用户管理、模型管理与内容治理能力，包括用户管理（信息维护，权限分配）、作品内容审核（通过/拒绝/下架）、模型库维护等功能。模块通过权限控制与审核流程保障平台内容质量与资源可用性。
 
+\Needspace{0.55\textheight}
 模块功能结构图如图~\ref{fig:adminModule} 所示。
 
 \begin{figure}[H]
@@ -476,6 +505,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 模块流程描述：管理员登录后进入后台；在用户管理中可检索用户并执行角色分配，信息修改等操作；在作品审核中查看待审内容并做出通过或拒绝决定，必要时可对已发布内容执行下架；在资源管理中维护模型资源，保证前端定制能力与内容展示的基础数据完整。
 
+\Needspace{0.55\textheight}
 模块流程图如图~\ref{fig:adminModuleFlow} 所示。
 
 \begin{figure}[H]
@@ -484,6 +514,8 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 	\caption{后台管理流程图}
 	\label{fig:adminModuleFlow}
 \end{figure}
+
+\endgroup
 
 \section{系统数据库设计}
 
@@ -525,7 +557,7 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 \subsection{数据库核心数据表}
 
-\noindent\textbf{1）users（用户核心表）}
+\noindent\textbf{（1）users（用户核心表）}
 
 \noindent users（用户核心表）用于存储系统用户账号、密码、角色与基础资料，是全局用户主体表。系统通过 \texttt{user\_follows} 建立“用户\texorpdfstring{-}{-}用户”多对多关注关系，并引入 \texttt{followers\_count}/\texttt{following\_count} 作为冗余计数字段以降低列表页聚合统计开销；在关注/取关时同步更新被关注者 \texttt{followers\_count} 与关注者 \texttt{following\_count}。
 
@@ -541,7 +573,7 @@ users 表结构如表~\ref{tab:users} 所示。
 \midrule
 \endfirsthead
 
-\multicolumn{4}{r}{\zihao{5}续表\thechapter.\arabic{table}}\\
+\multicolumn{4}{c}{\zihao{5}续表\thetable\quad users 表结构}\\
 \toprule
 字段名 & 类型 & 约束/索引 & 说明 \\
 \midrule
@@ -565,7 +597,7 @@ users 表结构如表~\ref{tab:users} 所示。
 \end{longtable}
 }
 
-\noindent\textbf{2）user\_follows（用户关注关系表）}
+\noindent\textbf{（2）user\_follows（用户关注关系表）}
 
 \noindent user\_follows（用户关注关系表）用于记录用户之间的关注关系，以 \texttt{follower\_id} 与 \texttt{following\_id} 关联 \texttt{users}，支持关注/取关与关注列表/粉丝列表等功能，并通过唯一约束 \texttt{(follower\_id, following\_id)} 防止重复关注；用户注销时外键设置 \texttt{ON DELETE CASCADE} 以清理关联数据。
 
@@ -581,7 +613,7 @@ user\_follows 表结构如表~\ref{tab:user-follows} 所示。
 \midrule
 \endfirsthead
 
-\multicolumn{4}{r}{\zihao{5}续表\thechapter.\arabic{table}}\\
+\multicolumn{4}{c}{\zihao{5}续表\thetable\quad user\_follows 表结构}\\
 \toprule
 字段名 & 类型 & 约束/索引 & 说明 \\
 \midrule
@@ -603,7 +635,7 @@ user\_follows 表结构如表~\ref{tab:user-follows} 所示。
 \end{longtable}
 }
 
-\noindent\textbf{3）model\_files（模型/资源文件表）}
+\noindent\textbf{（3）model\_files（模型/资源文件表）}
 
 \noindent model\_files（模型/资源文件表）用于统一管理系统上传/生成的文件资源元数据，包括展示名称、访问 URL、文件大小以及创建/更新时间等信息，并作为各业务表引用外部资源的统一入口。当前模型中该表主要承载作品封面文件的引用关系，便于复用同一资源、减少冗余存储，同时通过名称索引支持后台按名称检索与管理。
 
@@ -619,7 +651,7 @@ model\_files 表结构如表~\ref{tab:model-files} 所示。
 \midrule
 \endfirsthead
 
-\multicolumn{4}{r}{\zihao{5}续表\thechapter.\arabic{table}}\\
+\multicolumn{4}{c}{\zihao{5}续表\thetable\quad model\_files 表结构}\\
 \toprule
 字段名 & 类型 & 约束/索引 & 说明 \\
 \midrule
@@ -641,7 +673,7 @@ model\_files 表结构如表~\ref{tab:model-files} 所示。
 \end{longtable}
 }
 
-\noindent\textbf{4）design\_works（作品主表）}
+\noindent\textbf{（4）design\_works（作品主表）}
 
 \noindent design\_works（作品主表）用于存储作品主体信息，是创意广场的核心业务表，记录作品标题、描述、发布状态与发布时间等内容，并通过 \texttt{user\_id} 关联作品作者。该表可选关联封面文件 \texttt{cover\_file\_id}，并维护点赞数、评论数、收藏数等冗余统计字段与推荐标识，用于提升广场列表查询与排序展示的性能。
 
@@ -657,7 +689,7 @@ design\_works 表结构如表~\ref{tab:design-works} 所示。
 \midrule
 \endfirsthead
 
-\multicolumn{4}{r}{\zihao{5}续表\thechapter.\arabic{table}}\\
+\multicolumn{4}{c}{\zihao{5}续表\thetable\quad design\_works 表结构}\\
 \toprule
 字段名 & 类型 & 约束/索引 & 说明 \\
 \midrule
@@ -685,7 +717,7 @@ design\_works 表结构如表~\ref{tab:design-works} 所示。
 \end{longtable}
 }
 
-\noindent\textbf{5）work\_tags（作品标签表）}
+\noindent\textbf{（5）work\_tags（作品标签表）}
 
 \noindent work\_tags（作品标签表）用于维护作品与标签的关联，将作品与若干语义标签进行绑定，以支撑分类浏览、条件筛选与个性化推荐等功能。表中通过 \texttt{work\_id} 快速定位作品标签集合，并为 \texttt{tag} 建立索引以提高按标签聚合与检索的效率。
 
@@ -701,7 +733,7 @@ work\_tags 表结构如表~\ref{tab:work-tags} 所示。
 \midrule
 \endfirsthead
 
-\multicolumn{4}{r}{\zihao{5}续表\thechapter.\arabic{table}}\\
+\multicolumn{4}{c}{\zihao{5}续表\thetable\quad work\_tags 表结构}\\
 \toprule
 字段名 & 类型 & 约束/索引 & 说明 \\
 \midrule
@@ -719,7 +751,7 @@ work\_tags 表结构如表~\ref{tab:work-tags} 所示。
 \end{longtable}
 }
 
-\noindent\textbf{6）work\_likes（作品点赞表）}
+\noindent\textbf{（6）work\_likes（作品点赞表）}
 
 \noindent work\_likes（作品点赞表）用于记录用户对作品的点赞行为，形成“用户\texorpdfstring{-}{-}作品”的多对多关系落地数据，用于支撑点赞/取消点赞以及点赞列表查询等功能。该表通过唯一约束 \texttt{(work\_id, user\_id)} 防止重复点赞，并以时间字段记录行为发生时间，便于行为追溯与排序展示。
 
@@ -735,7 +767,7 @@ work\_likes 表结构如表~\ref{tab:work-likes} 所示。
 \midrule
 \endfirsthead
 
-\multicolumn{4}{r}{\zihao{5}续表\thechapter.\arabic{table}}\\
+\multicolumn{4}{c}{\zihao{5}续表\thetable\quad work\_likes 表结构}\\
 \toprule
 字段名 & 类型 & 约束/索引 & 说明 \\
 \midrule
@@ -755,7 +787,7 @@ work\_likes 表结构如表~\ref{tab:work-likes} 所示。
 \end{longtable}
 }
 
-\noindent\textbf{7）work\_favorites（作品收藏表）}
+\noindent\textbf{（7）work\_favorites（作品收藏表）}
 
 \noindent work\_favorites（作品收藏表）用于记录用户对作品的收藏行为，支撑用户收藏夹、收藏/取消收藏与收藏状态判断等功能，并在数据层面表达“用户\texorpdfstring{-}{-}作品”多对多关系。该表同样通过唯一约束 \texttt{(work\_id, user\_id)} 防止重复收藏，并使用时间字段记录收藏发生时间，便于收藏列表按时间排序。
 
@@ -771,7 +803,7 @@ work\_favorites 表结构如表~\ref{tab:work-favorites} 所示。
 \midrule
 \endfirsthead
 
-\multicolumn{4}{r}{\zihao{5}续表\thechapter.\arabic{table}}\\
+\multicolumn{4}{c}{\zihao{5}续表\thetable\quad work\_favorites 表结构}\\
 \toprule
 字段名 & 类型 & 约束/索引 & 说明 \\
 \midrule
@@ -791,7 +823,7 @@ work\_favorites 表结构如表~\ref{tab:work-favorites} 所示。
 \end{longtable}
 }
 
-\noindent\textbf{8）work\_comments（作品评论表）}
+\noindent\textbf{（8）work\_comments（作品评论表）}
 
 \noindent work\_comments（作品评论表）用于记录用户对作品的文本评论内容，支撑作品详情页评论展示、评论发布与评论列表分页查询等功能。该表通过 \texttt{work\_id} 关联评论所属作品、通过 \texttt{user\_id} 标识评论作者，并对 \texttt{work\_id} 建立索引以优化按作品维度的评论检索。
 
@@ -807,7 +839,7 @@ work\_comments 表结构如表~\ref{tab:work-comments} 所示。
 \midrule
 \endfirsthead
 
-\multicolumn{4}{r}{\zihao{5}续表\thechapter.\arabic{table}}\\
+\multicolumn{4}{c}{\zihao{5}续表\thetable\quad work\_comments 表结构}\\
 \toprule
 字段名 & 类型 & 约束/索引 & 说明 \\
 \midrule
@@ -827,7 +859,7 @@ work\_comments 表结构如表~\ref{tab:work-comments} 所示。
 \end{longtable}
 }
 
-\noindent\textbf{9）tryon\_tasks（试衣任务表）}
+\noindent\textbf{（9）tryon\_tasks（试衣任务表）}
 
 \noindent tryon\_tasks（试衣任务表）用于记录用户针对作品发起的试衣生成任务及执行结果，支撑异步任务创建、进度查询与结果展示等流程，并通过唯一的业务任务号 \texttt{task\_id} 进行幂等与外部调用关联。该表记录输入参考数据、任务状态与进度、结果地址以及异常信息，同时保存开始/完成时间与创建/更新时间，用于任务调度、失败重试与问题定位。
 
@@ -843,7 +875,7 @@ tryon\_tasks 表结构如表~\ref{tab:tryon-tasks} 所示。
 \midrule
 \endfirsthead
 
-\multicolumn{4}{r}{\zihao{5}续表\thechapter.\arabic{table}}\\
+\multicolumn{4}{c}{\zihao{5}续表\thetable\quad tryon\_tasks 表结构}\\
 \toprule
 字段名 & 类型 & 约束/索引 & 说明 \\
 \midrule
@@ -1727,7 +1759,7 @@ AI 虚拟试穿模块主要覆盖“输入准备—提交生成—结果展示�
 
 本课题围绕“融合 3D 定制与 AI 虚拟试穿的服装创意分享平台”的设计与实现展开研究，面向普通用户提供从创意生成、3D 服装定制、AI 试穿展示到作品发布分享的一体化流程，并配套实现后台管理系统以支撑平台内容治理与资源维护。通过对需求分析、系统设计、核心功能实现与测试验证的完整闭环，平台能够满足用户个性化创作与社区分享的实际需求。
 
-本文的主要工作与成果可归纳如下。
+毕业设计的主要工作与成果总结如下：
 \begin{enumerate}[label=(\arabic*)]
 	\item 完成系统需求分析与总体架构设计。结合平台“创作—展示—传播”的业务特点，对普通用户与管理员两类角色进行功能划分，明确用户模块、3D 服装定制模块、AI 虚拟试穿模块、创意广场模块、作品管理模块与后台管理模块等核心功能，并在此基础上完成系统整体架构与数据流转设计，为后续开发提供清晰边界与实现路径。
 	\item 实现 3D 服装定制与可视化交互能力。定制模块支持服装款式选择与属性调整（如颜色、材质、纹理等），并提供旋转、缩放、视角重置等交互操作，使用户能够在设计阶段获得直观、可控的视觉反馈，降低设计门槛并提升创作体验。
