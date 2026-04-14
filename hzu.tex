@@ -361,159 +361,141 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 
 \subsection{用户与权限模块}
 
-模块功能：该模块为系统提供身份认证与权限控制能力，覆盖用户注册、登录、退出、个人信息维护与角色权限校验等功能。系统采用 JWT 作为鉴权载体，在保证前端无状态访问的同时，实现普通用户与管理员接口的权限隔离，为作品发布、互动与后台治理提供统一的安全入口。
-
-\Needspace{0.55\textheight}
-模块功能结构图如图~\ref{fig:userModule} 所示。
+模块功能：该模块为系统提供身份认证与权限控制能力，覆盖用户注册、登录、退出、个人信息维护与角色权限校验等功能。系统采用 JWT 作为鉴权载体，在保证前端无状态访问的同时，实现普通用户与管理员接口的权限隔离，为作品发布、互动与后台治理提供统一的安全入口。模块功能结构图如图~\ref{fig:userModule}，模块流程图如图~\ref{fig:userModuleFlow} 所示。
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.88\textwidth]{userModule.png}
-	\caption{用户与权限模块功能结构}
-	\label{fig:userModule}
+	\begin{minipage}[t]{0.58\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{userModule.png}
+		\caption{用户与权限模块功能结构}
+		\label{fig:userModule}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.38\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{userModuleFlow.png}
+		\caption{用户流程图}
+		\label{fig:userModuleFlow}
+	\end{minipage}
 \end{figure}
 
 模块流程描述：用户提交账号密码完成登录后，后端校验凭证并签发 JWT；前端在后续请求中携带令牌，后端完成令牌校验与角色鉴权后返回业务数据；当用户退出或令牌失效时，前端清理本地令牌并重新进入登录流程。
 
-\Needspace{0.55\textheight}
-模块流程图如图~\ref{fig:userModuleFlow} 所示。
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.88\textwidth]{userModuleFlow.png}
-	\caption{用户流程图}
-	\label{fig:userModuleFlow}
-\end{figure}
-
 \subsection{3D 服装定制模块}
 
-模块功能：该模块在浏览器端提供三维可视化服装定制能力，支持基础模型选择、颜色与材质参数调整、图案上传与部位应用、视角控制与细节预览等操作。服装三维捕获与重定向技术\cite{pons2017clothcap}的研究成果为本模块的服装形变处理提供了参考基础。用户可将定制配置保存为草稿或作品版本，为作品发布提供可复用的设计数据。
-
-\Needspace{0.55\textheight}
-模块功能结构图如图~\ref{fig:3dModule} 所示。
+模块功能：该模块在浏览器端提供三维可视化服装定制能力，支持基础模型选择、颜色与材质参数调整、图案上传与部位应用、视角控制与细节预览等操作。服装三维捕获与重定向技术\cite{pons2017clothcap}的研究成果为本模块的服装形变处理提供了参考基础。用户可将定制配置保存为草稿或作品版本，为作品发布提供可复用的设计数据。模块功能结构图如图~\ref{fig:3dModule}，模块流程图如图~\ref{fig:3dModuleFlow} 所示。
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.88\textwidth]{3dModule.png}
-	\caption{3D 服装定制模块功能结构}
-	\label{fig:3dModule}
+	\begin{minipage}[t]{0.58\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{3dModule.png}
+		\caption{3D 服装定制模块功能结构}
+		\label{fig:3dModule}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.38\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{3dModuleFlow.png}
+		\caption{3D 服装定制模块流程图}
+		\label{fig:3dModuleFlow}
+	\end{minipage}
 \end{figure}
 
 模块流程描述：用户选择服装类型后，前端加载模型与材质资源并渲染；用户通过交互面板调整参数并实时预览；当用户保存时，前端将关键配置参数（模型引用、材质与贴图、颜色与部位信息等）提交至后端形成草稿/版本记录，支持后续继续编辑或提审发布。
 
-\Needspace{0.55\textheight}
-模块流程图如图~\ref{fig:3dModuleFlow} 所示。
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.88\textwidth]{3dModuleFlow.png}
-	\caption{3D 服装定制模块流程图}
-	\label{fig:3dModuleFlow}
-\end{figure}
-
 \subsection{AI 虚拟试穿模块}
 
-模块功能：该模块将用户的 3D 设计各角度平面图作为条件输入，生成高保真的真人试穿效果图。本系统 AI 试穿功能以去噪扩散概率模型（DDPM）\cite{ddpm_ho2020}为核心基础，借助潜在扩散模型（LDM）\cite{ldm_rombach2022}的高效图像合成能力，并采用 ControlNet\cite{controlnet_zhang2023} 实现以 3D 服装渲染图为控制条件的引导生成。试穿前处理流程中涉及人体姿态估计\cite{cao2021openpose}与人体语义解析\cite{li2022schp}，以保证服装与人体的对齐精度。最终参考 M3D-VTON\cite{m3d_vton}的单目转三维方案提升试穿立体感。由于 AI 生成属于耗时任务，系统采用任务化/异步化机制：后端创建任务并返回任务 ID，任务执行模块从队列取出任务调用外部 AI 服务，生成结果保存至文件存储并写入数据库，前端通过查询接口获取进度并展示结果。
-
-\Needspace{0.55\textheight}
-模块功能结构图如图~\ref{fig:aiModule} 所示。
+模块功能：该模块将用户的 3D 设计各角度平面图作为条件输入，生成高保真的真人试穿效果图。本系统 AI 试穿功能以去噪扩散概率模型（DDPM）\cite{ddpm_ho2020}为核心基础，借助潜在扩散模型（LDM）\cite{ldm_rombach2022}的高效图像合成能力，并采用 ControlNet\cite{controlnet_zhang2023} 实现以 3D 服装渲染图为控制条件的引导生成。试穿前处理流程中涉及人体姿态估计\cite{cao2021openpose}与人体语义解析\cite{li2022schp}，以保证服装与人体的对齐精度。最终参考 M3D-VTON\cite{m3d_vton}的单目转三维方案提升试穿立体感。由于 AI 生成属于耗时任务，系统采用任务化/异步化机制：后端创建任务并返回任务 ID，任务执行模块从队列取出任务调用外部 AI 服务，生成结果保存至文件存储并写入数据库，前端通过查询接口获取进度并展示结果。模块功能结构图如图~\ref{fig:aiModule}，模块流程图如图~\ref{fig:aiModuleFlow} 所示。
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.88\textwidth]{aiModule.png}
-	\caption{AI 虚拟试穿模块功能结构}
-	\label{fig:aiModule}
+	\begin{minipage}[t]{0.55\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{aiModule.png}
+		\caption{AI 虚拟试穿模块功能结构}
+		\label{fig:aiModule}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.41\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{aiModuleFlow.png}
+		\caption{AI 虚拟试穿模块流程图}
+		\label{fig:aiModuleFlow}
+	\end{minipage}
 \end{figure}
 
 模块流程描述：用户在前端选择模特与场景风格后提交生成请求；后端创建任务写入队列并返回任务 ID；前端基于任务 ID 查询进度；任务执行模块消费队列调用外部 AI，生成完成后上传结果文件并写入版本数据，更新任务状态；前端获取到完成状态后展示试穿图并允许用户保存。
 
-\Needspace{0.55\textheight}
-模块流程图如图~\ref{fig:aiModuleFlow} 所示。
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.88\textwidth]{aiModuleFlow.png}
-	\caption{AI 虚拟试穿模块流程图}
-	\label{fig:aiModuleFlow}
-\end{figure}
-
 \subsection{作品管理模块}
 
-模块功能：该模块面向普通用户提供作品全生命周期管理能力，包含作品创建、信息编辑、草稿、发布/下架、删除等功能。
-
-\Needspace{0.55\textheight}
-模块功能结构图如图~\ref{fig:workModule} 所示。
+模块功能：该模块面向普通用户提供作品全生命周期管理能力，包含作品创建、信息编辑、草稿、发布/下架、删除等功能。模块功能结构图如图~\ref{fig:workModule}，模块流程图如图~\ref{fig:workModuleFlow} 所示。
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.88\textwidth]{workModule.png}
-	\caption{作品管理模块功能结构}
-	\label{fig:workModule}
+	\begin{minipage}[t]{0.56\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{workModule.png}
+		\caption{作品管理模块功能结构}
+		\label{fig:workModule}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.40\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{workModuleFlow.png}
+		\caption{作品管理模块流程图}
+		\label{fig:workModuleFlow}
+	\end{minipage}
 \end{figure}
 
 模块流程描述：用户创建作品并编辑标题、描述等信息；编辑完成后存储为草稿可选择提审发布，后端更新作品状态与发布时间；当用户下架或删除作品时，后端校验归属权限并更新状态，保证数据一致性与可审计性。
 
-\Needspace{0.55\textheight}
-模块流程图如图~\ref{fig:workModuleFlow} 所示。
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.88\textwidth]{workModuleFlow.png}
-	\caption{作品管理模块流程图}
-	\label{fig:workModuleFlow}
-\end{figure}
-
 \subsection{创意广场与社区互动模块}
 
-模块功能：该模块提供作品展示与社区交互能力，包含作品列表浏览、搜索与排序（热度/时间/标签等）、作品详情查看，以及点赞、收藏、评论、关注等互动功能。模块通过将互动行为与作品数据关联，形成反馈闭环，提升作品传播与社区活跃度。
-
-\Needspace{0.55\textheight}
-模块功能结构图如图~\ref{fig:squareModule} 所示。
+模块功能：该模块提供作品展示与社区交互能力，包含作品列表浏览、搜索与排序（热度/时间/标签等）、作品详情查看，以及点赞、收藏、评论、关注等互动功能。模块通过将互动行为与作品数据关联，形成反馈闭环，提升作品传播与社区活跃度。模块功能结构图如图~\ref{fig:squareModule}，模块流程图如图~\ref{fig:squareModuleFlow} 所示。
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.88\textwidth]{squareModule.png}
-	\caption{创意广场与社区互动模块功能结构}
-	\label{fig:squareModule}
+	\begin{minipage}[t]{0.54\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{squareModule.png}
+		\caption{创意广场与社区互动模块功能结构}
+		\label{fig:squareModule}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.42\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{squareModuleFlow.png}
+		\caption{创意广场与社区互动模块流程图}
+		\label{fig:squareModuleFlow}
+	\end{minipage}
 \end{figure}
 
 模块流程描述：用户进入创意广场后，前端请求作品列表并支持排序与筛选；用户打开作品详情页后加载作品信息、互动数据；当用户进行点赞、收藏或评论时，前端提交互动请求，后端校验登录状态并写入互动记录，更新计数并返回最新状态以刷新页面展示。
 
-\Needspace{0.55\textheight}
-模块流程图如图~\ref{fig:squareModuleFlow} 所示。
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.88\textwidth]{squareModuleFlow.png}
-	\caption{创意广场与社区互动模块流程图}
-	\label{fig:squareModuleFlow}
-\end{figure}
-
 \subsection{后台管理模块}
 
-模块功能：该模块面向系统管理员提供用户管理、模型管理与内容治理能力，包括用户管理（信息维护，权限分配）、作品内容审核（通过/拒绝/下架）、模型库维护等功能。模块通过权限控制与审核流程保障平台内容质量与资源可用性。
-
-\Needspace{0.55\textheight}
-模块功能结构图如图~\ref{fig:adminModule} 所示。
+模块功能：该模块面向系统管理员提供用户管理、模型管理与内容治理能力，包括用户管理（信息维护，权限分配）、作品内容审核（通过/拒绝/下架）、模型库维护等功能。模块通过权限控制与审核流程保障平台内容质量与资源可用性。模块功能结构图如图~\ref{fig:adminModule}，模块流程图如图~\ref{fig:adminModuleFlow} 所示。
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.88\textwidth]{adminModule.png}
-	\caption{后台管理模块功能结构}
-	\label{fig:adminModule}
+	\begin{minipage}[t]{0.56\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{adminModule.png}
+		\caption{后台管理模块功能结构}
+		\label{fig:adminModule}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.40\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{adminModuleFlow.png}
+		\caption{后台管理流程图}
+		\label{fig:adminModuleFlow}
+	\end{minipage}
 \end{figure}
 
 模块流程描述：管理员登录后进入后台；在用户管理中可检索用户并执行角色分配，信息修改等操作；在作品审核中查看待审内容并做出通过或拒绝决定，必要时可对已发布内容执行下架；在资源管理中维护模型资源，保证前端定制能力与内容展示的基础数据完整。
-
-\Needspace{0.55\textheight}
-模块流程图如图~\ref{fig:adminModuleFlow} 所示。
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.88\textwidth]{adminModuleFlow.png}
-	\caption{后台管理流程图}
-	\label{fig:adminModuleFlow}
-\end{figure}
 
 \endgroup
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.16)  13 APR 2026 21:57
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.16)  14 APR 2026 11:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1536,10 +1536,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [16]
 File: userModule.png Graphic file (type bmp)
 <userModule.png>
- [17]
 File: userModuleFlow.png Graphic file (type bmp)
 <userModuleFlow.png>
- [18]
 File: 3dModule.png Graphic file (type bmp)
 <3dModule.png>
 File: 3dModuleFlow.png Graphic file (type bmp)
@@ -1547,24 +1545,20 @@ File: 3dModuleFlow.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [20]
+ [17]
 File: aiModule.png Graphic file (type bmp)
 <aiModule.png>
- [21]
 File: aiModuleFlow.png Graphic file (type bmp)
 <aiModuleFlow.png>
- [22]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18]
 File: workModule.png Graphic file (type bmp)
 <workModule.png>
 File: workModuleFlow.png Graphic file (type bmp)
 <workModuleFlow.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [23] [24]
+ [19]
 File: squareModule.png Graphic file (type bmp)
 <squareModule.png>
 File: squareModuleFlow.png Graphic file (type bmp)
@@ -1572,122 +1566,120 @@ File: squareModuleFlow.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [26]
+ [20]
 File: adminModule.png Graphic file (type bmp)
 <adminModule.png>
- [27]
 File: adminModuleFlow.png Graphic file (type bmp)
 <adminModuleFlow.png>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 6157) has occurred while \output is active []
 
- [28]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [29]
-Underfull \hbox (badness 1755) in paragraph at lines 544--545
+ [21]
+Underfull \hbox (badness 1755) in paragraph at lines 526--527
 []\TU/simsun.ttc(0)/m/n/12.045 用 户 \TU/TimesNewRoman(1)/m/n/12.045 users \TU/simsun.ttc(0)/m/n/12.045 与 收 藏 \TU/TimesNewRoman(1)/m/n/12.045 work_favorites\TU/simsun.ttc(0)/m/n/12.045 ：| \TU/TimesNewRoman(0)/m/n/12.045 1 \TU/simsun.ttc(0)/m/n/12.045 对 \TU/TimesNewRoman(0)/m/n/12.045 N\TU/simsun.ttc(0)/m/n/12.045 ；|  作 品 \TU/TimesNewRoman(1)/m/n/12.045 design_works \TU/simsun.ttc(0)/m/n/12.045 与 收 藏
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22]
 File: ER.png Graphic file (type bmp)
 <ER.png>
 
-Overfull \hbox (5.73524pt too wide) in paragraph at lines 595--595
+Overfull \hbox (5.73524pt too wide) in paragraph at lines 577--577
 \TU/TimesNewRoman(1)/m/n/12.045 CURRENT_TIMESTAMP|  
  []
 
 
-Overfull \hbox (5.73524pt too wide) in paragraph at lines 596--596
+Overfull \hbox (5.73524pt too wide) in paragraph at lines 578--578
 \TU/TimesNewRoman(1)/m/n/12.045 CURRENT_TIMESTAMP 
  []
 
 
-Overfull \hbox (5.73524pt too wide) in paragraph at lines 596--596
+Overfull \hbox (5.73524pt too wide) in paragraph at lines 578--578
 \TU/TimesNewRoman(1)/m/n/12.045 CURRENT_TIMESTAMP|  
  []
 
-[30]
-Overfull \hbox (1.30069pt too wide) in paragraph at lines 629--629
+
+ignored: Infinite glue shrinkage found in box being split [23]
+Overfull \hbox (1.30069pt too wide) in paragraph at lines 611--611
 \TU/TimesNewRoman(1)/m/n/12.045 idx_follower(follower_id)|  
  []
 
 
-Overfull \hbox (13.36922pt too wide) in paragraph at lines 630--630
+Overfull \hbox (13.36922pt too wide) in paragraph at lines 612--612
 \TU/TimesNewRoman(1)/m/n/12.045 idx_following(following_id)|  
  []
 
 
-Overfull \hbox (5.73524pt too wide) in paragraph at lines 631--631
+Overfull \hbox (5.73524pt too wide) in paragraph at lines 613--613
 \TU/TimesNewRoman(1)/m/n/12.045 CURRENT_TIMESTAMP|  
  []
 
 
-Overfull \hbox (49.81595pt too wide) in paragraph at lines 632--632
+Overfull \hbox (49.81595pt too wide) in paragraph at lines 614--614
 \TU/TimesNewRoman(1)/m/n/12.045 uk_follower_following(follower_id, 
  []
 
-[31]
-Overfull \hbox (5.73524pt too wide) in paragraph at lines 670--670
+[24]
+Overfull \hbox (5.73524pt too wide) in paragraph at lines 652--652
 \TU/TimesNewRoman(1)/m/n/12.045 CURRENT_TIMESTAMP|  
  []
 
 
-Overfull \hbox (5.73524pt too wide) in paragraph at lines 671--671
+Overfull \hbox (5.73524pt too wide) in paragraph at lines 653--653
 \TU/TimesNewRoman(1)/m/n/12.045 CURRENT_TIMESTAMP 
  []
 
 
-Overfull \hbox (5.73524pt too wide) in paragraph at lines 671--671
+Overfull \hbox (5.73524pt too wide) in paragraph at lines 653--653
 \TU/TimesNewRoman(1)/m/n/12.045 CURRENT_TIMESTAMP|  
  []
 
-[32]
-Overfull \hbox (5.73524pt too wide) in paragraph at lines 711--711
+[25]
+Overfull \hbox (5.73524pt too wide) in paragraph at lines 693--693
 \TU/TimesNewRoman(1)/m/n/12.045 CURRENT_TIMESTAMP|  
  []
 
 
-Overfull \hbox (5.73524pt too wide) in paragraph at lines 712--712
+Overfull \hbox (5.73524pt too wide) in paragraph at lines 694--694
 \TU/TimesNewRoman(1)/m/n/12.045 CURRENT_TIMESTAMP 
  []
 
 
-Overfull \hbox (5.73524pt too wide) in paragraph at lines 712--712
+Overfull \hbox (5.73524pt too wide) in paragraph at lines 694--694
 \TU/TimesNewRoman(1)/m/n/12.045 CURRENT_TIMESTAMP|  
  []
 
 
-Overfull \hbox (15.56914pt too wide) in paragraph at lines 714--714
+Overfull \hbox (15.56914pt too wide) in paragraph at lines 696--696
 []|\TU/TimesNewRoman(1)/m/n/12.045 comments_count|  
  []
 
 
-Overfull \hbox (8.1998pt too wide) in paragraph at lines 715--715
+Overfull \hbox (8.1998pt too wide) in paragraph at lines 697--697
 []|\TU/TimesNewRoman(1)/m/n/12.045 favorites_count|  
  []
 
 
-ignored: Infinite glue shrinkage found in box being split [33] [34]
-ignored: Infinite glue shrinkage found in box being split [35] [36]
-Overfull \hbox (3.48886pt too wide) in paragraph at lines 902--902
+ignored: Infinite glue shrinkage found in box being split [26] [27]
+ignored: Infinite glue shrinkage found in box being split [28] [29]
+Overfull \hbox (3.48886pt too wide) in paragraph at lines 884--884
 []|\TU/TimesNewRoman(1)/m/n/12.045 error_message|  
  []
 
-[37]
-ignored: Infinite glue shrinkage found in box being split [38] [39]
+[30]
+ignored: Infinite glue shrinkage found in box being split [31] [32]
 5
 
-Overfull \hbox (4.6719pt too wide) in paragraph at lines 933--934
+Overfull \hbox (4.6719pt too wide) in paragraph at lines 915--916
 []\TU/simsun.ttc(0)/m/n/12.045 用 户 管 理 模 块 涉 及 前 台 认 证 与 用 户 信 息 维 护，|  后 端 核 心 对 象 为 \TU/TimesNewRoman(1)/m/n/12.045 AuthController\TU/simsun.ttc(0)/m/n/12.045 、|
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [40
+ [33
 
 ]
 File: login.png Graphic file (type bmp)
@@ -1695,16 +1687,16 @@ File: login.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [41]
+ [34]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [42]
+ [35]
 File: 3d.png Graphic file (type bmp)
 <3d.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43]
+ [36]
 File: AI1.png Graphic file (type bmp)
 <AI1.png>
 File: AI2.png Graphic file (type bmp)
@@ -1712,8 +1704,8 @@ File: AI2.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [44]
-Overfull \hbox (19.38419pt too wide) in paragraph at lines 1089--1090
+ [37]
+Overfull \hbox (19.38419pt too wide) in paragraph at lines 1071--1072
 []\TU/simsun.ttc(0)/m/n/12.045 关 注 关 系 写 入 \TU/TimesNewRoman(1)/m/n/12.045 user_follows \TU/simsun.ttc(0)/m/n/12.045 表，|  并 同 步 更 新 用 户 的 \TU/TimesNewRoman(1)/m/n/12.045 followers_count\TU/TimesNewRoman(0)/m/n/12.045 /\TU/TimesNewRoman(1)/m/n/12.045 following_count
  []
 
@@ -1722,26 +1714,26 @@ File: square.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [45]
+ [38]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46]
+ [39]
 File: mywork.png Graphic file (type bmp)
 <mywork.png>
 
-Overfull \hbox (38.30643pt too wide) in paragraph at lines 1166--1166
+Overfull \hbox (38.30643pt too wide) in paragraph at lines 1148--1148
  []|\TU/TimesNewRoman(0)/m/n/12.045 GET/POST/DELETE| 
  []
 
 
-Overfull \hbox (38.30643pt too wide) in paragraph at lines 1166--1166
+Overfull \hbox (38.30643pt too wide) in paragraph at lines 1148--1148
  []|\TU/TimesNewRoman(0)/m/n/12.045 GET/POST/DELETE| 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [47]
+ [40]
 File: admin1.png Graphic file (type bmp)
 <admin1.png>
 File: admin2.png Graphic file (type bmp)
@@ -1751,14 +1743,14 @@ File: admin3.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [48] [49]
+ [41] [42]
 6
 File: test1.png Graphic file (type bmp)
 <test1.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [50
+ [43
 
 ]
 File: test2.png Graphic file (type bmp)
@@ -1766,7 +1758,7 @@ File: test2.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [51]
+ [44]
 File: test3.png Graphic file (type bmp)
 <test3.png>
 File: test4.png Graphic file (type bmp)
@@ -1774,64 +1766,64 @@ File: test4.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [52]
+ [45]
 File: test5.png Graphic file (type bmp)
 <test5.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [53]
+ [46]
 File: test6.png Graphic file (type bmp)
 <test6.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [54]
+ [47]
 File: test7.png Graphic file (type bmp)
 <test7.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [55]
+ [48]
 File: test8.png Graphic file (type bmp)
 <test8.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [56]
+ [49]
 File: test9.png Graphic file (type bmp)
 <test9.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [57]
+ [50]
 File: test10.png Graphic file (type bmp)
 <test10.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [58]
+ [51]
 File: test11.png Graphic file (type bmp)
 <test11.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [59]
+ [52]
 File: test12.png Graphic file (type bmp)
 <test12.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [60]
+ [53]
 File: test13.png Graphic file (type bmp)
 <test13.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [61]
+ [54]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [62]
+ [55]
 File: test14.png Graphic file (type bmp)
 <test14.png>
 File: test15.png Graphic file (type bmp)
@@ -1839,22 +1831,22 @@ File: test15.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [63]
+ [56]
 File: test16.png Graphic file (type bmp)
 <test16.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [64]
+ [57]
 File: test17.png Graphic file (type bmp)
 <test17.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [65]
+ [58]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [66]
+ [59]
 File: test18.png Graphic file (type bmp)
 <test18.png>
 File: test19.png Graphic file (type bmp)
@@ -1862,7 +1854,7 @@ File: test19.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [67]
+ [60]
 File: test20.png Graphic file (type bmp)
 <test20.png>
 File: test21.png Graphic file (type bmp)
@@ -1870,7 +1862,7 @@ File: test21.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [68]
+ [61]
 File: test22.png Graphic file (type bmp)
 <test22.png>
 File: test23.png Graphic file (type bmp)
@@ -1878,192 +1870,218 @@ File: test23.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [69]
+ [62]
 File: test24.png Graphic file (type bmp)
 <test24.png>
- [70]
+ [63]
 7
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [71
+ [64
 
-] (./hzu.bbl [72]
+] (./hzu.bbl [65]
 Underfull \hbox (badness 1681) in paragraph at lines 27--32
 []\TU/TimesNewRoman(0)/m/n/10.53937 Choi S, Park S, Lee M, Choo J.  VITON-HD: High-Resolution Virtual Try-On via
  []
 
-[73
+[66
 
-]) [74] [75
+]) [67] [68
 
-] [76
+] [69
 
 ]
-Overfull \hbox (86.04941pt too wide) in paragraph at lines 1913--1913
+Overfull \hbox (86.04941pt too wide) in paragraph at lines 1895--1895
 []        \TU/TimesNewRoman(1)/m/n/12.045 <div class="w-full lg:w-2/5 flex flex-col justify-center items-center p-8 lg:p-16 bg-white relative">[] 
  []
 
 
-Overfull \hbox (503.40738pt too wide) in paragraph at lines 1913--1913
+Overfull \hbox (503.40738pt too wide) in paragraph at lines 1895--1895
 []                        \TU/TimesNewRoman(1)/m/n/12.045 class="inline-flex justify-center items-center w-[64px] h-[64px] bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl shadow-lg shadow-purple-200 mb-6 transform">[] 
  []
 
 
-Overfull \hbox (139.005pt too wide) in paragraph at lines 1913--1913
+Overfull \hbox (139.005pt too wide) in paragraph at lines 1895--1895
 []                \TU/TimesNewRoman(1)/m/n/12.045 <el-form ref="formRef" :model="form" :rules="rules" size="large" class="space-y-5" @submit.prevent>[] 
  []
 
 
-Overfull \hbox (9.36833pt too wide) in paragraph at lines 1913--1913
+Overfull \hbox (9.36833pt too wide) in paragraph at lines 1895--1895
 []                        \TU/TimesNewRoman(1)/m/n/12.045 <label class="text-xs font-semibold text-gray-600 ml-1">\TU/STFangsong(0)/m/n/12.045 用户名\TU/TimesNewRoman(1)/m/n/12.045 </label>[] 
  []
 
 
-Overfull \hbox (91.1308pt too wide) in paragraph at lines 1913--1913
+Overfull \hbox (91.1308pt too wide) in paragraph at lines 1895--1895
 []                            \TU/TimesNewRoman(1)/m/n/12.045 <el-input v-model="form.username" placeholder="\TU/STFangsong(0)/m/n/12.045 请输入用户名\TU/TimesNewRoman(1)/m/n/12.045 " :prefix-icon="User"[] 
  []
 
 
-Overfull \hbox (166.31207pt too wide) in paragraph at lines 1913--1913
+Overfull \hbox (166.31207pt too wide) in paragraph at lines 1895--1895
 []                            \TU/TimesNewRoman(1)/m/n/12.045 <el-input v-model="form.password" type="password" placeholder="\TU/STFangsong(0)/m/n/12.045 请输入密码\TU/TimesNewRoman(1)/m/n/12.045 " :prefix-icon="Lock"[] 
  []
 
-[77
+[70
 
 ]
-Overfull \hbox (608.8717pt too wide) in paragraph at lines 1913--1913
+Overfull \hbox (608.8717pt too wide) in paragraph at lines 1895--1895
 []                        \TU/TimesNewRoman(1)/m/n/12.045 class="w-full !h-11 !bg-gradient-to-r !from-[#a855f7] !to-[#d8b4fe] !border-none hover:!opacity-90 transition-all duration-300 shadow-lg shadow-purple-200 text-base font-semibold tracking-wide"[] 
  []
 
 
-Overfull \hbox (65.1176pt too wide) in paragraph at lines 1913--1913
+Overfull \hbox (65.1176pt too wide) in paragraph at lines 1895--1895
 []                        \TU/TimesNewRoman(1)/m/n/12.045 style="border-radius: 12px;" :loading="loading" @click="handleSubmit(formRef)">[] 
  []
 
 
-Overfull \hbox (82.70874pt too wide) in paragraph at lines 1913--1913
+Overfull \hbox (82.70874pt too wide) in paragraph at lines 1895--1895
 []                        \TU/TimesNewRoman(1)/m/n/12.045 <button class="text-purple-600 font-bold hover:underline ml-1" @click="toggleMode">[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [78]
+ [71]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [79] [80]
-Overfull \hbox (30.51773pt too wide) in paragraph at lines 2091--2091
+ [72] [73]
+Overfull \hbox (30.51773pt too wide) in paragraph at lines 2073--2073
 [] \TU/TimesNewRoman(1)/m/n/12.045 stmt, err := config.DB.Prepare("INSERT INTO users(username, password) VALUES(?, ?)")[] 
  []
 
 
-Overfull \hbox (390.68544pt too wide) in paragraph at lines 2091--2091
+Overfull \hbox (390.68544pt too wide) in paragraph at lines 2073--2073
 [] \TU/TimesNewRoman(1)/m/n/12.045 row := config.DB.QueryRow("SELECT id, username, password, COALESCE(avatar, ''), role, created_at, updated_at FROM users WHERE username = ?", username)[] 
  []
 
 
-Overfull \hbox (191.11964pt too wide) in paragraph at lines 2091--2091
+Overfull \hbox (191.11964pt too wide) in paragraph at lines 2073--2073
 [] \TU/TimesNewRoman(1)/m/n/12.045 err := row.Scan(&user.ID, &user.Username, &user.Password, &user.Avatar, &user.Role, &user.CreatedAt, &user.UpdatedAt)[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [81]
-Overfull \hbox (265.60097pt too wide) in paragraph at lines 2091--2091
+ [74]
+Overfull \hbox (265.60097pt too wide) in paragraph at lines 2073--2073
 [] \TU/TimesNewRoman(1)/m/n/12.045 row := config.DB.QueryRow("SELECT id, username, COALESCE(avatar, ''), role, created_at, updated_at FROM users WHERE id = ?", id)[] 
  []
 
 
-Overfull \hbox (107.1399pt too wide) in paragraph at lines 2091--2091
+Overfull \hbox (107.1399pt too wide) in paragraph at lines 2073--2073
 [] \TU/TimesNewRoman(1)/m/n/12.045 err := row.Scan(&user.ID, &user.Username, &user.Avatar, &user.Role, &user.CreatedAt, &user.UpdatedAt)[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [82]
-Overfull \hbox (292.86102pt too wide) in paragraph at lines 2091--2091
+ [75]
+Overfull \hbox (292.86102pt too wide) in paragraph at lines 2073--2073
 []  \TU/TimesNewRoman(1)/m/n/12.045 "SELECT id, username, COALESCE(avatar, ''), role, created_at, updated_at FROM users"+where+" ORDER BY id DESC LIMIT ? OFFSET ?",[] 
  []
 
 
-Overfull \hbox (103.76984pt too wide) in paragraph at lines 2091--2091
+Overfull \hbox (103.76984pt too wide) in paragraph at lines 2073--2073
 []  \TU/TimesNewRoman(1)/m/n/12.045 if err := rows.Scan(&u.ID, &u.Username, &u.Avatar, &u.Role, &u.CreatedAt, &u.UpdatedAt); err != nil {[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [83]
-Overfull \hbox (317.12157pt too wide) in paragraph at lines 2091--2091
+ [76]
+Overfull \hbox (317.12157pt too wide) in paragraph at lines 2073--2073
 [] \TU/TimesNewRoman(1)/m/n/12.045 row := config.DB.QueryRow("SELECT id, username, password, COALESCE(avatar, ''), role, created_at, updated_at FROM users WHERE id = ?", id)[] 
  []
 
 
-Overfull \hbox (191.11964pt too wide) in paragraph at lines 2091--2091
+Overfull \hbox (191.11964pt too wide) in paragraph at lines 2073--2073
 [] \TU/TimesNewRoman(1)/m/n/12.045 err := row.Scan(&user.ID, &user.Username, &user.Password, &user.Avatar, &user.Role, &user.CreatedAt, &user.UpdatedAt)[] 
  []
 
 
-Overfull \hbox (8.4509pt too wide) in paragraph at lines 2091--2091
+Overfull \hbox (8.4509pt too wide) in paragraph at lines 2073--2073
 []\TU/TimesNewRoman(1)/m/n/12.045 func UpdateUserFields(id int, username *string, avatar *string, role *int) (int64, error) {[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [84]
-Overfull \hbox (10.89754pt too wide) in paragraph at lines 2091--2091
+ [77]
+Overfull \hbox (10.89754pt too wide) in paragraph at lines 2073--2073
 [] \TU/TimesNewRoman(1)/m/n/12.045 query := fmt.Sprintf("UPDATE users SET %s WHERE id = ?", strings.Join(fields, ", "))[] 
  []
 
 
-Overfull \hbox (64.01785pt too wide) in paragraph at lines 2091--2091
+Overfull \hbox (64.01785pt too wide) in paragraph at lines 2073--2073
 [] \TU/TimesNewRoman(1)/m/n/12.045 res, err := config.DB.Exec("UPDATE users SET password = ? WHERE id = ?", passwordHash, id)[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [85] [86] [87
+ [78] [79] [80
 
 ]
-Overfull \hbox (24.4364pt too wide) in paragraph at lines 2809--2809
+Overfull \hbox (24.4364pt too wide) in paragraph at lines 2791--2791
 []      \TU/TimesNewRoman(1)/m/n/12.045 <PropertiesPanel v-if="activePanel" :active="activePanel" @close="activePanel = ''" />[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [88]
-Overfull \hbox (8.80377pt too wide) in paragraph at lines 2809--2809
+ [81]
+Overfull \hbox (8.80377pt too wide) in paragraph at lines 2791--2791
 []\TU/TimesNewRoman(1)/m/n/12.045 const modelName = computed(() => modelNames[config.modelId] || 'Unknown Model')[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [89]
+ [82]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [90]
-Overfull \hbox (33.39372pt too wide) in paragraph at lines 2809--2809
+ [83]
+Overfull \hbox (33.39372pt too wide) in paragraph at lines 2791--2791
 []\TU/TimesNewRoman(1)/m/n/12.045 const confirmSave = async (formData: { title: string; description: string; tags: string[] }) => {[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [91]
-Overfull \hbox (171.92883pt too wide) in paragraph at lines 2809--2809
+ [84]
+Overfull \hbox (171.92883pt too wide) in paragraph at lines 2791--2791
 []    \TU/TimesNewRoman(1)/m/n/12.045 <div v-if="showLoading" class="absolute inset-0 flex items-center justify-center bg-white/80 z-10 backdrop-blur-sm">[] 
  []
 
 
-Overfull \hbox (112.68019pt too wide) in paragraph at lines 2809--2809
+Overfull \hbox (112.68019pt too wide) in paragraph at lines 2791--2791
 []        \TU/TimesNewRoman(1)/m/n/12.045 <div class="w-8 h-8 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [85]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [86]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [87]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [88]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [89]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [90]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [91]
+Overfull \hbox (111.645pt too wide) in paragraph at lines 2791--2791
+[]    \TU/TimesNewRoman(1)/m/n/12.045 this.camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 100)[] 
  []
 
 
@@ -2073,6 +2091,16 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [93]
+Overfull \hbox (15.38503pt too wide) in paragraph at lines 2791--2791
+[]        \TU/TimesNewRoman(1)/m/n/12.045 // For simplicity, we assume strict matching or specific generic names logic in caller.[] 
+ []
+
+
+Overfull \hbox (34.51701pt too wide) in paragraph at lines 2791--2791
+[]        \TU/TimesNewRoman(1)/m/n/12.045 // Here we check if the mesh name includes the target name (e.g. 'tshirt' includes 'body'?)[] 
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [94]
@@ -2082,119 +2110,174 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [96]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [97]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [98]
-Overfull \hbox (111.645pt too wide) in paragraph at lines 2809--2809
-[]    \TU/TimesNewRoman(1)/m/n/12.045 this.camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 100)[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [99]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [100]
-Overfull \hbox (15.38503pt too wide) in paragraph at lines 2809--2809
-[]        \TU/TimesNewRoman(1)/m/n/12.045 // For simplicity, we assume strict matching or specific generic names logic in caller.[] 
- []
-
-
-Overfull \hbox (34.51701pt too wide) in paragraph at lines 2809--2809
-[]        \TU/TimesNewRoman(1)/m/n/12.045 // Here we check if the mesh name includes the target name (e.g. 'tshirt' includes 'body'?)[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [101]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [102]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [103]
-Overfull \hbox (71.05785pt too wide) in paragraph at lines 2809--2809
+Overfull \hbox (71.05785pt too wide) in paragraph at lines 2791--2791
 []    \TU/TimesNewRoman(1)/m/n/12.045 // We can potentially reuse material if texture hasn't changed, but creating new one is safer for now[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [104]
-Overfull \hbox (169.10577pt too wide) in paragraph at lines 2809--2809
+ [97]
+Overfull \hbox (169.10577pt too wide) in paragraph at lines 2791--2791
 []      \TU/TimesNewRoman(1)/m/n/12.045 const position = new THREE.Vector3(logo.transform.position.x, logo.transform.position.y, logo.transform.position.z)[] 
  []
 
 
-Overfull \hbox (78.35658pt too wide) in paragraph at lines 2809--2809
+Overfull \hbox (78.35658pt too wide) in paragraph at lines 2791--2791
 []      \TU/TimesNewRoman(1)/m/n/12.045 const size = new THREE.Vector3(logo.transform.scale, logo.transform.scale, logo.transform.scale)[] 
  []
 
 
-Overfull \hbox (23.2072pt too wide) in paragraph at lines 2809--2809
+Overfull \hbox (23.2072pt too wide) in paragraph at lines 2791--2791
 []      \TU/TimesNewRoman(1)/m/n/12.045 mesh.userData.config = JSON.parse(JSON.stringify(logo)) // Store deep copy of config[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [105]
+ [98]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [106]
+ [99]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [107]
-Overfull \hbox (135.27039pt too wide) in paragraph at lines 2809--2809
+ [100]
+Overfull \hbox (135.27039pt too wide) in paragraph at lines 2791--2791
 []        \TU/TimesNewRoman(1)/m/n/12.045 normal: hit.face?.normal?.clone().transformDirection(hit.object.matrixWorld) || new THREE.Vector3(0, 1, 0),[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [108] [109]
-Overfull \hbox (45.12698pt too wide) in paragraph at lines 3421--3421
+ [101] [102]
+Overfull \hbox (45.12698pt too wide) in paragraph at lines 3403--3403
 []  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusBadRequest, gin.H{"success": false, "message": "params_json\TU/STFangsong(0)/m/n/12.045 不能为空\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
  []
 
 
-Overfull \hbox (98.4061pt too wide) in paragraph at lines 3421--3421
+Overfull \hbox (98.4061pt too wide) in paragraph at lines 3403--3403
 [] \TU/TimesNewRoman(1)/m/n/12.045 workID, err := model.CreateDesignWork(int64(userID), input.Title, input.Description, input.CoverFileID)[] 
  []
 
 
-Overfull \hbox (27.02422pt too wide) in paragraph at lines 3421--3421
+Overfull \hbox (27.02422pt too wide) in paragraph at lines 3403--3403
 []  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 创建作品失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [110]
-Overfull \hbox (57.34253pt too wide) in paragraph at lines 3421--3421
+ [103]
+Overfull \hbox (57.34253pt too wide) in paragraph at lines 3403--3403
 [] \TU/TimesNewRoman(1)/m/n/12.045 versionID, err := model.CreateDesignVersion(workID, 1, input.ParamsJSON, input.ModelFileID)[] 
  []
 
 
-Overfull \hbox (27.02422pt too wide) in paragraph at lines 3421--3421
+Overfull \hbox (27.02422pt too wide) in paragraph at lines 3403--3403
 []  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 创建版本失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
  []
 
 
-Overfull \hbox (27.02422pt too wide) in paragraph at lines 3421--3421
+Overfull \hbox (27.02422pt too wide) in paragraph at lines 3403--3403
 []  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 更新作品失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [104]
+Overfull \hbox (27.02422pt too wide) in paragraph at lines 3403--3403
+[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 获取作品失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [105]
+Overfull \hbox (292.48465pt too wide) in paragraph at lines 3403--3403
+[] \TU/TimesNewRoman(1)/m/n/12.045 if work.Status == model.DesignStatusSubmitted || work.Status == model.DesignStatusApproved || work.Status == model.DesignStatusPublished {[] 
+ []
+
+
+Overfull \hbox (139.2579pt too wide) in paragraph at lines 3403--3403
+[] \TU/TimesNewRoman(1)/m/n/12.045 _, err = model.UpdateDesignWorkFields(workID, input.Title, input.Description, input.CoverFileID, status, nil, nil)[] 
+ []
+
+
+Overfull \hbox (27.02422pt too wide) in paragraph at lines 3403--3403
+[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 更新作品失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
+ []
+
+
+Overfull \hbox (30.03546pt too wide) in paragraph at lines 3403--3403
+[]   \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 获取版本失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [106]
+Overfull \hbox (178.15128pt too wide) in paragraph at lines 3403--3403
+[] \TU/TimesNewRoman(1)/m/n/12.045 clearSubmittedAt := work.Status == model.DesignStatusRejected || len(input.ParamsJSON) > 0 || input.ModelFileID != nil[] 
+ []
+
+
+Overfull \hbox (71.0696pt too wide) in paragraph at lines 3403--3403
+[]  \TU/TimesNewRoman(1)/m/n/12.045 _, err = model.UpdateDesignVersionFields(versionID, input.ParamsJSON, input.ModelFileID, true)[] 
+ []
+
+
+Overfull \hbox (30.03546pt too wide) in paragraph at lines 3403--3403
+[]   \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 更新版本失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [107]
+Overfull \hbox (27.02422pt too wide) in paragraph at lines 3403--3403
+[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 获取作品失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
+ []
+
+
+Overfull \hbox (38.82217pt too wide) in paragraph at lines 3403--3403
+[] \TU/TimesNewRoman(1)/m/n/12.045 if work.Status != model.DesignStatusDraft && work.Status != model.DesignStatusRejected {[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [108]
+Overfull \hbox (2.93422pt too wide) in paragraph at lines 3403--3403
+[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 提交失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
+ []
+
+
+Overfull \hbox (2.93422pt too wide) in paragraph at lines 3403--3403
+[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 提交失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [109]
+Overfull \hbox (27.02422pt too wide) in paragraph at lines 3403--3403
+[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 获取作品失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
+ []
+
+
+Overfull \hbox (27.02422pt too wide) in paragraph at lines 3403--3403
+[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 获取作品失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [110]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [111]
-Overfull \hbox (27.02422pt too wide) in paragraph at lines 3421--3421
+Overfull \hbox (27.02422pt too wide) in paragraph at lines 3403--3403
 []  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 获取作品失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
  []
 
@@ -2202,647 +2285,587 @@ Overfull \hbox (27.02422pt too wide) in paragraph at lines 3421--3421
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [112]
-Overfull \hbox (292.48465pt too wide) in paragraph at lines 3421--3421
-[] \TU/TimesNewRoman(1)/m/n/12.045 if work.Status == model.DesignStatusSubmitted || work.Status == model.DesignStatusApproved || work.Status == model.DesignStatusPublished {[] 
- []
-
-
-Overfull \hbox (139.2579pt too wide) in paragraph at lines 3421--3421
-[] \TU/TimesNewRoman(1)/m/n/12.045 _, err = model.UpdateDesignWorkFields(workID, input.Title, input.Description, input.CoverFileID, status, nil, nil)[] 
- []
-
-
-Overfull \hbox (27.02422pt too wide) in paragraph at lines 3421--3421
-[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 更新作品失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
- []
-
-
-Overfull \hbox (30.03546pt too wide) in paragraph at lines 3421--3421
-[]   \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 获取版本失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [113]
-Overfull \hbox (178.15128pt too wide) in paragraph at lines 3421--3421
-[] \TU/TimesNewRoman(1)/m/n/12.045 clearSubmittedAt := work.Status == model.DesignStatusRejected || len(input.ParamsJSON) > 0 || input.ModelFileID != nil[] 
- []
-
-
-Overfull \hbox (71.0696pt too wide) in paragraph at lines 3421--3421
-[]  \TU/TimesNewRoman(1)/m/n/12.045 _, err = model.UpdateDesignVersionFields(versionID, input.ParamsJSON, input.ModelFileID, true)[] 
- []
-
-
-Overfull \hbox (30.03546pt too wide) in paragraph at lines 3421--3421
-[]   \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 更新版本失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
+Overfull \hbox (27.02422pt too wide) in paragraph at lines 3403--3403
+[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 获取作品失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [114]
-Overfull \hbox (27.02422pt too wide) in paragraph at lines 3421--3421
-[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 获取作品失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
+Overfull \hbox (27.02422pt too wide) in paragraph at lines 3403--3403
+[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 创建任务失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
  []
 
 
-Overfull \hbox (38.82217pt too wide) in paragraph at lines 3421--3421
-[] \TU/TimesNewRoman(1)/m/n/12.045 if work.Status != model.DesignStatusDraft && work.Status != model.DesignStatusRejected {[] 
+Overfull \hbox (63.88261pt too wide) in paragraph at lines 3403--3403
+[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusOK, gin.H{"success": false, "message": "\TU/STFangsong(0)/m/n/12.045 当前作品已有进行中的试穿任务\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
+ []
+
+
+Overfull \hbox (27.02422pt too wide) in paragraph at lines 3403--3403
+[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 创建任务失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
+ []
+
+
+Overfull \hbox (82.08261pt too wide) in paragraph at lines 3403--3403
+[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusOK, gin.H{"success": false, "message": "\TU/STFangsong(0)/m/n/12.045 进行中的试穿任务过多，| 请稍后再试\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
+ []
+
+
+Overfull \hbox (27.02422pt too wide) in paragraph at lines 3403--3403
+[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 创建任务失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
+ []
+
+
+Overfull \hbox (276.66382pt too wide) in paragraph at lines 3403--3403
+[] \TU/TimesNewRoman(1)/m/n/12.045 _, err = model.CreateTryOnTask(taskID, workID, *work.CurrentVersionID, int64(userID), input.BodyType, input.SceneStyle, input.InputRefs)[] 
+ []
+
+
+Overfull \hbox (27.02422pt too wide) in paragraph at lines 3403--3403
+[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 创建任务失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [115]
-Overfull \hbox (2.93422pt too wide) in paragraph at lines 3421--3421
-[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 提交失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
- []
-
-
-Overfull \hbox (2.93422pt too wide) in paragraph at lines 3421--3421
-[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 提交失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [116]
-Overfull \hbox (27.02422pt too wide) in paragraph at lines 3421--3421
-[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 获取作品失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
- []
-
-
-Overfull \hbox (27.02422pt too wide) in paragraph at lines 3421--3421
-[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 获取作品失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [117]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [118]
-Overfull \hbox (27.02422pt too wide) in paragraph at lines 3421--3421
-[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 获取作品失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [119]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [120]
-Overfull \hbox (27.02422pt too wide) in paragraph at lines 3421--3421
-[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 获取作品失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [121]
-Overfull \hbox (27.02422pt too wide) in paragraph at lines 3421--3421
-[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 创建任务失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
- []
-
-
-Overfull \hbox (63.88261pt too wide) in paragraph at lines 3421--3421
-[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusOK, gin.H{"success": false, "message": "\TU/STFangsong(0)/m/n/12.045 当前作品已有进行中的试穿任务\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
- []
-
-
-Overfull \hbox (27.02422pt too wide) in paragraph at lines 3421--3421
-[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 创建任务失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
- []
-
-
-Overfull \hbox (82.08261pt too wide) in paragraph at lines 3421--3421
-[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusOK, gin.H{"success": false, "message": "\TU/STFangsong(0)/m/n/12.045 进行中的试穿任务过多，| 请稍后再试\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
- []
-
-
-Overfull \hbox (27.02422pt too wide) in paragraph at lines 3421--3421
-[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 创建任务失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
- []
-
-
-Overfull \hbox (276.66382pt too wide) in paragraph at lines 3421--3421
-[] \TU/TimesNewRoman(1)/m/n/12.045 _, err = model.CreateTryOnTask(taskID, workID, *work.CurrentVersionID, int64(userID), input.BodyType, input.SceneStyle, input.InputRefs)[] 
- []
-
-
-Overfull \hbox (27.02422pt too wide) in paragraph at lines 3421--3421
-[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 创建任务失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [122]
-Overfull \hbox (30.03546pt too wide) in paragraph at lines 3421--3421
+Overfull \hbox (30.03546pt too wide) in paragraph at lines 3403--3403
 []   \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 任务入队失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [123]
-Overfull \hbox (27.02422pt too wide) in paragraph at lines 3421--3421
+ [116]
+Overfull \hbox (27.02422pt too wide) in paragraph at lines 3403--3403
 []  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 获取作品失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
  []
 
 
-Overfull \hbox (19.03734pt too wide) in paragraph at lines 3421--3421
+Overfull \hbox (19.03734pt too wide) in paragraph at lines 3403--3403
 []  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusBadRequest, gin.H{"success": false, "message": "task_id\TU/STFangsong(0)/m/n/12.045 不能为空\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
  []
 
 
-Overfull \hbox (27.02422pt too wide) in paragraph at lines 3421--3421
+Overfull \hbox (27.02422pt too wide) in paragraph at lines 3403--3403
 []  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 获取任务失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [124]
-Overfull \hbox (153.84956pt too wide) in paragraph at lines 3421--3421
+ [117]
+Overfull \hbox (153.84956pt too wide) in paragraph at lines 3403--3403
 [] \TU/TimesNewRoman(1)/m/n/12.045 return fmt.Sprintf("tryon_%d_%d_%d_%s", workID, userID, time.Now().UnixNano(), hex.EncodeToString(buf)), nil[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [125]
-Overfull \hbox (27.02422pt too wide) in paragraph at lines 3421--3421
+ [118]
+Overfull \hbox (27.02422pt too wide) in paragraph at lines 3403--3403
 []  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 获取作品失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
  []
 
 
-Overfull \hbox (2.93422pt too wide) in paragraph at lines 3421--3421
+Overfull \hbox (2.93422pt too wide) in paragraph at lines 3403--3403
 []  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 下架失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [126]
-Overfull \hbox (27.02422pt too wide) in paragraph at lines 3421--3421
+ [119]
+Overfull \hbox (27.02422pt too wide) in paragraph at lines 3403--3403
 []  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 获取作品失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
  []
 
 
-Overfull \hbox (59.95973pt too wide) in paragraph at lines 3421--3421
+Overfull \hbox (59.95973pt too wide) in paragraph at lines 3403--3403
 [] \TU/TimesNewRoman(1)/m/n/12.045 if work.Status == model.DesignStatusSubmitted || work.Status == model.DesignStatusPublished {[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [127]
-Overfull \hbox (2.93422pt too wide) in paragraph at lines 3421--3421
+ [120]
+Overfull \hbox (2.93422pt too wide) in paragraph at lines 3403--3403
 []  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "\TU/STFangsong(0)/m/n/12.045 删除失败\TU/TimesNewRoman(1)/m/n/12.045 "})[] 
  []
 
-[128]
-Overfull \hbox (114.61516pt too wide) in paragraph at lines 3696--3696
+[121]
+Overfull \hbox (114.61516pt too wide) in paragraph at lines 3678--3678
 []  \TU/TimesNewRoman(1)/m/n/12.045 <div class="bg-white rounded-[2rem] border border-slate-100 shadow-[0_4px_24px_rgba(0,0,0,0.04)] p-8">[] 
  []
 
 
-Overfull \hbox (111.09804pt too wide) in paragraph at lines 3696--3696
+Overfull \hbox (111.09804pt too wide) in paragraph at lines 3678--3678
 []      \TU/TimesNewRoman(1)/m/n/12.045 <span class="px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-600 text-xs font-bold">BETA</span>[] 
  []
 
 
-Overfull \hbox (355.32101pt too wide) in paragraph at lines 3696--3696
+Overfull \hbox (355.32101pt too wide) in paragraph at lines 3678--3678
 []      \TU/TimesNewRoman(1)/m/n/12.045 <button @click="router.push('/login')" class="px-6 py-2 rounded-xl bg-purple-50 text-purple-600 text-sm font-bold hover:bg-purple-100 transition-colors">[] 
  []
 
 
-Overfull \hbox (178.75114pt too wide) in paragraph at lines 3696--3696
+Overfull \hbox (178.75114pt too wide) in paragraph at lines 3678--3678
 []          \TU/TimesNewRoman(1)/m/n/12.045 <label class="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-wider">\TU/STFangsong(0)/m/n/12.045 模特体型 \TU/TimesNewRoman(1)/m/n/12.045 (Body Type)</label>[] 
  []
 
 
-Overfull \hbox (890.353pt too wide) in paragraph at lines 3696--3696
+Overfull \hbox (890.353pt too wide) in paragraph at lines 3678--3678
 []          \TU/TimesNewRoman(1)/m/n/12.045 <select v-model="form.body_type" :disabled="isBusy" class="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-800 outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-500/10 transition-all disabled:opacity-50">[] 
  []
 
 
-Overfull \hbox (182.2623pt too wide) in paragraph at lines 3696--3696
+Overfull \hbox (182.2623pt too wide) in paragraph at lines 3678--3678
 []          \TU/TimesNewRoman(1)/m/n/12.045 <label class="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-wider">\TU/STFangsong(0)/m/n/12.045 场景风格 \TU/TimesNewRoman(1)/m/n/12.045 (Scene Style)</label>[] 
  []
 
 
-Overfull \hbox (895.0228pt too wide) in paragraph at lines 3696--3696
+Overfull \hbox (895.0228pt too wide) in paragraph at lines 3678--3678
 []          \TU/TimesNewRoman(1)/m/n/12.045 <select v-model="form.scene_style" :disabled="isBusy" class="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-800 outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-500/10 transition-all disabled:opacity-50">[] 
  []
 
-[129
+[122
 
 ]
-Overfull \hbox (937.492pt too wide) in paragraph at lines 3696--3696
+Overfull \hbox (937.492pt too wide) in paragraph at lines 3678--3678
 []          \TU/TimesNewRoman(1)/m/n/12.045 class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 text-white text-sm font-bold shadow-md shadow-purple-500/20 hover:shadow-purple-500/40 transition-all disabled:opacity-50 disabled:cursor-not-allowed"[] 
  []
 
 
-Overfull \hbox (164.45955pt too wide) in paragraph at lines 3696--3696
+Overfull \hbox (164.45955pt too wide) in paragraph at lines 3678--3678
 []          \TU/TimesNewRoman(1)/m/n/12.045 <span v-if="isBusy" class="w-4 h-4 rounded-full border-2 border-white/30 border-t-white animate-spin"></span>[] 
  []
 
 
-Overfull \hbox (38.62811pt too wide) in paragraph at lines 3696--3696
+Overfull \hbox (38.62811pt too wide) in paragraph at lines 3678--3678
 []      \TU/TimesNewRoman(1)/m/n/12.045 <div v-if="latestTask" class="bg-slate-50 rounded-2xl p-5 mb-6 border border-slate-100">[] 
  []
 
 
-Overfull \hbox (257.5612pt too wide) in paragraph at lines 3696--3696
+Overfull \hbox (257.5612pt too wide) in paragraph at lines 3678--3678
 []          \TU/TimesNewRoman(1)/m/n/12.045 <span class="px-2.5 py-1 rounded-lg text-xs font-bold" :class="statusConfig[latestTask.status]?.class || 'bg-slate-200 text-slate-600'">[] 
  []
 
 
-Overfull \hbox (193.27223pt too wide) in paragraph at lines 3696--3696
+Overfull \hbox (193.27223pt too wide) in paragraph at lines 3678--3678
 []            \TU/TimesNewRoman(1)/m/n/12.045 <div class="h-full bg-purple-500 transition-all duration-500" :style="{ width: `${latestTask.progress || 0}%` }"></div>[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [130]
-Overfull \hbox (73.41042pt too wide) in paragraph at lines 3696--3696
+ [123]
+Overfull \hbox (73.41042pt too wide) in paragraph at lines 3678--3678
 []        \TU/TimesNewRoman(1)/m/n/12.045 <div v-if="latestTask.status === 4" class="mt-2 p-3 rounded-xl bg-red-50 text-red-600 text-xs">[] 
  []
 
 
-Overfull \hbox (272.41165pt too wide) in paragraph at lines 3696--3696
+Overfull \hbox (272.41165pt too wide) in paragraph at lines 3678--3678
 []        \TU/TimesNewRoman(1)/m/n/12.045 <div v-if="latestTask.status === 3 && resultImage" class="mt-4 relative rounded-xl overflow-hidden bg-white border border-slate-200">[] 
  []
 
 
-Overfull \hbox (56.17802pt too wide) in paragraph at lines 3696--3696
+Overfull \hbox (56.17802pt too wide) in paragraph at lines 3678--3678
 []        \TU/TimesNewRoman(1)/m/n/12.045 <h3 class="text-xs font-bold text-slate-500 mb-3 uppercase tracking-wider">\TU/STFangsong(0)/m/n/12.045 历史记录\TU/TimesNewRoman(1)/m/n/12.045 </h3>[] 
  []
 
 
-Overfull \hbox (622.34593pt too wide) in paragraph at lines 3696--3696
+Overfull \hbox (622.34593pt too wide) in paragraph at lines 3678--3678
 []          \TU/TimesNewRoman(1)/m/n/12.045 <div v-for="task in historyTasks" :key="task.id" class="flex gap-3 p-3 rounded-xl bg-white border border-slate-100 hover:border-purple-200 transition-colors cursor-pointer" @click="viewHistoryTask(task)">[] 
  []
 
 
-Overfull \hbox (248.94507pt too wide) in paragraph at lines 3696--3696
+Overfull \hbox (248.94507pt too wide) in paragraph at lines 3678--3678
 []            \TU/TimesNewRoman(1)/m/n/12.045 <div class="w-12 h-12 rounded-lg bg-slate-50 overflow-hidden shrink-0 flex items-center justify-center border border-slate-100">[] 
  []
 
 
-Overfull \hbox (358.46161pt too wide) in paragraph at lines 3696--3696
+Overfull \hbox (358.46161pt too wide) in paragraph at lines 3678--3678
 []              \TU/TimesNewRoman(1)/m/n/12.045 <img v-if="task.status === 3 && (task.thumbnail_url || task.result_url)" :src="task.thumbnail_url || task.result_url" class="w-full h-full object-cover" />[] 
  []
 
 
-Overfull \hbox (288.90877pt too wide) in paragraph at lines 3696--3696
+Overfull \hbox (288.90877pt too wide) in paragraph at lines 3678--3678
 []              \TU/TimesNewRoman(1)/m/n/12.045 <svg v-else width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-slate-300">[] 
  []
 
 
-Overfull \hbox (283.00974pt too wide) in paragraph at lines 3696--3696
+Overfull \hbox (283.00974pt too wide) in paragraph at lines 3678--3678
 []                \TU/TimesNewRoman(1)/m/n/12.045 <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>[] 
  []
 
 
-Overfull \hbox (318.7682pt too wide) in paragraph at lines 3696--3696
+Overfull \hbox (318.7682pt too wide) in paragraph at lines 3678--3678
 []                  \TU/TimesNewRoman(1)/m/n/12.045 {{ task.body_type === 'female' ? '\TU/STFangsong(0)/m/n/12.045 女性\TU/TimesNewRoman(1)/m/n/12.045 ' : '\TU/STFangsong(0)/m/n/12.045 男性\TU/TimesNewRoman(1)/m/n/12.045 ' }} / {{ task.scene_style === 'studio' ? '\TU/STFangsong(0)/m/n/12.045 影棚\TU/TimesNewRoman(1)/m/n/12.045 ' : task.scene_style === 'street' ? '\TU/STFangsong(0)/m/n/12.045 街拍\TU/TimesNewRoman(1)/m/n/12.045 ' : '\TU/STFangsong(0)/m/n/12.045 自然\TU/TimesNewRoman(1)/m/n/12.045 ' }}[] 
  []
 
 
-Overfull \hbox (140.8635pt too wide) in paragraph at lines 3696--3696
+Overfull \hbox (140.8635pt too wide) in paragraph at lines 3678--3678
 []                \TU/TimesNewRoman(1)/m/n/12.045 <span class="text-[10px] px-1.5 py-0.5 rounded text-slate-500" :class="statusConfig[task.status]?.class">[] 
  []
 
 
-Overfull \hbox (32.35266pt too wide) in paragraph at lines 3696--3696
+Overfull \hbox (32.35266pt too wide) in paragraph at lines 3678--3678
 []              \TU/TimesNewRoman(1)/m/n/12.045 <span class="text-[10px] text-slate-400">{{ formatTime(task.created_at) }}</span>[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [131]
+ [124]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [132]
-Overfull \hbox (281.46889pt too wide) in paragraph at lines 3696--3696
+ [125]
+Overfull \hbox (281.46889pt too wide) in paragraph at lines 3678--3678
 []  \TU/TimesNewRoman(1)/m/n/12.045 return `${date.getMonth() + 1}/${date.getDate()} ${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}`[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [133]
+ [126]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [134]
-Overfull \hbox (76.75687pt too wide) in paragraph at lines 3696--3696
+ [127]
+Overfull \hbox (76.75687pt too wide) in paragraph at lines 3678--3678
 []    \TU/TimesNewRoman(1)/m/n/12.045 const msg = e.response?._data?.message || e.response?.data?.message || e.message || '\TU/STFangsong(0)/m/n/12.045 网络请求失败\TU/TimesNewRoman(1)/m/n/12.045 '[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [135]
+ [128]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [136] [137]
+ [129] [130]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [138]
+ [131]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [139]
-Overfull \hbox (287.01497pt too wide) in paragraph at lines 4035--4035
+ [132]
+Overfull \hbox (287.01497pt too wide) in paragraph at lines 4017--4017
 []\TU/TimesNewRoman(1)/m/n/12.045 func CreateTryOnTask(taskID string, workID, versionID, userID int64, bodyType, sceneStyle string, inputRefs json.RawMessage) (int64, error) {[] 
  []
 
 
-Overfull \hbox (165.36522pt too wide) in paragraph at lines 4035--4035
+Overfull \hbox (165.36522pt too wide) in paragraph at lines 4017--4017
 []  \TU/TimesNewRoman(1)/m/n/12.045 `INSERT INTO tryon_tasks(task_id, work_id, version_id, user_id, body_type, scene_style, input_refs, status, progress)[] 
  []
 
 
-Overfull \hbox (64.15312pt too wide) in paragraph at lines 4035--4035
+Overfull \hbox (64.15312pt too wide) in paragraph at lines 4017--4017
 []  \TU/TimesNewRoman(1)/m/n/12.045 taskID, workID, versionID, userID, bodyType, sceneStyle, inputRefs, TryOnTaskStatusQueued, 0,[] 
  []
 
 
-Overfull \hbox (91.37787pt too wide) in paragraph at lines 4035--4035
+Overfull \hbox (91.37787pt too wide) in paragraph at lines 4017--4017
 []  \TU/TimesNewRoman(1)/m/n/12.045 `SELECT id, task_id, work_id, version_id, user_id, body_type, scene_style, input_refs, status, progress,[] 
  []
 
 
-Overfull \hbox (20.34883pt too wide) in paragraph at lines 4035--4035
+Overfull \hbox (20.34883pt too wide) in paragraph at lines 4017--4017
 []          \TU/TimesNewRoman(1)/m/n/12.045 result_url, error_code, error_message, started_at, finished_at, created_at, updated_at[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [140]
-Overfull \hbox (91.37787pt too wide) in paragraph at lines 4035--4035
+ [133]
+Overfull \hbox (91.37787pt too wide) in paragraph at lines 4017--4017
 []  \TU/TimesNewRoman(1)/m/n/12.045 `SELECT id, task_id, work_id, version_id, user_id, body_type, scene_style, input_refs, status, progress,[] 
  []
 
 
-Overfull \hbox (20.34883pt too wide) in paragraph at lines 4035--4035
+Overfull \hbox (20.34883pt too wide) in paragraph at lines 4017--4017
 []          \TU/TimesNewRoman(1)/m/n/12.045 result_url, error_code, error_message, started_at, finished_at, created_at, updated_at[] 
  []
 
 
-Overfull \hbox (91.37787pt too wide) in paragraph at lines 4035--4035
+Overfull \hbox (91.37787pt too wide) in paragraph at lines 4017--4017
 []  \TU/TimesNewRoman(1)/m/n/12.045 `SELECT id, task_id, work_id, version_id, user_id, body_type, scene_style, input_refs, status, progress,[] 
  []
 
 
-Overfull \hbox (20.34883pt too wide) in paragraph at lines 4035--4035
+Overfull \hbox (20.34883pt too wide) in paragraph at lines 4017--4017
 []          \TU/TimesNewRoman(1)/m/n/12.045 result_url, error_code, error_message, started_at, finished_at, created_at, updated_at[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [141]
+ [134]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [142]
-Overfull \hbox (61.61829pt too wide) in paragraph at lines 4035--4035
+ [135]
+Overfull \hbox (61.61829pt too wide) in paragraph at lines 4017--4017
 []\TU/TimesNewRoman(1)/m/n/12.045 func ListTimedOutRunningTryOnTasks(timeoutBefore time.Time, limit int) ([]TryOnTask, error) {[] 
  []
 
 
-Overfull \hbox (91.37787pt too wide) in paragraph at lines 4035--4035
+Overfull \hbox (91.37787pt too wide) in paragraph at lines 4017--4017
 []  \TU/TimesNewRoman(1)/m/n/12.045 `SELECT id, task_id, work_id, version_id, user_id, body_type, scene_style, input_refs, status, progress,[] 
  []
 
 
-Overfull \hbox (20.34883pt too wide) in paragraph at lines 4035--4035
+Overfull \hbox (20.34883pt too wide) in paragraph at lines 4017--4017
 []          \TU/TimesNewRoman(1)/m/n/12.045 result_url, error_code, error_message, started_at, finished_at, created_at, updated_at[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [143]
+ [136]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [144]
+ [137]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [145]
-Overfull \hbox (65.48813pt too wide) in paragraph at lines 4035--4035
+ [138]
+Overfull \hbox (65.48813pt too wide) in paragraph at lines 4017--4017
 []      \TU/TimesNewRoman(1)/m/n/12.045 SET status = ?, progress = 100, result_url = ?, error_code = '', error_message = '', finished_at = ?[] 
  []
 
 
-Overfull \hbox (155.46693pt too wide) in paragraph at lines 4035--4035
+Overfull \hbox (155.46693pt too wide) in paragraph at lines 4017--4017
 []  \TU/TimesNewRoman(1)/m/n/12.045 TryOnTaskStatusFailed, errorCode, errorMessage, now, taskID, TryOnTaskStatusQueued, TryOnTaskStatusRunning,[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [146]
-Overfull \hbox (47.09724pt too wide) in paragraph at lines 4035--4035
+ [139]
+Overfull \hbox (47.09724pt too wide) in paragraph at lines 4017--4017
 []  \TU/TimesNewRoman(1)/m/n/12.045 TryOnTaskStatusCancelled, now, taskID, TryOnTaskStatusQueued, TryOnTaskStatusRunning,[] 
  []
 
 
-Overfull \hbox (23.613pt too wide) in paragraph at lines 4035--4035
+Overfull \hbox (23.613pt too wide) in paragraph at lines 4017--4017
 []\TU/TimesNewRoman(1)/m/n/12.045 func UpdateTryOnTaskStatus(taskID string, toStatus int, fromStatuses []int) (int64, error) {[] 
  []
 
 
-Overfull \hbox (204.69965pt too wide) in paragraph at lines 4035--4035
+Overfull \hbox (204.69965pt too wide) in paragraph at lines 4017--4017
 [] \TU/TimesNewRoman(1)/m/n/12.045 query := fmt.Sprintf("UPDATE tryon_tasks SET status = ? WHERE task_id = ? AND status IN (%s)", strings.Join(holders, ","))[] 
  []
 
-[147]
-Overfull \hbox (178.54149pt too wide) in paragraph at lines 5864--5864
+[140]
+Overfull \hbox (178.54149pt too wide) in paragraph at lines 5846--5846
 []                    \TU/TimesNewRoman(1)/m/n/12.045 <input v-model="searchQuery" type="text" placeholder="\TU/STFangsong(0)/m/n/12.045 搜索设计作品、| 灵感\TU/TimesNewRoman(1)/m/n/12.045 ..." class="sq-search__input" />[] 
  []
 
-[148
+[141
 
 ]
-Overfull \hbox (218.262pt too wide) in paragraph at lines 5864--5864
+Overfull \hbox (218.262pt too wide) in paragraph at lines 5846--5846
 []                            \TU/TimesNewRoman(1)/m/n/12.045 <img :src="userStore.user?.avatar || 'https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png'"[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [149]
-Overfull \hbox (64.78233pt too wide) in paragraph at lines 5864--5864
+ [142]
+Overfull \hbox (64.78233pt too wide) in paragraph at lines 5846--5846
 []                                \TU/TimesNewRoman(1)/m/n/12.045 <el-dropdown-item class="!rounded-lg !mb-1" @click="navigateTo('/works')">[] 
  []
 
 
-Overfull \hbox (90.86023pt too wide) in paragraph at lines 5864--5864
+Overfull \hbox (90.86023pt too wide) in paragraph at lines 5846--5846
 []                                \TU/TimesNewRoman(1)/m/n/12.045 <el-dropdown-item class="!rounded-lg !mb-1" @click="navigateTo('/user/profile')">[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [150]
-Overfull \hbox (139.8934pt too wide) in paragraph at lines 5864--5864
+ [143]
+Overfull \hbox (139.8934pt too wide) in paragraph at lines 5846--5846
 []                        \TU/STFangsong(0)/m/n/12.045 汇聚全球顶尖设计师的 \TU/TimesNewRoman(1)/m/n/12.045 3D \TU/STFangsong(0)/m/n/12.045 服装作品，| 从赛博朋克到复古回潮，| 激发你下一个设计的灵感火花。| [] 
  []
 
 
-Overfull \hbox (57.41893pt too wide) in paragraph at lines 5864--5864
+Overfull \hbox (57.41893pt too wide) in paragraph at lines 5846--5846
 []                        \TU/TimesNewRoman(1)/m/n/12.045 <button @click="navigateTo('/design')" class="sq-hero-btn sq-hero-btn--primary">[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [151]
-Overfull \hbox (41.83926pt too wide) in paragraph at lines 5864--5864
+ [144]
+Overfull \hbox (41.83926pt too wide) in paragraph at lines 5846--5846
 []                        \TU/TimesNewRoman(1)/m/n/12.045 <button v-for="tag in tags" :key="tag" @click="activeTag = tag" class="sq-tag"[] 
  []
 
 
-Overfull \hbox (0.72273pt too wide) in paragraph at lines 5864--5864
+Overfull \hbox (0.72273pt too wide) in paragraph at lines 5846--5846
 []                        \TU/TimesNewRoman(1)/m/n/12.045 <el-dropdown trigger="click" @command="(c: string) => sortBy = c">[] 
  []
 
 
-Overfull \hbox (78.70934pt too wide) in paragraph at lines 5864--5864
+Overfull \hbox (78.70934pt too wide) in paragraph at lines 5846--5846
 []                                        \TU/TimesNewRoman(1)/m/n/12.045 :class="{ '!text-violet-400 !bg-violet-900/30 !font-bold': sortBy === 'latest' }"[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [152]
-Overfull \hbox (68.68164pt too wide) in paragraph at lines 5864--5864
+ [145]
+Overfull \hbox (68.68164pt too wide) in paragraph at lines 5846--5846
 []                                        \TU/TimesNewRoman(1)/m/n/12.045 :class="{ '!text-violet-400 !bg-violet-900/30 !font-bold': sortBy === 'hot' }"[] 
  []
 
 
-Overfull \hbox (78.03886pt too wide) in paragraph at lines 5864--5864
+Overfull \hbox (78.03886pt too wide) in paragraph at lines 5846--5846
 []                                        \TU/TimesNewRoman(1)/m/n/12.045 :class="{ '!text-violet-400 !bg-violet-900/30 !font-bold': sortBy === 'trend' }"[] 
  []
 
 
-Overfull \hbox (76.01575pt too wide) in paragraph at lines 5864--5864
+Overfull \hbox (76.01575pt too wide) in paragraph at lines 5846--5846
 []                            \TU/TimesNewRoman(1)/m/n/12.045 <button class="sq-view-btn" :class="{ 'sq-view-btn--active': viewMode === 'grid' }"[] 
  []
 
 
-Overfull \hbox (71.34007pt too wide) in paragraph at lines 5864--5864
+Overfull \hbox (71.34007pt too wide) in paragraph at lines 5846--5846
 []                            \TU/TimesNewRoman(1)/m/n/12.045 <button class="sq-view-btn" :class="{ 'sq-view-btn--active': viewMode === 'list' }"[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [153]
-Overfull \hbox (121.36684pt too wide) in paragraph at lines 5864--5864
+ [146]
+Overfull \hbox (121.36684pt too wide) in paragraph at lines 5846--5846
 []                        \TU/TimesNewRoman(1)/m/n/12.045 <ModelPreview v-if="work.params_json?.modelUrl" :model-url="work.params_json.modelUrl"[] 
  []
 
 
-Overfull \hbox (56.21913pt too wide) in paragraph at lines 5864--5864
+Overfull \hbox (56.21913pt too wide) in paragraph at lines 5846--5846
 []                            \TU/TimesNewRoman(1)/m/n/12.045 class="w-full h-full transition-transform duration-700 group-hover:scale-105" />[] 
  []
 
 
-Overfull \hbox (85.04951pt too wide) in paragraph at lines 5864--5864
+Overfull \hbox (85.04951pt too wide) in paragraph at lines 5846--5846
 []                            \TU/TimesNewRoman(1)/m/n/12.045 <button class="sq-card__action" :class="{ 'sq-card__action--fav': work.is_favorited }"[] 
  []
 
 
-Overfull \hbox (18.90198pt too wide) in paragraph at lines 5864--5864
+Overfull \hbox (18.90198pt too wide) in paragraph at lines 5846--5846
 []                                \TU/TimesNewRoman(1)/m/n/12.045 @click.stop="router.push(`/square/${work.id}`)">\TU/STFangsong(0)/m/n/12.045 查看详情\TU/TimesNewRoman(1)/m/n/12.045 </button>[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [154]
-Overfull \hbox (124.27219pt too wide) in paragraph at lines 5864--5864
+ [147]
+Overfull \hbox (124.27219pt too wide) in paragraph at lines 5846--5846
 []                            \TU/TimesNewRoman(1)/m/n/12.045 <span v-for="tag in work.tags.slice(0, 3)" :key="tag" class="sq-card__tag">#{{ tag }}</span>[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [155]
+ [148]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [156]
-Overfull \hbox (150.64404pt too wide) in paragraph at lines 5864--5864
+ [149]
+Overfull \hbox (150.64404pt too wide) in paragraph at lines 5846--5846
 []\TU/TimesNewRoman(1)/m/n/12.045 const tags = ['\TU/STFangsong(0)/m/n/12.045 全部\TU/TimesNewRoman(1)/m/n/12.045 ', '\TU/STFangsong(0)/m/n/12.045 夹克\TU/TimesNewRoman(1)/m/n/12.045 ', '\TU/STFangsong(0)/m/n/12.045 连衣裙\TU/TimesNewRoman(1)/m/n/12.045 ', 'T\TU/STFangsong(0)/m/n/12.045 恤\TU/TimesNewRoman(1)/m/n/12.045 ', '\TU/STFangsong(0)/m/n/12.045 运动装\TU/TimesNewRoman(1)/m/n/12.045 ', '\TU/STFangsong(0)/m/n/12.045 正装\TU/TimesNewRoman(1)/m/n/12.045 ', '\TU/STFangsong(0)/m/n/12.045 休闲\TU/TimesNewRoman(1)/m/n/12.045 ', '\TU/STFangsong(0)/m/n/12.045 概念设计\TU/TimesNewRoman(1)/m/n/12.045 ', '\TU/STFangsong(0)/m/n/12.045 国潮\TU/TimesNewRoman(1)/m/n/12.045 ', '\TU/STFangsong(0)/m/n/12.045 赛博朋克\TU/TimesNewRoman(1)/m/n/12.045 ', '\TU/STFangsong(0)/m/n/12.045 虚拟服饰\TU/TimesNewRoman(1)/m/n/12.045 ', '\TU/STFangsong(0)/m/n/12.045 配饰\TU/TimesNewRoman(1)/m/n/12.045 '][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [157]
+ [150]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [158]
-Overfull \hbox (78.29776pt too wide) in paragraph at lines 5864--5864
+ [151]
+Overfull \hbox (78.29776pt too wide) in paragraph at lines 5846--5846
 []        \TU/TimesNewRoman(1)/m/n/12.045 const res = await useRequest(`/api/square/works/${work.id}/like`, {}, { method: 'POST' }) as any[] 
  []
 
 
-Overfull \hbox (97.68855pt too wide) in paragraph at lines 5864--5864
+Overfull \hbox (97.68855pt too wide) in paragraph at lines 5846--5846
 []        \TU/TimesNewRoman(1)/m/n/12.045 const res = await useRequest(`/api/square/works/${work.id}/favorite`, {}, { method: 'POST' }) as any[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [159]
+ [152]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [160]
-Overfull \hbox (278.98698pt too wide) in paragraph at lines 5864--5864
+ [153]
+Overfull \hbox (278.98698pt too wide) in paragraph at lines 5846--5846
 []\TU/TimesNewRoman(1)/m/n/12.045 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [161]
+ [154]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [162]
-Overfull \hbox (24.83633pt too wide) in paragraph at lines 5864--5864
+ [155]
+Overfull \hbox (24.83633pt too wide) in paragraph at lines 5846--5846
 []    \TU/TimesNewRoman(1)/m/n/12.045 background-image: radial-gradient(circle, rgba(109, 40, 217, 0.07) 1px, transparent 1px);[] 
  []
 
 
-Overfull \hbox (21.71335pt too wide) in paragraph at lines 5864--5864
+Overfull \hbox (21.71335pt too wide) in paragraph at lines 5846--5846
 []    \TU/TimesNewRoman(1)/m/n/12.045 mask-image: radial-gradient(ellipse 80% 50% at 50% 0%, black 20%, transparent 75%);[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [156]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [157]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [158]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [159]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [160]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [161]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [162]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [163]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [164]
+Overfull \hbox (10.22708pt too wide) in paragraph at lines 5846--5846
+[]    \TU/TimesNewRoman(1)/m/n/12.045 background: linear-gradient(140deg, #EDE9FE 0%, #F5F0FF 50%, #FAF5FF 100%);[] 
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [165]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [166]
+Overfull \hbox (13.07953pt too wide) in paragraph at lines 5846--5846
+[]    \TU/TimesNewRoman(1)/m/n/12.045 background: linear-gradient(128deg, #7C3AED 0%, #A855F7 60%, #6D28D9 100%);[] 
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [167]
@@ -2858,22 +2881,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [171]
-Overfull \hbox (10.22708pt too wide) in paragraph at lines 5864--5864
-[]    \TU/TimesNewRoman(1)/m/n/12.045 background: linear-gradient(140deg, #EDE9FE 0%, #F5F0FF 50%, #FAF5FF 100%);[] 
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [172]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [173]
-Overfull \hbox (13.07953pt too wide) in paragraph at lines 5864--5864
-[]    \TU/TimesNewRoman(1)/m/n/12.045 background: linear-gradient(128deg, #7C3AED 0%, #A855F7 60%, #6D28D9 100%);[] 
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [174]
@@ -2886,6 +2899,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [177]
+Overfull \hbox (39.15741pt too wide) in paragraph at lines 5846--5846
+[]    \TU/TimesNewRoman(1)/m/n/12.045 transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s, box-shadow 0.4s;[] 
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [178]
@@ -2907,17 +2925,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [184]
-Overfull \hbox (39.15741pt too wide) in paragraph at lines 5864--5864
-[]    \TU/TimesNewRoman(1)/m/n/12.045 transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s, box-shadow 0.4s;[] 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [185]
+Overfull \hbox (11.46214pt too wide) in paragraph at lines 5846--5846
+[]    \TU/TimesNewRoman(1)/m/n/12.045 background: linear-gradient(90deg, transparent, rgba(124, 58, 237, 0.08), transparent);[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [185]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [186]
+Overfull \hbox (11.0034pt too wide) in paragraph at lines 5846--5846
+[]    \TU/TimesNewRoman(1)/m/n/12.045 box-shadow: 0 4px 18px rgba(124, 58, 237, 0.35), 0 1px 4px rgba(124, 58, 237, 0.15);[] 
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [187]
@@ -2927,755 +2950,760 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [189]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [190]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [191]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [192]
-Overfull \hbox (11.46214pt too wide) in paragraph at lines 5864--5864
-[]    \TU/TimesNewRoman(1)/m/n/12.045 background: linear-gradient(90deg, transparent, rgba(124, 58, 237, 0.08), transparent);[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [193]
-Overfull \hbox (11.0034pt too wide) in paragraph at lines 5864--5864
-[]    \TU/TimesNewRoman(1)/m/n/12.045 box-shadow: 0 4px 18px rgba(124, 58, 237, 0.35), 0 1px 4px rgba(124, 58, 237, 0.15);[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [194]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [195]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [196]
-Overfull \hbox (15.38501pt too wide) in paragraph at lines 5864--5864
+Overfull \hbox (15.38501pt too wide) in paragraph at lines 5846--5846
 []    \TU/TimesNewRoman(1)/m/n/12.045 const a = new THREE.AmbientLight(0xffffff, 0.7); scene.add(a); defaultLights.push(a)[] 
  []
 
 
-Overfull \hbox (241.99329pt too wide) in paragraph at lines 5864--5864
+Overfull \hbox (241.99329pt too wide) in paragraph at lines 5846--5846
 []    \TU/TimesNewRoman(1)/m/n/12.045 const s = new THREE.DirectionalLight(0xffffff, 1.2); s.position.set(5, 10, 5); s.castShadow = true; scene.add(s); defaultLights.push(s)[] 
  []
 
 
-Overfull \hbox (443.62347pt too wide) in paragraph at lines 5864--5864
+Overfull \hbox (443.62347pt too wide) in paragraph at lines 5846--5846
 []    \TU/TimesNewRoman(1)/m/n/12.045 const sp = new THREE.SpotLight(0xffffff, 1.5); sp.position.set(0, 5, 5); sp.angle = Math.PI / 4; sp.penumbra = 0.5; sp.castShadow = true; scene.add(sp); defaultLights.push(sp)[] 
  []
 
 
-Overfull \hbox (258.06113pt too wide) in paragraph at lines 5864--5864
+Overfull \hbox (258.06113pt too wide) in paragraph at lines 5846--5846
 []    \TU/TimesNewRoman(1)/m/n/12.045 const rim = new THREE.SpotLight(0x4c1d95, 2); rim.position.set(-5, 2, -5); rim.lookAt(0, 0, 0); scene.add(rim); defaultLights.push(rim)[] 
  []
 
 
-Overfull \hbox (15.38501pt too wide) in paragraph at lines 5864--5864
+Overfull \hbox (15.38501pt too wide) in paragraph at lines 5846--5846
 []    \TU/TimesNewRoman(1)/m/n/12.045 const a = new THREE.AmbientLight(0xffffff, 0.6); scene.add(a); defaultLights.push(a)[] 
  []
 
 
-Overfull \hbox (242.64612pt too wide) in paragraph at lines 5864--5864
+Overfull \hbox (242.64612pt too wide) in paragraph at lines 5846--5846
 []    \TU/TimesNewRoman(1)/m/n/12.045 const d = new THREE.DirectionalLight(0xffffff, 0.8); d.position.set(2, 4, 3); d.castShadow = true; scene.add(d); defaultLights.push(d)[] 
  []
 
 
-Overfull \hbox (138.15225pt too wide) in paragraph at lines 5864--5864
+Overfull \hbox (138.15225pt too wide) in paragraph at lines 5846--5846
 []    \TU/TimesNewRoman(1)/m/n/12.045 const f = new THREE.DirectionalLight(0xffffff, 0.3); f.position.set(-2, 0, -2); scene.add(f); defaultLights.push(f)[] 
  []
 
 
-Overfull \hbox (83.97324pt too wide) in paragraph at lines 5864--5864
+Overfull \hbox (83.97324pt too wide) in paragraph at lines 5846--5846
 []      \TU/TimesNewRoman(1)/m/n/12.045 if (config.opacity !== undefined) { m.opacity = config.opacity; m.transparent = config.opacity < 1 }[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [197]
-Overfull \hbox (109.28658pt too wide) in paragraph at lines 5864--5864
+ [190]
+Overfull \hbox (109.28658pt too wide) in paragraph at lines 5846--5846
 []      \TU/TimesNewRoman(1)/m/n/12.045 if ((obj as THREE.Mesh).isMesh && obj.name === logo.meshName) targetMesh = obj as THREE.Mesh[] 
  []
 
 
-Overfull \hbox (163.08328pt too wide) in paragraph at lines 5864--5864
+Overfull \hbox (163.08328pt too wide) in paragraph at lines 5846--5846
 []    \TU/TimesNewRoman(1)/m/n/12.045 const position = new THREE.Vector3(logo.transform.position.x, logo.transform.position.y, logo.transform.position.z)[] 
  []
 
 
-Overfull \hbox (72.33409pt too wide) in paragraph at lines 5864--5864
+Overfull \hbox (72.33409pt too wide) in paragraph at lines 5846--5846
 []    \TU/TimesNewRoman(1)/m/n/12.045 const size = new THREE.Vector3(logo.transform.scale, logo.transform.scale, logo.transform.scale)[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [198]
-Overfull \hbox (29.12383pt too wide) in paragraph at lines 5864--5864
+ [191]
+Overfull \hbox (29.12383pt too wide) in paragraph at lines 5846--5846
 []  \TU/TimesNewRoman(1)/m/n/12.045 const dpr = typeof window !== 'undefined' ? Math.min(window.devicePixelRatio || 1, 2) : 1[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [199]
+ [192]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [200]
+ [193]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [201]
-Overfull \hbox (15.71436pt too wide) in paragraph at lines 5864--5864
+ [194]
+Overfull \hbox (15.71436pt too wide) in paragraph at lines 5846--5846
 []      \TU/TimesNewRoman(1)/m/n/12.045 if (props.params.scene?.lightPreset) applyLightPreset(props.params.scene.lightPreset)[] 
  []
 
 
-Overfull \hbox (528.23846pt too wide) in paragraph at lines 5864--5864
+Overfull \hbox (528.23846pt too wide) in paragraph at lines 5846--5846
 []    \TU/TimesNewRoman(1)/m/n/12.045 text.style.cssText = 'position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#6D28D9;font-weight:600;background:rgba(255,255,255,0.6);backdrop-filter:blur(2px);'[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [202]
+ [195]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [203]
+ [196]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [204] [205]
+ [197] [198]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [206]
+ [199]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [207]
-Overfull \hbox (134.61754pt too wide) in paragraph at lines 6596--6596
+ [200]
+Overfull \hbox (134.61754pt too wide) in paragraph at lines 6578--6578
 []\TU/TimesNewRoman(1)/m/n/12.045 func ListSquareWorks(page, pageSize int, tag, sort, keyword string, userID int64) ([]SquareWorkItem, int, error) {[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [208]
-Overfull \hbox (0.82277pt too wide) in paragraph at lines 6596--6596
+ [201]
+Overfull \hbox (0.82277pt too wide) in paragraph at lines 6578--6578
 []  \TU/TimesNewRoman(1)/m/n/12.045 list, total, err := listSquareWorksFromDB(page, pageSize, tag, sort, keyword, userID)[] 
  []
 
 
-Overfull \hbox (31.0941pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (31.0941pt too wide) in paragraph at lines 6578--6578
 []  \TU/TimesNewRoman(1)/m/n/12.045 saveSquareCache(key, squareListCacheValue{List: list, Total: total}, squareListCacheTTL)[] 
  []
 
 
-Overfull \hbox (173.44029pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (173.44029pt too wide) in paragraph at lines 6578--6578
 []\TU/TimesNewRoman(1)/m/n/12.045 func listSquareWorksFromDB(page, pageSize int, tag, sort, keyword string, userID int64) ([]SquareWorkItem, int, error) {[] 
  []
 
 
-Overfull \hbox (146.88603pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (146.88603pt too wide) in paragraph at lines 6578--6578
 []  \TU/TimesNewRoman(1)/m/n/12.045 where = append(where, "EXISTS (SELECT 1 FROM work_tags wt WHERE wt.work_id = w.id AND wt.tag = ?)")[] 
  []
 
 
-Overfull \hbox (228.82492pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (228.82492pt too wide) in paragraph at lines 6578--6578
 [] \TU/TimesNewRoman(1)/m/n/12.045 if err := config.DB.QueryRow("SELECT COUNT(1) FROM design_works w"+whereClause, countArgs...).Scan(&total); err != nil {[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [209]
-Overfull \hbox (106.3812pt too wide) in paragraph at lines 6596--6596
+ [202]
+Overfull \hbox (106.3812pt too wide) in paragraph at lines 6578--6578
 []  \TU/TimesNewRoman(1)/m/n/12.045 log.Printf("ListSquareWorks count query error where=%q args=%v err=%v", whereClause, countArgs, err)[] 
  []
 
 
-Overfull \hbox (48.1147pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (48.1147pt too wide) in paragraph at lines 6578--6578
 []   \TU/TimesNewRoman(1)/m/n/12.045 WHERE wl.work_id = w.id AND wl.created_at >= DATE_SUB(NOW(), INTERVAL 7 DAY)[] 
  []
 
 
-Overfull \hbox (123.43707pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (123.43707pt too wide) in paragraph at lines 6578--6578
 [] \TU/TimesNewRoman(1)/m/n/12.045 query := `SELECT w.id, w.user_id, w.title, COALESCE(w.description,''), u.username, COALESCE(u.avatar,''),[] 
  []
 
 
-Overfull \hbox (84.7908pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (84.7908pt too wide) in paragraph at lines 6578--6578
 []  \TU/TimesNewRoman(1)/m/n/12.045 (SELECT dv.params_json FROM design_versions dv WHERE dv.id = w.current_version_id LIMIT 1)[] 
  []
 
 
-Overfull \hbox (35.47571pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (35.47571pt too wide) in paragraph at lines 6578--6578
 []  \TU/TimesNewRoman(1)/m/n/12.045 log.Printf("ListSquareWorks main query error query=%s args=%v err=%v", query, args, err)[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [210]
+ [203]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [211]
-Overfull \hbox (192.62527pt too wide) in paragraph at lines 6596--6596
+ [204]
+Overfull \hbox (192.62527pt too wide) in paragraph at lines 6578--6578
 [] \TU/TimesNewRoman(1)/m/n/12.045 tagRows, err := config.DB.Query("SELECT work_id, tag FROM work_tags WHERE work_id IN ("+placeholders+")", ids...)[] 
  []
 
 
-Overfull \hbox (394.94359pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (394.94359pt too wide) in paragraph at lines 6578--6578
 []  \TU/TimesNewRoman(1)/m/n/12.045 likeRows, err := config.DB.Query("SELECT work_id FROM work_likes WHERE user_id = ? AND work_id IN ("+placeholders+")", append([]any{userID}, ids...)...)[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [212]
-Overfull \hbox (411.6525pt too wide) in paragraph at lines 6596--6596
+ [205]
+Overfull \hbox (411.6525pt too wide) in paragraph at lines 6578--6578
 []  \TU/TimesNewRoman(1)/m/n/12.045 favRows, err := config.DB.Query("SELECT work_id FROM work_favorites WHERE user_id = ? AND work_id IN ("+placeholders+")", append([]any{userID}, ids...)...)[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [213]
-Overfull \hbox (8.13919pt too wide) in paragraph at lines 6596--6596
+ [206]
+Overfull \hbox (8.13919pt too wide) in paragraph at lines 6578--6578
 []\TU/TimesNewRoman(1)/m/n/12.045 func ListMyFavorites(userID int64, page, pageSize int) ([]SquareWorkItem, int, error) {[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [214]
-Overfull \hbox (169.08812pt too wide) in paragraph at lines 6596--6596
+ [207]
+Overfull \hbox (169.08812pt too wide) in paragraph at lines 6578--6578
 []  \TU/TimesNewRoman(1)/m/n/12.045 log.Printf("ListMyFavorites main query error userID=%d page=%d pageSize=%d err=%v", userID, page, pageSize, err)[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [215]
-Overfull \hbox (192.62527pt too wide) in paragraph at lines 6596--6596
+ [208]
+Overfull \hbox (192.62527pt too wide) in paragraph at lines 6578--6578
 [] \TU/TimesNewRoman(1)/m/n/12.045 tagRows, err := config.DB.Query("SELECT work_id, tag FROM work_tags WHERE work_id IN ("+placeholders+")", ids...)[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [216]
-Overfull \hbox (391.93234pt too wide) in paragraph at lines 6596--6596
+ [209]
+Overfull \hbox (391.93234pt too wide) in paragraph at lines 6578--6578
 [] \TU/TimesNewRoman(1)/m/n/12.045 likeRows, err := config.DB.Query("SELECT work_id FROM work_likes WHERE user_id = ? AND work_id IN ("+placeholders+")", append([]any{userID}, ids...)...)[] 
  []
 
 
-Overfull \hbox (44.29771pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (44.29771pt too wide) in paragraph at lines 6578--6578
 []\TU/TimesNewRoman(1)/m/n/12.045 func GetSquareWorkByID(workID, userID int64) (*SquareWorkItem, []CommentItem, error) {[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [217]
-Overfull \hbox (118.21448pt too wide) in paragraph at lines 6596--6596
+ [210]
+Overfull \hbox (118.21448pt too wide) in paragraph at lines 6578--6578
 []  \TU/TimesNewRoman(1)/m/n/12.045 saveSquareCache(key, squareDetailCacheValue{Item: item, Comments: comments}, squareDetailCacheTTL)[] 
  []
 
 
-Overfull \hbox (84.45555pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (84.45555pt too wide) in paragraph at lines 6578--6578
 []\TU/TimesNewRoman(1)/m/n/12.045 func getSquareWorkByIDFromDB(workID, userID int64) (*SquareWorkItem, []CommentItem, error) {[] 
  []
 
 
-Overfull \hbox (78.85059pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (78.85059pt too wide) in paragraph at lines 6578--6578
 []  \TU/TimesNewRoman(1)/m/n/12.045 SELECT w.id, w.user_id, w.title, COALESCE(w.description,''), u.username, COALESCE(u.avatar,''),[] 
  []
 
 
-Overfull \hbox (84.7908pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (84.7908pt too wide) in paragraph at lines 6578--6578
 []  \TU/TimesNewRoman(1)/m/n/12.045 (SELECT dv.params_json FROM design_versions dv WHERE dv.id = w.current_version_id LIMIT 1)[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [218]
-Overfull \hbox (67.9525pt too wide) in paragraph at lines 6596--6596
+ [211]
+Overfull \hbox (67.9525pt too wide) in paragraph at lines 6578--6578
 [] \TU/TimesNewRoman(1)/m/n/12.045 tagRows, err := config.DB.Query("SELECT tag FROM work_tags WHERE work_id = ?", workID)[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [219]
-Overfull \hbox (243.24014pt too wide) in paragraph at lines 6596--6596
+ [212]
+Overfull \hbox (243.24014pt too wide) in paragraph at lines 6578--6578
 []  \TU/TimesNewRoman(1)/m/n/12.045 config.DB.QueryRow("SELECT COUNT(1) FROM work_likes WHERE work_id = ? AND user_id = ?", workID, userID).Scan(&cnt)[] 
  []
 
 
-Overfull \hbox (262.63095pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (262.63095pt too wide) in paragraph at lines 6578--6578
 []  \TU/TimesNewRoman(1)/m/n/12.045 config.DB.QueryRow("SELECT COUNT(1) FROM work_favorites WHERE work_id = ? AND user_id = ?", workID, userID).Scan(&cnt)[] 
  []
 
 
-Overfull \hbox (24.90692pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (24.90692pt too wide) in paragraph at lines 6578--6578
 []\TU/TimesNewRoman(1)/m/n/12.045 func GetWorkDetailForAdmin(workID int64) (*SquareWorkItem, []CommentItem, error) {[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [220]
-Overfull \hbox (78.85059pt too wide) in paragraph at lines 6596--6596
+ [213]
+Overfull \hbox (78.85059pt too wide) in paragraph at lines 6578--6578
 []  \TU/TimesNewRoman(1)/m/n/12.045 SELECT w.id, w.user_id, w.title, COALESCE(w.description,''), u.username, COALESCE(u.avatar,''),[] 
  []
 
 
-Overfull \hbox (67.9525pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (67.9525pt too wide) in paragraph at lines 6578--6578
 [] \TU/TimesNewRoman(1)/m/n/12.045 tagRows, err := config.DB.Query("SELECT tag FROM work_tags WHERE work_id = ?", workID)[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [221]
+ [214]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [222]
-Overfull \hbox (240.2289pt too wide) in paragraph at lines 6596--6596
+ [215]
+Overfull \hbox (240.2289pt too wide) in paragraph at lines 6578--6578
 [] \TU/TimesNewRoman(1)/m/n/12.045 config.DB.QueryRow("SELECT COUNT(1) FROM work_likes WHERE work_id = ? AND user_id = ?", workID, userID).Scan(&cnt)[] 
  []
 
 
-Overfull \hbox (208.71071pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (208.71071pt too wide) in paragraph at lines 6578--6578
 []  \TU/TimesNewRoman(1)/m/n/12.045 if _, err := config.DB.Exec("DELETE FROM work_likes WHERE work_id = ? AND user_id = ?", workID, userID); err != nil {[] 
  []
 
 
-Overfull \hbox (277.9812pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (277.9812pt too wide) in paragraph at lines 6578--6578
 []  \TU/TimesNewRoman(1)/m/n/12.045 if _, err := config.DB.Exec("UPDATE design_works SET likes_count = GREATEST(0, likes_count - 1) WHERE id = ?", workID); err != nil {[] 
  []
 
 
-Overfull \hbox (166.52383pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (166.52383pt too wide) in paragraph at lines 6578--6578
 []  \TU/TimesNewRoman(1)/m/n/12.045 if _, err := config.DB.Exec("INSERT INTO work_likes(work_id, user_id) VALUES(?,?)", workID, userID); err != nil {[] 
  []
 
 
-Overfull \hbox (200.47093pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (200.47093pt too wide) in paragraph at lines 6578--6578
 []  \TU/TimesNewRoman(1)/m/n/12.045 if _, err := config.DB.Exec("UPDATE design_works SET likes_count = likes_count + 1 WHERE id = ?", workID); err != nil {[] 
  []
 
 
-Overfull \hbox (133.10017pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (133.10017pt too wide) in paragraph at lines 6578--6578
 [] \TU/TimesNewRoman(1)/m/n/12.045 config.DB.QueryRow("SELECT likes_count FROM design_works WHERE id = ?", workID).Scan(&newCount)[] 
  []
 
 
-Overfull \hbox (259.6197pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (259.6197pt too wide) in paragraph at lines 6578--6578
 [] \TU/TimesNewRoman(1)/m/n/12.045 config.DB.QueryRow("SELECT COUNT(1) FROM work_favorites WHERE work_id = ? AND user_id = ?", workID, userID).Scan(&cnt)[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [223]
-Overfull \hbox (228.10152pt too wide) in paragraph at lines 6596--6596
+ [216]
+Overfull \hbox (228.10152pt too wide) in paragraph at lines 6578--6578
 []  \TU/TimesNewRoman(1)/m/n/12.045 if _, err := config.DB.Exec("DELETE FROM work_favorites WHERE work_id = ? AND user_id = ?", workID, userID); err != nil {[] 
  []
 
 
-Overfull \hbox (316.76282pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (316.76282pt too wide) in paragraph at lines 6578--6578
 []  \TU/TimesNewRoman(1)/m/n/12.045 if _, err := config.DB.Exec("UPDATE design_works SET favorites_count = GREATEST(0, favorites_count - 1) WHERE id = ?", workID); err != nil {[] 
  []
 
 
-Overfull \hbox (185.91464pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (185.91464pt too wide) in paragraph at lines 6578--6578
 []  \TU/TimesNewRoman(1)/m/n/12.045 if _, err := config.DB.Exec("INSERT INTO work_favorites(work_id, user_id) VALUES(?,?)", workID, userID); err != nil {[] 
  []
 
 
-Overfull \hbox (239.25255pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (239.25255pt too wide) in paragraph at lines 6578--6578
 []  \TU/TimesNewRoman(1)/m/n/12.045 if _, err := config.DB.Exec("UPDATE design_works SET favorites_count = favorites_count + 1 WHERE id = ?", workID); err != nil {[] 
  []
 
 
-Overfull \hbox (152.49098pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (152.49098pt too wide) in paragraph at lines 6578--6578
 [] \TU/TimesNewRoman(1)/m/n/12.045 config.DB.QueryRow("SELECT favorites_count FROM design_works WHERE id = ?", workID).Scan(&newCount)[] 
  []
 
 
-Overfull \hbox (221.17334pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (221.17334pt too wide) in paragraph at lines 6578--6578
 [] \TU/TimesNewRoman(1)/m/n/12.045 res, err := config.DB.Exec("INSERT INTO work_comments(work_id, user_id, content) VALUES(?,?,?)", workID, userID, content)[] 
  []
 
 
-Overfull \hbox (140.9753pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (140.9753pt too wide) in paragraph at lines 6578--6578
 [] \TU/TimesNewRoman(1)/m/n/12.045 config.DB.Exec("UPDATE design_works SET comments_count = comments_count + 1 WHERE id = ?", workID)[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [224]
-Overfull \hbox (21.26047pt too wide) in paragraph at lines 6596--6596
+ [217]
+Overfull \hbox (21.26047pt too wide) in paragraph at lines 6578--6578
 []  \TU/TimesNewRoman(1)/m/n/12.045 WHERE c.id = ?`, commentID).Scan(&ci.User, &ci.Avatar, &ci.Content, &ci.CreatedAt)[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [225]
-Overfull \hbox (36.66957pt too wide) in paragraph at lines 6596--6596
+ [218]
+Overfull \hbox (36.66957pt too wide) in paragraph at lines 6578--6578
 [] \TU/TimesNewRoman(1)/m/n/12.045 if _, err := tx.Exec("DELETE FROM work_tags WHERE work_id = ?", workID); err != nil {[] 
  []
 
 
-Overfull \hbox (71.85768pt too wide) in paragraph at lines 6596--6596
+Overfull \hbox (71.85768pt too wide) in paragraph at lines 6578--6578
 []  \TU/TimesNewRoman(1)/m/n/12.045 if _, err := tx.Exec("INSERT INTO work_tags(work_id, tag) VALUES(?,?)", workID, t); err != nil {[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [226] [227]
-Overfull \hbox (12.4679pt too wide) in paragraph at lines 6980--6980
+ [219] [220]
+Overfull \hbox (12.4679pt too wide) in paragraph at lines 6962--6962
 []    \TU/TimesNewRoman(1)/m/n/12.045 <div class="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">[] 
  []
 
 
-Overfull \hbox (163.23033pt too wide) in paragraph at lines 6980--6980
+Overfull \hbox (163.23033pt too wide) in paragraph at lines 6962--6962
 []      \TU/TimesNewRoman(1)/m/n/12.045 <div class="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-purple-200/30 blur-3xl"></div>[] 
  []
 
 
-Overfull \hbox (165.23587pt too wide) in paragraph at lines 6980--6980
+Overfull \hbox (165.23587pt too wide) in paragraph at lines 6962--6962
 []      \TU/TimesNewRoman(1)/m/n/12.045 <div class="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-blue-200/30 blur-3xl"></div>[] 
  []
 
 
-Overfull \hbox (73.34569pt too wide) in paragraph at lines 6980--6980
+Overfull \hbox (73.34569pt too wide) in paragraph at lines 6962--6962
 []      \TU/TimesNewRoman(1)/m/n/12.045 <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">[] 
  []
 
 
-Overfull \hbox (58.32469pt too wide) in paragraph at lines 6980--6980
+Overfull \hbox (58.32469pt too wide) in paragraph at lines 6962--6962
 []          \TU/TimesNewRoman(1)/m/n/12.045 <h1 class="text-4xl md:text-5xl font-black tracking-tight text-slate-900 mb-2 font-display">[] 
  []
 
 
-Overfull \hbox (681.93573pt too wide) in paragraph at lines 6980--6980
+Overfull \hbox (681.93573pt too wide) in paragraph at lines 6962--6962
 []          \TU/TimesNewRoman(1)/m/n/12.045 class="!rounded-full !px-8 !py-6 !text-lg !font-bold shadow-lg shadow-purple-500/30 hover:!shadow-purple-500/50 transition-all duration-300 hover:scale-105 bg-gradient-to-r from-purple-600 to-indigo-600 border-none"[] 
  []
 
-[228
+[221
 
 ]
-Overfull \hbox (227.12526pt too wide) in paragraph at lines 6980--6980
+Overfull \hbox (227.12526pt too wide) in paragraph at lines 6962--6962
 []        \TU/TimesNewRoman(1)/m/n/12.045 class="mb-10 flex flex-wrap gap-2 p-1.5 bg-white/50 backdrop-blur-sm rounded-2xl w-fit border border-white/60 shadow-sm">[] 
  []
 
 
-Overfull \hbox (153.44963pt too wide) in paragraph at lines 6980--6980
+Overfull \hbox (153.44963pt too wide) in paragraph at lines 6962--6962
 []          \TU/TimesNewRoman(1)/m/n/12.045 class="px-6 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 relative overflow-hidden group"[] 
  []
 
 
-Overfull \hbox (175.71048pt too wide) in paragraph at lines 6980--6980
+Overfull \hbox (175.71048pt too wide) in paragraph at lines 6962--6962
 []          \TU/TimesNewRoman(1)/m/n/12.045 :class="activeTab === tab.value ? 'text-white shadow-md' : 'text-slate-500 hover:text-slate-900 hover:bg-white/60'">[] 
  []
 
 
-Overfull \hbox (66.24103pt too wide) in paragraph at lines 6980--6980
+Overfull \hbox (66.24103pt too wide) in paragraph at lines 6962--6962
 []          \TU/TimesNewRoman(1)/m/n/12.045 <div v-if="activeTab === tab.value" class="absolute inset-0 bg-slate-900 rounded-xl"></div>[] 
  []
 
 
-Overfull \hbox (36.76962pt too wide) in paragraph at lines 6980--6980
+Overfull \hbox (36.76962pt too wide) in paragraph at lines 6962--6962
 []      \TU/TimesNewRoman(1)/m/n/12.045 <div v-if="loading" class="flex flex-col items-center justify-center py-32 animate-pulse">[] 
  []
 
 
-Overfull \hbox (152.50276pt too wide) in paragraph at lines 6980--6980
+Overfull \hbox (152.50276pt too wide) in paragraph at lines 6962--6962
 []        \TU/TimesNewRoman(1)/m/n/12.045 <div class="w-16 h-16 border-4 border-purple-200 border-t-purple-600 rounded-full animate-spin mb-4"></div>[] 
  []
 
 
-Overfull \hbox (102.29369pt too wide) in paragraph at lines 6980--6980
+Overfull \hbox (102.29369pt too wide) in paragraph at lines 6962--6962
 []      \TU/TimesNewRoman(1)/m/n/12.045 <div v-else-if="works.length === 0" class="flex flex-col items-center justify-center py-32 text-center">[] 
  []
 
 
-Overfull \hbox (104.45213pt too wide) in paragraph at lines 6980--6980
+Overfull \hbox (104.45213pt too wide) in paragraph at lines 6962--6962
 []        \TU/TimesNewRoman(1)/m/n/12.045 <div class="w-24 h-24 bg-slate-100 rounded-full flex items-center justify-center mb-6 text-slate-300">[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [229]
-Overfull \hbox (22.2015pt too wide) in paragraph at lines 6980--6980
+ [222]
+Overfull \hbox (22.2015pt too wide) in paragraph at lines 6962--6962
 []      \TU/TimesNewRoman(1)/m/n/12.045 <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">[] 
  []
 
 
-Overfull \hbox (760.19296pt too wide) in paragraph at lines 6980--6980
+Overfull \hbox (760.19296pt too wide) in paragraph at lines 6962--6962
 []          \TU/TimesNewRoman(1)/m/n/12.045 class="group relative bg-white rounded-[2rem] overflow-hidden border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2 flex flex-col">[] 
  []
 
 
-Overfull \hbox (153.94365pt too wide) in paragraph at lines 6980--6980
+Overfull \hbox (153.94365pt too wide) in paragraph at lines 6962--6962
 []          \TU/TimesNewRoman(1)/m/n/12.045 <div class="h-72 bg-slate-50 relative cursor-pointer overflow-hidden" @click="handleWorkClick(item.work)">[] 
  []
 
 
-Overfull \hbox (133.10603pt too wide) in paragraph at lines 6980--6980
+Overfull \hbox (133.10603pt too wide) in paragraph at lines 6962--6962
 []            \TU/TimesNewRoman(1)/m/n/12.045 <div class="w-full h-full relative z-10 transition-transform duration-700 ease-out group-hover:scale-110">[] 
  []
 
 
-Overfull \hbox (130.92993pt too wide) in paragraph at lines 6980--6980
+Overfull \hbox (130.92993pt too wide) in paragraph at lines 6962--6962
 []              \TU/TimesNewRoman(1)/m/n/12.045 <ModelPreview v-if="getModelUrl(item)" :model-url="getModelUrl(item)" :params="getParams(item)"[] 
  []
 
 
-Overfull \hbox (65.97635pt too wide) in paragraph at lines 6980--6980
+Overfull \hbox (65.97635pt too wide) in paragraph at lines 6962--6962
 []              \TU/TimesNewRoman(1)/m/n/12.045 <div v-else class="w-full h-full flex items-center justify-center text-slate-200 bg-slate-50">[] 
  []
 
 
-Overfull \hbox (493.00919pt too wide) in paragraph at lines 6980--6980
+Overfull \hbox (493.00919pt too wide) in paragraph at lines 6962--6962
 []              \TU/TimesNewRoman(1)/m/n/12.045 class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none">[] 
  []
 
 
-Overfull \hbox (253.77359pt too wide) in paragraph at lines 6980--6980
+Overfull \hbox (253.77359pt too wide) in paragraph at lines 6962--6962
 []                \TU/TimesNewRoman(1)/m/n/12.045 class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-md border border-white/20 shadow-sm"[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [230]
-Overfull \hbox (177.85721pt too wide) in paragraph at lines 6980--6980
+ [223]
+Overfull \hbox (177.85721pt too wide) in paragraph at lines 6962--6962
 []                \TU/TimesNewRoman(1)/m/n/12.045 class="text-xl font-bold text-slate-900 mb-2 truncate group-hover:text-purple-600 transition-colors duration-300"[] 
  []
 
 
-Overfull \hbox (31.52344pt too wide) in paragraph at lines 6980--6980
+Overfull \hbox (31.52344pt too wide) in paragraph at lines 6962--6962
 []            \TU/TimesNewRoman(1)/m/n/12.045 <div class="mt-auto pt-4 border-t border-slate-50 flex justify-between items-center">[] 
  []
 
 
-Overfull \hbox (269.24748pt too wide) in paragraph at lines 6980--6980
+Overfull \hbox (269.24748pt too wide) in paragraph at lines 6962--6962
 []                \TU/TimesNewRoman(1)/m/n/12.045 class="flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">[] 
  []
 
 
-Overfull \hbox (53.54318pt too wide) in paragraph at lines 6980--6980
+Overfull \hbox (53.54318pt too wide) in paragraph at lines 6962--6962
 []                  \TU/TimesNewRoman(1)/m/n/12.045 <button class="p-2 rounded-full hover:bg-purple-50 text-purple-600 transition-colors"[] 
  []
 
 
-Overfull \hbox (10.93282pt too wide) in paragraph at lines 6980--6980
+Overfull \hbox (10.93282pt too wide) in paragraph at lines 6962--6962
 []                    \TU/TimesNewRoman(1)/m/n/12.045 class="p-2 rounded-full hover:bg-green-50 text-green-600 transition-colors"[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [231]
-Overfull \hbox (59.22456pt too wide) in paragraph at lines 6980--6980
+ [224]
+Overfull \hbox (59.22456pt too wide) in paragraph at lines 6962--6962
 []                \TU/TimesNewRoman(1)/m/n/12.045 <button v-else class="p-2 rounded-full hover:bg-blue-50 text-blue-600 transition-colors"[] 
  []
 
 
-Overfull \hbox (16.95534pt too wide) in paragraph at lines 6980--6980
+Overfull \hbox (16.95534pt too wide) in paragraph at lines 6962--6962
 []                  \TU/TimesNewRoman(1)/m/n/12.045 class="p-2 rounded-full hover:bg-orange-50 text-orange-600 transition-colors"[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [232]
-Overfull \hbox (76.6863pt too wide) in paragraph at lines 6980--6980
+ [225]
+Overfull \hbox (76.6863pt too wide) in paragraph at lines 6962--6962
 []        \TU/TimesNewRoman(1)/m/n/12.045 <el-pagination v-model:current-page="currentPage" v-model:page-size="pageSize" :total="total"[] 
  []
 
 
-Overfull \hbox (37.93405pt too wide) in paragraph at lines 6980--6980
+Overfull \hbox (37.93405pt too wide) in paragraph at lines 6962--6962
 []          \TU/TimesNewRoman(1)/m/n/12.045 layout="prev, pager, next" @current-change="fetchData" background class="!gap-2" />[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [233]
-Overfull \hbox (52.64923pt too wide) in paragraph at lines 6980--6980
+ [226]
+Overfull \hbox (52.64923pt too wide) in paragraph at lines 6962--6962
 []\TU/TimesNewRoman(1)/m/n/12.045 const getStatusClass = (status: number) => statusMap[status]?.class || 'bg-gray-100 text-gray-500'[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [234]
+ [227]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [235]
+ [228]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [236]
-Overfull \hbox (45.48795pt too wide) in paragraph at lines 6980--6980
+ [229]
+Overfull \hbox (45.48795pt too wide) in paragraph at lines 6962--6962
 []    \TU/TimesNewRoman(1)/m/n/12.045 await ElMessageBox.confirm('\TU/STFangsong(0)/m/n/12.045 确定要下架该作品吗？| 下架后将从创意广场移除。| \TU/TimesNewRoman(1)/m/n/12.045 ', '\TU/STFangsong(0)/m/n/12.045 提示\TU/TimesNewRoman(1)/m/n/12.045 ', {[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [237]
-Overfull \hbox (318.47426pt too wide) in paragraph at lines 6980--6980
+ [230]
+Overfull \hbox (318.47426pt too wide) in paragraph at lines 6962--6962
 []  \TU/TimesNewRoman(1)/m/n/12.045 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [238] [239]
+ [231] [232]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [240]
-Overfull \hbox (190.13159pt too wide) in paragraph at lines 7146--7146
+ [233]
+Overfull \hbox (190.13159pt too wide) in paragraph at lines 7128--7128
 []\TU/TimesNewRoman(1)/m/n/12.045 func CreateDesignVersion(workID int64, versionNo int, paramsJSON json.RawMessage, modelFileID *int64) (int64, error) {[] 
  []
 
 
-Overfull \hbox (100.02934pt too wide) in paragraph at lines 7146--7146
+Overfull \hbox (100.02934pt too wide) in paragraph at lines 7128--7128
 []  \TU/TimesNewRoman(1)/m/n/12.045 "INSERT INTO design_versions(work_id, version_no, params_json, model_file_id) VALUES(?, ?, ?, ?)",[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [241]
-Overfull \hbox (281.27478pt too wide) in paragraph at lines 7146--7146
+ [234]
+Overfull \hbox (281.27478pt too wide) in paragraph at lines 7128--7128
 []  \TU/TimesNewRoman(1)/m/n/12.045 "SELECT id, work_id, version_no, params_json, model_file_id, submitted_at, created_at, updated_at FROM design_versions WHERE id = ?",[] 
  []
 
 
-Overfull \hbox (511.45891pt too wide) in paragraph at lines 7146--7146
+Overfull \hbox (511.45891pt too wide) in paragraph at lines 7128--7128
 []  \TU/TimesNewRoman(1)/m/n/12.045 "SELECT id, work_id, version_no, params_json, model_file_id, submitted_at, created_at, updated_at FROM design_versions WHERE work_id = ? ORDER BY version_no DESC LIMIT 1",[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [242]
-Overfull \hbox (465.9667pt too wide) in paragraph at lines 7146--7146
+ [235]
+Overfull \hbox (465.9667pt too wide) in paragraph at lines 7128--7128
 []  \TU/TimesNewRoman(1)/m/n/12.045 "SELECT id, work_id, version_no, params_json, model_file_id, submitted_at, created_at, updated_at FROM design_versions WHERE work_id = ? ORDER BY version_no DESC",[] 
  []
 
 
-Overfull \hbox (11.74446pt too wide) in paragraph at lines 7146--7146
+Overfull \hbox (11.74446pt too wide) in paragraph at lines 7128--7128
 []\TU/TimesNewRoman(1)/m/n/12.045 func UpdateDesignVersionSubmittedAt(id int64, submittedAt time.Time) (int64, error) {[] 
  []
 
 
-Overfull \hbox (122.90778pt too wide) in paragraph at lines 7146--7146
+Overfull \hbox (122.90778pt too wide) in paragraph at lines 7128--7128
 [] \TU/TimesNewRoman(1)/m/n/12.045 res, err := config.DB.Exec("UPDATE design_versions SET submitted_at = ? WHERE id = ?", submittedAt, id)[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [243]
-Overfull \hbox (238.31747pt too wide) in paragraph at lines 7146--7146
+ [236]
+Overfull \hbox (238.31747pt too wide) in paragraph at lines 7128--7128
 []\TU/TimesNewRoman(1)/m/n/12.045 func UpdateDesignVersionFields(id int64, paramsJSON json.RawMessage, modelFileID *int64, clearSubmittedAt bool) (int64, error) {[] 
  []
 
 
-Overfull \hbox (63.75908pt too wide) in paragraph at lines 7146--7146
+Overfull \hbox (63.75908pt too wide) in paragraph at lines 7128--7128
 [] \TU/TimesNewRoman(1)/m/n/12.045 query := fmt.Sprintf("UPDATE design_versions SET %s WHERE id = ?", strings.Join(fields, ", "))[] 
  []
 
-[244]
-Overfull \hbox (45.26817pt too wide) in paragraph at lines 7670--7670
+[237]
+Overfull \hbox (45.26817pt too wide) in paragraph at lines 7652--7652
 []        \TU/TimesNewRoman(1)/m/n/12.045 <div class="bg-white p-4 rounded-xl shadow-sm mb-4 flex justify-between items-center">[] 
  []
 
 
-Overfull \hbox (178.957pt too wide) in paragraph at lines 7670--7670
+Overfull \hbox (178.957pt too wide) in paragraph at lines 7652--7652
 []                \TU/TimesNewRoman(1)/m/n/12.045 <el-input v-model="searchKeyword" placeholder="\TU/STFangsong(0)/m/n/12.045 搜索模板名称\TU/TimesNewRoman(1)/m/n/12.045 " prefix-icon="Search" class="w-64" clearable[] 
  []
 
 
-Overfull \hbox (46.65611pt too wide) in paragraph at lines 7670--7670
+Overfull \hbox (46.65611pt too wide) in paragraph at lines 7652--7652
 []                \TU/TimesNewRoman(1)/m/n/12.045 <el-button type="primary" :icon="Search" @click="handleSearch">\TU/STFangsong(0)/m/n/12.045 搜索\TU/TimesNewRoman(1)/m/n/12.045 </el-button>[] 
  []
 
 
-Overfull \hbox (34.65817pt too wide) in paragraph at lines 7670--7670
+Overfull \hbox (34.65817pt too wide) in paragraph at lines 7652--7652
 []            \TU/TimesNewRoman(1)/m/n/12.045 <el-button type="primary" :icon="Plus" @click="handleAdd">\TU/STFangsong(0)/m/n/12.045 新增模板\TU/TimesNewRoman(1)/m/n/12.045 </el-button>[] 
  []
 
 
-Overfull \hbox (66.51154pt too wide) in paragraph at lines 7670--7670
+Overfull \hbox (66.51154pt too wide) in paragraph at lines 7652--7652
 []                \TU/TimesNewRoman(1)/m/n/12.045 <el-table-column prop="url" label="\TU/STFangsong(0)/m/n/12.045 文件地址\TU/TimesNewRoman(1)/m/n/12.045 " min-width="260" show-overflow-tooltip>[] 
  []
 
 
-Overfull \hbox (63.74136pt too wide) in paragraph at lines 7670--7670
+Overfull \hbox (63.74136pt too wide) in paragraph at lines 7652--7652
 []                            \TU/TimesNewRoman(1)/m/n/12.045 <el-button link type="primary" @click="handleCopy(row.url)">\TU/STFangsong(0)/m/n/12.045 复制\TU/TimesNewRoman(1)/m/n/12.045 </el-button>[] 
  []
 
-[245
+[238
 
 ]
-Overfull \hbox (93.85388pt too wide) in paragraph at lines 7670--7670
+Overfull \hbox (93.85388pt too wide) in paragraph at lines 7652--7652
 []                        \TU/TimesNewRoman(1)/m/n/12.045 <el-button link type="primary" :icon="Edit" @click="handleEdit(row)">\TU/STFangsong(0)/m/n/12.045 编辑\TU/TimesNewRoman(1)/m/n/12.045 </el-button>[] 
  []
 
 
-Overfull \hbox (111.20975pt too wide) in paragraph at lines 7670--7670
+Overfull \hbox (111.20975pt too wide) in paragraph at lines 7652--7652
 []                        \TU/TimesNewRoman(1)/m/n/12.045 <el-button link type="danger" :icon="Delete" @click="handleDelete(row)">\TU/STFangsong(0)/m/n/12.045 删除\TU/TimesNewRoman(1)/m/n/12.045 </el-button>[] 
  []
 
 
-Overfull \hbox (34.97575pt too wide) in paragraph at lines 7670--7670
+Overfull \hbox (34.97575pt too wide) in paragraph at lines 7652--7652
 []                \TU/TimesNewRoman(1)/m/n/12.045 <el-pagination v-model:current-page="currentPage" v-model:page-size="pageSize"[] 
  []
 
 
-Overfull \hbox (100.17038pt too wide) in paragraph at lines 7670--7670
+Overfull \hbox (100.17038pt too wide) in paragraph at lines 7652--7652
 []                    \TU/TimesNewRoman(1)/m/n/12.045 :page-sizes="[10, 20, 50, 100]" layout="total, sizes, prev, pager, next, jumper" :total="total" />[] 
  []
 
 
-Overfull \hbox (134.15288pt too wide) in paragraph at lines 7670--7670
+Overfull \hbox (134.15288pt too wide) in paragraph at lines 7652--7652
 []        \TU/TimesNewRoman(1)/m/n/12.045 <el-dialog v-model="dialogVisible" :title="dialogType === 'add' ? '\TU/STFangsong(0)/m/n/12.045 新增模板\TU/TimesNewRoman(1)/m/n/12.045 ' : '\TU/STFangsong(0)/m/n/12.045 编辑模板\TU/TimesNewRoman(1)/m/n/12.045 '" width="500px">[] 
  []
 
 
-Overfull \hbox (10.16824pt too wide) in paragraph at lines 7670--7670
+Overfull \hbox (10.16824pt too wide) in paragraph at lines 7652--7652
 []            \TU/TimesNewRoman(1)/m/n/12.045 <el-form ref="formRef" :model="formData" :rules="rules" label-width="90px">[] 
  []
 
 
-Overfull \hbox (152.8732pt too wide) in paragraph at lines 7670--7670
+Overfull \hbox (152.8732pt too wide) in paragraph at lines 7652--7652
 []                        \TU/TimesNewRoman(1)/m/n/12.045 :on-change="handleFileChange" :before-remove="handleBeforeRemove" accept=".png,.glb,.jpg,.jpeg"[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [246]
-Overfull \hbox (33.07018pt too wide) in paragraph at lines 7670--7670
+ [239]
+Overfull \hbox (33.07018pt too wide) in paragraph at lines 7652--7652
 []                    \TU/TimesNewRoman(1)/m/n/12.045 <el-button type="primary" @click="handleSubmit(formRef)">\TU/STFangsong(0)/m/n/12.045 确定\TU/TimesNewRoman(1)/m/n/12.045 </el-button>[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [240]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [241]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [242]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [243]
+Overfull \hbox (27.44176pt too wide) in paragraph at lines 7652--7652
+[]            \TU/TimesNewRoman(1)/m/n/12.045 const modelRes = uploadRes as unknown as { success: boolean; model: ModelFile }[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [244]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [245]
+Overfull \hbox (33.22319pt too wide) in paragraph at lines 7652--7652
+[]    \TU/TimesNewRoman(1)/m/n/12.045 <div class="bg-white p-4 rounded-xl shadow-sm mb-4 flex justify-between items-center">[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [246]
+Overfull \hbox (64.8295pt too wide) in paragraph at lines 7652--7652
+[]        \TU/TimesNewRoman(1)/m/n/12.045 <el-table-column prop="description" label="\TU/STFangsong(0)/m/n/12.045 描述\TU/TimesNewRoman(1)/m/n/12.045 " min-width="240" show-overflow-tooltip />[] 
  []
 
 
@@ -3685,132 +3713,96 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [248]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [249]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [250]
-Overfull \hbox (27.44176pt too wide) in paragraph at lines 7670--7670
-[]            \TU/TimesNewRoman(1)/m/n/12.045 const modelRes = uploadRes as unknown as { success: boolean; model: ModelFile }[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [251]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [252]
-Overfull \hbox (33.22319pt too wide) in paragraph at lines 7670--7670
-[]    \TU/TimesNewRoman(1)/m/n/12.045 <div class="bg-white p-4 rounded-xl shadow-sm mb-4 flex justify-between items-center">[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [253]
-Overfull \hbox (64.8295pt too wide) in paragraph at lines 7670--7670
-[]        \TU/TimesNewRoman(1)/m/n/12.045 <el-table-column prop="description" label="\TU/STFangsong(0)/m/n/12.045 描述\TU/TimesNewRoman(1)/m/n/12.045 " min-width="240" show-overflow-tooltip />[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [254]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [255]
-Overfull \hbox (38.43988pt too wide) in paragraph at lines 7670--7670
+Overfull \hbox (38.43988pt too wide) in paragraph at lines 7652--7652
 []          \TU/TimesNewRoman(1)/m/n/12.045 <el-button type="primary" :loading="reviewLoading" @click="handleSubmitReview">[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [256]
+ [249]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [257]
+ [250]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [258]
+ [251]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [259]
-Overfull \hbox (20.07242pt too wide) in paragraph at lines 7670--7670
+ [252]
+Overfull \hbox (20.07242pt too wide) in paragraph at lines 7652--7652
 []      \TU/TimesNewRoman(1)/m/n/12.045 ElMessage.success(reviewForm.result === 1 ? '\TU/STFangsong(0)/m/n/12.045 审核通过并已发布\TU/TimesNewRoman(1)/m/n/12.045 ' : '\TU/STFangsong(0)/m/n/12.045 已驳回该作品\TU/TimesNewRoman(1)/m/n/12.045 ')[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [260] [261]
-Overfull \hbox (22.31909pt too wide) in paragraph at lines 7866--7866
+ [253] [254]
+Overfull \hbox (22.31909pt too wide) in paragraph at lines 7848--7848
 []  \TU/TimesNewRoman(1)/m/n/12.045 "SELECT id, name, url, size, created_at, updated_at FROM model_files WHERE id = ?",[] 
  []
 
 
-Overfull \hbox (17.07295pt too wide) in paragraph at lines 7866--7866
+Overfull \hbox (17.07295pt too wide) in paragraph at lines 7848--7848
 [] \TU/TimesNewRoman(1)/m/n/12.045 err := row.Scan(&m.ID, &m.Name, &m.URL, &m.Size, &m.CreatedAt, &m.UpdatedAt)[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [262]
-Overfull \hbox (15.88493pt too wide) in paragraph at lines 7866--7866
+ [255]
+Overfull \hbox (15.88493pt too wide) in paragraph at lines 7848--7848
 [] \TU/TimesNewRoman(1)/m/n/12.045 row := config.DB.QueryRow("SELECT COUNT(1) FROM model_files"+where, args...)[] 
  []
 
 
-Overfull \hbox (208.24611pt too wide) in paragraph at lines 7866--7866
+Overfull \hbox (208.24611pt too wide) in paragraph at lines 7848--7848
 []  \TU/TimesNewRoman(1)/m/n/12.045 "SELECT id, name, url, size, created_at, updated_at FROM model_files"+where+" ORDER BY id DESC LIMIT ? OFFSET ?",[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [263]
-Overfull \hbox (93.98328pt too wide) in paragraph at lines 7866--7866
+ [256]
+Overfull \hbox (93.98328pt too wide) in paragraph at lines 7848--7848
 []  \TU/TimesNewRoman(1)/m/n/12.045 if err := rows.Scan(&m.ID, &m.Name, &m.URL, &m.Size, &m.CreatedAt, &m.UpdatedAt); err != nil {[] 
  []
 
 
-Overfull \hbox (43.00969pt too wide) in paragraph at lines 7866--7866
+Overfull \hbox (43.00969pt too wide) in paragraph at lines 7848--7848
 [] \TU/TimesNewRoman(1)/m/n/12.045 query := fmt.Sprintf("UPDATE model_files SET %s WHERE id = ?", strings.Join(fields, ", "))[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [264]
+ [257]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [265]
-Overfull \hbox (76.3569pt too wide) in paragraph at lines 7866--7866
+ [258]
+Overfull \hbox (76.3569pt too wide) in paragraph at lines 7848--7848
 []\TU/TimesNewRoman(1)/m/n/12.045 func CreateDesignReview(workID, versionID, adminID int64, result int, reason string) (int64, error) {[] 
  []
 
 
-Overfull \hbox (87.29623pt too wide) in paragraph at lines 7866--7866
+Overfull \hbox (87.29623pt too wide) in paragraph at lines 7848--7848
 []  \TU/TimesNewRoman(1)/m/n/12.045 "INSERT INTO design_reviews(work_id, version_id, admin_id, result, reason) VALUES(?, ?, ?, ?, ?)",[] 
  []
 
 
-Overfull \hbox (279.96915pt too wide) in paragraph at lines 7866--7866
+Overfull \hbox (279.96915pt too wide) in paragraph at lines 7848--7848
 []  \TU/TimesNewRoman(1)/m/n/12.045 "SELECT id, work_id, version_id, admin_id, result, reason, reviewed_at FROM design_reviews WHERE work_id = ? ORDER BY id DESC",[] 
  []
 
 
-Overfull \hbox (164.95938pt too wide) in paragraph at lines 7866--7866
+Overfull \hbox (164.95938pt too wide) in paragraph at lines 7848--7848
 []  \TU/TimesNewRoman(1)/m/n/12.045 if err := rows.Scan(&r.ID, &r.WorkID, &r.VersionID, &r.AdminID, &r.Result, &r.Reason, &r.ReviewedAt); err != nil {[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [266] [267] (./hzu.aux)
+ [259] [260] (./hzu.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2022/08/05>
@@ -3823,11 +3815,8 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `hzu.out' has not changed.
-(rerunfilecheck)             Checksum: E52241867AB0F4A10F95623DF542B3E2;8155.
+(rerunfilecheck)             Checksum: FA5FFDC7BC64D2D255FFD0BA5128F4F8;8155.
  ) 
 Here is how much of TeX's memory you used:
  35194 strings out of 468168
@@ -3838,4 +3827,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  123i,11n,128p,3982b,748s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on hzu.pdf (273 pages).
+Output written on hzu.pdf (266 pages).
