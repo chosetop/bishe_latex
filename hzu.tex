@@ -574,8 +574,8 @@ users 表结构如表~\ref{tab:users} 所示。
 \texttt{role} & \texttt{tinyint(2) UNSIGNED} & \texttt{NOT NULL, DEFAULT 1} & 角色：1\texorpdfstring{-}{-}普通用户，2\texorpdfstring{-}{-}管理员 \\
 {\small\texttt{followers\_\allowbreak count}} & \texttt{int} & \texttt{NOT NULL, DEFAULT 0} & 被关注数（冗余统计） \\
 {\small\texttt{following\_\allowbreak count}} & \texttt{int} & \texttt{NOT NULL, DEFAULT 0} & 主动关注数（冗余统计） \\
-\texttt{created\_at} & \texttt{datetime} & \texttt{DEFAULT CURRENT\_TIMESTAMP} & 注册时间 \\
-\texttt{updated\_at} & \texttt{datetime} & \texttt{DEFAULT CURRENT\_TIMESTAMP ON UPDATE CURRENT\_TIMESTAMP} & 最后更新时间 \\
+\texttt{created\_\allowbreak at} & \texttt{datetime} & \texttt{DEFAULT CURRENT\_TIMESTAMP} & 注册时间 \\
+\texttt{updated\_\allowbreak at} & \texttt{datetime} & \texttt{DEFAULT CURRENT\_TIMESTAMP ON UPDATE CURRENT\_TIMESTAMP} & 最后更新时间 \\
 \end{longtable}
 }
 
@@ -610,7 +610,7 @@ user\_follows 表结构如表~\ref{tab:user-follows} 所示。
 \texttt{id} & \texttt{bigint(20) UNSIGNED} & \texttt{PK, AUTO\_INCREMENT} & 主键 ID \\
 \texttt{follower\_\allowbreak id} & \texttt{bigint(20) UNSIGNED} & \texttt{NOT NULL, KEY idx\_follower(follower\_id)} & 关注者 ID \\
 \texttt{following\_\allowbreak id} & \texttt{bigint(20) UNSIGNED} & \texttt{NOT NULL, KEY idx\_following(following\_id)} & 被关注者 ID \\
-\texttt{created\_at} & \texttt{datetime} & \texttt{DEFAULT CURRENT\_TIMESTAMP} & 关注时间 \\
+\texttt{created\_\allowbreak at} & \texttt{datetime} & \texttt{DEFAULT CURRENT\_TIMESTAMP} & 关注时间 \\
 \texttt{-} & \texttt{-} & \texttt{UNIQUE uk\_follower\_following(follower\_id, following\_id)} & 防止重复关注 \\
 \texttt{-} & \texttt{-} & \texttt{FK follower\_id -> users(id) ON DELETE CASCADE} & 关注者外键 \\
 \texttt{-} & \texttt{-} & \texttt{FK following\_id -> users(id) ON DELETE CASCADE} & 被关注者外键 \\
@@ -649,8 +649,8 @@ model\_files 表结构如表~\ref{tab:model-files} 所示。
 \texttt{name} & \texttt{varchar(255)} & \texttt{NOT NULL, DEFAULT ''} & 展示名称 \\
 \texttt{url} & \texttt{varchar(1024)} & \texttt{NOT NULL} & 访问 URL \\
 \texttt{size} & \texttt{bigint(20) UNSIGNED} & \texttt{NOT NULL, DEFAULT 0} & 文件大小（byte） \\
-\texttt{created\_at} & \texttt{datetime} & \texttt{DEFAULT CURRENT\_TIMESTAMP} & 创建时间 \\
-\texttt{updated\_at} & \texttt{datetime} & \texttt{DEFAULT CURRENT\_TIMESTAMP ON UPDATE CURRENT\_TIMESTAMP} & 更新时间 \\
+\texttt{created\_\allowbreak at} & \texttt{datetime} & \texttt{DEFAULT CURRENT\_TIMESTAMP} & 创建时间 \\
+\texttt{updated\_\allowbreak at} & \texttt{datetime} & \texttt{DEFAULT CURRENT\_TIMESTAMP ON UPDATE CURRENT\_TIMESTAMP} & 更新时间 \\
 \texttt{-} & \texttt{-} & \texttt{KEY idx\_name(name)} & 名称索引 \\
 \end{longtable}
 }
@@ -684,18 +684,18 @@ design\_works 表结构如表~\ref{tab:design-works} 所示。
 \endlastfoot
 
 \texttt{id} & \texttt{bigint(20) UNSIGNED} & \texttt{PK, AUTO\_INCREMENT} & 作品 ID \\
-\texttt{user\_id} & \texttt{bigint(20) UNSIGNED} & \texttt{NOT NULL, KEY idx\_user(user\_id)} & 作者用户 ID \\
+\texttt{user\_\allowbreak id} & \texttt{bigint(20) UNSIGNED} & \texttt{NOT NULL, KEY idx\_user(user\_id)} & 作者用户 ID \\
 \texttt{title} & \texttt{varchar(255)} & \texttt{NOT NULL, DEFAULT ''} & 作品标题 \\
 \texttt{description} & \texttt{text} & \texttt{-} & 作品描述 \\
-\texttt{cover\_file\_id} & \texttt{bigint(20) UNSIGNED} & \texttt{DEFAULT NULL} & 封面文件 ID \\
+\texttt{cover\_\allowbreak file\_\allowbreak id} & \texttt{bigint(20) UNSIGNED} & \texttt{DEFAULT NULL} & 封面文件 ID \\
 \texttt{status} & \texttt{tinyint(3) UNSIGNED} & \texttt{NOT NULL, DEFAULT 1, KEY idx\_status(status)} & 作品状态 \\
-\texttt{published\_at} & \texttt{datetime} & \texttt{DEFAULT NULL} & 发布时间 \\
-\texttt{created\_at} & \texttt{datetime} & \texttt{DEFAULT CURRENT\_TIMESTAMP} & 创建时间 \\
-\texttt{updated\_at} & \texttt{datetime} & \texttt{DEFAULT CURRENT\_TIMESTAMP ON UPDATE CURRENT\_TIMESTAMP} & 更新时间 \\
-\texttt{likes\_count} & \texttt{int} & \texttt{NOT NULL, DEFAULT 0} & 点赞数（冗余统计） \\
-\texttt{comments\_count} & \texttt{int} & \texttt{NOT NULL, DEFAULT 0} & 评论数（冗余统计） \\
-\texttt{favorites\_count} & \texttt{int} & \texttt{NOT NULL, DEFAULT 0} & 收藏数（冗余统计） \\
-\texttt{is\_featured} & \texttt{tinyint(1)} & \texttt{NOT NULL, DEFAULT 0} & 是否推荐 \\
+\texttt{published\_\allowbreak at} & \texttt{datetime} & \texttt{DEFAULT NULL} & 发布时间 \\
+\texttt{created\_\allowbreak at} & \texttt{datetime} & \texttt{DEFAULT CURRENT\_TIMESTAMP} & 创建时间 \\
+\texttt{updated\_\allowbreak at} & \texttt{datetime} & \texttt{DEFAULT CURRENT\_TIMESTAMP ON UPDATE CURRENT\_TIMESTAMP} & 更新时间 \\
+\texttt{likes\_\allowbreak count} & \texttt{int} & \texttt{NOT NULL, DEFAULT 0} & 点赞数（冗余统计） \\
+\texttt{comments\_\allowbreak count} & \texttt{int} & \texttt{NOT NULL, DEFAULT 0} & 评论数（冗余统计） \\
+\texttt{favorites\_\allowbreak count} & \texttt{int} & \texttt{NOT NULL, DEFAULT 0} & 收藏数（冗余统计） \\
+\texttt{is\_\allowbreak featured} & \texttt{tinyint(1)} & \texttt{NOT NULL, DEFAULT 0} & 是否推荐 \\
 \end{longtable}
 }
 
@@ -728,7 +728,7 @@ work\_tags 表结构如表~\ref{tab:work-tags} 所示。
 \endlastfoot
 
 \texttt{id} & \texttt{bigint(20) UNSIGNED} & \texttt{PK, AUTO\_INCREMENT} & 主键 ID \\
-\texttt{work\_id} & \texttt{bigint(20) UNSIGNED} & \texttt{NOT NULL, FK->design\_works(id), INDEX idx\_work\_id(work\_id)} & 作品 ID \\
+\texttt{work\_\allowbreak id} & \texttt{bigint(20) UNSIGNED} & \texttt{NOT NULL, FK->design\_works(id), INDEX idx\_work\_id(work\_id)} & 作品 ID \\
 \texttt{tag} & \texttt{varchar(32)} & \texttt{NOT NULL, INDEX idx\_tag(tag)} & 标签内容 \\
 \end{longtable}
 }
@@ -762,9 +762,9 @@ work\_likes 表结构如表~\ref{tab:work-likes} 所示。
 \endlastfoot
 
 \texttt{id} & \texttt{bigint(20) UNSIGNED} & \texttt{PK, AUTO\_INCREMENT} & 主键 ID \\
-\texttt{work\_id} & \texttt{bigint(20) UNSIGNED} & \texttt{NOT NULL, FK->design\_works(id)} & 作品 ID \\
-\texttt{user\_id} & \texttt{bigint(20) UNSIGNED} & \texttt{NOT NULL} & 点赞用户 ID \\
-\texttt{created\_at} & \texttt{datetime} & \texttt{DEFAULT CURRENT\_TIMESTAMP} & 点赞时间 \\
+\texttt{work\_\allowbreak id} & \texttt{bigint(20) UNSIGNED} & \texttt{NOT NULL, FK->design\_works(id)} & 作品 ID \\
+\texttt{user\_\allowbreak id} & \texttt{bigint(20) UNSIGNED} & \texttt{NOT NULL} & 点赞用户 ID \\
+\texttt{created\_\allowbreak at} & \texttt{datetime} & \texttt{DEFAULT CURRENT\_TIMESTAMP} & 点赞时间 \\
 \texttt{-} & \texttt{-} & \texttt{UNIQUE uk\_work\_user(work\_id, user\_id)} & 防止重复点赞 \\
 \end{longtable}
 }
@@ -798,9 +798,9 @@ work\_favorites 表结构如表~\ref{tab:work-favorites} 所示。
 \endlastfoot
 
 \texttt{id} & \texttt{bigint(20) UNSIGNED} & \texttt{PK, AUTO\_INCREMENT} & 主键 ID \\
-\texttt{work\_id} & \texttt{bigint(20) UNSIGNED} & \texttt{NOT NULL, FK->design\_works(id)} & 作品 ID \\
-\texttt{user\_id} & \texttt{bigint(20) UNSIGNED} & \texttt{NOT NULL} & 收藏用户 ID \\
-\texttt{created\_at} & \texttt{datetime} & \texttt{DEFAULT CURRENT\_TIMESTAMP} & 收藏时间 \\
+\texttt{work\_\allowbreak id} & \texttt{bigint(20) UNSIGNED} & \texttt{NOT NULL, FK->design\_works(id)} & 作品 ID \\
+\texttt{user\_\allowbreak id} & \texttt{bigint(20) UNSIGNED} & \texttt{NOT NULL} & 收藏用户 ID \\
+\texttt{created\_\allowbreak at} & \texttt{datetime} & \texttt{DEFAULT CURRENT\_TIMESTAMP} & 收藏时间 \\
 \texttt{-} & \texttt{-} & \texttt{UNIQUE uk\_work\_user(work\_id, user\_id)} & 防止重复收藏 \\
 \end{longtable}
 }
@@ -834,10 +834,10 @@ work\_comments 表结构如表~\ref{tab:work-comments} 所示。
 \endlastfoot
 
 \texttt{id} & \texttt{bigint(20) UNSIGNED} & \texttt{PK, AUTO\_INCREMENT} & 主键 ID \\
-\texttt{work\_id} & \texttt{bigint(20) UNSIGNED} & \texttt{NOT NULL, FK->design\_works(id), INDEX idx\_work\_id(work\_id)} & 作品 ID \\
-\texttt{user\_id} & \texttt{bigint(20) UNSIGNED} & \texttt{NOT NULL} & 评论用户 ID \\
+\texttt{work\_\allowbreak id} & \texttt{bigint(20) UNSIGNED} & \texttt{NOT NULL, FK->design\_works(id), INDEX idx\_work\_id(work\_id)} & 作品 ID \\
+\texttt{user\_\allowbreak id} & \texttt{bigint(20) UNSIGNED} & \texttt{NOT NULL} & 评论用户 ID \\
 \texttt{content} & \texttt{text} & \texttt{NOT NULL} & 评论内容 \\
-\texttt{created\_at} & \texttt{datetime} & \texttt{DEFAULT CURRENT\_TIMESTAMP} & 评论时间 \\
+\texttt{created\_\allowbreak at} & \texttt{datetime} & \texttt{DEFAULT CURRENT\_TIMESTAMP} & 评论时间 \\
 \end{longtable}
 }
 
@@ -870,22 +870,22 @@ tryon\_tasks 表结构如表~\ref{tab:tryon-tasks} 所示。
 \endlastfoot
 
 \texttt{id} & \texttt{bigint(20) UNSIGNED} & \texttt{PK, AUTO\_INCREMENT} & 主键 ID \\
-\texttt{task\_id} & \texttt{varchar(64)} & \texttt{NOT NULL, UNIQUE uk\_task\_id(task\_id)} & 业务任务号 \\
-\texttt{work\_id} & \texttt{bigint(20) UNSIGNED} & \texttt{NOT NULL, KEY idx\_work\_id(work\_id)} & 关联作品 ID \\
-\texttt{user\_id} & \texttt{bigint(20) UNSIGNED} & \texttt{NOT NULL, KEY idx\_user\_id(user\_id)} & 发起用户 ID \\
+\texttt{task\_\allowbreak id} & \texttt{varchar(64)} & \texttt{NOT NULL, UNIQUE uk\_task\_id(task\_id)} & 业务任务号 \\
+\texttt{work\_\allowbreak id} & \texttt{bigint(20) UNSIGNED} & \texttt{NOT NULL, KEY idx\_work\_id(work\_id)} & 关联作品 ID \\
+\texttt{user\_\allowbreak id} & \texttt{bigint(20) UNSIGNED} & \texttt{NOT NULL, KEY idx\_user\_id(user\_id)} & 发起用户 ID \\
 \texttt{gender} & \texttt{varchar(64)} & \texttt{NOT NULL, DEFAULT ''} & 性别 \\
-\texttt{body\_type} & \texttt{varchar(64)} & \texttt{NOT NULL, DEFAULT ''} & 体型参数 \\
-\texttt{scene\_style} & \texttt{varchar(64)} & \texttt{NOT NULL, DEFAULT ''} & 场景风格 \\
-\texttt{input\_refs} & \texttt{json} & \texttt{NOT NULL} & 输入参考数据 \\
+\texttt{body\_\allowbreak type} & \texttt{varchar(64)} & \texttt{NOT NULL, DEFAULT ''} & 体型参数 \\
+\texttt{scene\_\allowbreak style} & \texttt{varchar(64)} & \texttt{NOT NULL, DEFAULT ''} & 场景风格 \\
+\texttt{input\_\allowbreak refs} & \texttt{json} & \texttt{NOT NULL} & 输入参考数据 \\
 \texttt{status} & \texttt{tinyint(3) UNSIGNED} & \texttt{NOT NULL, DEFAULT 1, KEY idx\_status(status)} & 任务状态 \\
 \texttt{progress} & \texttt{tinyint(3) UNSIGNED} & \texttt{NOT NULL, DEFAULT 0} & 任务进度 \\
-\texttt{result\_url} & \texttt{varchar(1024)} & \texttt{NOT NULL, DEFAULT ''} & 结果地址 \\
-\texttt{error\_code} & \texttt{varchar(64)} & \texttt{NOT NULL, DEFAULT ''} & 错误码 \\
-\texttt{error\_message} & \texttt{varchar(1024)} & \texttt{NOT NULL, DEFAULT ''} & 错误信息 \\
-\texttt{started\_at} & \texttt{datetime} & \texttt{DEFAULT NULL} & 开始时间 \\
-\texttt{finished\_at} & \texttt{datetime} & \texttt{DEFAULT NULL} & 完成时间 \\
-\texttt{created\_at} & \texttt{datetime} & \texttt{DEFAULT CURRENT\_TIMESTAMP, KEY idx\_created\_at(created\_at)} & 创建时间 \\
-\texttt{updated\_at} & \texttt{datetime} & \texttt{DEFAULT CURRENT\_TIMESTAMP ON UPDATE CURRENT\_TIMESTAMP} & 更新时间 \\
+\texttt{result\_\allowbreak url} & \texttt{varchar(1024)} & \texttt{NOT NULL, DEFAULT ''} & 结果地址 \\
+\texttt{error\_\allowbreak code} & \texttt{varchar(64)} & \texttt{NOT NULL, DEFAULT ''} & 错误码 \\
+\texttt{error\_\allowbreak message} & \texttt{varchar(1024)} & \texttt{NOT NULL, DEFAULT ''} & 错误信息 \\
+\texttt{started\_\allowbreak at} & \texttt{datetime} & \texttt{DEFAULT NULL} & 开始时间 \\
+\texttt{finished\_\allowbreak at} & \texttt{datetime} & \texttt{DEFAULT NULL} & 完成时间 \\
+\texttt{created\_\allowbreak at} & \texttt{datetime} & \texttt{DEFAULT CURRENT\_TIMESTAMP, KEY idx\_created\_at(created\_at)} & 创建时间 \\
+\texttt{updated\_\allowbreak at} & \texttt{datetime} & \texttt{DEFAULT CURRENT\_TIMESTAMP ON UPDATE CURRENT\_TIMESTAMP} & 更新时间 \\
 \end{longtable}
 }
 
@@ -1773,129 +1773,88 @@ AI 虚拟试穿模块主要覆盖“输入准备—提交生成—结果展示�
 \clearpage
 \noindent\textbf{附录 A \quad 用户管理模块}
 
-\noindent\textbf{前端代码}
-\begin{verbatim}
-<template>
-    <!-- Right Panel: Login Form -->
-        <div class="w-full lg:w-2/5 flex flex-col justify-center items-center p-8 lg:p-16 bg-white relative">
-            <div class="w-full max-w-[400px]">
-                <!-- Header -->
-                <div class="text-center mb-6">
-                    <div
-                        class="inline-flex justify-center items-center w-[64px] h-[64px] bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl shadow-lg shadow-purple-200 mb-6 transform">
-                        <el-icon color="white" size="32">
-                            <MagicStick />
-                        </el-icon>
-                    </div>
-                    <h2 class="text-2xl font-bold text-gray-900 mb-2">织 光</h2>
-                    <p class="text-gray-500 text-sm">请登录以继续探索创意</p>
-                </div>
-
-                <!-- Form -->
-                <el-form ref="formRef" :model="form" :rules="rules" size="large" class="space-y-5" @submit.prevent>
-                    <div class="space-y-1">
-                        <label class="text-xs font-semibold text-gray-600 ml-1">用户名</label>
-                        <el-form-item prop="username" class="!mb-0">
-                            <el-input v-model="form.username" placeholder="请输入用户名" :prefix-icon="User"
-                                class="!h-11 custom-input-style" />
-                        </el-form-item>
-                    </div>
-
-                    <div class="space-y-1">
-                        <label class="text-xs font-semibold text-gray-600 ml-1">密码</label>
-                        <el-form-item prop="password" class="!mb-0">
-                            <el-input v-model="form.password" type="password" placeholder="请输入密码" :prefix-icon="Lock"
-                                show-password class="!h-11 custom-input-style" />
-                        </el-form-item>
-                    </div>
-
-                    <el-button type="primary"
-                        class="w-full !h-11 !bg-gradient-to-r !from-[#a855f7] !to-[#d8b4fe] !border-none hover:!opacity-90 transition-all duration-300 shadow-lg shadow-purple-200 text-base font-semibold tracking-wide"
-                        style="border-radius: 12px;" :loading="loading" @click="handleSubmit(formRef)">
-                        {{ isLogin ? '登 录' : '注 册' }}
-                    </el-button>
-                </el-form>
-
-                <div class="text-center mt-6">
-                    <p class="text-sm text-gray-500">
-                        {{ isLogin ? "还没有账号？" : "已有账号？" }}
-                        <button class="text-purple-600 font-bold hover:underline ml-1" @click="toggleMode">
-                            {{ isLogin ? '立即注册' : '去登录' }}
-                        </button>
-                    </p>
-                </div>
-
-                <div class="mt-4 text-center">
-                    <p class="text-xs text-gray-300">探索作品 · 协作共创 · 灵感发现</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</template>
-
-<script setup lang="ts">
-import { User, Lock, MagicStick, EditPen, Share } from '@element-plus/icons-vue'
-import { ElMessage } from 'element-plus'
-import type { FormInstance, FormRules } from 'element-plus'
-import { useUserStore } from '~/stores/user'
-import ModelPreview from '~/components/ModelPreview.vue'
-
-const isLogin = ref(true)
-const loading = ref(false)
-const formRef = ref<FormInstance>()
-const userStore = useUserStore()
-
-const form = reactive({
-    username: '',
-    password: ''
-})
-
-const rules = reactive<FormRules>({
-    username: [
-        { required: true, message: '请输入用户名', trigger: 'change' },
-        { min: 3, message: '用户名长度不能少于3位', trigger: 'blur' }
-    ],
-    password: [
-        { required: true, message: '请输入密码', trigger: 'change' },
-        { min: 6, message: '密码长度不能少于6位', trigger: 'blur' }
-    ]
-})
-
-const toggleMode = () => {
-    isLogin.value = !isLogin.value
-    formRef.value?.resetFields()
-}
-
-const handleSubmit = async (formEl: FormInstance | undefined) => {
-    if (!formEl) return
-
-    await formEl.validate(async (valid, fields) => {
-        if (valid) {
-            loading.value = true
-            try {
-                const url = isLogin.value ? '/api/login' : '/api/register'
-                const res: any = await useRequest(url, { ...form })
-                userStore.setAuth({ token: res.token, user: res.user })
-                if (res.success) {
-                    ElMessage.success(`${isLogin.value ? '登录' : '注册'}成功！`)
-                    navigateTo('/home')
-                } else {
-                    ElMessage.error(res.message)
-                }
-            } catch (error) {
-                ElMessage.error('请求失败')
-            } finally {
-                loading.value = false
-            }
-        }
-    })
-}
-</script>
-
-\end{verbatim}
-
 \noindent\textbf{后端代码}
 \begin{verbatim}
+package model
+
+import (
+	"database/sql"
+	"fmt"
+	"strings"
+	"time"
+
+	"github.com/chosetop/bishe_back/internal/config"
+)
+
+type User struct {
+	ID        int       `json:"id"`
+	Username  string    `json:"username"`
+	Password  string    `json:"-"`
+	Avatar    string    `json:"avatar"`
+	Role      int       `json:"role"`
+	CreatedAt time.Time `json:"created_at"`
+	UpdatedAt time.Time `json:"updated_at"`
+}
+
+func CreateUser(username, passwordHash string) error {
+	stmt, err := config.DB.Prepare("INSERT INTO users(username, password) VALUES(?, ?)")
+	if err != nil {
+		return err
+	}
+	defer stmt.Close()
+	_, err = stmt.Exec(username, passwordHash)
+	return err
+}
+
+func GetUserByUsername(username string) (*User, error) {
+	row := config.DB.QueryRow("SELECT id, username, password, COALESCE(avatar, ''), role, created_at, updated_at FROM users WHERE username = ?", username)
+	var user User
+	err := row.Scan(&user.ID, &user.Username, &user.Password, &user.Avatar, &user.Role, &user.CreatedAt, &user.UpdatedAt)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			return nil, nil
+		}
+		return nil, err
+	}
+	return &user, nil
+}
+
+func UpdateUserFields(id int, username *string, avatar *string, role *int) (int64, error) {
+	fields := make([]string, 0, 3)
+	args := make([]any, 0, 3)
+	if username != nil {
+		fields = append(fields, "username = ?")
+		args = append(args, *username)
+	}
+	if avatar != nil {
+		fields = append(fields, "avatar = ?")
+		args = append(args, *avatar)
+	}
+	if role != nil {
+		fields = append(fields, "role = ?")
+		args = append(args, *role)
+	}
+	if len(fields) == 0 {
+		return 0, nil
+	}
+	args = append(args, id)
+	query := fmt.Sprintf("UPDATE users SET %s WHERE id = ?", strings.Join(fields, ", "))
+	res, err := config.DB.Exec(query, args...)
+	if err != nil {
+		return 0, err
+	}
+	return res.RowsAffected()
+}
+
+func DeleteUser(id int) (int64, error) {
+	res, err := config.DB.Exec("DELETE FROM users WHERE id = ?", id)
+	if err != nil {
+		return 0, err
+	}
+	return res.RowsAffected()
+}
+\end{verbatim}
+\iffalse
 package model
 
 import (
@@ -2071,727 +2030,179 @@ func DeleteUser(id int) (int64, error) {
 }
 
 \end{verbatim}
+\fi
 
 \clearpage
 \noindent\textbf{附录 B \quad 3D 服装定制模块}
 
-\noindent\textbf{前端代码}
-\begin{verbatim}
-// 定制页
-<template>
-  <div class="flex h-screen w-full bg-gray-100 overflow-hidden">
-    <!-- Left: Feature Navigation -->
-    <SideNav v-model:active="activePanel" />
-
-    <!-- Center: 3D Viewer -->
-    <div class="flex-1 relative flex flex-col min-w-0">
-      <!-- Top Bar -->
-      <DesignTopBar
-        :work-title="workTitle"
-        :work-status="workStatus"
-        :model-name="modelName"
-        :can-undo="canUndo"
-        :can-redo="canRedo"
-        :saving="saving"
-        :submitting="submitting"
-        :is-read-only="isReadOnly"
-        :current-work-id="currentWorkId"
-        :show-undo-redo="true"
-        @back="router.back()"
-        @undo="undo"
-        @redo="redo"
-        @save="handleSave"
-        @submit="handleSubmit"
-      />
-
-      <!-- Viewer -->
-      <div class="flex-1 relative bg-gradient-to-b from-gray-50 to-gray-100">
-        <Viewer />
-      </div>
-    </div>
-
-    <!-- Right: Properties Panel -->
-    <transition name="slide-fade">
-      <PropertiesPanel v-if="activePanel" :active="activePanel" @close="activePanel = ''" />
-    </transition>
-
-    <!-- Save Dialog -->
-    <WorkSaveDialog
-      v-model="saveDialogVisible"
-      :title="workForm.title"
-      :description="workForm.description"
-      :tags="workForm.tags"
-      @confirm="confirmSave"
-    />
-  </div>
-</template>
-
-<script setup lang="ts">
-import { ref, computed, onMounted, reactive } from 'vue'
-import { useRouter, useRoute } from 'vue-router'
-import { ElMessage, ElMessageBox } from 'element-plus'
-import SideNav from '../../../components/design/SideNav.vue'
-import PropertiesPanel from '../../../components/design/PropertiesPanel.vue'
-import Viewer from '../../../components/design/Viewer.vue'
-import DesignTopBar from '../../../components/design/DesignTopBar.vue'
-import WorkSaveDialog from '../../../components/design/WorkSaveDialog.vue'
-import { useDesignState } from '../../../composables/useDesignState'
-// useWorks is auto-imported
-
-const router = useRouter()
-const route = useRoute()
-const { undo, redo, canUndo, canRedo, setConfig, config } = useDesignState()
-const { fetchWorkDetail, updateWorkDraft, submitWorkReview } = useWorks()
-
-const activePanel = ref('material')
-const saving = ref(false)
-const submitting = ref(false)
-const saveDialogVisible = ref(false)
-const currentWorkId = ref<number | null>(null)
-const workTitle = ref('')
-const workStatus = ref<number | null>(null)
-
-const workForm = reactive({
-  title: '',
-  description: '',
-  tags: [] as string[]
-})
-
-const isReadOnly = computed(() => {
-  if (!currentWorkId.value) return false
-  return ![1, 4].includes(workStatus.value ?? 1)
-})
-
-const modelNames: Record<string, string> = {
-  tshirt: '标准 T恤',
-  hoodie: '连帽卫衣'
-}
-
-const modelName = computed(() => modelNames[config.modelId] || 'Unknown Model')
-
-onMounted(async () => {
-  const idParam = route.params.id as string
-  const workId = Number(idParam)
-  if (!isNaN(workId)) {
-    currentWorkId.value = workId
-    await loadWork(workId)
-  } else {
-    ElMessage.error('无效的作品ID')
-    router.push('/design')
-  }
-})
-
-const loadWork = async (id: number) => {
-  try {
-    const res = await fetchWorkDetail(id)
-    if (res.success) {
-      const { work, version } = res
-      workTitle.value = work.title
-      workStatus.value = work.status
-      workForm.title = work.title
-      workForm.description = work.description
-      workForm.tags = Array.isArray(work.tags) ? [...work.tags] : []
-
-      if (version?.params_json) {
-        setConfig(version.params_json)
-      }
-    }
-  } catch (error) {
-    ElMessage.error('加载作品失败')
-    console.error(error)
-    router.push('/works')
-  }
-}
-
-const handleSave = () => {
-  saveDialogVisible.value = true
-}
-
-const confirmSave = async (formData: { title: string; description: string; tags: string[] }) => {
-  if (!currentWorkId.value) return
-  saving.value = true
-  try {
-    const res = await updateWorkDraft(currentWorkId.value, {
-      title: formData.title,
-      description: formData.description,
-      tags: formData.tags,
-      cover_file_id: 100,
-      model_file_id: 120,
-      params_json: config
-    })
-    if (res.success) {
-      ElMessage.success('保存成功')
-      workTitle.value = res.work.title
-      workForm.title = formData.title
-      workForm.description = formData.description
-      workForm.tags = [...formData.tags]
-      saveDialogVisible.value = false
-    }
-  } catch (error) {
-    ElMessage.error('保存失败')
-    console.error(error)
-  } finally {
-    saving.value = false
-  }
-}
-
-const handleSubmit = async () => {
-  if (!currentWorkId.value) return
-  try {
-    await ElMessageBox.confirm('确定要提交审核吗？提交后将无法修改。', '提示', {
-      confirmButtonText: '确定',
-      cancelButtonText: '取消',
-      type: 'warning'
-    })
-    submitting.value = true
-    await submitWorkReview(currentWorkId.value)
-    ElMessage.success('提交成功')
-    workStatus.value = 2
-    router.push('/works')
-  } catch {
-    // Cancelled or error
-  } finally {
-    submitting.value = false
-  }
-}
-</script>
-
-// 关键组件
-<template>
-  <div ref="container" class="w-full h-full relative overflow-hidden bg-gray-50">
-    <div v-if="showLoading" class="absolute inset-0 flex items-center justify-center bg-white/80 z-10 backdrop-blur-sm">
-      <div class="flex flex-col items-center gap-2">
-        <div class="w-8 h-8 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
-        <span class="text-sm text-gray-500 font-medium">加载中...</span>
-      </div>
-    </div>
-  </div>
-</template>
-
-<script setup lang="ts">
-import { ref, computed, onMounted, onBeforeUnmount, watch, toRaw } from 'vue'
-import { DesignService } from '../../services/DesignService'
-import { useDesignState } from '../../composables/useDesignState'
-import type { LogoConfig } from '../../types/design'
-
-const container = ref<HTMLElement | null>(null)
-const loading = ref(true)
-const designService = ref<DesignService | null>(null)
-const { config, ensureMaterial, updateLogo, isLoading } = useDesignState()
-
-const showLoading = computed(() => loading.value || isLoading.value)
-
-onMounted(async () => {
-  if (!container.value) return
-
-  // Initialize Service
-  const service = new DesignService(container.value)
-  designService.value = service
-
-  // Initial Load
-  await loadModel()
-
-  // Initial Lighting
-  service.setLightPreset(config.scene.lightPreset)
-
-  // Initial Materials
-  // We need to wait for model to load to know mesh names, 
-  // but we can also just try to apply what we have.
-  applyAllMaterials()
-
-  // Initial Logos
-  config.logos.forEach(logo => {
-    service.addLogo(toRaw(logo))
-    renderedLogoIds.add(logo.id)
-  })
-
-  // Add Drag Listeners
-  if (container.value) {
-    container.value.addEventListener('mousedown', onMouseDown)
-    window.addEventListener('mousemove', onMouseMove)
-    window.addEventListener('mouseup', onMouseUp)
-  }
-})
-
-onBeforeUnmount(() => {
-  if (designService.value) {
-    designService.value.dispose()
-  }
-  if (container.value) {
-    container.value.removeEventListener('mousedown', onMouseDown)
-  }
-  window.removeEventListener('mousemove', onMouseMove)
-  window.removeEventListener('mouseup', onMouseUp)
-})
-
-const draggingLogoId = ref<string | null>(null)
-
-const onMouseDown = (e: MouseEvent) => {
-  if (!designService.value) return
-  const id = designService.value.pickLogo(e.clientX, e.clientY)
-  if (id) {
-    draggingLogoId.value = id
-    if (designService.value.controls) designService.value.controls.enabled = false
-  }
-}
-
-const onMouseMove = (e: MouseEvent) => {
-  if (draggingLogoId.value && designService.value) {
-    // Find intersection on model
-    const hit = designService.value.getIntersection(e.clientX, e.clientY)
-    if (hit) {
-      const currentLogo = config.logos.find(l => l.id === draggingLogoId.value)
-      if (currentLogo) {
-        // Update position directly
-        updateLogo(draggingLogoId.value, {
-          transform: {
-            ...currentLogo.transform,
-            position: hit.point
-          },
-          meshName: hit.meshName
-        })
-      }
-    }
-  }
-}
-
-const onMouseUp = () => {
-  if (draggingLogoId.value) {
-    draggingLogoId.value = null
-    if (designService.value && designService.value.controls) {
-      designService.value.controls.enabled = true
-    }
-  }
-}
-
-// --- Watchers ---
-
-watch(() => config.modelId, async () => {
-  await loadModel()
-})
-
-watch(() => config.scene.lightPreset, (preset) => {
-  designService.value?.setLightPreset(preset)
-})
-
-watch(() => config.materials, (materials) => {
-  if (!designService.value) return
-  // Apply all changes. DesignService.updateMaterial is efficient enough.
-  Object.entries(materials).forEach(([meshName, matConfig]) => {
-    designService.value?.updateMaterial(meshName, toRaw(matConfig))
-  })
-}, { deep: true })
-
-const renderedLogoIds = new Set<string>()
-
-watch(() => config.logos, async (newLogos) => {
-  if (!designService.value) return
-
-  const newIds = new Set(newLogos.map(l => l.id))
-
-  // Remove deleted
-  for (const id of renderedLogoIds) {
-    if (!newIds.has(id)) {
-      designService.value.removeLogo(id)
-    }
-  }
-
-  // Detect if we have new logos (which might require texture loading)
-  const hasNewLogos = newLogos.some(l => !renderedLogoIds.has(l.id))
-
-  // Update our set synchronously to prevent race conditions
-  renderedLogoIds.clear()
-  newIds.forEach(id => renderedLogoIds.add(id))
-
-  if (hasNewLogos) {
-    loading.value = true
-  }
-
-  // Add/Update new
-  const updatePromises = newLogos.map(logo => {
-    return designService.value?.addLogo(toRaw(logo))
-  })
-
-  await Promise.all(updatePromises)
-
-  if (hasNewLogos) {
-    loading.value = false
-  }
-
-}, { deep: true })
-
-
-// --- Methods ---
-
-const loadModel = async () => {
-  if (!designService.value) return
-  loading.value = true
-  await designService.value.loadModel(config.modelUrl)
-
-  // Initialize materials in state for the new model
-  const meshNames = designService.value.getMeshNames()
-  meshNames.forEach(name => {
-    ensureMaterial(name)
-  })
-
-  applyAllMaterials()
-  loading.value = false
-}
-
-const applyAllMaterials = () => {
-  if (!designService.value) return
-  Object.entries(config.materials).forEach(([name, mat]) => {
-    designService.value?.updateMaterial(name, toRaw(mat))
-  })
-}
-
-</script>
-
-//关键3D类
-import * as THREE from 'three'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
-import { DecalGeometry } from 'three/examples/jsm/geometries/DecalGeometry.js'
-import type { MaterialConfig, LogoConfig, LightPreset } from '../types/design'
-import { LightManager } from './LightManager'
-
-export class DesignService {
-  private container: HTMLElement
-  private renderer: THREE.WebGLRenderer
-  private scene: THREE.Scene
-  private camera: THREE.PerspectiveCamera
-  private controls: OrbitControls
-  private lightManager: LightManager
-  private currentModel: THREE.Group | null = null
-  private raycaster = new THREE.Raycaster()
-  private logos: Map<string, THREE.Mesh> = new Map() // Map logo ID to Mesh
-  private textureLoader = new THREE.TextureLoader()
-  private textureCache: Map<string, THREE.Texture> = new Map()
-  private rafId: number = 0
-
-  constructor(container: HTMLElement) {
-    this.container = container
-
-    // Renderer
-    this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
-    this.renderer.setSize(container.clientWidth, container.clientHeight)
-    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-    this.renderer.shadowMap.enabled = true
-    this.renderer.outputColorSpace = THREE.SRGBColorSpace
-    this.renderer.toneMapping = THREE.ACESFilmicToneMapping
-    container.appendChild(this.renderer.domElement)
-
-    // Scene
-    this.scene = new THREE.Scene()
-
-    // Camera
-    this.camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 100)
-    this.camera.position.set(0, 0.5, 2.5)
-
-    // Controls
-    this.controls = new OrbitControls(this.camera, this.renderer.domElement)
-    this.controls.enableDamping = true
-    this.controls.dampingFactor = 0.05
-    this.controls.minDistance = 1
-    this.controls.maxDistance = 5
-
-    // Light Manager
-    this.lightManager = new LightManager(this.scene)
-    this.lightManager.setPreset('indoor')
-
-    // Animation Loop
-    this.animate = this.animate.bind(this)
-    this.animate()
-
-    // Resize Handler
-    this.onResize = this.onResize.bind(this)
-    window.addEventListener('resize', this.onResize)
-  }
-
-  async loadModel(url: string) {
-    if (this.currentModel) {
-      this.scene.remove(this.currentModel)
-      this.disposeModel(this.currentModel)
-      this.currentModel = null
-    }
-
-    const loader = new GLTFLoader()
-    try {
-      const gltf = await loader.loadAsync(url)
-      this.currentModel = gltf.scene
-
-      // Center and Scale
-      const box = new THREE.Box3().setFromObject(this.currentModel)
-      const center = box.getCenter(new THREE.Vector3())
-      const size = box.getSize(new THREE.Vector3())
-      const maxDim = Math.max(size.x, size.y, size.z)
-      const scale = 1.5 / maxDim
-
-      this.currentModel.scale.setScalar(scale)
-      this.currentModel.position.sub(center.multiplyScalar(scale))
-      this.currentModel.position.y -= 0.2 // Adjust height
-
-      this.currentModel.traverse((child) => {
-        if ((child as THREE.Mesh).isMesh) {
-          child.castShadow = true
-          child.receiveShadow = true
-        }
-      })
-
-      this.scene.add(this.currentModel)
-    } catch (error) {
-      console.error("Failed to load model:", error)
-    }
-
-    return this.currentModel
-  }
-
-  updateMaterial(meshName: string, config: MaterialConfig) {
-    if (!this.currentModel) return
-
-    this.currentModel.traverse((child) => {
-      if ((child as THREE.Mesh).isMesh) {
-        // If meshName is provided, only update that mesh. Otherwise update all.
-        // For simplicity, we assume strict matching or specific generic names logic in caller.
-        // Here we check if the mesh name includes the target name (e.g. 'tshirt' includes 'body'?)
-        // Or exact match.
-        // Let's use exact match or 'all'
-        if (meshName !== 'all' && child.name !== meshName) return
-
-        const mesh = child as THREE.Mesh
-        // Ensure material is unique to this mesh if not already
-        if (!Array.isArray(mesh.material)) {
-          // Clone to avoid sharing if needed, but usually we want shared for same parts
-        }
-
-        const materials = Array.isArray(mesh.material) ? mesh.material : [mesh.material]
-
-        materials.forEach(m => {
-          if (m instanceof THREE.MeshStandardMaterial) {
-            m.color.set(config.color)
-            m.roughness = config.roughness
-            m.metalness = config.metalness
-
-            if (config.emissive) m.emissive.set(config.emissive)
-            if (config.opacity !== undefined) {
-              m.opacity = config.opacity
-              m.transparent = config.opacity < 1
-            }
-
-            if (config.map) {
-              this.textureLoader.load(config.map, (tex) => {
-                tex.colorSpace = THREE.SRGBColorSpace
-                tex.flipY = false
-                m.map = tex
-                m.needsUpdate = true
-              })
-            } else if (config.map === null) {
-              m.map = null
-            }
-
-            m.needsUpdate = true
-          }
-        })
-      }
-    })
-  }
-
-  // Method to identify mesh names for the UI
-  getMeshNames(): string[] {
-    const names: string[] = []
-    if (this.currentModel) {
-      this.currentModel.traverse((child) => {
-        if ((child as THREE.Mesh).isMesh) {
-          names.push(child.name)
-        }
-      })
-    }
-    return names
-  }
-
-  async addLogo(logo: LogoConfig) {
-    if (!this.currentModel) return
-
-    // Optimization: Check if update is needed
-    const existingMesh = this.logos.get(logo.id)
-    if (existingMesh) {
-      const prevConfig = existingMesh.userData.config as LogoConfig
-      // Simple deep compare to avoid unnecessary updates
-      if (prevConfig && JSON.stringify(prevConfig) === JSON.stringify(logo)) {
-        return
-      }
-    }
-
-    // Load texture (with caching)
-    let texture = this.textureCache.get(logo.url)
-    if (!texture) {
-      try {
-        texture = await this.textureLoader.loadAsync(logo.url)
-        texture.colorSpace = THREE.SRGBColorSpace
-        this.textureCache.set(logo.url, texture)
-      } catch (e) {
-        console.error('Failed to load texture', e)
-        return
-      }
-    }
-
-    // Remove existing mesh(es) for this ID
-    // Crucial: do this AFTER await (if any) to prevent race conditions leaving ghosts
-    // And ensure we remove ALL instances to clean up any past ghosts
-    this.removeLogo(logo.id)
-
-    // Create Decal Material
-    // We can potentially reuse material if texture hasn't changed, but creating new one is safer for now
-    const material = new THREE.MeshPhongMaterial({
-      map: texture,
-      transparent: true,
-      depthTest: true,
-      depthWrite: false,
-      polygonOffset: true,
-      polygonOffsetFactor: -4,
-      shininess: 30,
-      specular: 0x111111
-    })
-
-    // Find target mesh
-    let targetMesh: THREE.Mesh | null = null
-    this.currentModel.traverse((child) => {
-      if ((child as THREE.Mesh).isMesh && child.name === logo.meshName) {
-        targetMesh = child as THREE.Mesh
-      }
-    })
-
-    // Fallback: use the first mesh if no name match
-    if (!targetMesh) {
-      this.currentModel.traverse((child) => {
-        if (!targetMesh && (child as THREE.Mesh).isMesh) {
-          targetMesh = child as THREE.Mesh
-        }
-      })
-    }
-
-    if (targetMesh) {
-      const position = new THREE.Vector3(logo.transform.position.x, logo.transform.position.y, logo.transform.position.z)
-      const orientation = new THREE.Euler(0, 0, logo.transform.rotation)
-      const size = new THREE.Vector3(logo.transform.scale, logo.transform.scale, logo.transform.scale)
-
-      const geometry = new DecalGeometry(targetMesh, position, orientation, size)
-      const mesh = new THREE.Mesh(geometry, material)
-      mesh.name = `logo-${logo.id}`
-      mesh.userData.config = JSON.parse(JSON.stringify(logo)) // Store deep copy of config
-
-      this.scene.add(mesh)
-      this.logos.set(logo.id, mesh)
-    }
-  }
-
-  removeLogo(id: string) {
-    // Robust removal: keep removing until no object with this name exists
-    let mesh: THREE.Object3D | undefined
-    while ((mesh = this.scene.getObjectByName(`logo-${id}`))) {
-      this.scene.remove(mesh)
-      if ((mesh as THREE.Mesh).isMesh) {
-        const m = mesh as THREE.Mesh
-        m.geometry.dispose()
-        if (Array.isArray(m.material)) {
-          m.material.forEach(mat => mat.dispose())
-        } else {
-          (m.material as THREE.Material).dispose()
-        }
-      }
-    }
-    this.logos.delete(id)
-  }
-
-  setLightPreset(preset: LightPreset) {
-    this.lightManager.setPreset(preset)
-  }
-
-  private animate() {
-    this.rafId = requestAnimationFrame(this.animate)
-    this.controls.update()
-    this.renderer.render(this.scene, this.camera)
-  }
-
-  private onResize() {
-    if (!this.container) return
-    const width = this.container.clientWidth
-    const height = this.container.clientHeight
-    this.camera.aspect = width / height
-    this.camera.updateProjectionMatrix()
-    this.renderer.setSize(width, height)
-  }
-
-  private disposeModel(model: THREE.Group) {
-    model.traverse((child) => {
-      if ((child as THREE.Mesh).isMesh) {
-        const mesh = child as THREE.Mesh
-        mesh.geometry.dispose()
-        const mats = Array.isArray(mesh.material) ? mesh.material : [mesh.material]
-        mats.forEach(m => m.dispose())
-      }
-    })
-  }
-
-  dispose() {
-    cancelAnimationFrame(this.rafId)
-    this.renderer.dispose()
-    this.renderer.forceContextLoss()
-    window.removeEventListener('resize', this.onResize)
-
-    // Dispose scene
-    this.scene.traverse((child) => {
-      if ((child as THREE.Mesh).isMesh) {
-        (child as THREE.Mesh).geometry.dispose()
-      }
-    })
-  }
-
-  // Helper to get intersection for placement
-  getIntersection(clientX: number, clientY: number) {
-    if (!this.currentModel) return null
-
-    const rect = this.renderer.domElement.getBoundingClientRect()
-    const x = ((clientX - rect.left) / rect.width) * 2 - 1
-    const y = -((clientY - rect.top) / rect.height) * 2 + 1
-
-    this.raycaster.setFromCamera({ x, y }, this.camera)
-
-    const intersects = this.raycaster.intersectObject(this.currentModel, true)
-
-    if (intersects.length > 0) {
-      const hit = intersects[0]
-      return {
-        point: hit.point,
-        normal: hit.face?.normal?.clone().transformDirection(hit.object.matrixWorld) || new THREE.Vector3(0, 1, 0),
-        meshName: hit.object.name
-      }
-    }
-    return null
-  }
-
-  pickLogo(clientX: number, clientY: number): string | null {
-    const rect = this.renderer.domElement.getBoundingClientRect()
-    const x = ((clientX - rect.left) / rect.width) * 2 - 1
-    const y = -((clientY - rect.top) / rect.height) * 2 + 1
-
-    this.raycaster.setFromCamera({ x, y }, this.camera)
-
-    const logoMeshes = Array.from(this.logos.values())
-    const intersects = this.raycaster.intersectObjects(logoMeshes, false)
-
-    if (intersects.length > 0) {
-      // Name is logo-{id}
-      return intersects[0].object.name.replace('logo-', '')
-    }
-    return null
-  }
-}
-
-\end{verbatim}
-
 \noindent\textbf{后端代码}
 \begin{verbatim}
+package front
+
+import (
+	"encoding/json"
+	"net/http"
+	"strconv"
+	"time"
+
+	"github.com/chosetop/bishe_back/internal/model"
+	"github.com/gin-gonic/gin"
+)
+
+type CreateWorkInput struct {
+	Title       string          `json:"title" binding:"required"`
+	Description string          `json:"description"`
+	CoverFileID *int64          `json:"cover_file_id"`
+	ParamsJSON  json.RawMessage `json:"params_json" binding:"required"`
+	ModelFileID *int64          `json:"model_file_id"`
+	Tags        []string        `json:"tags"`
+}
+
+type UpdateWorkInput struct {
+	Title       *string         `json:"title"`
+	Description *string         `json:"description"`
+	CoverFileID *int64          `json:"cover_file_id"`
+	ParamsJSON  json.RawMessage `json:"params_json"`
+	ModelFileID *int64          `json:"model_file_id"`
+	Tags        []string        `json:"tags"`
+}
+
+func CreateWork(c *gin.Context) {
+	userIDVal, ok := c.Get("userID")
+	if !ok {
+		c.JSON(http.StatusUnauthorized, gin.H{"success": false, "message": "未登录"})
+		return
+	}
+	userID, ok := userIDVal.(int)
+	if !ok || userID <= 0 {
+		c.JSON(http.StatusUnauthorized, gin.H{"success": false, "message": "未登录"})
+		return
+	}
+
+	var input CreateWorkInput
+	if err := c.ShouldBindJSON(&input); err != nil {
+		c.JSON(http.StatusOK, gin.H{"success": false, "message": err.Error()})
+		return
+	}
+	if len(input.ParamsJSON) == 0 {
+		c.JSON(http.StatusBadRequest, gin.H{"success": false, "message": "params_json不能为空"})
+		return
+	}
+
+	workID, err := model.CreateDesignWork(int64(userID), input.Title, input.Description, input.CoverFileID)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "创建作品失败"})
+		return
+	}
+
+	versionID, err := model.CreateDesignVersion(workID, 1, input.ParamsJSON, input.ModelFileID)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "创建版本失败"})
+		return
+	}
+	_, _ = model.UpdateDesignWorkFields(workID, nil, nil, nil, nil, &versionID, nil)
+
+	if input.Tags != nil {
+		_ = model.SetWorkTags(workID, input.Tags)
+	}
+
+	work, _ := model.GetDesignWorkByID(workID)
+	version, _ := model.GetDesignVersionByID(versionID)
+	c.JSON(http.StatusOK, gin.H{"success": true, "work": work, "version": version})
+}
+
+func UpdateWork(c *gin.Context) {
+	userIDVal, ok := c.Get("userID")
+	if !ok {
+		c.JSON(http.StatusUnauthorized, gin.H{"success": false, "message": "未登录"})
+		return
+	}
+	userID, ok := userIDVal.(int)
+	if !ok || userID <= 0 {
+		c.JSON(http.StatusUnauthorized, gin.H{"success": false, "message": "未登录"})
+		return
+	}
+
+	workID, err := strconv.ParseInt(c.Param("id"), 10, 64)
+	if err != nil || workID <= 0 {
+		c.JSON(http.StatusBadRequest, gin.H{"success": false, "message": "ID不合法"})
+		return
+	}
+
+	work, err := model.GetDesignWorkByID(workID)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "获取作品失败"})
+		return
+	}
+	if work == nil || work.UserID != int64(userID) {
+		c.JSON(http.StatusOK, gin.H{"success": false, "message": "作品不存在"})
+		return
+	}
+
+	var input UpdateWorkInput
+	if err := c.ShouldBindJSON(&input); err != nil {
+		c.JSON(http.StatusOK, gin.H{"success": false, "message": err.Error()})
+		return
+	}
+
+	_, err = model.UpdateDesignWorkFields(workID, input.Title, input.Description, input.CoverFileID, nil, nil, nil)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "更新作品失败"})
+		return
+	}
+	if work.CurrentVersionID != nil {
+		_, _ = model.UpdateDesignVersionFields(*work.CurrentVersionID, input.ParamsJSON, input.ModelFileID, true)
+	}
+	if input.Tags != nil {
+		_ = model.SetWorkTags(workID, input.Tags)
+	}
+
+	work, _ = model.GetDesignWorkByID(workID)
+	var version *model.DesignVersion
+	if work != nil && work.CurrentVersionID != nil {
+		version, _ = model.GetDesignVersionByID(*work.CurrentVersionID)
+	}
+	c.JSON(http.StatusOK, gin.H{"success": true, "work": work, "version": version})
+}
+
+func SubmitWork(c *gin.Context) {
+	userIDVal, ok := c.Get("userID")
+	if !ok {
+		c.JSON(http.StatusUnauthorized, gin.H{"success": false, "message": "未登录"})
+		return
+	}
+	userID, ok := userIDVal.(int)
+	if !ok || userID <= 0 {
+		c.JSON(http.StatusUnauthorized, gin.H{"success": false, "message": "未登录"})
+		return
+	}
+
+	workID, err := strconv.ParseInt(c.Param("id"), 10, 64)
+	if err != nil || workID <= 0 {
+		c.JSON(http.StatusBadRequest, gin.H{"success": false, "message": "ID不合法"})
+		return
+	}
+	work, err := model.GetDesignWorkByID(workID)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": "获取作品失败"})
+		return
+	}
+	if work == nil || work.UserID != int64(userID) || work.CurrentVersionID == nil {
+		c.JSON(http.StatusOK, gin.H{"success": false, "message": "作品不存在"})
+		return
+	}
+
+	status := model.DesignStatusSubmitted
+	now := time.Now()
+	_, _ = model.UpdateDesignWorkFields(workID, nil, nil, nil, &status, nil, nil)
+	_, _ = model.UpdateDesignVersionSubmittedAt(*work.CurrentVersionID, now)
+
+	work, _ = model.GetDesignWorkByID(workID)
+	version, _ := model.GetDesignVersionByID(*work.CurrentVersionID)
+	c.JSON(http.StatusOK, gin.H{"success": true, "work": work, "version": version})
+}
+\end{verbatim}
+\iffalse
 package front
 
 import (
@@ -3401,284 +2812,159 @@ func DeleteWork(c *gin.Context) {
 }
 
 \end{verbatim}
+\fi
 
 \clearpage
 \noindent\textbf{附录 C \quad AI 虚拟试穿模块}
 
-\noindent\textbf{前端代码}
-\begin{verbatim}
-<template>
-  <div class="bg-white rounded-[2rem] border border-slate-100 shadow-[0_4px_24px_rgba(0,0,0,0.04)] p-8">
-    <h2 class="text-lg font-black text-slate-900 mb-6 flex items-center gap-2">
-      AI 虚拟试穿
-      <span class="px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-600 text-xs font-bold">BETA</span>
-    </h2>
-
-    <div v-if="!userStore.token" class="text-center py-6">
-      <p class="text-sm text-slate-500 mb-4">登录后即可体验 AI 虚拟试穿功能</p>
-      <button @click="router.push('/login')" class="px-6 py-2 rounded-xl bg-purple-50 text-purple-600 text-sm font-bold hover:bg-purple-100 transition-colors">
-        去登录
-      </button>
-    </div>
-
-    <div v-else>
-      <!-- Configuration Form -->
-      <div class="space-y-4 mb-6">
-        <div>
-          <label class="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-wider">模特体型 (Body Type)</label>
-          <select v-model="form.body_type" :disabled="isBusy" class="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-800 outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-500/10 transition-all disabled:opacity-50">
-            <option value="female">女性 (Female)</option>
-            <option value="male">男性 (Male)</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-wider">场景风格 (Scene Style)</label>
-          <select v-model="form.scene_style" :disabled="isBusy" class="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-800 outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-500/10 transition-all disabled:opacity-50">
-            <option value="studio">影棚 (Studio)</option>
-            <option value="street">街拍 (Street)</option>
-            <option value="nature">自然 (Nature)</option>
-          </select>
-        </div>
-
-        <button
-          @click="startTryon"
-          :disabled="isBusy"
-          class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 text-white text-sm font-bold shadow-md shadow-purple-500/20 hover:shadow-purple-500/40 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          <span v-if="isBusy" class="w-4 h-4 rounded-full border-2 border-white/30 border-t-white animate-spin"></span>
-          <span>{{ isBusy ? '任务进行中...' : '开始试穿' }}</span>
-        </button>
-      </div>
-
-      <!-- Current Task Status -->
-      <div v-if="latestTask" class="bg-slate-50 rounded-2xl p-5 mb-6 border border-slate-100">
-        <div class="flex items-center justify-between mb-3">
-          <span class="text-sm font-bold text-slate-800">当前任务状态</span>
-          <span class="px-2.5 py-1 rounded-lg text-xs font-bold" :class="statusConfig[latestTask.status]?.class || 'bg-slate-200 text-slate-600'">
-            {{ statusConfig[latestTask.status]?.label || '未知状态' }}
-          </span>
-        </div>
-
-        <!-- Progress Bar for Queued/Running -->
-        <div v-if="[1, 2].includes(latestTask.status)" class="space-y-2">
-          <div class="flex justify-between text-xs text-slate-500">
-            <span>{{ latestTask.status === 1 ? '排队中...' : 'AI 正在生成中...' }}</span>
-            <span>{{ latestTask.progress || 0 }}%</span>
-          </div>
-          <div class="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
-            <div class="h-full bg-purple-500 transition-all duration-500" :style="{ width: `${latestTask.progress || 0}%` }"></div>
-          </div>
-        </div>
-
-        <!-- Error Message -->
-        <div v-if="latestTask.status === 4" class="mt-2 p-3 rounded-xl bg-red-50 text-red-600 text-xs">
-          {{ latestTask.error_message || '任务执行失败，请稍后重试' }}
-        </div>
-
-        <!-- Success Result -->
-        <div v-if="latestTask.status === 3 && resultImage" class="mt-4 relative rounded-xl overflow-hidden bg-white border border-slate-200">
-          <img :src="resultImage" class="w-full h-auto object-cover" alt="试穿结果" />
-        </div>
-      </div>
-
-      <!-- History Tasks -->
-      <div v-if="historyTasks.length > 0">
-        <h3 class="text-xs font-bold text-slate-500 mb-3 uppercase tracking-wider">历史记录</h3>
-        <div class="space-y-3 max-h-64 overflow-y-auto pr-2 custom-scrollbar">
-          <div v-for="task in historyTasks" :key="task.id" class="flex gap-3 p-3 rounded-xl bg-white border border-slate-100 hover:border-purple-200 transition-colors cursor-pointer" @click="viewHistoryTask(task)">
-            <div class="w-12 h-12 rounded-lg bg-slate-50 overflow-hidden shrink-0 flex items-center justify-center border border-slate-100">
-              <img v-if="task.status === 3 && (task.thumbnail_url || task.result_url)" :src="task.thumbnail_url || task.result_url" class="w-full h-full object-cover" />
-              <svg v-else width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-slate-300">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
-              </svg>
-            </div>
-            <div class="flex-1 min-w-0 flex flex-col justify-center">
-              <div class="flex items-center justify-between mb-1">
-                <span class="text-xs font-bold text-slate-700 truncate">
-                  {{ task.body_type === 'female' ? '女性' : '男性' }} / {{ task.scene_style === 'studio' ? '影棚' : task.scene_style === 'street' ? '街拍' : '自然' }}
-                </span>
-                <span class="text-[10px] px-1.5 py-0.5 rounded text-slate-500" :class="statusConfig[task.status]?.class">
-                  {{ statusConfig[task.status]?.label }}
-                </span>
-              </div>
-              <span class="text-[10px] text-slate-400">{{ formatTime(task.created_at) }}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
-
-<script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
-import { useRouter } from 'vue-router'
-import { useUserStore } from '~/stores/user'
-import { useWorks } from '~/composables/useWorks'
-import type { TryonTask } from '~/composables/useWorks'
-import { ElMessage } from 'element-plus'
-
-const props = defineProps<{
-  workId: number
-  initialData?: {
-    latest_task: TryonTask | null
-    history_tasks: TryonTask[]
-  }
-}>()
-
-const router = useRouter()
-const userStore = useUserStore()
-const { createTryonTask, getTryonTask } = useWorks()
-
-const form = ref({
-  body_type: 'female',
-  scene_style: 'studio'
-})
-
-const latestTask = ref<TryonTask & { thumbnail_url?: string } | null>(null)
-const historyTasks = ref<(TryonTask & { thumbnail_url?: string })[]>([])
-const pollTimer = ref<number | null>(null)
-
-const isBusy = computed(() => {
-  return latestTask.value ? [1, 2].includes(latestTask.value.status) : false
-})
-
-const resultImage = computed(() => {
-  if (!latestTask.value) return null
-  return latestTask.value.thumbnail_url || latestTask.value.result_url
-})
-
-const statusConfig: Record<number, { label: string; class: string }> = {
-  1: { label: '排队中', class: 'bg-amber-100 text-amber-700' },
-  2: { label: '处理中', class: 'bg-blue-100 text-blue-700' },
-  3: { label: '成功', class: 'bg-emerald-100 text-emerald-700' },
-  4: { label: '失败', class: 'bg-red-100 text-red-700' },
-  5: { label: '已取消', class: 'bg-slate-200 text-slate-600' }
-}
-
-const formatTime = (timeStr: string) => {
-  if (!timeStr) return ''
-  const date = new Date(timeStr)
-  return `${date.getMonth() + 1}/${date.getDate()} ${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}`
-}
-
-const startPolling = () => {
-  stopPolling()
-  const fetchStatus = async () => {
-    if (!latestTask.value?.task_id) return
-    try {
-      const res = await getTryonTask(props.workId, latestTask.value.task_id) as any
-      if (res.success && res.task) {
-        latestTask.value = { ...res.task, thumbnail_url: res.thumbnail_url }
-        if (![1, 2].includes(latestTask.value!.status)) {
-          stopPolling()
-          if (latestTask.value!.status === 3) {
-            ElMessage.success('试穿完成！')
-            updateHistory(latestTask.value!)
-          } else if (latestTask.value!.status === 4) {
-            ElMessage.error(latestTask.value!.error_message || '试穿失败')
-            updateHistory(latestTask.value!)
-          }
-        }
-      }
-    } catch (e) {
-      console.error('Polling error:', e)
-    }
-  }
-
-  fetchStatus()
-  pollTimer.value = window.setInterval(fetchStatus, 2000)
-}
-
-const stopPolling = () => {
-  if (pollTimer.value) {
-    clearInterval(pollTimer.value)
-    pollTimer.value = null
-  }
-}
-
-const updateHistory = (task: TryonTask & { thumbnail_url?: string }) => {
-  const index = historyTasks.value.findIndex(t => t.task_id === task.task_id)
-  if (index >= 0) {
-    historyTasks.value[index] = task
-  } else {
-    historyTasks.value.unshift(task)
-  }
-}
-
-const startTryon = async () => {
-  if (!userStore.token) {
-    ElMessage.warning('请先登录')
-    return
-  }
-  
-  try {
-    const res = await createTryonTask(props.workId, {
-      body_type: form.value.body_type,
-      scene_style: form.value.scene_style,
-      input_refs: []
-    }) as any
-
-    if (res.success && res.task) {
-      latestTask.value = res.task
-      startPolling()
-      ElMessage.success('已加入试穿队列')
-    } else {
-      ElMessage.error(res.message || '创建任务失败')
-    }
-  } catch (e: any) {
-    const msg = e.response?._data?.message || e.response?.data?.message || e.message || '网络请求失败'
-    ElMessage.error(msg)
-  }
-}
-
-const viewHistoryTask = (task: TryonTask & { thumbnail_url?: string }) => {
-  if (isBusy.value) {
-    ElMessage.warning('当前有任务正在进行中')
-    return
-  }
-  latestTask.value = task
-}
-
-watch(() => props.initialData, (newData) => {
-  if (newData) {
-    if (newData.latest_task) {
-      latestTask.value = newData.latest_task
-      if ([1, 2].includes(latestTask.value!.status)) {
-        startPolling()
-      }
-    }
-    if (newData.history_tasks) {
-      historyTasks.value = [...newData.history_tasks]
-    }
-  }
-}, { immediate: true, deep: true })
-
-onUnmounted(() => {
-  stopPolling()
-})
-</script>
-
-<style scoped>
-.custom-scrollbar::-webkit-scrollbar {
-  width: 4px;
-}
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
-}
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 4px;
-}
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
-}
-</style>
-
-\end{verbatim}
-
 \noindent\textbf{后端代码}
 \begin{verbatim}
+package model
+
+import (
+	"database/sql"
+	"encoding/json"
+	"time"
+
+	"github.com/chosetop/bishe_back/internal/config"
+)
+
+const (
+	TryOnTaskStatusQueued  = 1
+	TryOnTaskStatusRunning = 2
+	TryOnTaskStatusSuccess = 3
+	TryOnTaskStatusFailed  = 4
+)
+
+type TryOnTask struct {
+	ID           int64           `json:"id"`
+	TaskID       string          `json:"task_id"`
+	WorkID       int64           `json:"work_id"`
+	VersionID    int64           `json:"version_id"`
+	UserID       int64           `json:"user_id"`
+	BodyType     string          `json:"body_type"`
+	SceneStyle   string          `json:"scene_style"`
+	InputRefs    json.RawMessage `json:"input_refs"`
+	Status       int             `json:"status"`
+	Progress     int             `json:"progress"`
+	ResultURL    string          `json:"result_url"`
+	ErrorCode    string          `json:"error_code"`
+	ErrorMessage string          `json:"error_message"`
+	StartedAt    *time.Time      `json:"started_at"`
+	FinishedAt   *time.Time      `json:"finished_at"`
+	CreatedAt    time.Time       `json:"created_at"`
+	UpdatedAt    time.Time       `json:"updated_at"`
+}
+
+type tryOnTaskScanner interface {
+	Scan(dest ...any) error
+}
+
+func scanTryOnTask(scanner tryOnTaskScanner) (*TryOnTask, error) {
+	var t TryOnTask
+	var inputRefsRaw []byte
+	var startedAt sql.NullTime
+	var finishedAt sql.NullTime
+	if err := scanner.Scan(
+		&t.ID, &t.TaskID, &t.WorkID, &t.VersionID, &t.UserID,
+		&t.BodyType, &t.SceneStyle, &inputRefsRaw,
+		&t.Status, &t.Progress, &t.ResultURL,
+		&t.ErrorCode, &t.ErrorMessage,
+		&startedAt, &finishedAt,
+		&t.CreatedAt, &t.UpdatedAt,
+	); err != nil {
+		return nil, err
+	}
+	if inputRefsRaw != nil {
+		t.InputRefs = json.RawMessage(inputRefsRaw)
+	}
+	if startedAt.Valid {
+		val := startedAt.Time
+		t.StartedAt = &val
+	}
+	if finishedAt.Valid {
+		val := finishedAt.Time
+		t.FinishedAt = &val
+	}
+	return &t, nil
+}
+
+func CreateTryOnTask(taskID string, workID, versionID, userID int64, bodyType, sceneStyle string, inputRefs json.RawMessage) (int64, error) {
+	if len(inputRefs) == 0 {
+		inputRefs = json.RawMessage("[]")
+	}
+	res, err := config.DB.Exec(
+		`INSERT INTO tryon_tasks(task_id, work_id, version_id, user_id, body_type, scene_style, input_refs, status, progress)
+		 VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+		taskID, workID, versionID, userID, bodyType, sceneStyle, inputRefs, TryOnTaskStatusQueued, 0,
+	)
+	if err != nil {
+		return 0, err
+	}
+	return res.LastInsertId()
+}
+
+func GetTryOnTaskByTaskID(taskID string) (*TryOnTask, error) {
+	row := config.DB.QueryRow(
+		`SELECT id, task_id, work_id, version_id, user_id, body_type, scene_style, input_refs, status, progress,
+		        result_url, error_code, error_message, started_at, finished_at, created_at, updated_at
+		   FROM tryon_tasks
+		  WHERE task_id = ?`,
+		taskID,
+	)
+	task, err := scanTryOnTask(row)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			return nil, nil
+		}
+		return nil, err
+	}
+	return task, nil
+}
+
+func StartTryOnTask(taskID string) (int64, error) {
+	now := time.Now()
+	res, err := config.DB.Exec(
+		`UPDATE tryon_tasks
+		    SET status = ?, started_at = ?, error_code = '', error_message = ''
+		  WHERE task_id = ? AND status = ?`,
+		TryOnTaskStatusRunning, now, taskID, TryOnTaskStatusQueued,
+	)
+	if err != nil {
+		return 0, err
+	}
+	return res.RowsAffected()
+}
+
+func CompleteTryOnTask(taskID, resultURL string) (int64, error) {
+	now := time.Now()
+	res, err := config.DB.Exec(
+		`UPDATE tryon_tasks
+		    SET status = ?, progress = 100, result_url = ?, error_code = '', error_message = '', finished_at = ?
+		  WHERE task_id = ? AND status = ?`,
+		TryOnTaskStatusSuccess, resultURL, now, taskID, TryOnTaskStatusRunning,
+	)
+	if err != nil {
+		return 0, err
+	}
+	return res.RowsAffected()
+}
+
+func FailTryOnTask(taskID, errorCode, errorMessage string) (int64, error) {
+	now := time.Now()
+	res, err := config.DB.Exec(
+		`UPDATE tryon_tasks
+		    SET status = ?, error_code = ?, error_message = ?, finished_at = ?
+		  WHERE task_id = ? AND status IN (?, ?)`,
+		TryOnTaskStatusFailed, errorCode, errorMessage, now, taskID, TryOnTaskStatusQueued, TryOnTaskStatusRunning,
+	)
+	if err != nil {
+		return 0, err
+	}
+	return res.RowsAffected()
+}
+\end{verbatim}
+\iffalse
 
 package model
 
@@ -4015,1536 +3301,80 @@ func UpdateTryOnTaskStatus(taskID string, toStatus int, fromStatuses []int) (int
 }
 
 \end{verbatim}
+\fi
 
 \clearpage
 \noindent\textbf{附录 D \quad 创意广场模块}
 
 \noindent\textbf{前端代码}
 \begin{verbatim}
-// 广场页
 <template>
-    <div class="sq-root">
-        <!-- Ambient Background -->
-        <div class="sq-ambient" aria-hidden="true">
-            <div class="sq-orb sq-orb--violet"></div>
-            <div class="sq-orb sq-orb--pink"></div>
-            <div class="sq-dots"></div>
-        </div>
-
-        <!-- Header -->
-        <header class="sq-header" :class="{ 'sq-header--raised': isScrolled }">
-            <div class="sq-header__inner">
-                <!-- Logo -->
-                <div class="sq-logo" @click="navigateTo('/')">
-                    <div class="sq-logo__mark">
-                        <el-icon :size="17">
-                            <MagicStick />
-                        </el-icon>
-                    </div>
-                    <span class="sq-logo__text">FORGE</span>
-                    <span class="sq-logo__badge">广场</span>
-                </div>
-
-                <!-- Search -->
-                <div class="sq-search">
-                    <el-icon class="sq-search__icon">
-                        <Search />
-                    </el-icon>
-                    <input v-model="searchQuery" type="text" placeholder="搜索设计作品、灵感..." class="sq-search__input" />
-                </div>
-
-                <!-- Actions -->
-                <div class="sq-header__actions">
-                    <button class="sq-btn-icon sq-btn-icon--mobile-only">
-                        <el-icon :size="19">
-                            <Search />
-                        </el-icon>
-                    </button>
-
-                    <button @click="navigateTo('/design')" class="sq-btn-publish">
-                        <el-icon>
-                            <Plus />
-                        </el-icon>
-                        <span>发布</span>
-                    </button>
-
-                    <div class="sq-divider-v"></div>
-
-                    <button class="sq-btn-icon sq-btn-icon--notify">
-                        <el-icon :size="19">
-                            <Bell />
-                        </el-icon>
-                        <span class="sq-notify-dot"></span>
-                    </button>
-
-                    <el-dropdown trigger="click" popper-class="custom-dropdown">
-                        <div class="sq-avatar-wrap">
-                            <img :src="userStore.user?.avatar || 'https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png'"
-                                class="sq-avatar" />
-                        </div>
-                        <template #dropdown>
-                            <el-dropdown-menu class="!rounded-2xl !p-2 !min-w-[160px]">
-                                <el-dropdown-item class="!rounded-lg !mb-1" @click="navigateTo('/works')">
-                                    <el-icon>
-                                        <Folder />
-                                    </el-icon>我的作品
-                                </el-dropdown-item>
-                                <el-dropdown-item class="!rounded-lg !mb-1" @click="navigateTo('/user/profile')">
-                                    <el-icon>
-                                        <User />
-                                    </el-icon>个人主页
-                                </el-dropdown-item>
-                                <el-dropdown-item class="!rounded-lg !mb-1">
-                                    <el-icon>
-                                        <Star />
-                                    </el-icon>我的收藏
-                                </el-dropdown-item>
-                                <div class="h-px bg-white/10 my-1"></div>
-                                <el-dropdown-item class="!rounded-lg !text-red-400"
-                                    @click="handleLogout">退出登录</el-dropdown-item>
-                            </el-dropdown-menu>
-                        </template>
-                    </el-dropdown>
-                </div>
-            </div>
-        </header>
-
-        <main class="sq-main">
-            <!-- Hero -->
-            <section class="sq-hero">
-                <div class="sq-hero__glow"></div>
-                <div class="sq-hero__content">
-                    <div class="sq-hero__badge">
-                        <span class="sq-hero__badge-dot"></span>
-                        全新 3D 创意引擎 v2.0 上线
-                    </div>
-                    <h1 class="sq-hero__title">
-                        探索无限<br />
-                        <em class="sq-hero__title-em">数字时尚</em>
-                    </h1>
-                    <p class="sq-hero__desc">
-                        汇聚全球顶尖设计师的 3D 服装作品，从赛博朋克到复古回潮，激发你下一个设计的灵感火花。
-                    </p>
-                    <div class="sq-hero__actions">
-                        <button @click="navigateTo('/design')" class="sq-hero-btn sq-hero-btn--primary">
-                            开始创作
-                        </button>
-                        <button class="sq-hero-btn sq-hero-btn--ghost">
-                            <el-icon>
-                                <TrendCharts />
-                            </el-icon>
-                            热门趋势
-                        </button>
-                    </div>
-                </div>
-                <div class="sq-hero__visual">
-                    <div class="sq-hero__card sq-hero__card--back"></div>
-                    <div class="sq-hero__card sq-hero__card--front">
-                        <el-icon :size="72" class="sq-hero__visual-icon">
-                            <MagicStick />
-                        </el-icon>
-                    </div>
-                    <div class="sq-hero__ring sq-hero__ring--1"></div>
-                    <div class="sq-hero__ring sq-hero__ring--2"></div>
-                </div>
-            </section>
-
-            <!-- Filter Bar -->
-            <div class="sq-filter-wrap">
-                <div class="sq-filter">
-                    <!-- Tags -->
-                    <div class="sq-tags">
-                        <button v-for="tag in tags" :key="tag" @click="activeTag = tag" class="sq-tag"
-                            :class="{ 'sq-tag--active': activeTag === tag }">{{ tag }}</button>
-                    </div>
-
-                    <!-- Tools -->
-                    <div class="sq-filter__tools">
-                        <el-dropdown trigger="click" @command="(c: string) => sortBy = c">
-                            <button class="sq-sort-btn">
-                                <el-icon v-if="sortBy === 'latest'">
-                                    <Timer />
-                                </el-icon>
-                                <el-icon v-else-if="sortBy === 'hot'">
-                                    <Trophy />
-                                </el-icon>
-                                <el-icon v-else>
-                                    <TrendCharts />
-                                </el-icon>
-                                {{ sortLabel }}
-                                <el-icon class="sq-sort-btn__arrow">
-                                    <ArrowDown />
-                                </el-icon>
-                            </button>
-                            <template #dropdown>
-                                <el-dropdown-menu class="!rounded-xl !p-1.5 !min-w-[140px]">
-                                    <el-dropdown-item command="latest"
-                                        :class="{ '!text-violet-400 !bg-violet-900/30 !font-bold': sortBy === 'latest' }"
-                                        class="!rounded-lg">最新发布</el-dropdown-item>
-                                    <el-dropdown-item command="hot"
-                                        :class="{ '!text-violet-400 !bg-violet-900/30 !font-bold': sortBy === 'hot' }"
-                                        class="!rounded-lg">热门推荐</el-dropdown-item>
-                                    <el-dropdown-item command="trend"
-                                        :class="{ '!text-violet-400 !bg-violet-900/30 !font-bold': sortBy === 'trend' }"
-                                        class="!rounded-lg">人气最高</el-dropdown-item>
-                                </el-dropdown-menu>
-                            </template>
-                        </el-dropdown>
-
-                        <div class="sq-divider-v"></div>
-
-                        <div class="sq-view-toggle">
-                            <button class="sq-view-btn" :class="{ 'sq-view-btn--active': viewMode === 'grid' }"
-                                @click="viewMode = 'grid'">
-                                <el-icon :size="16">
-                                    <Grid />
-                                </el-icon>
-                            </button>
-                            <button class="sq-view-btn" :class="{ 'sq-view-btn--active': viewMode === 'list' }"
-                                @click="viewMode = 'list'">
-                                <el-icon :size="16">
-                                    <List />
-                                </el-icon>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Works Grid -->
-            <transition-group name="sq-fade" tag="div" class="sq-grid"
-                :class="viewMode === 'grid' ? 'sq-grid--grid' : 'sq-grid--list'">
-                <div v-for="(work, index) in works" :key="work.id" class="sq-card"
-                    :style="{ animationDelay: `${index * 55}ms` }">
-                    <!-- Image -->
-                    <div class="sq-card__image">
-                        <ModelPreview v-if="work.params_json?.modelUrl" :model-url="work.params_json.modelUrl"
-                            :params="work.params_json"
-                            class="w-full h-full transition-transform duration-700 group-hover:scale-105" />
-                        <div v-else class="sq-card__placeholder">
-                            <el-icon :size="52">
-                                <MagicStick />
-                            </el-icon>
-                        </div>
-
-                        <!-- Overlay -->
-                        <div class="sq-card__overlay">
-                            <button class="sq-card__action" :class="{ 'sq-card__action--fav': work.is_favorited }"
-                                @click.stop="toggleFavorite(work)" title="收藏">
-                                <el-icon :size="18">
-                                    <StarFilled v-if="work.is_favorited" />
-                                    <Star v-else />
-                                </el-icon>
-                            </button>
-                            <button class="sq-card__action sq-card__action--main"
-                                @click.stop="router.push(`/square/${work.id}`)">查看详情</button>
-                            <button class="sq-card__action" title="分享">
-                                <el-icon :size="18">
-                                    <Share />
-                                </el-icon>
-                            </button>
-                        </div>
-
-                        <div v-if="work.is_featured" class="sq-card__featured">精选</div>
-                    </div>
-
-                    <!-- Body -->
-                    <div class="sq-card__body">
-                        <h3 class="sq-card__title">{{ work.title }}</h3>
-                        <div class="sq-card__tags">
-                            <span v-for="tag in work.tags.slice(0, 3)" :key="tag" class="sq-card__tag">#{{ tag }}</span>
-                        </div>
-                        <div class="sq-card__footer">
-                            <div class="sq-card__author">
-                                <img :src="work.avatar" class="sq-card__avatar" />
-                                <span class="sq-card__author-name">{{ work.author }}</span>
-                            </div>
-                            <div class="sq-card__stats">
-                                <button class="sq-stat" :class="{ 'sq-stat--liked': work.is_liked }"
-                                    @click="toggleLike(work)">
-                                    <el-icon :size="14">
-                                        <component :is="work.is_liked ? 'StarFilled' : 'Star'" />
-                                    </el-icon>
-                                    <span>{{ work.likes }}</span>
-                                </button>
-                                <button class="sq-stat">
-                                    <el-icon :size="14">
-                                        <ChatDotRound />
-                                    </el-icon>
-                                    <span>{{ work.comments }}</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </transition-group>
-
-            <!-- Load More -->
-            <div v-if="!loading && works.length < total" class="sq-load-more">
-                <button @click="loadMore" :disabled="loadingMore" class="sq-load-btn">
-                    <span v-if="loadingMore" class="sq-load-spinner"></span>
-                    {{ loadingMore ? '加载中...' : '探索更多灵感' }}
-                </button>
-            </div>
-        </main>
-
-        <!-- Mobile FAB -->
-        <button @click="navigateTo('/design')" class="sq-fab md:hidden">
-            <el-icon :size="22">
-                <Plus />
-            </el-icon>
-        </button>
-    </div>
+  <ClientOnly>
+    <div ref="mountRef" class="w-full h-full" />
+  </ClientOnly>
 </template>
 
 <script setup lang="ts">
-import {
-    Search, Bell, Plus, User, ArrowDown, MagicStick, Trophy, Timer,
-    TrendCharts, Grid, List, Star, StarFilled, Share, ChatDotRound, Folder
-} from '@element-plus/icons-vue'
-import { useUserStore } from '~/stores/user'
+import * as THREE from 'three'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
-const userStore = useUserStore()
-const router = useRouter()
+const props = defineProps<{ modelUrl: string }>()
+const mountRef = ref<HTMLDivElement | null>(null)
 
-// State
-const searchQuery = ref('')
-const activeTag = ref('全部')
-const viewMode = ref<'grid' | 'list'>('grid')
-const sortBy = ref('latest')
-const loadingMore = ref(false)
-const isScrolled = ref(false)
+let renderer: THREE.WebGLRenderer | null = null
+let scene: THREE.Scene | null = null
+let camera: THREE.PerspectiveCamera | null = null
+let controls: OrbitControls | null = null
+let rafId = 0
 
-// Lifecycle
-onMounted(() => {
-    window.addEventListener('scroll', handleScroll)
-    fetchSquareWorks(true)
-})
+const init = async () => {
+  await nextTick()
+  if (!mountRef.value) return
+  const w = mountRef.value.clientWidth
+  const h = mountRef.value.clientHeight
 
+  renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
+  renderer.setSize(w, h)
+  mountRef.value.appendChild(renderer.domElement)
+
+  scene = new THREE.Scene()
+  scene.add(new THREE.AmbientLight(0xffffff, 0.8))
+
+  camera = new THREE.PerspectiveCamera(50, w / h, 0.1, 100)
+  camera.position.set(0.8, 1.1, 3.2)
+
+  const loader = new GLTFLoader()
+  const glb = await loader.loadAsync(props.modelUrl)
+  scene.add(glb.scene)
+
+  controls = new OrbitControls(camera, renderer.domElement)
+  controls.enableDamping = true
+
+  const animate = () => {
+    if (!renderer || !scene || !camera) return
+    controls?.update()
+    renderer.render(scene, camera)
+    rafId = requestAnimationFrame(animate)
+  }
+  animate()
+}
+
+onMounted(init)
 onUnmounted(() => {
-    window.removeEventListener('scroll', handleScroll)
+  if (rafId) cancelAnimationFrame(rafId)
+  controls?.dispose()
+  renderer?.dispose()
+  if (renderer?.domElement?.parentElement) renderer.domElement.parentElement.removeChild(renderer.domElement)
+  renderer = null
+  scene = null
+  camera = null
+  controls = null
 })
-
-const handleScroll = () => {
-    isScrolled.value = window.scrollY > 20
-}
-
-watch([activeTag, sortBy], () => fetchSquareWorks(true))
-
-let searchTimer: ReturnType<typeof setTimeout>
-watch(searchQuery, () => {
-    clearTimeout(searchTimer)
-    searchTimer = setTimeout(() => fetchSquareWorks(true), 400)
-})
-
-// Constants
-const tags = ['全部', '夹克', '连衣裙', 'T恤', '运动装', '正装', '休闲', '概念设计', '国潮', '赛博朋克', '虚拟服饰', '配饰']
-
-interface SquareWork {
-    id: number
-    title: string
-    author: string
-    avatar: string
-    likes: number
-    comments: number
-    favorites: number
-    is_liked: boolean
-    is_favorited: boolean
-    is_featured: boolean
-    tags: string[]
-    params_json: Record<string, any> | null
-}
-
-const works = ref<SquareWork[]>([])
-const total = ref(0)
-const currentPage = ref(1)
-const pageSize = ref(12)
-const loading = ref(false)
-
-const fetchSquareWorks = async (reset = false) => {
-    if (reset) currentPage.value = 1
-    loading.value = true
-    try {
-        const res = await useRequest('/api/square/works', {
-            page: currentPage.value,
-            page_size: pageSize.value,
-            tag: activeTag.value === '全部' ? undefined : activeTag.value,
-            sort: sortBy.value,
-            keyword: searchQuery.value || undefined
-        }, { method: 'GET' }) as any
-        if (reset) {
-            works.value = res.data.list
-        } else {
-            works.value.push(...res.data.list)
-        }
-        total.value = res.data.total
-    } catch (e) {
-        console.error(e)
-    } finally {
-        loading.value = false
-    }
-}
-
-const toggleLike = async (work: SquareWork) => {
-    try {
-        const res = await useRequest(`/api/square/works/${work.id}/like`, {}, { method: 'POST' }) as any
-        work.is_liked = res.data.is_liked
-        work.likes = res.data.likes
-    } catch (e) {
-        console.error(e)
-    }
-}
-
-const toggleFavorite = async (work: SquareWork) => {
-    try {
-        const res = await useRequest(`/api/square/works/${work.id}/favorite`, {}, { method: 'POST' }) as any
-        work.is_favorited = res.data.is_favorited
-        work.favorites = res.data.favorites
-    } catch (e) {
-        console.error(e)
-    }
-}
-
-// Computed
-const sortLabel = computed(() => {
-    switch (sortBy.value) {
-        case 'latest': return '最新发布'
-        case 'hot': return '热门推荐'
-        case 'trend': return '人气最高'
-        default: return '排序'
-    }
-})
-
-// Methods
-const handleLogout = () => {
-    userStore.logout()
-    ElMessage.success('已退出登录')
-    router.push('/')
-}
-
-const loadMore = async () => {
-    if (works.value.length >= total.value) return
-    currentPage.value++
-    loadingMore.value = true
-    await fetchSquareWorks(false)
-    loadingMore.value = false
-}
-
-const navigateTo = (path: string) => {
-    router.push(path)
-}
 </script>
-
-<style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
-
-/* ─── Root ─── */
-.sq-root {
-    min-height: 100vh;
-    background: #F5F3FF;
-    font-family: 'DM Sans', system-ui, sans-serif;
-    color: #2E2A48;
-    position: relative;
-    overflow-x: hidden;
-    padding-bottom: 5rem;
-}
-
-/* ─── Ambient ─── */
-.sq-ambient {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-    overflow: hidden;
-}
-
-.sq-orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(100px);
-}
-
-.sq-orb--violet {
-    width: 55vw;
-    height: 55vw;
-    top: -18%;
-    left: -12%;
-    background: radial-gradient(circle, rgba(167, 139, 250, 0.22) 0%, transparent 70%);
-    animation: orb-drift 14s ease-in-out infinite;
-}
-
-.sq-orb--pink {
-    width: 45vw;
-    height: 45vw;
-    bottom: -8%;
-    right: -8%;
-    background: radial-gradient(circle, rgba(232, 121, 249, 0.13) 0%, transparent 70%);
-    animation: orb-drift 18s ease-in-out infinite reverse;
-    animation-delay: -7s;
-}
-
-@keyframes orb-drift {
-
-    0%,
-    100% {
-        transform: translate(0, 0) scale(1);
-    }
-
-    33% {
-        transform: translate(3%, 5%) scale(1.06);
-    }
-
-    66% {
-        transform: translate(-2%, 2%) scale(0.97);
-    }
-}
-
-.sq-dots {
-    position: absolute;
-    inset: 0;
-    background-image: radial-gradient(circle, rgba(109, 40, 217, 0.07) 1px, transparent 1px);
-    background-size: 32px 32px;
-    mask-image: radial-gradient(ellipse 80% 50% at 50% 0%, black 20%, transparent 75%);
-}
-
-/* ─── Header ─── */
-.sq-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 50;
-    background: rgba(255, 255, 255, 0.78);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(139, 92, 246, 0.1);
-    transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
-}
-
-.sq-header--raised {
-    background: rgba(255, 255, 255, 0.95);
-    border-bottom-color: rgba(139, 92, 246, 0.18);
-    box-shadow: 0 2px 24px rgba(109, 40, 217, 0.07);
-}
-
-.sq-header__inner {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-    height: 66px;
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-}
-
-/* Logo */
-.sq-logo {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    cursor: pointer;
-    user-select: none;
-    flex-shrink: 0;
-}
-
-.sq-logo__mark {
-    width: 33px;
-    height: 33px;
-    border-radius: 9px;
-    background: linear-gradient(140deg, #7C3AED 0%, #A78BFA 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    box-shadow: 0 4px 14px rgba(124, 58, 237, 0.28);
-    transition: box-shadow 0.3s, transform 0.3s;
-    flex-shrink: 0;
-}
-
-.sq-logo:hover .sq-logo__mark {
-    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.42);
-    transform: scale(1.07);
-}
-
-.sq-logo__text {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: 1.05rem;
-    letter-spacing: 0.14em;
-    color: #2E2A48;
-    display: none;
-}
-
-.sq-logo__badge {
-    font-size: 0.68rem;
-    color: #7C3AED;
-    letter-spacing: 0.06em;
-    padding: 1px 7px;
-    border: 1px solid rgba(124, 58, 237, 0.22);
-    border-radius: 4px;
-    background: rgba(124, 58, 237, 0.06);
-    display: none;
-}
-
-@media (min-width: 580px) {
-
-    .sq-logo__text,
-    .sq-logo__badge {
-        display: block;
-    }
-}
-
-/* Search */
-.sq-search {
-    flex: 1;
-    max-width: 460px;
-    display: none;
-    position: relative;
-    align-items: center;
-}
-
-@media (min-width: 768px) {
-    .sq-search {
-        display: flex;
-    }
-}
-
-.sq-search__icon {
-    position: absolute;
-    left: 13px;
-    color: #A8A4C0;
-    font-size: 14px;
-    transition: color 0.25s;
-    pointer-events: none;
-}
-
-.sq-search:focus-within .sq-search__icon {
-    color: #7C3AED;
-}
-
-.sq-search__input {
-    width: 100%;
-    height: 40px;
-    padding: 0 1rem 0 2.6rem;
-    background: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(139, 92, 246, 0.15);
-    border-radius: 11px;
-    color: #2E2A48;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.875rem;
-    outline: none;
-    transition: all 0.25s;
-}
-
-.sq-search__input::placeholder {
-    color: #B0ACCC;
-}
-
-.sq-search__input:hover {
-    border-color: rgba(124, 58, 237, 0.3);
-    background: #fff;
-}
-
-.sq-search__input:focus {
-    border-color: rgba(124, 58, 237, 0.5);
-    background: #fff;
-    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
-}
-
-/* Header Actions */
-.sq-header__actions {
-    display: flex;
-    align-items: center;
-    gap: 0.45rem;
-    margin-left: auto;
-}
-
-.sq-btn-icon {
-    width: 37px;
-    height: 37px;
-    border-radius: 10px;
-    border: 1px solid rgba(139, 92, 246, 0.12);
-    background: rgba(255, 255, 255, 0.6);
-    color: #8B82B8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.2s;
-    position: relative;
-}
-
-.sq-btn-icon:hover {
-    background: #fff;
-    color: #4C1D95;
-    border-color: rgba(124, 58, 237, 0.28);
-    box-shadow: 0 2px 8px rgba(109, 40, 217, 0.1);
-}
-
-.sq-btn-icon--mobile-only {
-    display: flex;
-}
-
-@media (min-width: 768px) {
-    .sq-btn-icon--mobile-only {
-        display: none;
-    }
-}
-
-.sq-btn-icon--notify .sq-notify-dot {
-    position: absolute;
-    top: 7px;
-    right: 7px;
-    width: 6px;
-    height: 6px;
-    background: #EC4899;
-    border-radius: 50%;
-    border: 1.5px solid #F5F3FF;
-}
-
-.sq-btn-publish {
-    display: none;
-    align-items: center;
-    gap: 0.35rem;
-    padding: 0 1rem;
-    height: 37px;
-    background: linear-gradient(135deg, #7C3AED 0%, #9333EA 100%);
-    color: #fff;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 600;
-    font-size: 0.85rem;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s;
-    box-shadow: 0 4px 14px rgba(124, 58, 237, 0.28);
-    letter-spacing: 0.01em;
-    flex-shrink: 0;
-}
-
-.sq-btn-publish:hover {
-    background: linear-gradient(135deg, #6D28D9 0%, #7C3AED 100%);
-    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
-    transform: translateY(-1px);
-}
-
-@media (min-width: 580px) {
-    .sq-btn-publish {
-        display: flex;
-    }
-}
-
-.sq-divider-v {
-    width: 1px;
-    height: 18px;
-    background: rgba(109, 40, 217, 0.12);
-    display: none;
-    flex-shrink: 0;
-}
-
-@media (min-width: 580px) {
-    .sq-divider-v {
-        display: block;
-    }
-}
-
-.sq-avatar-wrap {
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    border: 1.5px solid rgba(124, 58, 237, 0.25);
-    padding: 2px;
-    cursor: pointer;
-    transition: border-color 0.2s;
-    flex-shrink: 0;
-}
-
-.sq-avatar-wrap:hover {
-    border-color: rgba(124, 58, 237, 0.55);
-}
-
-.sq-avatar {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-/* ─── Main ─── */
-.sq-main {
-    position: relative;
-    z-index: 1;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 86px 1.5rem 60px;
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-}
-
-/* ─── Hero ─── */
-.sq-hero {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2.5rem;
-    padding: 3rem 3.5rem;
-    border-radius: 2rem;
-    background: linear-gradient(140deg, #EDE9FE 0%, #F5F0FF 50%, #FAF5FF 100%);
-    border: 1px solid rgba(167, 139, 250, 0.3);
-    overflow: hidden;
-    box-shadow: 0 8px 40px rgba(124, 58, 237, 0.08);
-}
-
-.sq-hero__glow {
-    position: absolute;
-    top: -40%;
-    left: -5%;
-    width: 60%;
-    height: 180%;
-    background: linear-gradient(90deg, rgba(167, 139, 250, 0.2) 0%, transparent 60%);
-    transform: skewX(-18deg);
-    pointer-events: none;
-}
-
-.sq-hero__content {
-    position: relative;
-    z-index: 1;
-    max-width: 580px;
-}
-
-.sq-hero__badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.28rem 0.85rem;
-    border-radius: 999px;
-    background: rgba(124, 58, 237, 0.08);
-    border: 1px solid rgba(124, 58, 237, 0.2);
-    font-size: 0.73rem;
-    font-weight: 500;
-    color: #6D28D9;
-    letter-spacing: 0.04em;
-    margin-bottom: 1.4rem;
-}
-
-.sq-hero__badge-dot {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: #22C55E;
-    animation: blink-dot 2.2s ease-in-out infinite;
-}
-
-@keyframes blink-dot {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.35;
-    }
-}
-
-.sq-hero__title {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: clamp(2.4rem, 4.8vw, 3.75rem);
-    line-height: 1.06;
-    color: #1E1040;
-    letter-spacing: -0.025em;
-    margin: 0 0 1.2rem;
-}
-
-.sq-hero__title-em {
-    font-style: normal;
-    background: linear-gradient(128deg, #7C3AED 0%, #A855F7 60%, #6D28D9 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.sq-hero__desc {
-    font-size: 0.97rem;
-    line-height: 1.75;
-    color: #6B6490;
-    max-width: 460px;
-    margin: 0 0 2rem;
-}
-
-.sq-hero__actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.85rem;
-}
-
-.sq-hero-btn {
-    padding: 0.72rem 1.7rem;
-    border-radius: 11px;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 600;
-    font-size: 0.88rem;
-    cursor: pointer;
-    transition: all 0.25s;
-    border: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    letter-spacing: 0.015em;
-}
-
-.sq-hero-btn--primary {
-    background: linear-gradient(135deg, #7C3AED, #9333EA);
-    color: #fff;
-    box-shadow: 0 4px 16px rgba(124, 58, 237, 0.3);
-}
-
-.sq-hero-btn--primary:hover {
-    background: linear-gradient(135deg, #6D28D9, #7C3AED);
-    box-shadow: 0 6px 22px rgba(124, 58, 237, 0.42);
-    transform: translateY(-2px);
-}
-
-.sq-hero-btn--ghost {
-    background: rgba(255, 255, 255, 0.65);
-    color: #5B21B6;
-    border: 1px solid rgba(124, 58, 237, 0.2);
-    backdrop-filter: blur(8px);
-}
-
-.sq-hero-btn--ghost:hover {
-    background: #fff;
-    border-color: rgba(124, 58, 237, 0.38);
-    color: #4C1D95;
-    box-shadow: 0 4px 14px rgba(124, 58, 237, 0.1);
-}
-
-/* Hero Visual */
-.sq-hero__visual {
-    display: none;
-    position: relative;
-    z-index: 1;
-    width: 270px;
-    height: 270px;
-    flex-shrink: 0;
-}
-
-@media (min-width: 768px) {
-    .sq-hero__visual {
-        display: block;
-    }
-}
-
-.sq-hero__card {
-    position: absolute;
-    border-radius: 22px;
-    border: 1px solid rgba(167, 139, 250, 0.35);
-}
-
-.sq-hero__card--back {
-    inset: 14px;
-    background: rgba(167, 139, 250, 0.12);
-    transform: rotate(9deg);
-    animation: card-back 7.5s ease-in-out infinite;
-}
-
-.sq-hero__card--front {
-    inset: 14px;
-    background: rgba(255, 255, 255, 0.55);
-    backdrop-filter: blur(14px);
-    transform: rotate(-6deg);
-    animation: card-front 6s ease-in-out infinite;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 8px 32px rgba(124, 58, 237, 0.1);
-}
-
-.sq-hero__visual-icon {
-    color: rgba(124, 58, 237, 0.45);
-    filter: drop-shadow(0 0 16px rgba(124, 58, 237, 0.3));
-}
-
-@keyframes card-back {
-
-    0%,
-    100% {
-        transform: rotate(9deg) translateY(0);
-    }
-
-    50% {
-        transform: rotate(11deg) translateY(-14px);
-    }
-}
-
-@keyframes card-front {
-
-    0%,
-    100% {
-        transform: rotate(-6deg) translateY(0);
-    }
-
-    50% {
-        transform: rotate(-4deg) translateY(-20px);
-    }
-}
-
-.sq-hero__ring {
-    position: absolute;
-    border-radius: 50%;
-    pointer-events: none;
-    border: 1px solid rgba(124, 58, 237, 0.1);
-}
-
-.sq-hero__ring--1 {
-    width: 310px;
-    height: 310px;
-    top: -20px;
-    left: -20px;
-    animation: ring-spin 22s linear infinite;
-}
-
-.sq-hero__ring--2 {
-    width: 375px;
-    height: 375px;
-    top: -52px;
-    left: -52px;
-    border-color: rgba(232, 121, 249, 0.07);
-    animation: ring-spin 34s linear infinite reverse;
-}
-
-@keyframes ring-spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* ─── Filter Bar ─── */
-.sq-filter-wrap {
-    position: sticky;
-    top: 66px;
-    z-index: 40;
-    background: rgba(255, 255, 255, 0.82);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    border-radius: 14px;
-    border: 1px solid rgba(167, 139, 250, 0.18);
-    padding: 0.8rem 1.1rem;
-    box-shadow: 0 4px 20px rgba(109, 40, 217, 0.06);
-}
-
-.sq-filter {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-}
-
-@media (min-width: 768px) {
-    .sq-filter {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-}
-
-/* Tags */
-.sq-tags {
-    display: flex;
-    align-items: center;
-    gap: 0.45rem;
-    overflow-x: auto;
-    padding-bottom: 2px;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    mask-image: linear-gradient(to right, black 86%, transparent 100%);
-}
-
-.sq-tags::-webkit-scrollbar {
-    display: none;
-}
-
-.sq-tag {
-    padding: 0.36rem 0.9rem;
-    border-radius: 999px;
-    font-size: 0.78rem;
-    font-weight: 500;
-    font-family: 'DM Sans', sans-serif;
-    white-space: nowrap;
-    cursor: pointer;
-    transition: all 0.2s;
-    border: 1px solid rgba(167, 139, 250, 0.2);
-    background: rgba(255, 255, 255, 0.6);
-    color: #7C6FAA;
-    letter-spacing: 0.01em;
-}
-
-.sq-tag:hover {
-    color: #6D28D9;
-    border-color: rgba(124, 58, 237, 0.35);
-    background: rgba(124, 58, 237, 0.06);
-}
-
-.sq-tag--active {
-    background: linear-gradient(135deg, #7C3AED, #9333EA);
-    border-color: transparent;
-    color: #fff;
-    font-weight: 600;
-    box-shadow: 0 3px 12px rgba(124, 58, 237, 0.28);
-}
-
-.sq-tag--active:hover {
-    background: linear-gradient(135deg, #6D28D9, #7C3AED);
-    box-shadow: 0 4px 16px rgba(124, 58, 237, 0.38);
-    color: #fff;
-    border-color: transparent;
-}
-
-/* Filter Tools */
-.sq-filter__tools {
-    display: flex;
-    align-items: center;
-    gap: 0.45rem;
-    flex-shrink: 0;
-}
-
-.sq-sort-btn {
-    display: flex;
-    align-items: center;
-    gap: 0.45rem;
-    padding: 0.38rem 0.85rem;
-    border-radius: 9px;
-    border: 1px solid rgba(167, 139, 250, 0.2);
-    background: rgba(255, 255, 255, 0.7);
-    color: #6B6490;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s;
-    letter-spacing: 0.01em;
-}
-
-.sq-sort-btn:hover {
-    border-color: rgba(124, 58, 237, 0.35);
-    color: #5B21B6;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(109, 40, 217, 0.08);
-}
-
-.sq-sort-btn__arrow {
-    color: rgba(124, 58, 237, 0.3);
-    font-size: 11px;
-}
-
-.sq-view-toggle {
-    display: flex;
-    background: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(167, 139, 250, 0.2);
-    border-radius: 9px;
-    padding: 3px;
-    gap: 2px;
-}
-
-.sq-view-btn {
-    width: 30px;
-    height: 30px;
-    border-radius: 7px;
-    border: none;
-    background: transparent;
-    color: #B0A8D0;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s;
-}
-
-.sq-view-btn:hover {
-    color: #7C3AED;
-}
-
-.sq-view-btn--active {
-    background: rgba(124, 58, 237, 0.1);
-    color: #6D28D9;
-}
-
-/* ─── Grid ─── */
-.sq-grid {
-    display: grid;
-    gap: 1.375rem;
-}
-
-.sq-grid--grid {
-    grid-template-columns: 1fr;
-}
-
-@media (min-width: 580px) {
-    .sq-grid--grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    .sq-grid--grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-.sq-grid--list {
-    grid-template-columns: 1fr;
-}
-
-/* ─── Card ─── */
-.sq-card {
-    background: #fff;
-    border-radius: 18px;
-    border: 1px solid rgba(167, 139, 250, 0.14);
-    overflow: hidden;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s, box-shadow 0.4s;
-    animation: card-appear 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
-    position: relative;
-    box-shadow: 0 2px 12px rgba(109, 40, 217, 0.04);
-}
-
-.sq-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(124, 58, 237, 0.28);
-    box-shadow:
-        0 16px 48px rgba(109, 40, 217, 0.12),
-        0 4px 16px rgba(109, 40, 217, 0.06);
-}
-
-@keyframes card-appear {
-    from {
-        opacity: 0;
-        transform: translateY(20px) scale(0.98);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-/* Card Image */
-.sq-card__image {
-    aspect-ratio: 4 / 3;
-    overflow: hidden;
-    background: #F3F0FF;
-    position: relative;
-}
-
-.sq-card__placeholder {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #EDE9FE, #F5F0FF);
-    color: rgba(124, 58, 237, 0.22);
-}
-
-/* Overlay */
-.sq-card__overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(30, 16, 64, 0.5);
-    backdrop-filter: blur(3px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.6rem;
-    opacity: 0;
-    transition: opacity 0.28s;
-}
-
-.sq-card:hover .sq-card__overlay {
-    opacity: 1;
-}
-
-.sq-card__action {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    color: rgba(255, 255, 255, 0.88);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.2s;
-    backdrop-filter: blur(10px);
-}
-
-.sq-card__action:hover {
-    background: rgba(255, 255, 255, 0.35);
-    color: #fff;
-    transform: scale(1.1);
-}
-
-.sq-card__action--fav {
-    color: #F472B6;
-    background: rgba(244, 114, 182, 0.18);
-    border-color: rgba(244, 114, 182, 0.35);
-}
-
-.sq-card__action--main {
-    width: auto;
-    padding: 0 1.15rem;
-    height: 38px;
-    border-radius: 999px;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 600;
-    font-size: 0.8rem;
-    letter-spacing: 0.015em;
-    background: rgba(255, 255, 255, 0.22);
-}
-
-.sq-card__action--main:hover {
-    background: rgba(124, 58, 237, 0.6);
-    border-color: rgba(124, 58, 237, 0.5);
-    transform: scale(1.04);
-}
-
-.sq-card__featured {
-    position: absolute;
-    top: 11px;
-    left: 11px;
-    padding: 2px 9px;
-    border-radius: 999px;
-    background: linear-gradient(135deg, #7C3AED, #A855F7);
-    color: #fff;
-    font-size: 0.67rem;
-    font-weight: 700;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    font-family: 'Syne', sans-serif;
-    box-shadow: 0 2px 10px rgba(124, 58, 237, 0.35);
-}
-
-/* Card Body */
-.sq-card__body {
-    padding: 1.15rem 1.3rem;
-}
-
-.sq-card__title {
-    font-family: 'Syne', sans-serif;
-    font-weight: 700;
-    font-size: 0.97rem;
-    color: #2E2A48;
-    margin: 0 0 0.7rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    transition: color 0.2s;
-    letter-spacing: -0.01em;
-}
-
-.sq-card:hover .sq-card__title {
-    color: #6D28D9;
-}
-
-.sq-card__tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.35rem;
-    margin-bottom: 0.95rem;
-}
-
-.sq-card__tag {
-    font-size: 0.68rem;
-    font-weight: 600;
-    color: #7C3AED;
-    background: rgba(124, 58, 237, 0.06);
-    border: 1px solid rgba(124, 58, 237, 0.15);
-    border-radius: 5px;
-    padding: 2px 7px;
-    letter-spacing: 0.015em;
-    transition: all 0.2s;
-}
-
-.sq-card:hover .sq-card__tag {
-    border-color: rgba(124, 58, 237, 0.3);
-    background: rgba(124, 58, 237, 0.1);
-}
-
-.sq-card__footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 0.8rem;
-    border-top: 1px solid rgba(167, 139, 250, 0.1);
-}
-
-.sq-card__author {
-    display: flex;
-    align-items: center;
-    gap: 0.45rem;
-}
-
-.sq-card__avatar {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 1.5px solid rgba(124, 58, 237, 0.2);
-}
-
-.sq-card__author-name {
-    font-size: 0.775rem;
-    font-weight: 500;
-    color: #9990BA;
-}
-
-.sq-card__stats {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-}
-
-.sq-stat {
-    display: flex;
-    align-items: center;
-    gap: 0.28rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #C4BCDF;
-    font-size: 0.73rem;
-    font-weight: 600;
-    font-family: 'DM Sans', sans-serif;
-    transition: color 0.2s;
-    padding: 0;
-}
-
-.sq-stat:hover {
-    color: #7C3AED;
-}
-
-.sq-stat--liked {
-    color: #EC4899;
-}
-
-.sq-stat--liked:hover {
-    color: #DB2777;
-}
-
-/* ─── Load More ─── */
-.sq-load-more {
-    display: flex;
-    justify-content: center;
-    padding: 1.5rem 0 2rem;
-}
-
-.sq-load-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.72rem 2.4rem;
-    border-radius: 999px;
-    border: 1px solid rgba(124, 58, 237, 0.22);
-    background: rgba(124, 58, 237, 0.05);
-    color: #7C3AED;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 500;
-    font-size: 0.86rem;
-    cursor: pointer;
-    transition: all 0.28s;
-    position: relative;
-    overflow: hidden;
-}
-
-.sq-load-btn::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, transparent, rgba(124, 58, 237, 0.08), transparent);
-    transform: translateX(-100%);
-    transition: transform 0.55s;
-}
-
-.sq-load-btn:hover::before {
-    transform: translateX(100%);
-}
-
-.sq-load-btn:hover {
-    border-color: rgba(124, 58, 237, 0.38);
-    color: #5B21B6;
-    background: rgba(124, 58, 237, 0.1);
-    box-shadow: 0 4px 18px rgba(109, 40, 217, 0.12);
-}
-
-.sq-load-btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-.sq-load-spinner {
-    width: 13px;
-    height: 13px;
-    border: 2px solid rgba(124, 58, 237, 0.2);
-    border-top-color: #7C3AED;
-    border-radius: 50%;
-    animation: spinner 0.65s linear infinite;
-}
-
-@keyframes spinner {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* ─── FAB ─── */
-.sq-fab {
-    position: fixed;
-    bottom: 1.5rem;
-    right: 1.5rem;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #7C3AED, #9333EA);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 18px rgba(124, 58, 237, 0.35), 0 1px 4px rgba(124, 58, 237, 0.15);
-    border: none;
-    cursor: pointer;
-    z-index: 40;
-    transition: all 0.2s;
-}
-
-.sq-fab:hover {
-    transform: scale(1.08);
-    box-shadow: 0 6px 28px rgba(124, 58, 237, 0.62);
-}
-
-.sq-fab:active {
-    transform: scale(0.93);
-}
-
-/* ─── Transitions ─── */
-.sq-fade-enter-active,
-.sq-fade-leave-active {
-    transition: all 0.38s ease;
-}
-
-.sq-fade-enter-from,
-.sq-fade-leave-to {
-    opacity: 0;
-    transform: translateY(14px) scale(0.975);
-}
-</style>
-
+\end{verbatim}
+\iffalse
 // 3d预览组件
-
 <template>
   <ClientOnly>
     <div ref="mountRef" class="relative w-full h-full rounded-2xl overflow-hidden">
@@ -5844,9 +3674,125 @@ onUnmounted(() => {
 </style>
 
 \end{verbatim}
+\fi
 
 \noindent\textbf{后端代码}
 \begin{verbatim}
+package model
+
+import (
+	"context"
+	"encoding/json"
+	"fmt"
+	"net/url"
+	"strings"
+	"time"
+
+	"github.com/chosetop/bishe_back/internal/config"
+)
+
+const squareListCacheTTL = 60 * time.Second
+
+type squareListCacheValue struct {
+	List  []SquareWorkItem `json:"list"`
+	Total int              `json:"total"`
+}
+
+func squareListCacheKey(page, pageSize int, tag, sort, keyword string) string {
+	return fmt.Sprintf("square:list:page:%d:size:%d:tag:%s:sort:%s:keyword:%s",
+		page, pageSize,
+		url.QueryEscape(tag),
+		url.QueryEscape(sort),
+		url.QueryEscape(keyword),
+	)
+}
+
+func loadSquareCache(key string, target any) bool {
+	if config.RedisClient == nil {
+		return false
+	}
+	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
+	defer cancel()
+	raw, err := config.RedisClient.Get(ctx, key).Result()
+	if err != nil {
+		return false
+	}
+	return json.Unmarshal([]byte(raw), target) == nil
+}
+
+func saveSquareCache(key string, value any, ttl time.Duration) {
+	if config.RedisClient == nil {
+		return
+	}
+	data, err := json.Marshal(value)
+	if err != nil {
+		return
+	}
+	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
+	defer cancel()
+	_ = config.RedisClient.Set(ctx, key, data, ttl).Err()
+}
+
+type SquareWorkItem struct {
+	ID          int64           `json:"id"`
+	AuthorID    int64           `json:"author_id"`
+	Title       string          `json:"title"`
+	Description string          `json:"description"`
+	Author      string          `json:"author"`
+	Avatar      string          `json:"avatar"`
+	Likes       int             `json:"likes"`
+	Comments    int             `json:"comments"`
+	Favorites   int             `json:"favorites"`
+	Tags        []string        `json:"tags"`
+	ParamsJSON  json.RawMessage `json:"params_json"`
+	CreatedAt   time.Time       `json:"created_at"`
+}
+
+func ListSquareWorks(page, pageSize int, tag, sort, keyword string, userID int64) ([]SquareWorkItem, int, error) {
+	if userID == 0 {
+		key := squareListCacheKey(page, pageSize, tag, sort, keyword)
+		var cached squareListCacheValue
+		if loadSquareCache(key, &cached) {
+			return cached.List, cached.Total, nil
+		}
+		list, total, err := listSquareWorksFromDB(page, pageSize, tag, sort, keyword, userID)
+		if err != nil {
+			return nil, 0, err
+		}
+		saveSquareCache(key, squareListCacheValue{List: list, Total: total}, squareListCacheTTL)
+		return list, total, nil
+	}
+	return listSquareWorksFromDB(page, pageSize, tag, sort, keyword, userID)
+}
+
+func SetWorkTags(workID int64, tags []string) error {
+	tx, err := config.DB.Begin()
+	if err != nil {
+		return err
+	}
+	if _, err := tx.Exec("DELETE FROM work_tags WHERE work_id = ?", workID); err != nil {
+		tx.Rollback()
+		return err
+	}
+	for _, t := range tags {
+		t = strings.TrimSpace(t)
+		if t == "" {
+			continue
+		}
+		if _, err := tx.Exec("INSERT INTO work_tags(work_id, tag) VALUES(?,?)", workID, t); err != nil {
+			tx.Rollback()
+			return err
+		}
+	}
+	if err := tx.Commit(); err != nil {
+		return err
+	}
+	invalidateSquareWorkCache(workID)
+	invalidateSquareTagsCache()
+	return nil
+}
+\end{verbatim}
+\iffalse
 package model
 
 import (
@@ -6576,393 +4522,104 @@ func invalidateSquareWorkCache(workID int64) {
 }
 
 \end{verbatim}
+\fi
 
 \clearpage
 \noindent\textbf{附录 E \quad 作品管理模块}
 
-\noindent\textbf{前端代码}
-\begin{verbatim}
-<template>
-  <div class="min-h-screen bg-[#F8FAFC] text-slate-800 relative overflow-hidden">
-    <!-- Background Elements -->
-    <div class="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
-      <div class="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-purple-200/30 blur-3xl"></div>
-      <div class="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-blue-200/30 blur-3xl"></div>
-    </div>
-
-    <div class="max-w-7xl mx-auto px-6 py-12 relative z-10">
-      <!-- Header Section -->
-      <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">
-        <div>
-          <h1 class="text-4xl md:text-5xl font-black tracking-tight text-slate-900 mb-2 font-display">
-            我的作品 <span class="text-purple-600">.</span>
-          </h1>
-          <p class="text-slate-500 text-lg font-light tracking-wide">
-            这里展示了所有的设计与创作
-          </p>
-        </div>
-        <el-button type="primary" size="large"
-          class="!rounded-full !px-8 !py-6 !text-lg !font-bold shadow-lg shadow-purple-500/30 hover:!shadow-purple-500/50 transition-all duration-300 hover:scale-105 bg-gradient-to-r from-purple-600 to-indigo-600 border-none"
-          @click="router.push('/design')">
-          <el-icon class="mr-2">
-            <Plus />
-          </el-icon>
-          开始创作
-        </el-button>
-      </div>
-
-      <!-- Filter Tabs -->
-      <div
-        class="mb-10 flex flex-wrap gap-2 p-1.5 bg-white/50 backdrop-blur-sm rounded-2xl w-fit border border-white/60 shadow-sm">
-        <button v-for="tab in tabs" :key="tab.value" @click="activeTab = tab.value"
-          class="px-6 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 relative overflow-hidden group"
-          :class="activeTab === tab.value ? 'text-white shadow-md' : 'text-slate-500 hover:text-slate-900 hover:bg-white/60'">
-          <div v-if="activeTab === tab.value" class="absolute inset-0 bg-slate-900 rounded-xl"></div>
-          <span class="relative z-10">{{ tab.label }}</span>
-        </button>
-      </div>
-
-      <!-- Loading State -->
-      <div v-if="loading" class="flex flex-col items-center justify-center py-32 animate-pulse">
-        <div class="w-16 h-16 border-4 border-purple-200 border-t-purple-600 rounded-full animate-spin mb-4"></div>
-        <p class="text-slate-400 font-mono text-sm">LOADING ASSETS...</p>
-      </div>
-
-      <!-- Empty State -->
-      <div v-else-if="works.length === 0" class="flex flex-col items-center justify-center py-32 text-center">
-        <div class="w-24 h-24 bg-slate-100 rounded-full flex items-center justify-center mb-6 text-slate-300">
-          <el-icon :size="40">
-            <FolderOpened />
-          </el-icon>
-        </div>
-        <h3 class="text-xl font-bold text-slate-900 mb-2">暂无作品</h3>
-        <p class="text-slate-500 mb-8 max-w-md">
-          看起来你还没有创建任何作品。点击右上角的按钮开始你的第一次创作吧。
-        </p>
-        <el-button type="primary" plain round @click="router.push('/design')">
-          立即创建
-        </el-button>
-      </div>
-
-      <!-- Grid Layout -->
-      <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-        <div v-for="(item, index) in works" :key="item.work?.id || index"
-          class="group relative bg-white rounded-[2rem] overflow-hidden border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2 flex flex-col">
-          <!-- Preview Area -->
-          <div class="h-72 bg-slate-50 relative cursor-pointer overflow-hidden" @click="handleWorkClick(item.work)">
-            <!-- 3D Preview or Fallback -->
-            <div class="w-full h-full relative z-10 transition-transform duration-700 ease-out group-hover:scale-110">
-              <ModelPreview v-if="getModelUrl(item)" :model-url="getModelUrl(item)" :params="getParams(item)"
-                class="w-full h-full" />
-              <div v-else class="w-full h-full flex items-center justify-center text-slate-200 bg-slate-50">
-                <el-icon :size="64">
-                  <Picture />
-                </el-icon>
-              </div>
-            </div>
-
-            <!-- Overlay Gradient on Hover -->
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none">
-            </div>
-
-            <!-- Status Badge -->
-            <div class="absolute top-4 right-4 z-30">
-              <span
-                class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-md border border-white/20 shadow-sm"
-                :class="getStatusClass(item.work?.status)">
-                {{ getStatusLabel(item.work?.status) }}
-              </span>
-            </div>
-          </div>
-
-          <!-- Content Area -->
-          <div class="p-6 flex flex-col flex-1 relative z-30 bg-white">
-            <div class="mb-4">
-              <h3
-                class="text-xl font-bold text-slate-900 mb-2 truncate group-hover:text-purple-600 transition-colors duration-300"
-                :title="item.work?.title">
-                {{ item.work?.title || '未命名作品' }}
-              </h3>
-              <p class="text-slate-500 text-sm line-clamp-2 h-10 leading-relaxed">
-                {{ item.work?.description || '暂无描述信息...' }}
-              </p>
-            </div>
-
-            <div class="mt-auto pt-4 border-t border-slate-50 flex justify-between items-center">
-              <span class="text-xs font-mono text-slate-400">
-                {{ formatDate(item.work?.updated_at) }}
-              </span>
-
-              <!-- Action Buttons -->
-              <div
-                class="flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                <template v-if="[1, 4].includes(item.work?.status)">
-                  <button class="p-2 rounded-full hover:bg-purple-50 text-purple-600 transition-colors"
-                    @click.stop="editWork(item.work.id)" title="编辑">
-                    <el-icon>
-                      <Edit />
-                    </el-icon>
-                  </button>
-                  <button v-if="item.work?.status === 1"
-                    class="p-2 rounded-full hover:bg-green-50 text-green-600 transition-colors"
-                    @click.stop="submitWork(item.work.id)" title="提交审核">
-                    <el-icon>
-                      <Check />
-                    </el-icon>
-                  </button>
-                </template>
-                <button v-else class="p-2 rounded-full hover:bg-blue-50 text-blue-600 transition-colors"
-                  @click.stop="viewDetail(item.work.id)" title="查看详情">
-                  <el-icon>
-                    <View />
-                  </el-icon>
-                </button>
-
-                <button v-if="item.work?.status === 5"
-                  class="p-2 rounded-full hover:bg-orange-50 text-orange-600 transition-colors"
-                  @click.stop="handleUnpublish(item.work.id)" title="下架">
-                  <el-icon>
-                    <Bottom />
-                  </el-icon>
-                </button>
-
-                <button v-if="![2, 5].includes(item.work?.status)"
-                  class="p-2 rounded-full hover:bg-red-50 text-red-600 transition-colors"
-                  @click.stop="handleDelete(item.work.id)" title="删除">
-                  <el-icon>
-                    <Delete />
-                  </el-icon>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Pagination -->
-      <div class="mt-16 flex justify-center" v-if="total > pageSize">
-        <el-pagination v-model:current-page="currentPage" v-model:page-size="pageSize" :total="total"
-          layout="prev, pager, next" @current-change="fetchData" background class="!gap-2" />
-      </div>
-    </div>
-  </div>
-</template>
-
-<script setup lang="ts">
-import { ref, onMounted, watch } from 'vue'
-import { useRouter } from 'vue-router'
-import {
-  Loading,
-  Picture,
-  FolderOpened,
-  Plus,
-  Edit,
-  Check,
-  View,
-  Delete,
-  Bottom
-} from '@element-plus/icons-vue'
-import { ElMessage, ElMessageBox } from 'element-plus'
-
-const router = useRouter()
-const { fetchWorks, submitWorkReview, unpublishWork, deleteWork } = useWorks()
-
-const works = ref<any[]>([])
-const loading = ref(false)
-const activeTab = ref('all')
-const currentPage = ref(1)
-const pageSize = ref(12)
-const total = ref(0)
-
-const tabs = [
-  { label: '全部', value: 'all' },
-  { label: '草稿箱', value: '1' },
-  { label: '审核中', value: '2' },
-  { label: '已发布', value: '5' },
-  { label: '需修改', value: '4' },
-]
-
-const statusMap: Record<number, { label: string; class: string }> = {
-  1: { label: '草稿', class: 'bg-slate-100 text-slate-600' },
-  2: { label: '审核中', class: 'bg-amber-100 text-amber-700' },
-  3: { label: '已通过', class: 'bg-emerald-100 text-emerald-700' },
-  4: { label: '已驳回', class: 'bg-red-100 text-red-700' },
-  5: { label: '已发布', class: 'bg-purple-100 text-purple-700' }
-}
-
-const getStatusLabel = (status: number) => statusMap[status]?.label || '未知'
-const getStatusClass = (status: number) => statusMap[status]?.class || 'bg-gray-100 text-gray-500'
-
-const formatDate = (dateStr: string) => {
-  if (!dateStr) return ''
-  return new Date(dateStr).toLocaleDateString('zh-CN', {
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit'
-  })
-}
-
-// Helper to parse params_json
-const getParams = (item: any): Record<string, any> | null => {
-  if (!item?.version?.params_json) return null
-  try {
-    return typeof item.version.params_json === 'string'
-      ? JSON.parse(item.version.params_json)
-      : item.version.params_json
-  } catch (e) {
-    console.error('Error parsing params_json:', e)
-    return null
-  }
-}
-
-const getModelUrl = (item: any) => getParams(item)?.modelUrl ?? null
-
-const fetchData = async () => {
-  loading.value = true
-  try {
-    const status = activeTab.value === 'all' ? undefined : parseInt(activeTab.value)
-    const res = await fetchWorks({
-      page: currentPage.value,
-      page_size: pageSize.value,
-      status: status
-    })
-
-    if (res.success) {
-      works.value = res.data.list
-      total.value = res.data.total
-    }
-  } catch (error) {
-    console.error(error)
-    ElMessage.error('获取作品列表失败')
-  } finally {
-    loading.value = false
-  }
-}
-
-watch(activeTab, () => {
-  currentPage.value = 1
-  fetchData()
-})
-
-const handleWorkClick = (work: any) => {
-  if (!work) return
-  if ([1, 4].includes(work.status)) {
-    editWork(work.id)
-  } else {
-    viewDetail(work.id)
-  }
-}
-
-const editWork = (id: number) => {
-  router.push(`/design/edit/${id}`)
-}
-
-const viewDetail = (id: number) => {
-  router.push(`/design/edit/${id}?mode=view`)
-}
-
-const submitWork = async (id: number) => {
-  try {
-    await ElMessageBox.confirm('确定要提交审核吗？提交后将无法修改。', '提示', {
-      confirmButtonText: '确定',
-      cancelButtonText: '取消',
-      type: 'warning',
-      center: true,
-      customClass: '!rounded-2xl'
-    })
-
-    await submitWorkReview(id)
-    ElMessage.success('提交成功')
-    fetchData()
-  } catch (e) {
-    // Cancelled or error
-  }
-}
-
-const handleUnpublish = async (id: number) => {
-  try {
-    await ElMessageBox.confirm('确定要下架该作品吗？下架后将从创意广场移除。', '提示', {
-      confirmButtonText: '确定',
-      cancelButtonText: '取消',
-      type: 'warning',
-      center: true,
-      customClass: '!rounded-2xl'
-    })
-
-    await unpublishWork(id)
-    ElMessage.success('下架成功')
-    fetchData()
-  } catch (e) {
-    // Cancelled or error
-  }
-}
-
-const handleDelete = async (id: number) => {
-  try {
-    await ElMessageBox.confirm('确定要删除该作品吗？此操作不可恢复。', '警告', {
-      confirmButtonText: '确定',
-      cancelButtonText: '取消',
-      type: 'error',
-      center: true,
-      customClass: '!rounded-2xl'
-    })
-
-    await deleteWork(id)
-    ElMessage.success('删除成功')
-    fetchData()
-  } catch (e) {
-    // Cancelled or error
-  }
-}
-
-onMounted(() => {
-  fetchData()
-})
-</script>
-
-<style scoped>
-/* Custom Font Face if needed, otherwise using system stack with preferences */
-.font-display {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-/* Custom Scrollbar for the page if needed */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #cbd5e1;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #94a3b8;
-}
-
-/* Override Element Plus Pagination Styles */
-:deep(.el-pagination.is-background .el-pager li:not(.is-disabled).is-active) {
-  background-color: #0f172a !important;
-  color: #fff;
-  border-radius: 8px;
-}
-
-:deep(.el-pagination.is-background .el-pager li) {
-  border-radius: 8px;
-  background-color: #fff;
-  border: 1px solid #e2e8f0;
-}
-</style>
-
-\end{verbatim}
-
 \noindent\textbf{后端代码}
 \begin{verbatim}
+package model
+
+import (
+	"database/sql"
+	"encoding/json"
+	"fmt"
+	"strings"
+	"time"
+
+	"github.com/chosetop/bishe_back/internal/config"
+)
+
+type DesignVersion struct {
+	ID          int64           `json:"id"`
+	WorkID      int64           `json:"work_id"`
+	VersionNo   int             `json:"version_no"`
+	ParamsJSON  json.RawMessage `json:"params_json"`
+	ModelFileID *int64          `json:"model_file_id"`
+	SubmittedAt *time.Time      `json:"submitted_at"`
+	CreatedAt   time.Time       `json:"created_at"`
+	UpdatedAt   time.Time       `json:"updated_at"`
+}
+
+type versionScanner interface {
+	Scan(dest ...any) error
+}
+
+func scanDesignVersion(scanner versionScanner) (*DesignVersion, error) {
+	var v DesignVersion
+	var modelID sql.NullInt64
+	var submittedAt sql.NullTime
+	var paramsRaw []byte
+	if err := scanner.Scan(
+		&v.ID, &v.WorkID, &v.VersionNo,
+		&paramsRaw, &modelID, &submittedAt,
+		&v.CreatedAt, &v.UpdatedAt,
+	); err != nil {
+		return nil, err
+	}
+	if modelID.Valid {
+		val := modelID.Int64
+		v.ModelFileID = &val
+	}
+	if submittedAt.Valid {
+		val := submittedAt.Time
+		v.SubmittedAt = &val
+	}
+	if paramsRaw != nil {
+		v.ParamsJSON = json.RawMessage(paramsRaw)
+	}
+	return &v, nil
+}
+
+func CreateDesignVersion(workID int64, versionNo int, paramsJSON json.RawMessage, modelFileID *int64) (int64, error) {
+	res, err := config.DB.Exec(
+		"INSERT INTO design_versions(work_id, version_no, params_json, model_file_id) VALUES(?, ?, ?, ?)",
+		workID, versionNo, paramsJSON, modelFileID,
+	)
+	if err != nil {
+		return 0, err
+	}
+	return res.LastInsertId()
+}
+
+func UpdateDesignVersionFields(id int64, paramsJSON json.RawMessage, modelFileID *int64, clearSubmittedAt bool) (int64, error) {
+	fields := make([]string, 0, 3)
+	args := make([]any, 0, 3)
+	if len(paramsJSON) > 0 {
+		fields = append(fields, "params_json = ?")
+		args = append(args, paramsJSON)
+	}
+	if modelFileID != nil {
+		fields = append(fields, "model_file_id = ?")
+		args = append(args, *modelFileID)
+	}
+	if clearSubmittedAt {
+		fields = append(fields, "submitted_at = NULL")
+	}
+	if len(fields) == 0 {
+		return 0, nil
+	}
+	args = append(args, id)
+	query := fmt.Sprintf("UPDATE design_versions SET %s WHERE id = ?", strings.Join(fields, ", "))
+	res, err := config.DB.Exec(query, args...)
+	if err != nil {
+		return 0, err
+	}
+	return res.RowsAffected()
+}
+\end{verbatim}
+\iffalse
 package model
 
 import (
@@ -7126,533 +4783,100 @@ func UpdateDesignVersionFields(id int64, paramsJSON json.RawMessage, modelFileID
 }
 
 \end{verbatim}
+\fi
 
 \clearpage
 \noindent\textbf{附录 F \quad 后台管理模块}
 
-\noindent\textbf{前端代码}
-\begin{verbatim}
-// 模型管理
-<template>
-    <div class="template-list">
-        <div class="bg-white p-4 rounded-xl shadow-sm mb-4 flex justify-between items-center">
-            <div class="flex gap-4">
-                <el-input v-model="searchKeyword" placeholder="搜索模板名称" prefix-icon="Search" class="w-64" clearable
-                    @clear="handleSearch" @keyup.enter="handleSearch" />
-                <el-button type="primary" :icon="Search" @click="handleSearch">搜索</el-button>
-            </div>
-            <el-button type="primary" :icon="Plus" @click="handleAdd">新增模板</el-button>
-        </div>
-
-        <div class="bg-white p-4 rounded-xl shadow-sm">
-            <el-table :data="tableData" style="width: 100%" stripe v-loading="loading">
-                <el-table-column prop="name" label="名称" min-width="160" />
-                <el-table-column prop="url" label="文件地址" min-width="260" show-overflow-tooltip>
-                    <template #default="{ row }">
-                        <div class="flex items-center gap-2">
-                            <span class="flex-1 truncate" :title="row.url">{{ row.url }}</span>
-                            <el-button link type="primary" @click="handleCopy(row.url)">复制</el-button>
-                        </div>
-                    </template>
-                </el-table-column>
-                <el-table-column prop="size" label="大小(Byte)" width="120" />
-                <el-table-column prop="created_at" label="创建时间" width="180">
-                    <template #default="{ row }">
-                        {{ formatDate(row.created_at) }}
-                    </template>
-                </el-table-column>
-                <el-table-column prop="updated_at" label="更新时间" width="180">
-                    <template #default="{ row }">
-                        {{ formatDate(row.updated_at) }}
-                    </template>
-                </el-table-column>
-                <el-table-column label="操作" width="220" fixed="right">
-                    <template #default="{ row }">
-                        <el-button link type="primary" :icon="Edit" @click="handleEdit(row)">编辑</el-button>
-                        <el-button link type="danger" :icon="Delete" @click="handleDelete(row)">删除</el-button>
-                    </template>
-                </el-table-column>
-            </el-table>
-            <div class="mt-4 flex justify-end">
-                <el-pagination v-model:current-page="currentPage" v-model:page-size="pageSize"
-                    :page-sizes="[10, 20, 50, 100]" layout="total, sizes, prev, pager, next, jumper" :total="total" />
-            </div>
-        </div>
-
-        <el-dialog v-model="dialogVisible" :title="dialogType === 'add' ? '新增模板' : '编辑模板'" width="500px">
-            <el-form ref="formRef" :model="formData" :rules="rules" label-width="90px">
-                <el-form-item label="模板名称" prop="name">
-                    <el-input v-model="formData.name" placeholder="请输入模板名称" />
-                </el-form-item>
-                <el-form-item v-if="dialogType === 'add'" label="模板文件" prop="path">
-                    <el-upload v-model:file-list="fileList" :auto-upload="false" :limit="1"
-                        :on-change="handleFileChange" :before-remove="handleBeforeRemove" accept=".png,.glb,.jpg,.jpeg"
-                        class="w-full">
-                        <el-button type="primary">选择文件</el-button>
-                        <template #tip>
-                            <div class="text-xs text-gray-400 mt-1">
-                                将通过后台上传到 OSS 并自动写入模型表
-                            </div>
-                        </template>
-                    </el-upload>
-                </el-form-item>
-            </el-form>
-            <template #footer>
-                <div class="dialog-footer">
-                    <el-button @click="dialogVisible = false">取消</el-button>
-                    <el-button type="primary" @click="handleSubmit(formRef)">确定</el-button>
-                </div>
-            </template>
-        </el-dialog>
-    </div>
-</template>
-
-<script setup lang="ts">
-import { ref, reactive, onMounted, watch } from 'vue'
-import { Plus, Search, Edit, Delete } from '@element-plus/icons-vue'
-import { ElMessage, ElMessageBox, type UploadUserFile } from 'element-plus'
-import dayjs from 'dayjs'
-import { getModels, deleteModel, updateModel, uploadModel } from '@/api/models'
-import type { ModelFile } from '@/api/types'
-
-const tableData = ref<ModelFile[]>([])
-const loading = ref(false)
-
-const searchKeyword = ref('')
-const currentPage = ref(1)
-const pageSize = ref(10)
-const total = ref(0)
-
-const dialogVisible = ref(false)
-const dialogType = ref<'add' | 'edit'>('add')
-const formRef = ref()
-const fileList = ref<UploadUserFile[]>([])
-
-const formData = reactive({
-    id: 0,
-    name: '',
-    path: ''
-})
-
-const rules = {
-    name: [{ required: false, message: '请输入名称', trigger: 'blur' }],
-    path: [{ required: true, message: '请上传模板文件', trigger: 'change' }]
-}
-
-const formatDate = (value: string) => {
-    if (!value) return ''
-    return dayjs(value).format('YYYY-MM-DD HH:mm:ss')
-}
-
-const fetchData = async () => {
-    loading.value = true
-    try {
-        const res = await getModels({
-            page: currentPage.value,
-            page_size: pageSize.value,
-            name: searchKeyword.value || undefined
-        })
-        if (res.success) {
-            tableData.value = res.data.list
-            total.value = res.data.total
-            if (res.data.page) currentPage.value = res.data.page
-            if (res.data.page_size) pageSize.value = res.data.page_size
-        }
-    } finally {
-        loading.value = false
-    }
-}
-
-onMounted(() => {
-    fetchData()
-})
-
-watch([currentPage, pageSize], () => {
-    fetchData()
-})
-
-const handleSearch = () => {
-    currentPage.value = 1
-    fetchData()
-}
-
-const handleAdd = () => {
-    dialogType.value = 'add'
-    dialogVisible.value = true
-    formData.id = 0
-    formData.name = ''
-    formData.path = ''
-    fileList.value = []
-}
-
-const handleEdit = (row: ModelFile) => {
-    dialogType.value = 'edit'
-    dialogVisible.value = true
-    formData.id = row.id
-    formData.name = row.name
-    formData.path = ''
-    fileList.value = []
-}
-
-const handleFileChange = (_file: UploadUserFile, files: UploadUserFile[]) => {
-    fileList.value = files
-    const first = files[0]
-    if (first && first.name) {
-        formData.path = first.name
-    } else {
-        formData.path = ''
-    }
-}
-
-const handleBeforeRemove = () => {
-    formData.path = ''
-    return true
-}
-
-const handleSubmit = async (formEl: any) => {
-    if (!formEl) return
-    await formEl.validate(async (valid: boolean) => {
-        if (!valid) return
-
-        if (!fileList.value.length && dialogType.value === 'add') {
-            ElMessage.error('请先选择模板文件')
-            return
-        }
-
-        if (dialogType.value === 'add') {
-            const first = fileList.value[0]
-            if (!first || !first.raw) {
-                ElMessage.error('请选择有效的模板文件')
-                return
-            }
-            const uploadRes = await uploadModel(first.raw as File, 'models')
-            const modelRes = uploadRes as unknown as { success: boolean; model: ModelFile }
-            let model = modelRes.model
-
-            if (formData.name && model && formData.name !== model.name) {
-                const updateRes = await updateModel(model.id, { name: formData.name })
-                model = updateRes.model
-            }
-
-            ElMessage.success('新增模板成功')
-            dialogVisible.value = false
-            fetchData()
-        } else {
-            const currentId = formData.id
-            let finalModel: ModelFile | null = null
-
-            if (formData.name) {
-                const updateRes = await updateModel(currentId, { name: formData.name })
-                finalModel = updateRes.model
-            }
-
-            if (finalModel) {
-                tableData.value = tableData.value.map(item =>
-                    item.id === currentId ? finalModel as ModelFile : item
-                )
-            }
-
-            ElMessage.success('编辑模板成功')
-            dialogVisible.value = false
-        }
-    })
-}
-
-const handleCopy = async (text: string) => {
-    try {
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-            await navigator.clipboard.writeText(text)
-        } else {
-            const textarea = document.createElement('textarea')
-            textarea.value = text
-            textarea.style.position = 'fixed'
-            textarea.style.left = '-9999px'
-            document.body.appendChild(textarea)
-            textarea.select()
-            document.execCommand('copy')
-            document.body.removeChild(textarea)
-        }
-        ElMessage.success('已复制到剪贴板')
-    } catch (error) {
-        ElMessage.error('复制失败，请手动复制')
-    }
-}
-
-const handleDelete = (row: ModelFile) => {
-    ElMessageBox.confirm(`确定删除模板「${row.name}」吗?`, '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
-        type: 'warning'
-    })
-        .then(async () => {
-            await deleteModel(row.id)
-            ElMessage.success('删除成功')
-            fetchData()
-        })
-        .catch(() => { })
-}
-</script>
-
-<style scoped>
-.template-list {
-    min-height: 100%;
-}
-</style>
-
-// 作品审核
-<template>
-  <div class="work-list">
-    <div class="bg-white p-4 rounded-xl shadow-sm mb-4 flex justify-between items-center">
-      <div class="flex gap-4 items-center">
-        <span class="text-sm text-gray-500">作品状态</span>
-        <el-select
-          v-model="statusFilter"
-          placeholder="请选择状态"
-          class="w-48"
-          clearable
-          @change="handleStatusChange"
-        >
-          <el-option
-            v-for="item in statusOptions"
-            :key="item.value"
-            :label="item.label"
-            :value="item.value"
-          />
-        </el-select>
-      </div>
-      <el-button type="primary" :icon="Search" @click="fetchData">刷新</el-button>
-    </div>
-
-    <div class="bg-white p-4 rounded-xl shadow-sm">
-      <el-table :data="tableData" style="width: 100%" stripe v-loading="loading">
-        <el-table-column prop="id" label="ID" width="80" />
-        <el-table-column prop="title" label="标题" min-width="180" />
-        <el-table-column prop="description" label="描述" min-width="240" show-overflow-tooltip />
-        <el-table-column prop="status" label="状态" width="120">
-          <template #default="{ row }">
-            <el-tag :type="getStatusTagType(row.status)">
-              {{ getStatusText(row.status) }}
-            </el-tag>
-          </template>
-        </el-table-column>
-        <el-table-column prop="created_at" label="创建时间" width="180">
-          <template #default="{ row }">
-            {{ formatDate(row.created_at) }}
-          </template>
-        </el-table-column>
-        <el-table-column prop="updated_at" label="更新时间" width="180">
-          <template #default="{ row }">
-            {{ formatDate(row.updated_at) }}
-          </template>
-        </el-table-column>
-        <el-table-column prop="published_at" label="发布时间" width="180">
-          <template #default="{ row }">
-            {{ formatDate(row.published_at) }}
-          </template>
-        </el-table-column>
-        <el-table-column label="操作" width="220" fixed="right">
-          <template #default="{ row }">
-            <el-button link type="primary" :icon="View">查看</el-button>
-            <el-button
-              v-if="row.status === 2"
-              link
-              type="success"
-              :icon="Check"
-              @click="openReview(row)"
-            >
-              审核
-            </el-button>
-          </template>
-        </el-table-column>
-      </el-table>
-      <div class="mt-4 flex justify-end">
-        <el-pagination
-          v-model:current-page="currentPage"
-          v-model:page-size="pageSize"
-          :page-sizes="[10, 20, 50, 100]"
-          layout="total, sizes, prev, pager, next, jumper"
-          :total="total"
-        />
-      </div>
-    </div>
-
-    <el-dialog v-model="reviewDialogVisible" title="作品审核" width="500px">
-      <div v-if="currentWork" class="space-y-3 mb-4">
-        <div class="text-base font-medium text-gray-800">
-          {{ currentWork.title }}
-        </div>
-        <div class="text-sm text-gray-500">
-          {{ currentWork.description }}
-        </div>
-        <div class="text-sm text-gray-400">
-          当前状态：
-          <el-tag :type="getStatusTagType(currentWork.status)" size="small">
-            {{ getStatusText(currentWork.status) }}
-          </el-tag>
-        </div>
-      </div>
-
-      <el-form :model="reviewForm" label-width="80px">
-        <el-form-item label="审核结果">
-          <el-radio-group v-model="reviewForm.result">
-            <el-radio :label="1">通过并发布</el-radio>
-            <el-radio :label="2">驳回</el-radio>
-          </el-radio-group>
-        </el-form-item>
-        <el-form-item label="原因">
-          <el-input
-            v-model="reviewForm.reason"
-            type="textarea"
-            :rows="3"
-            placeholder="请输入驳回原因（驳回时必填）"
-          />
-        </el-form-item>
-      </el-form>
-
-      <template #footer>
-        <div class="dialog-footer">
-          <el-button @click="reviewDialogVisible = false">取消</el-button>
-          <el-button type="primary" :loading="reviewLoading" @click="handleSubmitReview">
-            确定
-          </el-button>
-        </div>
-      </template>
-    </el-dialog>
-  </div>
-</template>
-
-<script setup lang="ts">
-import { ref, reactive, onMounted, watch } from 'vue'
-import { Search, Check, View } from '@element-plus/icons-vue'
-import { ElMessage } from 'element-plus'
-import dayjs from 'dayjs'
-import { getWorks, reviewWork } from '@/api/admin'
-import type { Work } from '@/api/types'
-
-const tableData = ref<Work[]>([])
-const loading = ref(false)
-
-const currentPage = ref(1)
-const pageSize = ref(10)
-const total = ref(0)
-
-const statusFilter = ref<number | ''>(2)
-const statusOptions = [
-  { label: '全部状态', value: '' },
-  { label: '草稿', value: 1 },
-  { label: '已提交', value: 2 },
-  { label: '已通过', value: 3 },
-  { label: '已驳回', value: 4 },
-  { label: '已发布', value: 5 }
-]
-
-const reviewDialogVisible = ref(false)
-const reviewLoading = ref(false)
-const currentWork = ref<Work | null>(null)
-const reviewForm = reactive({
-  result: 1 as 1 | 2,
-  reason: ''
-})
-
-const formatDate = (value: string | null) => {
-  if (!value) return ''
-  return dayjs(value).format('YYYY-MM-DD HH:mm:ss')
-}
-
-const getStatusTagType = (status: number) => {
-  if (status === 2) return 'warning'
-  if (status === 3 || status === 5) return 'success'
-  if (status === 4) return 'danger'
-  return 'info'
-}
-
-const getStatusText = (status: number) => {
-  switch (status) {
-    case 1:
-      return '草稿'
-    case 2:
-      return '已提交'
-    case 3:
-      return '已通过'
-    case 4:
-      return '已驳回'
-    case 5:
-      return '已发布'
-    default:
-      return ''
-  }
-}
-
-const fetchData = async () => {
-  loading.value = true
-  try {
-    const res = await getWorks({
-      page: currentPage.value,
-      page_size: pageSize.value,
-      status: statusFilter.value || undefined
-    })
-    if (res.success) {
-      tableData.value = res.data.list
-      total.value = res.data.total
-      if (res.data.page) currentPage.value = res.data.page
-      if (res.data.page_size) pageSize.value = res.data.page_size
-    }
-  } catch (error) {
-  } finally {
-    loading.value = false
-  }
-}
-
-onMounted(() => {
-  fetchData()
-})
-
-watch([currentPage, pageSize], () => {
-  fetchData()
-})
-
-const handleStatusChange = () => {
-  currentPage.value = 1
-  fetchData()
-}
-
-const openReview = (row: Work) => {
-  currentWork.value = row
-  reviewForm.result = 1
-  reviewForm.reason = ''
-  reviewDialogVisible.value = true
-}
-
-const handleSubmitReview = async () => {
-  if (!currentWork.value) return
-  if (reviewForm.result === 2 && !reviewForm.reason.trim()) {
-    ElMessage.error('驳回必须填写原因')
-    return
-  }
-  reviewLoading.value = true
-  try {
-    const res = await reviewWork(currentWork.value.id, {
-      result: reviewForm.result,
-      reason: reviewForm.result === 2 ? reviewForm.reason : ''
-    })
-    if (res.success) {
-      ElMessage.success(reviewForm.result === 1 ? '审核通过并已发布' : '已驳回该作品')
-      reviewDialogVisible.value = false
-      fetchData()
-    }
-  } catch (error) {
-  } finally {
-    reviewLoading.value = false
-  }
-}
-</script>
-
-<style scoped></style>
-
-\end{verbatim}
-
 \noindent\textbf{后端代码}
 \begin{verbatim}
+package model
+
+import (
+	"fmt"
+	"strings"
+	"time"
+
+	"github.com/chosetop/bishe_back/internal/config"
+)
+
+type ModelFile struct {
+	ID        int       `json:"id"`
+	Name      string    `json:"name"`
+	URL       string    `json:"url"`
+	Size      int64     `json:"size"`
+	CreatedAt time.Time `json:"created_at"`
+	UpdatedAt time.Time `json:"updated_at"`
+}
+
+func CreateModelFile(name, url string, size int64) (int, error) {
+	res, err := config.DB.Exec(
+		"INSERT INTO model_files(name, url, size) VALUES(?, ?, ?)",
+		name, url, size,
+	)
+	if err != nil {
+		return 0, err
+	}
+	id64, err := res.LastInsertId()
+	if err != nil {
+		return 0, err
+	}
+	return int(id64), nil
+}
+
+func UpdateModelFileFields(id int, name *string, url *string) (int64, error) {
+	fields := make([]string, 0, 2)
+	args := make([]any, 0, 3)
+	if name != nil {
+		fields = append(fields, "name = ?")
+		args = append(args, *name)
+	}
+	if url != nil {
+		fields = append(fields, "url = ?")
+		args = append(args, *url)
+	}
+	if len(fields) == 0 {
+		return 0, nil
+	}
+	args = append(args, id)
+	query := fmt.Sprintf("UPDATE model_files SET %s WHERE id = ?", strings.Join(fields, ", "))
+	res, err := config.DB.Exec(query, args...)
+	if err != nil {
+		return 0, err
+	}
+	return res.RowsAffected()
+}
+
+func DeleteModelFile(id int) (int64, error) {
+	res, err := config.DB.Exec("DELETE FROM model_files WHERE id = ?", id)
+	if err != nil {
+		return 0, err
+	}
+	return res.RowsAffected()
+}
+
+type DesignReview struct {
+	ID         int64     `json:"id"`
+	WorkID     int64     `json:"work_id"`
+	VersionID  int64     `json:"version_id"`
+	AdminID    int64     `json:"admin_id"`
+	Result     int       `json:"result"`
+	Reason     string    `json:"reason"`
+	ReviewedAt time.Time `json:"reviewed_at"`
+}
+
+func CreateDesignReview(workID, versionID, adminID int64, result int, reason string) (int64, error) {
+	res, err := config.DB.Exec(
+		"INSERT INTO design_reviews(work_id, version_id, admin_id, result, reason) VALUES(?, ?, ?, ?, ?)",
+		workID, versionID, adminID, result, reason,
+	)
+	if err != nil {
+		return 0, err
+	}
+	return res.LastInsertId()
+}
+\end{verbatim}
+\iffalse
 // 模型管理
 package model
 
@@ -7846,6 +5070,7 @@ func ListDesignReviewsByWorkID(workID int64) ([]DesignReview, error) {
 }
 
 \end{verbatim}
+\fi
 
 
 \end{document}
