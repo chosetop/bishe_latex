@@ -396,7 +396,7 @@ footskip=7.9mm,%
 
 \vskip 1em
 
-\hspace{0.5\textwidth}日期：{2026年3月22日}
+\hspace{0.5\textwidth}日期：{2026年4月19日}
 
 }
 

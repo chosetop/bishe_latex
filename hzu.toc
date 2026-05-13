@@ -1,0 +1,78 @@
+\hypersetup {hidelinks}
+\contentsline {chapter}{\numberline {1\hspace {.3em}}绪论}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}研究背景与意义}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}主要研究内容}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}主要解决的问题}{2}{section.1.3}%
+\contentsline {chapter}{\numberline {2\hspace {.3em}}开发框架及技术}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}前端开发技术}{4}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Vue3}{4}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Nuxt3}{4}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Three.js}{4}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}后端开发技术}{4}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Go语言}{4}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Gin框架}{5}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Redis}{5}{subsection.2.2.3}%
+\contentsline {chapter}{\numberline {3\hspace {.3em}}需求分析}{6}{chapter.3}%
+\contentsline {section}{\numberline {3.1}需求分析概述}{6}{section.3.1}%
+\contentsline {section}{\numberline {3.2}系统用户及用例分析}{6}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}普通用户}{6}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}系统管理员}{8}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}主要功能需求}{10}{section.3.3}%
+\contentsline {section}{\numberline {3.4}系统数据需求}{11}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}数据流图}{11}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}数据项}{12}{subsection.3.4.2}%
+\contentsline {chapter}{\numberline {4\hspace {.3em}}系统设计}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}系统总体设计}{15}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}系统架构设计}{15}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}系统功能结构设计}{15}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}系统功能模块设计}{16}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}用户与权限模块}{17}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}3D 服装定制模块}{17}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}AI 虚拟试穿模块}{18}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}作品管理模块}{19}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}创意广场与社区互动模块}{20}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}后台管理模块}{21}{subsection.4.2.6}%
+\contentsline {section}{\numberline {4.3}系统数据库设计}{21}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}数据库实体联系分析}{21}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}数据库核心数据表}{24}{subsection.4.3.2}%
+\contentsline {chapter}{\numberline {5\hspace {.3em}}系统实现}{34}{chapter.5}%
+\contentsline {section}{\numberline {5.1}系统开发环境}{34}{section.5.1}%
+\contentsline {section}{\numberline {5.2}系统功能模块实现}{34}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}用户管理模块实现}{35}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}3D 服装定制模块实现}{36}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}AI 虚拟试穿模块实现}{37}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}创意广场模块实现}{38}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}作品管理模块实现}{40}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}后台管理模块实现}{41}{subsection.5.2.6}%
+\contentsline {chapter}{\numberline {6\hspace {.3em}}系统测试}{44}{chapter.6}%
+\contentsline {section}{\numberline {6.1}功能测试}{44}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}用户模块测试}{44}{subsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {\hskip 2em（1）}注册与登录}{44}{subsubsection.6.1.1.1}%
+\contentsline {subsubsection}{\numberline {\hskip 2em（2）}个人信息与资料维护}{45}{subsubsection.6.1.1.2}%
+\contentsline {subsection}{\numberline {6.1.2}3D 服装定制模块测试}{47}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {\hskip 2em（1）}进入定制与资源加载}{47}{subsubsection.6.1.2.1}%
+\contentsline {subsubsection}{\numberline {\hskip 2em（2）}款式与属性配置}{48}{subsubsection.6.1.2.2}%
+\contentsline {subsubsection}{\numberline {\hskip 2em（3）}3D 交互与预览验证}{49}{subsubsection.6.1.2.3}%
+\contentsline {subsubsection}{\numberline {\hskip 2em（4）}方案保存与后续流转}{50}{subsubsection.6.1.2.4}%
+\contentsline {subsection}{\numberline {6.1.3}AI 虚拟试穿模块测试}{51}{subsection.6.1.3}%
+\contentsline {subsubsection}{\numberline {\hskip 2em（1）}试穿任务创建}{51}{subsubsection.6.1.3.1}%
+\contentsline {subsubsection}{\numberline {\hskip 2em（2）}生成过程与结果展示}{52}{subsubsection.6.1.3.2}%
+\contentsline {subsection}{\numberline {6.1.4}创意广场模块测试}{53}{subsection.6.1.4}%
+\contentsline {subsubsection}{\numberline {\hskip 2em（1）}内容浏览与详情查看}{53}{subsubsection.6.1.4.1}%
+\contentsline {subsubsection}{\numberline {\hskip 2em（2）}搜索、筛选与排序}{54}{subsubsection.6.1.4.2}%
+\contentsline {subsubsection}{\numberline {\hskip 2em（3）}互动与反馈}{56}{subsubsection.6.1.4.3}%
+\contentsline {subsection}{\numberline {6.1.5}作品管理模块测试}{58}{subsection.6.1.5}%
+\contentsline {subsubsection}{\numberline {\hskip 2em（1）}作品创建与保存}{58}{subsubsection.6.1.5.1}%
+\contentsline {subsubsection}{\numberline {\hskip 2em（2）}作品编辑、发布与撤回}{59}{subsubsection.6.1.5.2}%
+\contentsline {subsection}{\numberline {6.1.6}后台管理模块测试}{60}{subsection.6.1.6}%
+\contentsline {subsubsection}{\numberline {\hskip 2em（1）}管理员登录与权限控制}{60}{subsubsection.6.1.6.1}%
+\contentsline {subsubsection}{\numberline {\hskip 2em（2）}用户管理}{61}{subsubsection.6.1.6.2}%
+\contentsline {subsubsection}{\numberline {\hskip 2em（3）}作品审核}{62}{subsubsection.6.1.6.3}%
+\contentsline {subsubsection}{\numberline {\hskip 2em（4）}模型管理}{63}{subsubsection.6.1.6.4}%
+\contentsline {chapter}{\numberline {7\hspace {.3em}}总结与展望}{65}{chapter.7}%
+\contentsline {section}{\numberline {7.1}总结}{65}{section.7.1}%
+\contentsline {section}{\numberline {7.2}展望}{66}{section.7.2}%
+\contentsline {chapter}{参考文献}{67}{section*.73}%
+\contentsline {chapter}{致 谢}{69}{section*.74}%
+\contentsline {chapter}{附 录}{70}{section*.75}%
+\contentsfinish 

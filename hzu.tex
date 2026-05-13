@@ -27,7 +27,7 @@
 \kongF{2214100741}
 \kongG{22软件工程2班}
 \kongH{刘利\quad 副教授}
-\kongI{2026年3月22日}
+\kongI{2026年4月19日}
 \signatureimage{signature}
 
 \maketitle
@@ -504,29 +504,57 @@ id & 主键 ID & user\_\allowbreak id & bigint unsigned & 20 & $\ge 1$，自增 
 \subsection{数据库实体联系分析}
 
 根据第 3 章系统需求分析，得出以下结论：
-\begin{itemize}
-	\item 本系统数据库可划分为三个核心子域：用户域（\texttt{users}）、作品广场域（\texttt{design\_works} 及互动表）、任务域（\texttt{tryon\_tasks}），并由资源域（\texttt{model\_files}）提供文件支撑。
-	\item \texttt{users} 为全局主体实体，承担身份认证与角色区分功能（普通用户/管理员），并作为作品发布、点赞、收藏、评论、试衣任务发起的统一行为主体。
-	\item 为支持作者社交数据展示，\texttt{users} 表中引入 \texttt{followers\_count} 与 \texttt{following\_count} 两个冗余统计字段，用于快速展示用户的粉丝数与关注数，降低列表页聚合统计开销。
-	\item \texttt{user\_follows} 用于记录用户之间的关注关系，以 \texttt{follower\_id} 与 \texttt{following\_id} 两个外键同时关联 \texttt{users}，通过唯一约束 \texttt{(follower\_id, following\_id)} 防止重复关注，并在用户注销时通过级联删除清理关注关系数据。
-	\item \texttt{design\_works} 为业务核心实体，记录作品基础信息（标题、描述、状态、发布时间等），通过 \texttt{user\_id} 关联作品作者；通过 \texttt{cover\_file\_id} 关联封面资源。
-	\item \texttt{model\_files} 用于统一管理文件资源（名称、URL、大小），在当前模型中主要被作品封面复用，形成“一个文件可被多个作品引用、一个作品最多一个封面文件”的关系。
-	\item \texttt{work\_tags}、\texttt{work\_likes}、\texttt{work\_favorites}、\texttt{work\_comments} 构成作品互动子模型：标签表达作品的语义分类；点赞与收藏是用户与作品的多对多关系落地；评论表达用户对作品的一对多文本反馈。
-	\item \texttt{tryon\_tasks} 表示用户针对作品触发的试衣生成任务，记录任务状态、进度、结果地址与异常信息，形成“用户—任务”“作品—任务”的双一对多关系。
-	\item 一致性方面，互动表对作品设置了外键级联删除；同时点赞/收藏通过 \texttt{(work\_id, user\_id)} 唯一约束防止重复行为。\texttt{design\_works} 中的计数字段（点赞数、评论数、收藏数）属于冗余统计字段，用于提高查询性能。
-\end{itemize}
+\subsubsection*{（1）核心子域划分}
+本系统数据库可划分为三个核心子域：用户域（\texttt{users}）、作品广场域（\texttt{design\_works} 及互动表）、任务域（\texttt{tryon\_tasks}），并由资源域（\texttt{model\_files}）提供文件支撑。
+
+\subsubsection*{（2）用户主体实体}
+\texttt{users} 为全局主体实体，承担身份认证与角色区分功能（普通用户/管理员），并作为作品发布、点赞、收藏、评论、试衣任务发起的统一行为主体。
+
+\subsubsection*{（3）社交计数字段}
+为支持作者社交数据展示，\texttt{users} 表中引入 \texttt{followers\_count} 与 \texttt{following\_count} 两个冗余统计字段，用于快速展示用户的粉丝数与关注数，降低列表页聚合统计开销。
+
+\subsubsection*{（4）关注关系建模}
+\texttt{user\_follows} 用于记录用户之间的关注关系，以 \texttt{follower\_id} 与 \texttt{following\_id} 两个外键同时关联 \texttt{users}，通过唯一约束 \texttt{(follower\_id, following\_id)} 防止重复关注，并在用户注销时通过级联删除清理关注关系数据。
+
+\subsubsection*{（5）作品核心实体}
+\texttt{design\_works} 为业务核心实体，记录作品基础信息（标题、描述、状态、发布时间等），通过 \texttt{user\_id} 关联作品作者；通过 \texttt{cover\_file\_id} 关联封面资源。
+
+\subsubsection*{（6）资源文件复用}
+\texttt{model\_files} 用于统一管理文件资源（名称、URL、大小），在当前模型中主要被作品封面复用，形成“一个文件可被多个作品引用、一个作品最多一个封面文件”的关系。
+
+\subsubsection*{（7）作品互动子模型}
+\texttt{work\_tags}、\texttt{work\_likes}、\texttt{work\_favorites}、\texttt{work\_comments} 构成作品互动子模型：标签表达作品的语义分类；点赞与收藏是用户与作品的多对多关系落地；评论表达用户对作品的一对多文本反馈。
+
+\subsubsection*{（8）试衣任务模型}
+\texttt{tryon\_tasks} 表示用户针对作品触发的试衣生成任务，记录任务状态、进度、结果地址与异常信息，形成“用户—任务”“作品—任务”的双一对多关系。
+
+\subsubsection*{（9）一致性与冗余统计}
+一致性方面，互动表对作品设置了外键级联删除；同时点赞/收藏通过 \texttt{(work\_id, user\_id)} 唯一约束防止重复行为。\texttt{design\_works} 中的计数字段（点赞数、评论数、收藏数）属于冗余统计字段，用于提高查询性能。
 
 \textbf{主要联系}
-\begin{itemize}
-	\item 用户 \texttt{users} 与作品 \texttt{design\_works}：1 对 N（一个用户可发布多个作品）。
-	\item 用户 \texttt{users} 与关注关系 \texttt{user\_follows}：1 对 N（一个用户可发起多条关注关系）；用户 \texttt{users} 与关注关系 \texttt{user\_follows}：1 对 N（一个用户可被多条关注关系指向），从而在实体层面形成用户之间的 M 对 N 关注关系。
-	\item 资源文件 \texttt{model\_files} 与作品 \texttt{design\_works}：1 对 N（一个文件可作为多个作品封面）。
-	\item 作品 \texttt{design\_works} 与标签 \texttt{work\_tags}：1 对 N。
-	\item 用户 \texttt{users} 与点赞 \texttt{work\_likes}：1 对 N；作品 \texttt{design\_works} 与点赞 \texttt{work\_likes}：1 对 N。
-	\item 用户 \texttt{users} 与收藏 \texttt{work\_favorites}：1 对 N；作品 \texttt{design\_works} 与收藏 \texttt{work\_favorites}：1 对 N。
-	\item 用户 \texttt{users} 与评论 \texttt{work\_comments}：1 对 N；作品 \texttt{design\_works} 与评论 \texttt{work\_comments}：1 对 N。
-	\item 用户 \texttt{users} 与试衣任务 \texttt{tryon\_tasks}：1 对 N；作品 \texttt{design\_works} 与试衣任务 \texttt{tryon\_tasks}：1 对 N。
-\end{itemize}
+\subsubsection*{（1）用户与作品}
+用户 \texttt{users} 与作品 \texttt{design\_works}：1 对 N（一个用户可发布多个作品）。
+
+\subsubsection*{（2）用户与关注关系}
+用户 \texttt{users} 与关注关系 \texttt{user\_follows}：1 对 N（一个用户可发起多条关注关系）；用户 \texttt{users} 与关注关系 \texttt{user\_follows}：1 对 N（一个用户可被多条关注关系指向），从而在实体层面形成用户之间的 M 对 N 关注关系。
+
+\subsubsection*{（3）资源文件与作品封面}
+资源文件 \texttt{model\_files} 与作品 \texttt{design\_works}：1 对 N（一个文件可作为多个作品封面）。
+
+\subsubsection*{（4）作品与标签}
+作品 \texttt{design\_works} 与标签 \texttt{work\_tags}：1 对 N。
+
+\subsubsection*{（5）用户与点赞}
+用户 \texttt{users} 与点赞 \texttt{work\_likes}：1 对 N；作品 \texttt{design\_works} 与点赞 \texttt{work\_likes}：1 对 N。
+
+\subsubsection*{（6）用户与收藏}
+用户 \texttt{users} 与收藏 \texttt{work\_favorites}：1 对 N；作品 \texttt{design\_works} 与收藏 \texttt{work\_favorites}：1 对 N。
+
+\subsubsection*{（7）用户与评论}
+用户 \texttt{users} 与评论 \texttt{work\_comments}：1 对 N；作品 \texttt{design\_works} 与评论 \texttt{work\_comments}：1 对 N。
+
+\subsubsection*{（8）用户与试衣任务}
+用户 \texttt{users} 与试衣任务 \texttt{tryon\_tasks}：1 对 N；作品 \texttt{design\_works} 与试衣任务 \texttt{tryon\_tasks}：1 对 N。
 
 根据以上分析，系统的 ER 图如图~\ref{fig:er} 所示。
 

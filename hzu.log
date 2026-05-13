@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.21)  17 APR 2026 01:05
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.21)  13 MAY 2026 22:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1832,4 +1832,730 @@ Overfull \hbox (2.4302pt too wide) in paragraph at lines 150--184
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
-File: 
+File: useCase2.png Graphic file (type bmp)
+<useCase2.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
+Overfull \hbox (2.4302pt too wide) in paragraph at lines 207--237
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
+File: dataFlow.png Graphic file (type bmp)
+<dataFlow.png>
+
+Overfull \hbox (30.28568pt too wide) in alignment at lines 281--287
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (30.28568pt too wide) in alignment at lines 287--293
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (30.28568pt too wide) in alignment at lines 293--296
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (30.28568pt too wide) in alignment at lines 296--299
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (30.28568pt too wide) in alignment at lines 299--302
+ [] [] [] [] [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+ignored: Infinite glue shrinkage found in box being split
+[12]
+ignored: Infinite glue shrinkage found in box being split [13] [14]
+4
+File: systemArchitecture.png Graphic file (type bmp)
+<systemArchitecture.png>
+File: Power.png Graphic file (type bmp)
+<Power.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16]
+File: userModule.png Graphic file (type bmp)
+<userModule.png>
+File: userModuleFlow.png Graphic file (type bmp)
+<userModuleFlow.png>
+File: 3dModule.png Graphic file (type bmp)
+<3dModule.png>
+File: 3dModuleFlow.png Graphic file (type bmp)
+<3dModuleFlow.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17]
+File: aiModule.png Graphic file (type bmp)
+<aiModule.png>
+File: aiModuleFlow.png Graphic file (type bmp)
+<aiModuleFlow.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18]
+File: workModule.png Graphic file (type bmp)
+<workModule.png>
+File: workModuleFlow.png Graphic file (type bmp)
+<workModuleFlow.png>
+
+[19]
+File: squareModule.png Graphic file (type bmp)
+<squareModule.png>
+File: squareModuleFlow.png Graphic file (type bmp)
+<squareModuleFlow.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20]
+File: adminModule.png Graphic file (type bmp)
+<adminModule.png>
+File: adminModuleFlow.png Graphic file (type bmp)
+<adminModuleFlow.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22]
+Underfull \hbox (badness 1436) in paragraph at lines 551--552
+[]\TU/simsun.ttc(0)/m/n/12.045 用 户 \TU/TimesNewRoman(1)/m/n/12.045 users \TU/si
+msun.ttc(0)/m/n/12.045 与 收 藏 \TU/TimesNewRoman(1)/m/n/12.045 work_favorites\TU/
+simsun.ttc(0)/m/n/12.045 ：| \TU/TimesNewRoman(0)/m/n/12.045 1 \TU/simsun.ttc(0)
+/m/n/12.045 对 \TU/TimesNewRoman(0)/m/n/12.045 N\TU/simsun.ttc(0)/m/n/12.045 ；| 
+ 作 品 \TU/TimesNewRoman(1)/m/n/12.045 design_works \TU/simsun.ttc(0)/m/n/12.045 
+与 收 藏
+ []
+
+File: ER.png Graphic file (type bmp)
+<ER.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23]
+Overfull \hbox (5.73524pt too wide) in paragraph at lines 605--605
+\TU/TimesNewRoman(1)/m/n/12.045 CURRENT_TIMESTAMP|  
+ []
+
+
+Overfull \hbox (5.73524pt too wide) in paragraph at lines 606--606
+\TU/TimesNewRoman(1)/m/n/12.045 CURRENT_TIMESTAMP 
+ []
+
+
+Overfull \hbox (5.73524pt too wide) in paragraph at lines 606--606
+\TU/TimesNewRoman(1)/m/n/12.045 CURRENT_TIMESTAMP|  
+ []
+
+
+ignored: Infinite glue shrinkage found in box being split [24]
+Overfull \hbox (1.30069pt too wide) in paragraph at lines 639--639
+\TU/TimesNewRoman(1)/m/n/12.045 idx_follower(follower_id)|  
+ []
+
+
+Overfull \hbox (13.36922pt too wide) in paragraph at lines 640--640
+\TU/TimesNewRoman(1)/m/n/12.045 idx_following(following_id)|  
+ []
+
+
+Overfull \hbox (5.73524pt too wide) in paragraph at lines 641--641
+\TU/TimesNewRoman(1)/m/n/12.045 CURRENT_TIMESTAMP|  
+ []
+
+
+Overfull \hbox (49.81595pt too wide) in paragraph at lines 642--642
+\TU/TimesNewRoman(1)/m/n/12.045 uk_follower_following(follower_id, 
+ []
+
+
+ignored: Infinite glue shrinkage found in box being split [25]
+Overfull \hbox (5.73524pt too wide) in paragraph at lines 680--680
+\TU/TimesNewRoman(1)/m/n/12.045 CURRENT_TIMESTAMP|  
+ []
+
+
+Overfull \hbox (5.73524pt too wide) in paragraph at lines 681--681
+\TU/TimesNewRoman(1)/m/n/12.045 CURRENT_TIMESTAMP 
+ []
+
+
+Overfull \hbox (5.73524pt too wide) in paragraph at lines 681--681
+\TU/TimesNewRoman(1)/m/n/12.045 CURRENT_TIMESTAMP|  
+ []
+
+
+ignored: Infinite glue shrinkage found in box being split [26]
+Overfull \hbox (5.73524pt too wide) in paragraph at lines 721--721
+\TU/TimesNewRoman(1)/m/n/12.045 CURRENT_TIMESTAMP|  
+ []
+
+
+Overfull \hbox (5.73524pt too wide) in paragraph at lines 722--722
+\TU/TimesNewRoman(1)/m/n/12.045 CURRENT_TIMESTAMP 
+ []
+
+
+Overfull \hbox (5.73524pt too wide) in paragraph at lines 722--722
+\TU/TimesNewRoman(1)/m/n/12.045 CURRENT_TIMESTAMP|  
+ []
+
+
+ignored: Infinite glue shrinkage found in box being split [27] [28]
+ignored: Infinite glue shrinka
+ge found in box being split [29] [30]
+ignored: Infinite glue shrinkage found in box being
+ split [31]
+ignored: Infinite glue shrinkage found in box being split [32] [33]
+5
+
+Overfull \hbox (4.6719pt too wide) in paragraph at lines 943--944
+[]\TU/simsun.ttc(0)/m/n/12.045 用 户 管 理 模 块 涉 及 前 台 认 证 与 用 户 信 息 维 护，|  后 端 核 心
+ 对 象 为 \TU/TimesNewRoman(1)/m/n/12.045 AuthController\TU/simsun.ttc(0)/m/n/12.0
+45 、|
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [34
+
+]
+File: login.png Graphic file (type bmp)
+<login.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [35]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [36]
+File: 3d.png Graphic file (type bmp)
+<3d.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37]
+File: AI1.png Graphic file (type bmp)
+<AI1.png>
+File: AI2.png Graphic file (type bmp)
+<AI2.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [38]
+Overfull \hbox (19.38419pt too wide) in paragraph at lines 1099--1100
+[]\TU/simsun.ttc(0)/m/n/12.045 关 注 关 系 写 入 \TU/TimesNewRoman(1)/m/n/12.045 user
+_follows \TU/simsun.ttc(0)/m/n/12.045 表，|  并 同 步 更 新 用 户 的 \TU/TimesNewRoman(1)
+/m/n/12.045 followers_count\TU/TimesNewRoman(0)/m/n/12.045 /\TU/TimesNewRoman(1
+)/m/n/12.045 following_count
+ []
+
+File: square.png Graphic file (type bmp)
+<square.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [40]
+File: mywork.png Graphic file (type bmp)
+<mywork.png>
+
+Overfull \hbox (38.30643pt too wide) in paragraph at lines 1176--1176
+ []|\TU/TimesNewRoman(0)/m/n/12.045 GET/POST/DELETE| 
+ []
+
+
+Overfull \hbox (38.30643pt too wide) in paragraph at lines 1176--1176
+ []|\TU/TimesNewRoman(0)/m/n/12.045 GET/POST/DELETE| 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [41]
+File: admin1.png Graphic file (type bmp)
+<admin1.png>
+File: admin2.png Graphic file (type bmp)
+<admin2.png>
+File: admin3.png Graphic file (type bmp)
+<admin3.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [42]
+[43]
+6
+File: test1.png Graphic file (type bmp)
+<test1.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [44
+
+]
+File: test2.png Graphic file (type bmp)
+<test2.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [45]
+File: test3.png Graphic file (type bmp)
+<test3.png>
+File: test4.png Graphic file (type bmp)
+<test4.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [46]
+File: test5.png Graphic file (type bmp)
+<test5.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [47]
+File: test6.png Graphic file (type bmp)
+<test6.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48]
+File: test7.png Graphic file (type bmp)
+<test7.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [49]
+File: test8.png Graphic file (type bmp)
+<test8.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [50]
+File: test9.png Graphic file (type bmp)
+<test9.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [51]
+File: test10.png Graphic file (type bmp)
+<test10.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [52]
+File: test11.png Graphic file (type bmp)
+<test11.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [53]
+File: test12.png Graphic file (type bmp)
+<test12.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [54]
+File: test13.png Graphic file (type bmp)
+<test13.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [55]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [56]
+File: test14.png Graphic file (type bmp)
+<test14.png>
+File: test15.png Graphic file (type bmp)
+<test15.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [57]
+File: test16.png Graphic file (type bmp)
+<test16.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [58]
+File: test17.png Graphic file (type bmp)
+<test17.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [59]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [60]
+File: test18.png Graphic file (type bmp)
+<test18.png>
+File: test19.png Graphic file (type bmp)
+<test19.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [61]
+File: test20.png Graphic file (type bmp)
+<test20.png>
+File: test21.png Graphic file (type bmp)
+<test21.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [62]
+File: test22.png Graphic file (type bmp)
+<test22.png>
+File: test23.png Graphic file (type bmp)
+<test23.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [63]
+File: test24.png Graphic file (type bmp)
+<test24.png>
+
+[64]
+7
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [65
+
+]
+(hzu.bbl [66]
+Underfull \hbox (badness 1681) in paragraph at lines 27--32
+[]\TU/TimesNewRoman(0)/m/n/10.53937 Choi S, Park S, Lee M, Choo J.  VITON-HD: H
+igh-Resolution Virtual Try-On via
+ []
+
+[67
+
+]) [68] [69
+
+] [70
+
+]
+Overfull \hbox (30.51773pt too wide) in paragraph at lines 1884--1884
+[] \TU/TimesNewRoman(1)/m/n/12.045 stmt, err := config.DB.Prepare("INSERT INTO 
+users(username, password) VALUES(?, ?)")[] 
+ []
+
+[71
+
+]
+Overfull \hbox (390.68544pt too wide) in paragraph at lines 1884--1884
+[] \TU/TimesNewRoman(1)/m/n/12.045 row := config.DB.QueryRow("SELECT id, userna
+me, password, COALESCE(avatar, ''), role, created_at, updated_at FROM users WHE
+RE username = ?", username)[] 
+ []
+
+
+Overfull \hbox (191.11964pt too wide) in paragraph at lines 1884--1884
+[] \TU/TimesNewRoman(1)/m/n/12.045 err := row.Scan(&user.ID, &user.Username, &u
+ser.Password, &user.Avatar, &user.Role, &user.CreatedAt, &user.UpdatedAt)[] 
+ []
+
+
+Overfull \hbox (8.4509pt too wide) in paragraph at lines 1884--1884
+[]\TU/TimesNewRoman(1)/m/n/12.045 func UpdateUserFields(id int, username *strin
+g, avatar *string, role *int) (int64, error) {[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [72]
+Overfull \hbox (10.89754pt too wide) in paragraph at lines 1884--1884
+[] \TU/TimesNewRoman(1)/m/n/12.045 query := fmt.Sprintf("UPDATE users SET %s WH
+ERE id = ?", strings.Join(fields, ", "))[] 
+ []
+
+[73] [74
+
+]
+Overfull \hbox (45.12698pt too wide) in paragraph at lines 2232--2232
+[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusBadRequest, gin.H{"succes
+s": false, "message": "params_json\TU/FangSong(0)/m/n/12.045 不能为空\TU/TimesNewRo
+man(1)/m/n/12.045 "})[] 
+ []
+
+
+Overfull \hbox (98.4061pt too wide) in paragraph at lines 2232--2232
+[] \TU/TimesNewRoman(1)/m/n/12.045 workID, err := model.CreateDesignWork(int64(
+userID), input.Title, input.Description, input.CoverFileID)[] 
+ []
+
+
+Overfull \hbox (27.02422pt too wide) in paragraph at lines 2232--2232
+[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.
+H{"success": false, "error": "\TU/FangSong(0)/m/n/12.045 创建作品失败\TU/TimesNewRoma
+n(1)/m/n/12.045 "})[] 
+ []
+
+
+Overfull \hbox (57.34253pt too wide) in paragraph at lines 2232--2232
+[] \TU/TimesNewRoman(1)/m/n/12.045 versionID, err := model.CreateDesignVersion(
+workID, 1, input.ParamsJSON, input.ModelFileID)[] 
+ []
+
+
+Overfull \hbox (27.02422pt too wide) in paragraph at lines 2232--2232
+[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.
+H{"success": false, "error": "\TU/FangSong(0)/m/n/12.045 创建版本失败\TU/TimesNewRoma
+n(1)/m/n/12.045 "})[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [75]
+Overfull \hbox (27.02422pt too wide) in paragraph at lines 2232--2232
+[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.
+H{"success": false, "error": "\TU/FangSong(0)/m/n/12.045 获取作品失败\TU/TimesNewRoma
+n(1)/m/n/12.045 "})[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [76]
+Overfull \hbox (124.5369pt too wide) in paragraph at lines 2232--2232
+[] \TU/TimesNewRoman(1)/m/n/12.045 _, err = model.UpdateDesignWorkFields(workID
+, input.Title, input.Description, input.CoverFileID, nil, nil, nil)[] 
+ []
+
+
+Overfull \hbox (27.02422pt too wide) in paragraph at lines 2232--2232
+[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.
+H{"success": false, "error": "\TU/FangSong(0)/m/n/12.045 更新作品失败\TU/TimesNewRoma
+n(1)/m/n/12.045 "})[] 
+ []
+
+
+Overfull \hbox (135.64679pt too wide) in paragraph at lines 2232--2232
+[]  \TU/TimesNewRoman(1)/m/n/12.045 _, _ = model.UpdateDesignVersionFields(*wor
+k.CurrentVersionID, input.ParamsJSON, input.ModelFileID, true)[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [77]
+Overfull \hbox (27.02422pt too wide) in paragraph at lines 2232--2232
+[]  \TU/TimesNewRoman(1)/m/n/12.045 c.JSON(http.StatusInternalServerError, gin.
+H{"success": false, "error": "\TU/FangSong(0)/m/n/12.045 获取作品失败\TU/TimesNewRoma
+n(1)/m/n/12.045 "})[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [78]
+[79] [80
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [81]
+Overfull \hbox (287.01497pt too wide) in paragraph at lines 2994--2994
+[]\TU/TimesNewRoman(1)/m/n/12.045 func CreateTryOnTask(taskID string, workID, v
+ersionID, userID int64, bodyType, sceneStyle string, inputRefs json.RawMessage)
+ (int64, error) {[] 
+ []
+
+
+Overfull \hbox (165.36522pt too wide) in paragraph at lines 2994--2994
+[]  \TU/TimesNewRoman(1)/m/n/12.045 `INSERT INTO tryon_tasks(task_id, work_id, 
+version_id, user_id, body_type, scene_style, input_refs, status, progress)[] 
+ []
+
+
+Overfull \hbox (64.15312pt too wide) in paragraph at lines 2994--2994
+[]  \TU/TimesNewRoman(1)/m/n/12.045 taskID, workID, versionID, userID, bodyType
+, sceneStyle, inputRefs, TryOnTaskStatusQueued, 0,[] 
+ []
+
+
+Overfull \hbox (91.37787pt too wide) in paragraph at lines 2994--2994
+[]  \TU/TimesNewRoman(1)/m/n/12.045 `SELECT id, task_id, work_id, version_id, u
+ser_id, body_type, scene_style, input_refs, status, progress,[] 
+ []
+
+
+Overfull \hbox (20.34883pt too wide) in paragraph at lines 2994--2994
+[]          \TU/TimesNewRoman(1)/m/n/12.045 result_url, error_code, error_messa
+ge, started_at, finished_at, created_at, updated_at[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [82]
+Overfull \hbox (65.48813pt too wide) in paragraph at lines 2994--2994
+[]      \TU/TimesNewRoman(1)/m/n/12.045 SET status = ?, progress = 100, result_
+url = ?, error_code = '', error_message = '', finished_at = ?[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [83]
+Overfull \hbox (155.46693pt too wide) in paragraph at lines 2994--2994
+[]  \TU/TimesNewRoman(1)/m/n/12.045 TryOnTaskStatusFailed, errorCode, errorMess
+age, now, taskID, TryOnTaskStatusQueued, TryOnTaskStatusRunning,[] 
+ []
+
+[84] [85
+
+]
+Overfull \hbox (154.10246pt too wide) in paragraph at lines 3403--3403
+[]  \TU/TimesNewRoman(1)/m/n/12.045 if (renderer?.domElement?.parentElement) re
+nderer.domElement.parentElement.removeChild(renderer.domElement)[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [86]
+[87]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [88]
+Overfull \hbox (134.61754pt too wide) in paragraph at lines 3822--3822
+[]\TU/TimesNewRoman(1)/m/n/12.045 func ListSquareWorks(page, pageSize int, tag,
+ sort, keyword string, userID int64) ([]SquareWorkItem, int, error) {[] 
+ []
+
+
+Overfull \hbox (0.82277pt too wide) in paragraph at lines 3822--3822
+[]  \TU/TimesNewRoman(1)/m/n/12.045 list, total, err := listSquareWorksFromDB(p
+age, pageSize, tag, sort, keyword, userID)[] 
+ []
+
+
+Overfull \hbox (31.0941pt too wide) in paragraph at lines 3822--3822
+[]  \TU/TimesNewRoman(1)/m/n/12.045 saveSquareCache(key, squareListCacheValue{L
+ist: list, Total: total}, squareListCacheTTL)[] 
+ []
+
+
+Overfull \hbox (36.66957pt too wide) in paragraph at lines 3822--3822
+[] \TU/TimesNewRoman(1)/m/n/12.045 if _, err := tx.Exec("DELETE FROM work_tags 
+WHERE work_id = ?", workID); err != nil {[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [89]
+Overfull \hbox (71.85768pt too wide) in paragraph at lines 3822--3822
+[]  \TU/TimesNewRoman(1)/m/n/12.045 if _, err := tx.Exec("INSERT INTO work_tags
+(work_id, tag) VALUES(?,?)", workID, t); err != nil {[] 
+ []
+
+[90] [91
+
+]
+Overfull \hbox (190.13159pt too wide) in paragraph at lines 4649--4649
+[]\TU/TimesNewRoman(1)/m/n/12.045 func CreateDesignVersion(workID int64, versio
+nNo int, paramsJSON json.RawMessage, modelFileID *int64) (int64, error) {[] 
+ []
+
+
+Overfull \hbox (100.02934pt too wide) in paragraph at lines 4649--4649
+[]  \TU/TimesNewRoman(1)/m/n/12.045 "INSERT INTO design_versions(work_id, versi
+on_no, params_json, model_file_id) VALUES(?, ?, ?, ?)",[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [92]
+Overfull \hbox (238.31747pt too wide) in paragraph at lines 4649--4649
+[]\TU/TimesNewRoman(1)/m/n/12.045 func UpdateDesignVersionFields(id int64, para
+msJSON json.RawMessage, modelFileID *int64, clearSubmittedAt bool) (int64, erro
+r) {[] 
+ []
+
+
+Overfull \hbox (63.75908pt too wide) in paragraph at lines 4649--4649
+[] \TU/TimesNewRoman(1)/m/n/12.045 query := fmt.Sprintf("UPDATE design_versions
+ SET %s WHERE id = ?", strings.Join(fields, ", "))[] 
+ []
+
+[93] [94
+
+]
+Overfull \hbox (43.00969pt too wide) in paragraph at lines 4906--4906
+[] \TU/TimesNewRoman(1)/m/n/12.045 query := fmt.Sprintf("UPDATE model_files SET
+ %s WHERE id = ?", strings.Join(fields, ", "))[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [95]
+Overfull \hbox (76.3569pt too wide) in paragraph at lines 4906--4906
+[]\TU/TimesNewRoman(1)/m/n/12.045 func CreateDesignReview(workID, versionID, ad
+minID int64, result int, reason string) (int64, error) {[] 
+ []
+
+
+Overfull \hbox (87.29623pt too wide) in paragraph at lines 4906--4906
+[]  \TU/TimesNewRoman(1)/m/n/12.045 "INSERT INTO design_reviews(work_id, versio
+n_id, admin_id, result, reason) VALUES(?, ?, ?, ?, ?)",[] 
+ []
+
+[96] (hzu.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2022/08/05>
+ ***********
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.22pt have occurred.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package rerunfilecheck Info: File `hzu.out' has not changed.
+(rerunfilecheck)             Checksum: FA5FFDC7BC64D2D255FFD0BA5128F4F8;8155.
+ ) 
+Here is how much of TeX's memory you used:
+ 34988 strings out of 402983
+ 737676 string characters out of 5455934
+ 1179834 words of memory out of 5000000
+ 63050 multiletter control sequences out of 15000+600000
+ 666725 words of font info for 234 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 123i,12n,125p,3983b,702s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on hzu.pdf (102 pages).
